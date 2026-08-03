@@ -59,10 +59,16 @@
         header { background: var(--bg-white); padding: 16px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
         /* 헤더 */
         header { background: var(--bg-white); padding: 16px 5%; display: flex; justify-content: center; align-items: center; gap: 48px; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
-        .logo { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 900; color: var(--text-black); display: flex; align-items: center; gap: 6px; letter-spacing: -0.03em; }
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 900; color: var(--text-black); display: flex; align-items: center; gap: 6px; letter-spacing: -0.03em; white-space: nowrap; }
         .logo span { color: var(--accent-color); font-weight: 800; font-size: 18px; margin-top: 1px; }
-        .nav-btn { color: var(--text-black); border: 1px solid var(--border-color); padding: 8px 18px; font-weight: 700; font-size: 14px; transition: all 0.3s ease; background: var(--bg-paper); }
+        .nav-btn { color: var(--text-black); border: 1px solid var(--border-color); padding: 8px 18px; font-weight: 700; font-size: 14px; transition: all 0.3s ease; background: var(--bg-paper); white-space: nowrap; }
         .nav-btn:hover { background: var(--accent-color); color: var(--bg-white); border-color: var(--accent-color); }
+        @media (max-width: 480px) {
+            header { flex-direction: column; justify-content: center; align-items: center; gap: 10px; padding: 14px 5%; }
+            .logo { font-size: 18px; }
+            .logo span { font-size: 16px; }
+            .nav-btn { padding: 8px 24px; font-size: 13px; }
+        }
 
         /* 히어로 */
         .hero { padding: 90px 5% 100px 5%; text-align: center; border-bottom: 1px solid var(--border-color); background-color: var(--bg-paper); }
@@ -88,15 +94,16 @@
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
 
         /* 카드 */
-        .card { background: var(--bg-white); border: 1px solid var(--border-color); padding: 28px; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
+        .card { background: var(--bg-white); border: 1px solid var(--border-color); padding: 28px; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; position: relative; }
         .card:hover { border-color: var(--accent-color); box-shadow: 0 8px 25px rgba(79, 70, 229, 0.06); transform: translateY(-3px); }
+        .card-link { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; }
         .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
         .card-no { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14px; color: var(--accent-color); }
         .pattern-name { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; color: var(--text-black); margin-bottom: 10px; line-height: 1.2; }
         .pattern-desc { font-size: 14.5px; color: var(--text-gray); margin-bottom: 30px; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.5; }
 
         /* 카드 버튼 */
-        .card-actions { display: flex; gap: 10px; border-top: 1px solid var(--border-color); padding-top: 20px; }
+        .card-actions { display: flex; gap: 10px; border-top: 1px solid var(--border-color); padding-top: 20px; position: relative; z-index: 2; }
         .action-link { flex: 1; text-align: center; font-size: 14px; font-weight: 700; color: var(--text-black); padding: 10px 0; border: 1px solid var(--border-color); background: var(--bg-paper); transition: all 0.2s ease; }
         .action-link:hover { background: var(--text-black); color: var(--bg-white); border-color: var(--text-black); }
         .action-link.video { background: var(--bg-white); color: var(--accent-color); border: 1px solid var(--accent-color); }
@@ -182,7 +189,7 @@
         // ── pattern-list.json fetch → 카드 렌더링 ──────────────────
         let patternData = [];
         let currentData = [];
-        let displayCount = 16;  // 초기 표시 개수
+        let displayCount = 9;  // 초기 표시 개수
 
         const grid         = document.getElementById('patternGrid');
         const loadMoreBtn  = document.getElementById('loadMoreContainer');
@@ -223,6 +230,7 @@
                 const card = document.createElement('div');
                 card.className = 'card';
                 card.innerHTML =
+                    '<a href="' + patternUrl + '" class="card-link" aria-label="' + item.name + ' 예문 학습"></a>' +
                     '<div>' +
                     '  <div class="card-top">' +
                     '    <span class="card-no">No. ' + item.no + '</span>' +
@@ -244,9 +252,9 @@
             }
         }
 
-        // 더보기 — 16개씩 추가
+        // 더보기 — 9개씩 추가
         function loadMore() {
-            displayCount += 16;
+            displayCount += 9;
             renderPatterns(currentData, displayCount);
         }
 
