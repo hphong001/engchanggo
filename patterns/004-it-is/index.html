@@ -54,10 +54,12 @@
 body{font-family:var(--font);background:var(--bg);color:var(--black);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px;}
 a{text-decoration:none;color:inherit;}
 svg{display:inline-block;vertical-align:middle;flex-shrink:0;}
-header{background:var(--white);padding:0 5%;height:60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;}
+header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:100%;display:flex;justify-content:space-between;align-items:center;}
+.header-inner .hd-right{margin-right:336px;}
 .logo{font-family:var(--font-en);font-size:18px;font-weight:900;display:flex;align-items:center;gap:6px;}
 .logo span{color:var(--accent);font-size:16px;}
-.hd-right{display:flex;align-items:center;gap:10px;}
+.hd-right{display:flex;align-items:center;gap:16px;}
 .hd-ebook-btn{background:var(--accent);color:white;padding:8px 18px;font-size:14px;font-weight:700;transition:background .2s;display:flex;align-items:center;gap:6px;}
 .hd-ebook-btn:hover{background:var(--black);}
 .hd-list-btn{border:1px solid var(--border);padding:8px 16px;font-size:14px;font-weight:700;background:var(--bg);transition:all .2s;display:flex;align-items:center;gap:6px;}
@@ -178,6 +180,7 @@ footer{text-align:center;padding:30px 20px;color:var(--gray-lt);font-size:14px;b
   .sidebar{display:none;}
   .hamburger{display:block;}
   .hd-list-btn{display:none;}
+  .header-inner .hd-right{margin-right:0;}
   .pattern-title-h1{font-size:32px;}
   .summary-main{font-size:34px;}
   .ebook-inline-banner{flex-direction:column;}
@@ -195,12 +198,14 @@ footer{text-align:center;padding:30px 20px;color:var(--gray-lt);font-size:14px;b
 </head>
 <body>
 <header>
+<div class="header-inner">
   <a href="../../index.html" class="logo">영어창고 <span>MyEnglishVault</span></a>
   <div class="hd-right">
     <a href="#" class="hd-ebook-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> 전자책 구매</a>
     <a href="../../index.html" class="hd-list-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> 패턴 목록</a>
     <button class="hamburger" onclick="toggleMenu()" aria-label="메뉴"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
+</div>
 </header>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#" class="accent"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> 전자책 구매하기</a>
