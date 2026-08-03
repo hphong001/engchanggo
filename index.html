@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="머릿속에 맴도는 영단어, 이제 긴 문장으로 시원하게 내뱉으세요! 영어창고가 제공하는 치트키 패턴 회화 훈련.">
+    <title>영어창고 | 진짜 회화 패턴 훈련</title>
+    
+    <style>
+        /* 트렌디하고 날렵한 폰트 조합 */
+        @import url('https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap');
+        
+        :root {
+            /* 차분한 All-White 톤 */
+            --bg-paper: #FBFBF9;
+            --bg-white: #FFFFFF;
+            --text-black: #1A1A1A;
+            --text-gray: #555555;
+            /* 쌈빡한 인디고 컬러를 포인트 색상으로만 얕게 사용 */
+            --accent-color: #4F46E5; 
+            --border-color: #E2E2DF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'SUIT', sans-serif; letter-spacing: -0.02em; }
+        body { background-color: var(--bg-paper); color: var(--text-black); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+
+        /* 네비게이션 */
+        header { background: var(--bg-white); padding: 16px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 900; color: var(--text-black); display: flex; align-items: center; gap: 6px; letter-spacing: -0.03em; }
+        .logo span { color: var(--accent-color); font-weight: 800; font-size: 18px; margin-top: 1px; }
+        .nav-btn { color: var(--text-black); border: 1px solid var(--border-color); padding: 8px 18px; font-weight: 700; font-size: 14px; transition: all 0.3s ease; background: var(--bg-paper); }
+        .nav-btn:hover { background: var(--accent-color); color: var(--bg-white); border-color: var(--accent-color); }
+
+        /* 메인 배너 */
+        .hero { padding: 90px 5% 100px 5%; text-align: center; border-bottom: 1px solid var(--border-color); background-color: var(--bg-paper); }
+        .hero-badge { color: var(--accent-color); font-weight: 700; font-size: 15px; display: block; margin-bottom: 20px; }
+        .hero h1 { font-family: 'SUIT', sans-serif; font-size: 38px; font-weight: 900; margin-bottom: 24px; line-height: 1.35; word-break: keep-all; color: var(--text-black); }
+        .hero p { font-size: 17px; color: var(--text-gray); margin-bottom: 40px; font-weight: 500; max-width: 650px; margin-inline: auto; word-break: keep-all; line-height: 1.6; }
+        .hero-btn { display: inline-block; background: var(--text-black); color: var(--bg-white); padding: 15px 36px; font-size: 15px; font-weight: 700; transition: all 0.3s ease; }
+        .hero-btn:hover { background: var(--accent-color); }
+
+        /* 콘텐츠 영역 */
+        .container { max-width: 1100px; margin: 0 auto; padding: 70px 5%; }
+        .section-header { margin-bottom: 50px; text-align: left; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
+        .section-title { font-family: 'SUIT', sans-serif; font-size: 28px; font-weight: 900; color: var(--text-black); }
+        
+        /* 검색창 (단정한 선) */
+        .search-box { width: 100%; max-width: 300px; position: relative; }
+        .search-box input { width: 100%; padding: 10px 0; border: none; border-bottom: 2px solid var(--border-color); background: transparent; font-size: 15px; font-weight: 600; outline: none; transition: border-color 0.3s ease; }
+        .search-box input:focus { border-bottom-color: var(--accent-color); }
+        .search-box input::placeholder { color: #A0A0A0; font-weight: 500; }
+        
+        /* 그리드 */
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+        
+        /* 카드 디자인 (All-White 여백과 선 중심) */
+        .card { background: var(--bg-white); border: 1px solid var(--border-color); padding: 28px; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
+        .card:hover { border-color: var(--accent-color); box-shadow: 0 8px 25px rgba(79, 70, 229, 0.06); transform: translateY(-3px); }
+        
+        .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .card-no { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14px; color: var(--accent-color); }
+        .card-time { font-size: 13px; font-weight: 600; color: var(--text-gray); }
+        
+        .pattern-name { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; color: var(--text-black); margin-bottom: 10px; line-height: 1.2; }
+        .pattern-desc { font-size: 14.5px; color: var(--text-gray); margin-bottom: 30px; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.5; }
+        
+        /* 카드 버튼 */
+        .card-actions { display: flex; gap: 10px; border-top: 1px solid var(--border-color); padding-top: 20px; }
+        .action-link { flex: 1; text-align: center; font-size: 14px; font-weight: 700; color: var(--text-black); padding: 10px 0; border: 1px solid var(--border-color); background: var(--bg-paper); transition: all 0.2s ease; }
+        .action-link:hover { background: var(--text-black); color: var(--bg-white); border-color: var(--text-black); }
+        
+        /* 유튜브 영상 버튼에만 포인트 컬러 부여 */
+        .action-link.video { background: var(--bg-white); color: var(--accent-color); border: 1px solid var(--accent-color); }
+        .action-link.video:hover { color: var(--bg-white); background: var(--accent-color); }
+
+        /* 더보기 버튼 */
+        .load-more-container { text-align: center; margin-top: 50px; }
+        .btn-load { background: var(--bg-white); border: 1px solid var(--text-black); color: var(--text-black); padding: 14px 40px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; }
+        .btn-load:hover { background: var(--text-black); color: var(--bg-white); }
+        .hidden { display: none !important; }
+
+        /* 프리미엄 배너 */
+        .premium-banner { margin-top: 80px; background: var(--bg-white); border: 1px solid var(--border-color); padding: 50px 5%; text-align: center; }
+        .premium-banner h2 { font-family: 'SUIT', sans-serif; font-size: 26px; font-weight: 800; margin-bottom: 16px; color: var(--text-black); }
+        .premium-banner p { color: var(--text-gray); font-size: 15.5px; margin-bottom: 30px; font-weight: 500; line-height: 1.6; }
+        .premium-btn { background: var(--text-black); color: var(--bg-white); padding: 14px 32px; font-size: 15px; font-weight: 700; display: inline-block; transition: background 0.3s ease; }
+        .premium-btn:hover { background: var(--accent-color); }
+
+        /* 푸터 */
+        footer { text-align: center; padding: 40px 20px; color: var(--text-gray); font-size: 13px; margin-top: 20px; border-top: 1px solid var(--border-color); background: var(--bg-white); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .search-box { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">영어창고 <span>MyEnglishVault</span></div>
+        <a href="#premium" class="nav-btn">전자책 안내</a>
+    </header>
+
+    <section class="hero">
+        <span class="hero-badge">기초부터 실전까지 200 패턴 완결판</span>
+        <h1>머릿속에 맴도는 영단어,<br>이제 긴 문장으로 시원하게 내뱉으세요!</h1>
+        <p>단순 암기식 공부는 그만! 기초 패턴 하나에 살을 붙여 나가는 '문장 꼬리물기' 훈련으로 10분 만에 원어민처럼 말할 수 있습니다.</p>
+        <a href="#curriculum" class="hero-btn">무료 학습 시작하기</a>
+    </section>
+
+    <section id="curriculum" class="container">
+        <div class="section-header">
+            <h2 class="section-title">필수 패턴 목록</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="패턴이나 뜻을 검색하세요" onkeyup="filterPatterns()">
+            </div>
+        </div>
+
+        <!-- 카드 렌더링 영역 -->
+        <div class="grid" id="patternGrid"></div>
+
+        <!-- 250개 확장을 고려한 더보기 버튼 -->
+        <div class="load-more-container hidden" id="loadMoreContainer">
+            <button class="btn-load" onclick="loadMore()">패턴 더보기 ↓</button>
+        </div>
+
+        <div id="premium" class="premium-banner">
+            <h2>진짜 회화의 완성, 프리미엄 전자책</h2>
+            <p>웹에 공개된 92개 패턴 외에도, 실전 대화문과 원어민 음성을 포함한<br>200개의 전체 패턴 워크시트를 영구 소장하실 수 있습니다.</p>
+            <a href="#" class="premium-btn">전자책 자세히 보기</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const patternData = [
+            { no: 1, patternName: "I can", desc: "문장 꼬리물기 패턴 훈련", time: "13:08", urlText: "pattern_001.html", urlVideo: "https://www.youtube.com/watch?v=bwwKi2c4HyY" },
+            { no: 2, patternName: "Can I", desc: "문장 꼬리물기 패턴 훈련", time: "12:23", urlText: "pattern_002.html", urlVideo: "https://www.youtube.com/watch?v=YseF-WvMpgo" },
+            { no: 3, patternName: "May I", desc: "문장 꼬리물기 패턴 훈련", time: "12:25", urlText: "pattern_003.html", urlVideo: "https://www.youtube.com/watch?v=ExHTg45uoTY" },
+            { no: 4, patternName: "It is", desc: "문장 꼬리물기 패턴 훈련", time: "12:28", urlText: "pattern_004.html", urlVideo: "https://www.youtube.com/watch?v=_-m0Z9FvgM8" },
+            { no: 5, patternName: "Don’t", desc: "문장 꼬리물기 패턴 훈련", time: "13:05", urlText: "pattern_005.html", urlVideo: "https://www.youtube.com/watch?v=m2Y5GGtFNIc" },
+            { no: 6, patternName: "Let’s", desc: "문장 꼬리물기 패턴 훈련", time: "12:43", urlText: "pattern_006.html", urlVideo: "https://www.youtube.com/watch?v=GZxdb4ZkZtI" },
+            { no: 7, patternName: "Do you", desc: "문장 꼬리물기 패턴 훈련", time: "12:17", urlText: "pattern_007.html", urlVideo: "https://www.youtube.com/watch?v=1GdIWIOKR4M" },
+            { no: 8, patternName: "How is", desc: "문장 꼬리물기 패턴 훈련", time: "14:12", urlText: "pattern_008.html", urlVideo: "https://www.youtube.com/watch?v=XG466jtvrh4" },
+            { no: 9, patternName: "Please", desc: "문장 꼬리물기 패턴 훈련", time: "13:12", urlText: "pattern_009.html", urlVideo: "https://www.youtube.com/watch?v=Qst_LpDtpg4" },
+            { no: 10, patternName: "I think", desc: "문장 꼬리물기 패턴 훈련", time: "15:40", urlText: "pattern_010.html", urlVideo: "https://www.youtube.com/watch?v=9m9o3e8mB8c" },
+            { no: 11, patternName: "Can you", desc: "문장 꼬리물기 패턴 훈련", time: "12:29", urlText: "pattern_011.html", urlVideo: "https://www.youtube.com/watch?v=X4mcHM1QBf0" },
+            { no: 12, patternName: "Are you", desc: "문장 꼬리물기 패턴 훈련", time: "13:04", urlText: "pattern_012.html", urlVideo: "https://www.youtube.com/watch?v=ZitmeGEl_vw" },
+            { no: 13, patternName: "When is", desc: "문장 꼬리물기 패턴 훈련", time: "13:53", urlText: "pattern_013.html", urlVideo: "https://www.youtube.com/watch?v=vE1rZCbp1Y8" },
+            { no: 14, patternName: "How was", desc: "문장 꼬리물기 패턴 훈련", time: "13:59", urlText: "pattern_014.html", urlVideo: "https://www.youtube.com/watch?v=YVPdHyOmPng" },
+            { no: 15, patternName: "This is", desc: "문장 꼬리물기 패턴 훈련", time: "14:07", urlText: "pattern_015.html", urlVideo: "https://www.youtube.com/watch?v=VBWG-g1XsqA" },
+            { no: 16, patternName: "I’m sure", desc: "문장 꼬리물기 패턴 훈련", time: "14:05", urlText: "pattern_016.html", urlVideo: "https://www.youtube.com/watch?v=VUACnYkQV_A" },
+            { no: 17, patternName: "Where is", desc: "문장 꼬리물기 패턴 훈련", time: "12:56", urlText: "pattern_017.html", urlVideo: "https://www.youtube.com/watch?v=Htgnm3eA1P0" },
+            { no: 18, patternName: "Is there", desc: "문장 꼬리물기 패턴 훈련", time: "13:30", urlText: "pattern_018.html", urlVideo: "https://www.youtube.com/watch?v=VzAWUJ8FTO0" },
+            { no: 19, patternName: "Shall we", desc: "문장 꼬리물기 패턴 훈련", time: "13:15", urlText: "pattern_019.html", urlVideo: "https://www.youtube.com/watch?v=zgUzRZESymg" },
+            { no: 20, patternName: "I want to", desc: "문장 꼬리물기 패턴 훈련", time: "13:26", urlText: "pattern_020.html", urlVideo: "https://www.youtube.com/watch?v=Pyn-Rdfp6KA" },
+            { no: 21, patternName: "I need to", desc: "문장 꼬리물기 패턴 훈련", time: "13:46", urlText: "pattern_021.html", urlVideo: "https://www.youtube.com/watch?v=RcC4WqEi6Ts" },
+            { no: 22, patternName: "I have to", desc: "문장 꼬리물기 패턴 훈련", time: "13:13", urlText: "pattern_022.html", urlVideo: "https://www.youtube.com/watch?v=kqb3XiJY2HI" },
+            { no: 23, patternName: "I like to", desc: "문장 꼬리물기 패턴 훈련", time: "14:39", urlText: "pattern_023.html", urlVideo: "https://www.youtube.com/watch?v=vX9r5IgMeu0" },
+            { no: 24, patternName: "I hate to", desc: "문장 꼬리물기 패턴 훈련", time: "16:30", urlText: "pattern_024.html", urlVideo: "https://www.youtube.com/watch?v=rvBqWVeOg_c" },
+            { no: 25, patternName: "I hope to", desc: "문장 꼬리물기 패턴 훈련", time: "13:33", urlText: "pattern_025.html", urlVideo: "https://www.youtube.com/watch?v=Wkc9SHWJit0" },
+            { no: 26, patternName: "I used to", desc: "문장 꼬리물기 패턴 훈련", time: "13:38", urlText: "pattern_026.html", urlVideo: "https://www.youtube.com/watch?v=h8255wloZQ4" },
+            { no: 27, patternName: "Could you", desc: "문장 꼬리물기 패턴 훈련", time: "14:19", urlText: "pattern_027.html", urlVideo: "https://www.youtube.com/watch?v=ZxuU8ERrxbA" },
+            { no: 28, patternName: "How about", desc: "문장 꼬리물기 패턴 훈련", time: "13:40", urlText: "pattern_028.html", urlVideo: "https://www.youtube.com/watch?v=T6zhTEr1xq0" },
+            { no: 29, patternName: "I’m afraid", desc: "문장 꼬리물기 패턴 훈련", time: "16:07", urlText: "pattern_029.html", urlVideo: "https://www.youtube.com/watch?v=Gd_3LX0uDq4" },
+            { no: 30, patternName: "I remember", desc: "문장 꼬리물기 패턴 훈련", time: "14:59", urlText: "pattern_030.html", urlVideo: "https://www.youtube.com/watch?v=WektQcOHu8c" },
+            { no: 31, patternName: "That’s why", desc: "문장 꼬리물기 패턴 훈련", time: "14:52", urlText: "pattern_031.html", urlVideo: "https://www.youtube.com/watch?v=cTeZeojohSo" },
+            { no: 32, patternName: "What about", desc: "문장 꼬리물기 패턴 훈련", time: "14:58", urlText: "pattern_032.html", urlVideo: "https://www.youtube.com/watch?v=1byLSIJSnwg" },
+            { no: 33, patternName: "I’m good at", desc: "문장 꼬리물기 패턴 훈련", time: "15:49", urlText: "pattern_033.html", urlVideo: "https://www.youtube.com/watch?v=5UL97VaVeEI" },
+            { no: 34, patternName: "[1시간 연속듣기]", desc: "출퇴근길 편안한 마음으로 듣다보면 초보 탈출..!! 🎧| 왕초보 탈출 필수 영어패턴 5개 총정리 / I can, Can I, May I, It is, Don’t", time: "1:00:07", urlText: "pattern_034.html", urlVideo: "https://www.youtube.com/watch?v=bYZ1L47tlLY" },
+            { no: 35, patternName: "I’d like to", desc: "문장 꼬리물기 패턴 훈련", time: "15:33", urlText: "pattern_035.html", urlVideo: "https://www.youtube.com/watch?v=9oyKxpfdnb8" },
+            { no: 36, patternName: "I feel like", desc: "문장 꼬리물기 패턴 훈련", time: "14:31", urlText: "pattern_036.html", urlVideo: "https://www.youtube.com/watch?v=W60CE5M_ASM" },
+            { no: 37, patternName: "I forgot to", desc: "문장 꼬리물기 패턴 훈련", time: "16:26", urlText: "pattern_037.html", urlVideo: "https://www.youtube.com/watch?v=CtkSuJ_HdKE" },
+            { no: 38, patternName: "[ 1시간 연속듣기 ]", desc: "출퇴근길 편안한 마음으로 듣다보면 초보 탈출..!! 🎧| 왕초보 탈출 필수 영어패턴 5개 총정리 / Let’s, Do you, How is 등", time: "1:04:26", urlText: "pattern_038.html", urlVideo: "https://www.youtube.com/watch?v=qOQl0g5NyL4" },
+            { no: 39, patternName: "Do you like", desc: "문장 꼬리물기 패턴 훈련", time: "12:54", urlText: "pattern_039.html", urlVideo: "https://www.youtube.com/watch?v=Dqrr88CIoec" },
+            { no: 40, patternName: "Do you have", desc: "문장 꼬리물기 패턴 훈련", time: "10:55", urlText: "pattern_040.html", urlVideo: "https://www.youtube.com/watch?v=qXEVvZ6T5tE" },
+            { no: 41, patternName: "Do you need", desc: "문장 꼬리물기 패턴 훈련", time: "10:45", urlText: "pattern_041.html", urlVideo: "https://www.youtube.com/watch?v=wJA8ywOSmR4" },
+            { no: 42, patternName: "Do you know", desc: "문장 꼬리물기 패턴 훈련", time: "11:26", urlText: "pattern_042.html", urlVideo: "https://www.youtube.com/watch?v=El2ufNXYSd4" },
+            { no: 43, patternName: "Why are you", desc: "문장 꼬리물기 패턴 훈련", time: "11:30", urlText: "pattern_043.html", urlVideo: "https://www.youtube.com/watch?v=HMbsu0Zp01A" },
+            { no: 44, patternName: "There is no", desc: "문장 꼬리물기 패턴 훈련", time: "11:13", urlText: "pattern_044.html", urlVideo: "https://www.youtube.com/watch?v=w_rrkSSg7Cs" },
+            { no: 45, patternName: "I’m ready to", desc: "문장 꼬리물기 패턴 훈련", time: "11:00", urlText: "pattern_045.html", urlVideo: "https://www.youtube.com/watch?v=eQSBM6sbFH0" },
+            { no: 46, patternName: "I don’t like", desc: "문장 꼬리물기 패턴 훈련", time: "11:34", urlText: "pattern_046.html", urlVideo: "https://www.youtube.com/watch?v=AgmqaWeRNjA" },
+            { no: 47, patternName: "I decided to", desc: "문장 꼬리물기 패턴 훈련", time: "12:24", urlText: "pattern_047.html", urlVideo: "https://www.youtube.com/watch?v=l80MgXNSsZ0" },
+            { no: 48, patternName: "Are you sure", desc: "문장 꼬리물기 패턴 훈련", time: "11:36", urlText: "pattern_048.html", urlVideo: "https://www.youtube.com/watch?v=X6mAA8D3XIg" },
+            { no: 49, patternName: "What are you", desc: "문장 꼬리물기 패턴 훈련", time: "10:26", urlText: "pattern_049.html", urlVideo: "https://www.youtube.com/watch?v=04XYQnkTG4A" },
+            { no: 50, patternName: "It’s time to", desc: "문장 꼬리물기 패턴 훈련", time: "11:09", urlText: "pattern_050.html", urlVideo: "https://www.youtube.com/watch?v=kDxglhekYEA" },
+            { no: 51, patternName: "It’s hard to", desc: "문장 꼬리물기 패턴 훈련", time: "10:59", urlText: "pattern_051.html", urlVideo: "https://www.youtube.com/watch?v=093zUhT_9ao" },
+            { no: 52, patternName: "It’s easy to", desc: "문장 꼬리물기 패턴 훈련", time: "11:55", urlText: "pattern_052.html", urlVideo: "https://www.youtube.com/watch?v=sMyQB62dNOw" },
+            { no: 53, patternName: "딱10분..!!", desc: "빠르게 복습할수 있는 쇼츠 묶음 영상 - 필수 영어 패턴 훈련", time: "10:06", urlText: "pattern_053.html", urlVideo: "https://www.youtube.com/watch?v=UDt9ndutRm0" },
+            { no: 54, patternName: "It’s nice to", desc: "문장 꼬리물기 패턴 훈련", time: "11:16", urlText: "pattern_054.html", urlVideo: "https://www.youtube.com/watch?v=nmIzd4Mi2Fw" },
+            { no: 55, patternName: "I’m sorry for", desc: "문장 꼬리물기 패턴 훈련", time: "11:49", urlText: "pattern_055.html", urlVideo: "https://www.youtube.com/watch?v=mFz1W5cynKo" },
+            { no: 56, patternName: "I don’t think", desc: "문장 꼬리물기 패턴 훈련", time: "12:15", urlText: "pattern_056.html", urlVideo: "https://www.youtube.com/watch?v=yOvUTXsw0dU" },
+            { no: 57, patternName: "I promised to", desc: "문장 꼬리물기 패턴 훈련", time: "12:21", urlText: "pattern_057.html", urlVideo: "https://www.youtube.com/watch?v=9LAk6thTpdU" },
+            { no: 58, patternName: "I know how to", desc: "문장 꼬리물기 패턴 훈련", time: "11:02", urlText: "pattern_058.html", urlVideo: "https://www.youtube.com/watch?v=A9az263ydOo" },
+            { no: 59, patternName: "That’s what i", desc: "문장 꼬리물기 패턴 훈련", time: "10:36", urlText: "pattern_059.html", urlVideo: "https://www.youtube.com/watch?v=mWAL5SzpMkE" },
+            { no: 60, patternName: "Why don’t you", desc: "문장 꼬리물기 패턴 훈련", time: "11:18", urlText: "pattern_060.html", urlVideo: "https://www.youtube.com/watch?v=7OdFmYekktA" },
+            { no: 61, patternName: "Thank you for", desc: "문장 꼬리물기 패턴 훈련", time: "11:28", urlText: "pattern_061.html", urlVideo: "https://www.youtube.com/watch?v=paGx-1NQlJg" },
+            { no: 62, patternName: "I wish I could", desc: "문장 꼬리물기 패턴 훈련", time: "12:51", urlText: "pattern_062.html", urlVideo: "https://www.youtube.com/watch?v=e13w9y88p1E" },
+            { no: 63, patternName: "Do you want to", desc: "문장 꼬리물기 패턴 훈련", time: "10:07", urlText: "pattern_063.html", urlVideo: "https://www.youtube.com/watch?v=ShJZx8A6eq4" },
+            { no: 64, patternName: "I’m looking for", desc: "문장 꼬리물기 패턴 훈련", time: "12:12", urlText: "pattern_064.html", urlVideo: "https://www.youtube.com/watch?v=J3UKimFv5kE" },
+            { no: 65, patternName: "I can’t wait to", desc: "문장 꼬리물기 패턴 훈련", time: "11:23", urlText: "pattern_065.html", urlVideo: "https://www.youtube.com/watch?v=nCiBoVT462U" },
+            { no: 66, patternName: "I’m thinking of", desc: "문장 꼬리물기 패턴 훈련", time: "13:21", urlText: "pattern_066.html", urlVideo: "https://www.youtube.com/watch?v=2WkKLlHHqIk" },
+            { no: 67, patternName: "I’m planning to", desc: "문장 꼬리물기 패턴 훈련", time: "11:59", urlText: "pattern_067.html", urlVideo: "https://www.youtube.com/watch?v=W4QExkKDETw" },
+            { no: 68, patternName: "Is it okay if I", desc: "문장 꼬리물기 패턴 훈련", time: "11:19", urlText: "pattern_068.html", urlVideo: "https://www.youtube.com/watch?v=HsLod1VK-xI" },
+            { no: 69, patternName: "Are you ready to", desc: "문장 꼬리물기 패턴 훈련", time: "8:44", urlText: "pattern_069.html", urlVideo: "https://www.youtube.com/watch?v=z6eTiPxi7KM" },
+            { no: 70, patternName: "I’m interested in", desc: "문장 꼬리물기 패턴 훈련", time: "12:54", urlText: "pattern_070.html", urlVideo: "https://www.youtube.com/watch?v=RI2ydNWFs40" },
+            { no: 71, patternName: "It’s important to", desc: "문장 꼬리물기 패턴 훈련", time: "11:53", urlText: "pattern_071.html", urlVideo: "https://www.youtube.com/watch?v=RHN_p4po1Lg" },
+            { no: 72, patternName: "Do you know how to", desc: "문장 꼬리물기 패턴 훈련", time: "11:19", urlText: "pattern_072.html", urlVideo: "https://www.youtube.com/watch?v=1NAzXGIeP_M" },
+            { no: 73, patternName: "What if", desc: "문장 꼬리물기 패턴 훈련", time: "11:08", urlText: "pattern_073.html", urlVideo: "https://www.youtube.com/watch?v=zpE3Jv5sGJY" },
+            { no: 74, patternName: "How do I", desc: "문장 꼬리물기 패턴 훈련", time: "11:28", urlText: "pattern_074.html", urlVideo: "https://www.youtube.com/watch?v=gsF_Mx4gdgo" },
+            { no: 75, patternName: "How come", desc: "문장 꼬리물기 패턴 훈련", time: "10:47", urlText: "pattern_075.html", urlVideo: "https://www.youtube.com/watch?v=_vscRzW6xSs" },
+            { no: 76, patternName: "I’ve been", desc: "문장 꼬리물기 패턴 훈련", time: "11:20", urlText: "pattern_076.html", urlVideo: "https://www.youtube.com/watch?v=EvaTs7dgVIA" },
+            { no: 77, patternName: "I’m used to", desc: "문장 꼬리물기 패턴 훈련", time: "12:28", urlText: "pattern_077.html", urlVideo: "https://www.youtube.com/watch?v=AD8lJ1xUiNg" },
+            { no: 78, patternName: "I wonder if", desc: "문장 꼬리물기 패턴 훈련", time: "11:29", urlText: "pattern_078.html", urlVideo: "https://www.youtube.com/watch?v=M-bYXLg39E0" },
+            { no: 79, patternName: "I’m here to", desc: "문장 꼬리물기 패턴 훈련", time: "10:54", urlText: "pattern_079.html", urlVideo: "https://www.youtube.com/watch?v=QHpIr_gmceo" },
+            { no: 80, patternName: "I’m about to", desc: "문장 꼬리물기 패턴 훈련", time: "11:29", urlText: "pattern_080.html", urlVideo: "https://www.youtube.com/watch?v=-kXjtF35LUs" },
+            { no: 81, patternName: "I don’t mind", desc: "문장 꼬리물기 패턴 훈련", time: "9:28", urlText: "pattern_081.html", urlVideo: "https://www.youtube.com/watch?v=wip4M4kSz9k" },
+            { no: 82, patternName: "What kind of", desc: "문장 꼬리물기 패턴 훈련", time: "11:56", urlText: "pattern_082.html", urlVideo: "https://www.youtube.com/watch?v=hf3YXdBrBck" },
+            { no: 83, patternName: "Whatever you", desc: "문장 꼬리물기 패턴 훈련", time: "13:02", urlText: "pattern_083.html", urlVideo: "https://www.youtube.com/watch?v=1_8B17umnHk" },
+            { no: 84, patternName: "Whenever you", desc: "문장 꼬리물기 패턴 훈련", time: "11:53", urlText: "pattern_084.html", urlVideo: "https://www.youtube.com/watch?v=DltCdZOkqtA" },
+            { no: 85, patternName: "Wherever you", desc: "문장 꼬리물기 패턴 훈련", time: "13:22", urlText: "pattern_085.html", urlVideo: "https://www.youtube.com/watch?v=JC0kqj10H6A" },
+            { no: 86, patternName: "You’d better", desc: "문장 꼬리물기 패턴 훈련", time: "11:37", urlText: "pattern_086.html", urlVideo: "https://www.youtube.com/watch?v=qpyzPecgplw" },
+            { no: 87, patternName: "Make sure to", desc: "문장 꼬리물기 패턴 훈련", time: "12:13", urlText: "pattern_087.html", urlVideo: "https://www.youtube.com/watch?v=lWdhHzHWaBA" },
+            { no: 88, patternName: "Feel free to", desc: "문장 꼬리물기 패턴 훈련", time: "12:01", urlText: "pattern_088.html", urlVideo: "https://www.youtube.com/watch?v=3cbnzGhhmB8" },
+            { no: 89, patternName: "Let me check", desc: "문장 꼬리물기 패턴 훈련", time: "11:27", urlText: "pattern_089.html", urlVideo: "https://www.youtube.com/watch?v=WRiFQlwrkq8" },
+            { no: 90, patternName: "It looks like", desc: "문장 꼬리물기 패턴 훈련", time: "11:36", urlText: "pattern_090.html", urlVideo: "https://www.youtube.com/watch?v=fAPgVurbtdM" },
+            { no: 91, patternName: "It seems like", desc: "문장 꼬리물기 패턴 훈련", time: "11:56", urlText: "pattern_091.html", urlVideo: "https://www.youtube.com/watch?v=CiLOPVsbsJI" },
+            { no: 92, patternName: "It doesn’t seem like", desc: "문장 꼬리물기 패턴 훈련", time: "11:50", urlText: "pattern_092.html", urlVideo: "https://www.youtube.com/watch?v=SyQQlbnLI9w" }
+        ];
+
+        const grid = document.getElementById('patternGrid');
+        const loadMoreBtn = document.getElementById('loadMoreContainer');
+        
+        let displayCount = 24; 
+        let currentData = patternData; 
+
+        function renderPatterns(data, limit) {
+            grid.innerHTML = ''; 
+            const itemsToShow = data.slice(0, limit);
+            
+            itemsToShow.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div>
+                        <div class="card-top">
+                            <span class="card-no">No. ${String(item.no).padStart(2, '0')}</span>
+                            <span class="card-time">⏱ ${item.time}</span>
+                        </div>
+                        <h3 class="pattern-name">${item.patternName}</h3>
+                        <p class="pattern-desc">${item.desc}</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="${item.urlText}" class="action-link">텍스트 학습</a>
+                        <a href="${item.urlVideo}" target="_blank" class="action-link video">영상 시청 ↗</a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            if (data.length > limit) {
+                loadMoreBtn.classList.remove('hidden');
+            } else {
+                loadMoreBtn.classList.add('hidden');
+            }
+        }
+
+        renderPatterns(currentData, displayCount);
+
+        function loadMore() {
+            displayCount += 24; 
+            renderPatterns(currentData, displayCount);
+        }
+
+        function filterPatterns() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            
+            if(query === "") {
+                currentData = patternData;
+                displayCount = 24;
+            } else {
+                currentData = patternData.filter(item => 
+                    item.patternName.toLowerCase().includes(query) || 
+                    item.desc.toLowerCase().includes(query)
+                );
+                displayCount = currentData.length; 
+            }
+            renderPatterns(currentData, displayCount);
+        }
+    </script>
+</body>
+</html>
