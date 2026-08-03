@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">패턴 로딩중...</title>
+
+    <script>
+    // =====================================================
+    // ★ C#이 이 DATA 블록만 통째로 교체합니다 ★
+    // ★ 이 블록 외에는 절대 수정하지 마세요 ★
+    // =====================================================
+    const DATA = {
+    patternNo    : "17",
+    patternTitle : "Where is",
+    meaning      : "~가 어디인가요?",
+    desc         : "이번에는 Where is 뒤에 명사를 추가하는 패턴입니다.<br>\"무엇 무엇이 어디인가요?\"라고 위치를 묻는 문장을 연습합니다.<br>그럼 시작해 볼까요?",
+    youtubeUrl   : "https://www.youtube.com/watch?v=Htgnm3eA1P0",
+    grammarPoint : "<strong>Where is</strong>는 특정 장소나 사물의 위치를 묻는 의문문 패턴으로, <strong>Where + be동사 + 주어</strong> 어순을 따릅니다.<br>단순한 위치 질문뿐 아니라 <strong>문제의 원인이나 출처</strong>를 찾을 때도 폭넓게 활용할 수 있습니다.",
+
+    examples: [
+        {   // 01
+            s1_eng : "Where is the restroom?",
+            s1_kor : "화장실이 어디에 있나요?",
+            s2_s1  : "Where is the restroom,",
+            s2_s2  : "excuse me?",
+            s2_kor : "죄송하지만, 화장실이 어디에 있나요?",
+            s3_s1  : "Where is the restroom,",
+            s3_s2  : "excuse me,",
+            s3_s3  : "because I really need to go?",
+            s3_kor : "죄송하지만, 제가 급해서 화장실이 어디에 있는지 알려주실 수 있나요?",
+            voca   : "<strong>excuse</strong> me 실례합니다 <span class=\'voca-sep\'>|</span> <strong>really</strong> need to 꼭 ~해야 하다"
+        },
+        {   // 02
+            s1_eng : "Where is the station?",
+            s1_kor : "역이 어디에 있나요?",
+            s2_s1  : "Where is the station",
+            s2_s2  : "with the big clock tower?",
+            s2_kor : "큰 시계탑이 있는 역이 어디에 있나요?",
+            s3_s1  : "Where is the station",
+            s3_s2  : "with the big clock tower,",
+            s3_s3  : "which is our meeting point?",
+            s3_kor : "큰 시계탑이 있는 역이 어디에 있나요, 그곳이 저희 만남의 장소라서요?",
+            voca   : "<strong>meeting</strong> point 만남의 장소 <span class=\'voca-sep\'>|</span> <strong>clock</strong> tower 시계탑"
+        },
+        {   // 03
+            s1_eng : "Where is the remote?",
+            s1_kor : "리모컨이 어디에 있나요?",
+            s2_s1  : "Where is the remote",
+            s2_s2  : "that was on the couch?",
+            s2_kor : "소파 위에 있던 리모컨이 어디에 있나요?",
+            s3_s1  : "Where is the remote",
+            s3_s2  : "that was on the couch",
+            s3_s3  : "just a moment ago?",
+            s3_kor : "방금 전까지 소파 위에 있던 리모컨은 어디에 있나요?",
+            voca   : "<strong>a</strong> moment ago 방금 전에 <span class=\'voca-sep\'>|</span> <strong>couch</strong> 소파"
+        },
+        {   // 04
+            s1_eng : "Where is the issue coming from?",
+            s1_kor : "문제가 어디서 발생하고 있나요?",
+            s2_s1  : "Where is the issue coming from",
+            s2_s2  : "within the new system?",
+            s2_kor : "새로운 시스템 내에서 문제가 어디서 발생하고 있나요?",
+            s3_s1  : "Where is the issue coming from",
+            s3_s2  : "within the new system,",
+            s3_s3  : "so we can investigate it immediately?",
+            s3_kor : "우리가 즉시 조사할 수 있도록 새로운 시스템 내에서 문제가 어디서 발생하고 있나요?",
+            voca   : "<strong>investigate</strong> 조사하다 <span class=\'voca-sep\'>|</span> <strong>immediately</strong> 즉시"
+        },
+        {   // 05
+            s1_eng : "Where is the hotel?",
+            s1_kor : "호텔은 어디에 있나요?",
+            s2_s1  : "Where is the hotel",
+            s2_s2  : "with the rooftop pool?",
+            s2_kor : "옥상 수영장이 있는 호텔은 어디에 있나요?",
+            s3_s1  : "Where is the hotel",
+            s3_s2  : "with the rooftop pool",
+            s3_s3  : "that everyone recommended?",
+            s3_kor : "모두가 추천했던 옥상 수영장이 있는 호텔은 어디에 있나요?",
+            voca   : "<strong>rooftop</strong> 옥상 <span class=\'voca-sep\'>|</span> <strong>recommend</strong> 추천하다"
+        },
+        {   // 06
+            s1_eng : "Where is the best place",
+            s1_kor : "어디가 가장 좋은 장소인가요?",
+            s2_s1  : "Where is the best place",
+            s2_s2  : "to take photos?",
+            s2_kor : "사진을 찍기에 어디가 가장 좋은 장소인가요?",
+            s3_s1  : "Where is the best place",
+            s3_s2  : "to take photos",
+            s3_s3  : "of the sunset?",
+            s3_kor : "일몰 사진을 찍기에 어디가 가장 좋은 장소인가요?",
+            voca   : "<strong>take</strong> photos 사진을 찍다 <span class=\'voca-sep\'>|</span> <strong>sunset</strong> 일몰"
+        },
+        {   // 07
+            s1_eng : "Where is the manager?",
+            s1_kor : "매니저 어디 있어요?",
+            s2_s1  : "Where is the manager",
+            s2_s2  : "of this coffee shop?",
+            s2_kor : "이 커피숍 매니저는 어디 있어요?",
+            s3_s1  : "Where is the manager",
+            s3_s2  : "of this coffee shop",
+            s3_s3  : "because I need to complain about my order?",
+            s3_kor : "이 커피숍 매니저는 어디 있어요? 주문한 것에 대해 불만을 얘기해야 해서요.",
+            voca   : "<strong>complain</strong> 불만을 제기하다 <span class=\'voca-sep\'>|</span> <strong>order</strong> 주문"
+        },
+        {   // 08
+            s1_eng : "Where is the restaurant?",
+            s1_kor : "식당이 어디예요?",
+            s2_s1  : "Where is the restaurant",
+            s2_s2  : "we\'re going to tonight?",
+            s2_kor : "오늘 밤에 갈 식당이 어디예요?",
+            s3_s1  : "Where is the restaurant",
+            s3_s2  : "we\'re going to tonight,",
+            s3_s3  : "because I need to check the parking situation?",
+            s3_kor : "오늘 밤에 갈 식당이 어디예요, 주차 상황을 확인해야 해서요?",
+            voca   : "<strong>parking</strong> situation 주차 상황 <span class=\'voca-sep\'>|</span> <strong>because</strong> ~때문에"
+        },
+        {   // 09
+            s1_eng : "Where is the hospital?",
+            s1_kor : "병원이 어디예요?",
+            s2_s1  : "Where is the hospital",
+            s2_s2  : "near here?",
+            s2_kor : "이 근처에 병원이 어디인가요?",
+            s3_s1  : "Where is the hospital",
+            s3_s2  : "near here",
+            s3_s3  : "because my friend hurt her ankle?",
+            s3_kor : "제 친구가 발목을 다쳐서 그러는데, 이 근처에 병원이 어디인가요?",
+            voca   : "<strong>hurt</strong> 다치다 <span class=\'voca-sep\'>|</span> <strong>ankle</strong> 발목"
+        },
+        {   // 10
+            s1_eng : "Where is the bottleneck",
+            s1_kor : "병목 현상이 어디에 있나요?",
+            s2_s1  : "Where is the bottleneck",
+            s2_s2  : "in the production line?",
+            s2_kor : "생산 라인에서 병목 현상이 어디에 있나요?",
+            s3_s1  : "Where is the bottleneck",
+            s3_s2  : "in the production line,",
+            s3_s3  : "causing these delays in delivery?",
+            s3_kor : "배송 지연을 유발하는 생산 라인에서 병목 현상이 어디에 있나요?",
+            voca   : "<strong>bottleneck</strong> 병목 현상 <span class=\'voca-sep\'>|</span> <strong>production</strong> line 생산 라인 <span class=\'voca-sep\'>|</span> <strong>delay</strong> 지연"
+        }
+    ],
+
+    dialogueA_eng : "I can\'t find the exit anywhere.",
+    dialogueA_kor : "출구를 도저히 못 찾겠어요.",
+    dialogueB_eng : "Where is the exit sign on this floor?",
+    dialogueB_kor : "이 층에 출구 표지판이 어디에 있나요?"
+};
+    // =====================================================
+    // ★ 이 아래는 렌더링 엔진 — 절대 수정하지 마세요 ★
+    // =====================================================
+    </script>
+
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        :root {
+            --primary:#1F2937; --secondary:#4F46E5; --border-color:#E5E7EB;
+            
+            /* [조합 1 적용] 화면과 인쇄가 일치하는 인쇄 안전 색상 세팅 */
+            --c-step1:#000000; /* 1단계: 순수 검정 */
+            --c-step2:#C2185B; /* 2단계: 클래식 마젠타 */
+            --c-step3:#0F9D58; /* 3단계: 딥 그린 */
+        }
+        @page { size:A4; margin:0; }
+        
+        body { 
+            font-family:'Pretendard',sans-serif; margin:0; padding:20px 0; background-color:#555; 
+            display:flex; flex-direction:column; align-items:center; gap:20px; 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale; 
+            text-rendering: optimizeLegibility; 
+        }
+        
+        .page-container { width:210mm; height:297mm; background-color:#FFF; box-sizing:border-box; padding:12mm 15mm; display:flex; flex-direction:column; box-shadow:0 10px 25px rgba(0,0,0,0.3); page-break-after:always; position:relative; }
+        
+        .header { display:flex; justify-content:space-between; align-items:center; margin-bottom:2.5mm; border-bottom:2px solid var(--primary); padding-bottom:3mm; flex-shrink:0; }
+        .header-left { display:flex; flex-direction:column; justify-content:center; flex:1; padding-right:15px; } 
+        .day-badge { background-color:var(--primary); color:white; padding:4px 16px; border-radius:20px; font-size:17px; font-weight:800; letter-spacing:1px; margin-bottom:8px; width:fit-content; }
+        
+        .pattern-title   { font-size:38px; font-weight:900; color:var(--primary); margin:0 0 6px 0; line-height:1; }
+        .pattern-meaning { font-size:24px; font-weight:700; color:var(--secondary); margin:0; line-height:1.2; letter-spacing:-0.5px; word-break:keep-all; }
+        
+        .header-right { display:flex; align-items:center; padding-top:0; flex-shrink:0; }
+        .qr-link-box { text-decoration:none; display:flex; transition:transform 0.2s; }
+        .qr-link-box:hover { transform:scale(1.02); }
+        .qr-box { display:grid; grid-template-columns:auto 15mm; grid-template-rows:auto 15mm; column-gap:6px; row-gap:3px; align-items:end; background:#F8FAFC; padding:6px 8px; border:1px solid var(--border-color); border-radius:8px; box-sizing:border-box; }
+        
+        .qr-top-text { grid-column:2; grid-row:1; font-size:12px; font-weight:800; color:var(--secondary); text-align:center; letter-spacing:-0.5px; line-height:1;}
+        .qr-left-text { grid-column:1; grid-row:2; font-size:11px; font-weight:800; color:var(--secondary); text-align:right; line-height:1.3; letter-spacing:-0.5px; align-self:center; }
+        .qr-image { grid-column:2; grid-row:2; width:15mm; height:15mm; border:1px solid var(--border-color); padding:2px; background-color:#fff; margin:0; box-sizing:border-box; }
+        
+        .grammar-prep { background-color:#FFFBEB; border-left:4px solid #F59E0B; padding:10px 14px; border-radius:6px; margin-bottom:2.5mm; font-size:15.5px; font-weight:500; color:#374155; display:flex; flex-direction:column; gap:5px; line-height:1.65; flex-shrink:0; word-break:keep-all; }
+        .grammar-prep-title { font-weight:800; color:#D97706; font-size:16px; }
+
+        .mini-header { border-bottom:2px solid var(--border-color); margin-bottom:3.5mm; padding-bottom:3mm; display:flex; justify-content:space-between; align-items:center; flex-shrink:0; }
+        .mini-title { font-size:19px; font-weight:800; color:var(--primary); }
+        .table-container { width:100%; border:1px solid var(--border-color); border-radius:10px; overflow:hidden; flex-grow:1; display:flex; flex-direction:column; }
+        .table-header { display:flex; flex-shrink:0; }
+        .th-no { background-color:#E0E7FF; color:#1E3A5F; width:6%; text-align:center; padding:8px 0; font-size:13.5px; font-weight:800; flex-shrink:0; }
+        .th-content { background-color:#EFF6FF; color:#1E3A5F; flex:1; text-align:left; padding:8px 12px; font-size:13.5px; font-weight:800; letter-spacing:0.3px; }
+        
+        .ex-row { display:flex; flex:1; border-top:1px solid var(--border-color); }
+        .ex-row:nth-child(even) .ex-content { background-color:#F8FAFC; }
+        .td-no { width:6%; flex-shrink:0; text-align:center; font-weight:800; color:#9CA3AF; font-size:15px; display:flex; align-items:center; justify-content:center; border-right:1px solid #F3F4F6; }
+        .ex-content { flex:1; padding:9px 14px; display:flex; flex-direction:column; justify-content:center; }
+        
+        .line-inline { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px; margin-bottom:2px; }
+        .line-block  { margin-bottom:2px; }
+        
+        .eng-text { font-size:16px; font-weight:700; word-break:keep-all; }
+        .kor-text { font-size:13.5px; font-weight:500; color:#4B5563; word-break:keep-all; }
+        
+        .c-s1 { color:var(--c-step1); } .c-s2 { color:var(--c-step2); } .c-s3 { color:var(--c-step3); }
+        .inline-voca { display:inline-block; margin-top:5px; background-color:rgba(0,0,0,0.04); padding:3px 8px; border-radius:4px; font-size:13px; color:#334155; line-height:1.35; font-weight:500; }
+        .inline-voca strong { color:#0F172A; font-weight:700; }
+        .voca-sep { color:#CBD5E1; margin:0 5px; }
+        
+        .footer { margin-top:4mm; height:32mm; flex-shrink:0; display:flex; gap:15px; }
+        .tip-box { flex-grow:1; background-color:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; padding:12px 16px; display:flex; flex-direction:column; justify-content:center; }
+        .tip-title { font-size:15.5px; font-weight:800; color:var(--secondary); margin-bottom:6px; }
+        .tip-content { font-size:15.5px; color:#333; font-weight:500; line-height:1.6; }
+        .dialogue-box { display:grid; grid-template-columns:24px 1fr; gap:6px; margin-top:2px; }
+        .dialogue-speaker { font-weight:800; color:var(--primary); font-size:16px; }
+        .dialogue-text { color:#1F2937; font-size:16px; font-weight:700; }
+        
+        .page-number { font-size:12.5px; color:#9CA3AF; text-align:center; font-weight:500; margin-top:auto; padding-top:10px; letter-spacing:1px; }
+
+        #tbody-p1, #tbody-p2 { display:contents; }
+        
+        @media print {
+            @page { size:A4; margin:0; }
+            body { padding:0!important; margin:0!important; gap:0!important; background-color:#FFF!important; }
+            .page-container { box-shadow:none!important; margin:0!important; height:296.5mm!important; page-break-after:always!important; page-break-inside:avoid!important; overflow:hidden!important; }
+            .page-container:last-child { page-break-after:auto!important; }
+            
+            .pattern-title, .eng-text, .dialogue-speaker, .dialogue-text { color: #000000 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page-container">
+    <div class="header">
+        <div class="header-left">
+            <div class="day-badge" id="badge"></div>
+            <h1 class="pattern-title" id="title"></h1>
+            <p class="pattern-meaning" id="meaning"></p>
+        </div>
+        <div class="header-right">
+            <a id="qr-link" href="#" target="_blank" class="qr-link-box">
+                <div class="qr-box">
+                    <div class="qr-top-text">영상 강의</div>
+                    <div class="qr-left-text">클릭<br>또는<br>스캔</div>
+                    <img id="qr-img" class="qr-image" src="" alt="QR Code">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="grammar-prep">
+        <div class="grammar-prep-title">※ Grammar Point</div>
+        <div id="grammar"></div>
+    </div>
+    <div class="table-container">
+        <div class="table-header">
+            <div class="th-no">번호</div>
+            <!-- [수정됨] 화살표를 플러스 기호로 바꾸고 각 단계별 색상 적용 -->
+            <div class="th-content">
+                <span class="c-s1">짧게 말하기(초급)</span> &nbsp;+&nbsp; 
+                <span class="c-s2">확장해서 말하기(중급)</span> &nbsp;+&nbsp; 
+                <span class="c-s3">더 추가해서 말하기(고급)</span>
+            </div>
+        </div>
+        <div id="tbody-p1"></div>
+    </div>
+    
+    <div class="page-number" id="page-num-1"></div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page-container">
+    <div class="mini-header">
+        <div class="mini-title" id="mini-title"></div>
+        <div id="mini-sub" style="font-size:13.5px;color:#6B7280;font-weight:700;"></div>
+    </div>
+    <div class="table-container">
+        <div id="tbody-p2"></div>
+    </div>
+    <div class="footer">
+        <div class="tip-box">
+            <div class="tip-title">💬 실전 롤플레이 (Mini Dialogue)</div>
+            <div class="tip-content">
+                <div class="dialogue-box">
+                    <div class="dialogue-speaker">A:</div>
+                    <div class="dialogue-text" id="dlg-a"></div>
+                    <div class="dialogue-speaker">B:</div>
+                    <div class="dialogue-text" id="dlg-b"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page-number" id="page-num-2"></div>
+</div>
+
+<!-- 렌더링 엔진 -->
+<script>
+(function() {
+    document.getElementById('page-title').textContent = `패턴 ${DATA.patternNo} - ${DATA.patternTitle}`;
+    document.getElementById('badge').textContent   = `패턴 ${DATA.patternNo}`;
+    document.getElementById('title').textContent   = DATA.patternTitle;
+    document.getElementById('meaning').textContent = DATA.meaning;
+    
+    document.getElementById('qr-link').href        = DATA.youtubeUrl;
+    document.getElementById('qr-img').src          = `https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(DATA.youtubeUrl)}`;
+    
+    document.getElementById('grammar').innerHTML   = DATA.grammarPoint;
+    document.getElementById('mini-title').textContent = `패턴 ${DATA.patternNo} - 추가 예문으로 확실하게 내 것 만들기`;
+    document.getElementById('mini-sub').textContent   = DATA.patternTitle;
+
+    let pNo = parseInt(DATA.patternNo);
+    if(!isNaN(pNo)) {
+        document.getElementById('page-num-1').textContent = `- ${(pNo * 2) - 1} -`;
+        document.getElementById('page-num-2').textContent = `- ${pNo * 2} -`;
+    }
+
+    function buildRow(ex, no) {
+        const num = String(no).padStart(2, '0');
+        return `
+        <div class="ex-row">
+            <div class="td-no">${num}</div>
+            <div class="ex-content">
+                <div class="line-inline">
+                    <div class="eng-text"><span class="c-s1">${ex.s1_eng}</span></div>
+                    <div class="kor-text">${ex.s1_kor}</div>
+                </div>
+                <div class="line-inline">
+                    <div class="eng-text">
+                        <span class="c-s1">${ex.s2_s1}</span>
+                        <span class="c-s2"> ${ex.s2_s2}</span>
+                    </div>
+                    <div class="kor-text">${ex.s2_kor}</div>
+                </div>
+                <div class="line-block">
+                    <div class="eng-text">
+                        <span class="c-s1">${ex.s3_s1}</span>
+                        <span class="c-s2"> ${ex.s3_s2}</span>
+                        <span class="c-s3"> ${ex.s3_s3}</span>
+                    </div>
+                    <div class="kor-text" style="margin-bottom:2px;">${ex.s3_kor}</div>
+                </div>
+                <div class="inline-voca">${ex.voca}</div>
+            </div>
+        </div>`;
+    }
+
+    let p1html = '';
+    for (let i = 0; i < 5; i++) p1html += buildRow(DATA.examples[i], i + 1);
+    document.getElementById('tbody-p1').innerHTML = p1html;
+
+    let p2html = '';
+    for (let i = 5; i < 10; i++) p2html += buildRow(DATA.examples[i], i + 1);
+    document.getElementById('tbody-p2').innerHTML = p2html;
+
+    document.getElementById('dlg-a').innerHTML =
+        `${DATA.dialogueA_eng} <span style="color:#6B7280;font-size:13.5px;font-weight:500;margin-left:6px;">(${DATA.dialogueA_kor})</span>`;
+    document.getElementById('dlg-b').innerHTML =
+        `${DATA.dialogueB_eng} <span style="color:#6B7280;font-size:13.5px;font-weight:500;margin-left:6px;">(${DATA.dialogueB_kor})</span>`;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">패턴 로딩중...</title>
+
+    <script>
+    // =====================================================
+    // ★ C#이 이 DATA 블록만 통째로 교체합니다 ★
+    // ★ 이 블록 외에는 절대 수정하지 마세요 ★
+    // =====================================================
+    const DATA = {
+    patternNo    : "16",
+    patternTitle : "I’m sure",
+    meaning      : "확실히 ~예요",
+    desc         : "이번에는 I am sure 뒤에 문장을 추가하는 패턴입니다.<br>\"확실히 무엇 무엇이에요\"라고 확신하는 내용을 넣는 문장을 연습합니다.<br>그럼 시작해 볼까요?",
+    youtubeUrl   : "https://www.youtube.com/watch?v=VUACnYkQV_A",
+    grammarPoint : "\'I\'m sure\'는 <strong>화자의 강한 확신이나 믿음</strong>을 표현할 때 사용하는 패턴이에요.<br>뒤에 <strong>명사(of + 명사)</strong> 또는 <strong>that절/주어+동사</strong>를 이어 붙여 확신의 내용을 구체적으로 말할 수 있어요.<br>단순한 추측보다 훨씬 강한 확신을 나타내며, 상대방을 <strong>안심시키거나 격려할 때</strong>도 자주 쓰여요.",
+
+    examples: [
+        {   // 01
+            s1_eng : "I’m sure of it.",
+            s1_kor : "나는 그것을 확신해요.",
+            s2_s1  : "I\'m sure of it,",
+            s2_s2  : "this movie will win the award.",
+            s2_kor : "확신해요, 이 영화가 상을 받을 거예요.",
+            s3_s1  : "I\'m sure of it,",
+            s3_s2  : "this movie will win the award,",
+            s3_s3  : "because the director\'s vision is brilliant.",
+            s3_kor : "확신해요, 이 영화가 상을 받을 거예요, 감독의 비전이 훌륭하거든요.",
+            voca   : "<strong>award</strong> 상, 수상 <span class=\'voca-sep\'>|</span> <strong>brilliant</strong> 훌륭한, 뛰어난"
+        },
+        {   // 02
+            s1_eng : "I’m sure of success.",
+            s1_kor : "나는 성공을 확신해요.",
+            s2_s1  : "I\'m sure of success",
+            s2_s2  : "with this laundry method.",
+            s2_kor : "저는 이 세탁 방법으로 성공할 거라고 확신해요.",
+            s3_s1  : "I\'m sure of success",
+            s3_s2  : "with this laundry method",
+            s3_s3  : "because it removes all the stains.",
+            s3_kor : "저는 이 세탁 방법으로 성공할 거라고 확신해요 왜냐하면 얼룩을 다 제거하거든요.",
+            voca   : "<strong>remove</strong> 제거하다 <span class=\'voca-sep\'>|</span> <strong>stain</strong> 얼룩"
+        },
+        {   // 03
+            s1_eng : "I’m sure he will come.",
+            s1_kor : "나는 그가 올 거라고 확신해요.",
+            s2_s1  : "I\'m sure he will come",
+            s2_s2  : "to the meeting tomorrow.",
+            s2_kor : "내일 회의에 그가 올 거라고 확신해요.",
+            s3_s1  : "I\'m sure he will come",
+            s3_s2  : "to the meeting tomorrow",
+            s3_s3  : "even though he\'s very busy.",
+            s3_kor : "내일 회의에 그가 올 거라고 확신해요, 비록 그가 매우 바쁘긴 하지만요.",
+            voca   : "<strong>even</strong> though 비록 ~이지만 <span class=\'voca-sep\'>|</span> <strong>meeting</strong> 회의"
+        },
+        {   // 04
+            s1_eng : "I’m sure we will win.",
+            s1_kor : "우리는 분명히 이길 거야.",
+            s2_s1  : "I’m sure we will win",
+            s2_s2  : "this game.",
+            s2_kor : "우리는 이번 경기에서 분명히 이길 거야.",
+            s3_s1  : "I’m sure we will win",
+            s3_s2  : "this game",
+            s3_s3  : "due to our hard work.",
+            s3_kor : "우리의 노력 덕분에 이번 경기에서 분명히 이길 거야.",
+            voca   : "<strong>due</strong> to ~ 덕분에, ~ 때문에 <span class=\'voca-sep\'>|</span> <strong>hard</strong> work 노력, 열심히 한 일"
+        },
+        {   // 05
+            s1_eng : "I’m sure it is true.",
+            s1_kor : "저는 그것이 사실이라고 확신합니다.",
+            s2_s1  : "I’m sure it is true,",
+            s2_s2  : "after checking all the facts carefully.",
+            s2_kor : "모든 사실을 신중하게 확인한 후에, 저는 그것이 사실이라고 확신합니다.",
+            s3_s1  : "I’m sure it is true,",
+            s3_s2  : "after checking all the facts carefully",
+            s3_s3  : "with the team this morning.",
+            s3_kor : "오늘 아침 팀과 함께 모든 사실을 신중하게 확인한 후에, 저는 그것이 사실이라고 확신합니다.",
+            voca   : "<strong>carefully</strong> 신중하게, 주의 깊게 <span class=\'voca-sep\'>|</span> <strong>check</strong> 확인하다"
+        },
+        {   // 06
+            s1_eng : "I’m sure she is busy.",
+            s1_kor : "저는 그녀가 바쁘다고 확신해요.",
+            s2_s1  : "I’m sure she is busy",
+            s2_s2  : "all day today with client meetings.",
+            s2_kor : "저는 그녀가 오늘 하루 종일 고객 미팅으로 바쁘다고 확신해요.",
+            s3_s1  : "I’m sure she is busy",
+            s3_s2  : "all day today with client meetings,",
+            s3_s3  : "so let\'s try to reach her tomorrow.",
+            s3_kor : "저는 그녀가 오늘 하루 종일 고객 미팅으로 바쁘다고 확신해요. 그러니 내일 연락해 보는 게 좋겠어요.",
+            voca   : "<strong>client</strong> 고객 <span class=\'voca-sep\'>|</span> <strong>reach</strong> (연락)하다, 닿다"
+        },
+        {   // 07
+            s1_eng : "I’m sure I understand.",
+            s1_kor : "제가 이해했다고 확신합니다.",
+            s2_s1  : "I’m sure I understand",
+            s2_s2  : "the new system.",
+            s2_kor : "제가 새로운 시스템을 이해했다고 확신합니다.",
+            s3_s1  : "I’m sure I understand",
+            s3_s2  : "the new system",
+            s3_s3  : "well enough to explain it.",
+            s3_kor : "저는 새로운 시스템을 설명할 수 있을 만큼 충분히 잘 이해했다고 확신합니다.",
+            voca   : "<strong>well</strong> enough to ~할 만큼 충분히 <span class=\'voca-sep\'>|</span> <strong>explain</strong> 설명하다"
+        },
+        {   // 08
+            s1_eng : "I’m sure they will help.",
+            s1_kor : "저는 그들이 도울 것이라고 확신합니다.",
+            s2_s1  : "I’m sure they will help",
+            s2_s2  : "to solve the problem.",
+            s2_kor : "저는 그들이 문제를 해결하는 데 도울 것이라고 확신합니다.",
+            s3_s1  : "I’m sure they will help",
+            s3_s2  : "to solve the problem",
+            s3_s3  : "quickly if we ask them.",
+            s3_kor : "저는 우리가 그들에게 요청하면 그들이 문제를 빠르게 해결하는 데 도울 것이라고 확신합니다.",
+            voca   : "<strong>solve</strong> 해결하다 <span class=\'voca-sep\'>|</span> <strong>quickly</strong> 빠르게"
+        },
+        {   // 09
+            s1_eng : "I’m sure it will be fine.",
+            s1_kor : "나는 괜찮을 거라고 확신해요.",
+            s2_s1  : "I\'m sure it will be fine",
+            s2_s2  : "after some rest.",
+            s2_kor : "좀 쉬고 나면 괜찮아질 거예요.",
+            s3_s1  : "I\'m sure it will be fine",
+            s3_s2  : "after some rest,",
+            s3_s3  : "so try not to worry too much.",
+            s3_kor : "좀 쉬고 나면 괜찮아질 거예요, 그러니까 너무 걱정하지 마세요.",
+            voca   : "<strong>so</strong> ~해서, 그러니까 <span class=\'voca-sep\'>|</span> <strong>worry</strong> 걱정하다"
+        },
+        {   // 10
+            s1_eng : "I’m sure you will like it.",
+            s1_kor : "저는 당신이 그것을 좋아할 것이라고 확신합니다.",
+            s2_s1  : "I’m sure you will like it,",
+            s2_s2  : "as it\'s perfect for you.",
+            s2_kor : "저는 당신이 그것을 좋아할 것이라고 확신합니다, 당신에게 완벽하니까요.",
+            s3_s1  : "I’m sure you will like it,",
+            s3_s2  : "as it\'s perfect for you",
+            s3_s3  : "to relax after work.",
+            s3_kor : "저는 당신이 그것을 좋아할 것이라고 확신합니다, 퇴근 후 휴식하기에 당신에게 완벽하니까요.",
+            voca   : "<strong>as</strong> ~이니까, ~이므로 <span class=\'voca-sep\'>|</span> <strong>relax</strong> 휴식하다, 긴장을 풀다"
+        }
+    ],
+
+    dialogueA_eng : "Do you think our team will make it?",
+    dialogueA_kor : "우리 팀이 해낼 수 있을 것 같아?",
+    dialogueB_eng : "I\'m sure we will win this game.",
+    dialogueB_kor : "우리는 이번 경기에서 분명히 이길 거야."
+};
+    // =====================================================
+    // ★ 이 아래는 렌더링 엔진 — 절대 수정하지 마세요 ★
+    // =====================================================
+    </script>
+
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        :root {
+            --primary:#1F2937; --secondary:#4F46E5; --border-color:#E5E7EB;
+            
+            /* [조합 1 적용] 화면과 인쇄가 일치하는 인쇄 안전 색상 세팅 */
+            --c-step1:#000000; /* 1단계: 순수 검정 */
+            --c-step2:#C2185B; /* 2단계: 클래식 마젠타 */
+            --c-step3:#0F9D58; /* 3단계: 딥 그린 */
+        }
+        @page { size:A4; margin:0; }
+        
+        body { 
+            font-family:'Pretendard',sans-serif; margin:0; padding:20px 0; background-color:#555; 
+            display:flex; flex-direction:column; align-items:center; gap:20px; 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale; 
+            text-rendering: optimizeLegibility; 
+        }
+        
+        .page-container { width:210mm; height:297mm; background-color:#FFF; box-sizing:border-box; padding:12mm 15mm; display:flex; flex-direction:column; box-shadow:0 10px 25px rgba(0,0,0,0.3); page-break-after:always; position:relative; }
+        
+        .header { display:flex; justify-content:space-between; align-items:center; margin-bottom:2.5mm; border-bottom:2px solid var(--primary); padding-bottom:3mm; flex-shrink:0; }
+        .header-left { display:flex; flex-direction:column; justify-content:center; flex:1; padding-right:15px; } 
+        .day-badge { background-color:var(--primary); color:white; padding:4px 16px; border-radius:20px; font-size:17px; font-weight:800; letter-spacing:1px; margin-bottom:8px; width:fit-content; }
+        
+        .pattern-title   { font-size:38px; font-weight:900; color:var(--primary); margin:0 0 6px 0; line-height:1; }
+        .pattern-meaning { font-size:24px; font-weight:700; color:var(--secondary); margin:0; line-height:1.2; letter-spacing:-0.5px; word-break:keep-all; }
+        
+        .header-right { display:flex; align-items:center; padding-top:0; flex-shrink:0; }
+        .qr-link-box { text-decoration:none; display:flex; transition:transform 0.2s; }
+        .qr-link-box:hover { transform:scale(1.02); }
+        .qr-box { display:grid; grid-template-columns:auto 15mm; grid-template-rows:auto 15mm; column-gap:6px; row-gap:3px; align-items:end; background:#F8FAFC; padding:6px 8px; border:1px solid var(--border-color); border-radius:8px; box-sizing:border-box; }
+        
+        .qr-top-text { grid-column:2; grid-row:1; font-size:12px; font-weight:800; color:var(--secondary); text-align:center; letter-spacing:-0.5px; line-height:1;}
+        .qr-left-text { grid-column:1; grid-row:2; font-size:11px; font-weight:800; color:var(--secondary); text-align:right; line-height:1.3; letter-spacing:-0.5px; align-self:center; }
+        .qr-image { grid-column:2; grid-row:2; width:15mm; height:15mm; border:1px solid var(--border-color); padding:2px; background-color:#fff; margin:0; box-sizing:border-box; }
+        
+        .grammar-prep { background-color:#FFFBEB; border-left:4px solid #F59E0B; padding:10px 14px; border-radius:6px; margin-bottom:2.5mm; font-size:15.5px; font-weight:500; color:#374155; display:flex; flex-direction:column; gap:5px; line-height:1.65; flex-shrink:0; word-break:keep-all; }
+        .grammar-prep-title { font-weight:800; color:#D97706; font-size:16px; }
+
+        .mini-header { border-bottom:2px solid var(--border-color); margin-bottom:3.5mm; padding-bottom:3mm; display:flex; justify-content:space-between; align-items:center; flex-shrink:0; }
+        .mini-title { font-size:19px; font-weight:800; color:var(--primary); }
+        .table-container { width:100%; border:1px solid var(--border-color); border-radius:10px; overflow:hidden; flex-grow:1; display:flex; flex-direction:column; }
+        .table-header { display:flex; flex-shrink:0; }
+        .th-no { background-color:#E0E7FF; color:#1E3A5F; width:6%; text-align:center; padding:8px 0; font-size:13.5px; font-weight:800; flex-shrink:0; }
+        .th-content { background-color:#EFF6FF; color:#1E3A5F; flex:1; text-align:left; padding:8px 12px; font-size:13.5px; font-weight:800; letter-spacing:0.3px; }
+        
+        .ex-row { display:flex; flex:1; border-top:1px solid var(--border-color); }
+        .ex-row:nth-child(even) .ex-content { background-color:#F8FAFC; }
+        .td-no { width:6%; flex-shrink:0; text-align:center; font-weight:800; color:#9CA3AF; font-size:15px; display:flex; align-items:center; justify-content:center; border-right:1px solid #F3F4F6; }
+        .ex-content { flex:1; padding:9px 14px; display:flex; flex-direction:column; justify-content:center; }
+        
+        .line-inline { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px; margin-bottom:2px; }
+        .line-block  { margin-bottom:2px; }
+        
+        .eng-text { font-size:16px; font-weight:700; word-break:keep-all; }
+        .kor-text { font-size:13.5px; font-weight:500; color:#4B5563; word-break:keep-all; }
+        
+        .c-s1 { color:var(--c-step1); } .c-s2 { color:var(--c-step2); } .c-s3 { color:var(--c-step3); }
+        .inline-voca { display:inline-block; margin-top:5px; background-color:rgba(0,0,0,0.04); padding:3px 8px; border-radius:4px; font-size:13px; color:#334155; line-height:1.35; font-weight:500; }
+        .inline-voca strong { color:#0F172A; font-weight:700; }
+        .voca-sep { color:#CBD5E1; margin:0 5px; }
+        
+        .footer { margin-top:4mm; height:32mm; flex-shrink:0; display:flex; gap:15px; }
+        .tip-box { flex-grow:1; background-color:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; padding:12px 16px; display:flex; flex-direction:column; justify-content:center; }
+        .tip-title { font-size:15.5px; font-weight:800; color:var(--secondary); margin-bottom:6px; }
+        .tip-content { font-size:15.5px; color:#333; font-weight:500; line-height:1.6; }
+        .dialogue-box { display:grid; grid-template-columns:24px 1fr; gap:6px; margin-top:2px; }
+        .dialogue-speaker { font-weight:800; color:var(--primary); font-size:16px; }
+        .dialogue-text { color:#1F2937; font-size:16px; font-weight:700; }
+        
+        .page-number { font-size:12.5px; color:#9CA3AF; text-align:center; font-weight:500; margin-top:auto; padding-top:10px; letter-spacing:1px; }
+
+        #tbody-p1, #tbody-p2 { display:contents; }
+        
+        @media print {
+            @page { size:A4; margin:0; }
+            body { padding:0!important; margin:0!important; gap:0!important; background-color:#FFF!important; }
+            .page-container { box-shadow:none!important; margin:0!important; height:296.5mm!important; page-break-after:always!important; page-break-inside:avoid!important; overflow:hidden!important; }
+            .page-container:last-child { page-break-after:auto!important; }
+            
+            .pattern-title, .eng-text, .dialogue-speaker, .dialogue-text { color: #000000 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page-container">
+    <div class="header">
+        <div class="header-left">
+            <div class="day-badge" id="badge"></div>
+            <h1 class="pattern-title" id="title"></h1>
+            <p class="pattern-meaning" id="meaning"></p>
+        </div>
+        <div class="header-right">
+            <a id="qr-link" href="#" target="_blank" class="qr-link-box">
+                <div class="qr-box">
+                    <div class="qr-top-text">영상 강의</div>
+                    <div class="qr-left-text">클릭<br>또는<br>스캔</div>
+                    <img id="qr-img" class="qr-image" src="" alt="QR Code">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="grammar-prep">
+        <div class="grammar-prep-title">※ Grammar Point</div>
+        <div id="grammar"></div>
+    </div>
+    <div class="table-container">
+        <div class="table-header">
+            <div class="th-no">번호</div>
+            <!-- [수정됨] 화살표를 플러스 기호로 바꾸고 각 단계별 색상 적용 -->
+            <div class="th-content">
+                <span class="c-s1">짧게 말하기(초급)</span> &nbsp;+&nbsp; 
+                <span class="c-s2">확장해서 말하기(중급)</span> &nbsp;+&nbsp; 
+                <span class="c-s3">더 추가해서 말하기(고급)</span>
+            </div>
+        </div>
+        <div id="tbody-p1"></div>
+    </div>
+    
+    <div class="page-number" id="page-num-1"></div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page-container">
+    <div class="mini-header">
+        <div class="mini-title" id="mini-title"></div>
+        <div id="mini-sub" style="font-size:13.5px;color:#6B7280;font-weight:700;"></div>
+    </div>
+    <div class="table-container">
+        <div id="tbody-p2"></div>
+    </div>
+    <div class="footer">
+        <div class="tip-box">
+            <div class="tip-title">💬 실전 롤플레이 (Mini Dialogue)</div>
+            <div class="tip-content">
+                <div class="dialogue-box">
+                    <div class="dialogue-speaker">A:</div>
+                    <div class="dialogue-text" id="dlg-a"></div>
+                    <div class="dialogue-speaker">B:</div>
+                    <div class="dialogue-text" id="dlg-b"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page-number" id="page-num-2"></div>
+</div>
+
+<!-- 렌더링 엔진 -->
+<script>
+(function() {
+    document.getElementById('page-title').textContent = `패턴 ${DATA.patternNo} - ${DATA.patternTitle}`;
+    document.getElementById('badge').textContent   = `패턴 ${DATA.patternNo}`;
+    document.getElementById('title').textContent   = DATA.patternTitle;
+    document.getElementById('meaning').textContent = DATA.meaning;
+    
+    document.getElementById('qr-link').href        = DATA.youtubeUrl;
+    document.getElementById('qr-img').src          = `https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(DATA.youtubeUrl)}`;
+    
+    document.getElementById('grammar').innerHTML   = DATA.grammarPoint;
+    document.getElementById('mini-title').textContent = `패턴 ${DATA.patternNo} - 추가 예문으로 확실하게 내 것 만들기`;
+    document.getElementById('mini-sub').textContent   = DATA.patternTitle;
+
+    let pNo = parseInt(DATA.patternNo);
+    if(!isNaN(pNo)) {
+        document.getElementById('page-num-1').textContent = `- ${(pNo * 2) - 1} -`;
+        document.getElementById('page-num-2').textContent = `- ${pNo * 2} -`;
+    }
+
+    function buildRow(ex, no) {
+        const num = String(no).padStart(2, '0');
+        return `
+        <div class="ex-row">
+            <div class="td-no">${num}</div>
+            <div class="ex-content">
+                <div class="line-inline">
+                    <div class="eng-text"><span class="c-s1">${ex.s1_eng}</span></div>
+                    <div class="kor-text">${ex.s1_kor}</div>
+                </div>
+                <div class="line-inline">
+                    <div class="eng-text">
+                        <span class="c-s1">${ex.s2_s1}</span>
+                        <span class="c-s2"> ${ex.s2_s2}</span>
+                    </div>
+                    <div class="kor-text">${ex.s2_kor}</div>
+                </div>
+                <div class="line-block">
+                    <div class="eng-text">
+                        <span class="c-s1">${ex.s3_s1}</span>
+                        <span class="c-s2"> ${ex.s3_s2}</span>
+                        <span class="c-s3"> ${ex.s3_s3}</span>
+                    </div>
+                    <div class="kor-text" style="margin-bottom:2px;">${ex.s3_kor}</div>
+                </div>
+                <div class="inline-voca">${ex.voca}</div>
+            </div>
+        </div>`;
+    }
+
+    let p1html = '';
+    for (let i = 0; i < 5; i++) p1html += buildRow(DATA.examples[i], i + 1);
+    document.getElementById('tbody-p1').innerHTML = p1html;
+
+    let p2html = '';
+    for (let i = 5; i < 10; i++) p2html += buildRow(DATA.examples[i], i + 1);
+    document.getElementById('tbody-p2').innerHTML = p2html;
+
+    document.getElementById('dlg-a').innerHTML =
+        `${DATA.dialogueA_eng} <span style="color:#6B7280;font-size:13.5px;font-weight:500;margin-left:6px;">(${DATA.dialogueA_kor})</span>`;
+    document.getElementById('dlg-b').innerHTML =
+        `${DATA.dialogueB_eng} <span style="color:#6B7280;font-size:13.5px;font-weight:500;margin-left:6px;">(${DATA.dialogueB_kor})</span>`;
+})();
+</script>
+</body>
+</html>

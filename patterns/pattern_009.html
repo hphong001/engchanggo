@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">패턴 로딩중...</title>
+
+    <script>
+    // =====================================================
+    // ★ C#이 이 DATA 블록만 통째로 교체합니다 ★
+    // ★ 이 블록 외에는 절대 수정하지 마세요 ★
+    // =====================================================
+    const DATA = {
+    patternNo    : "9",
+    patternTitle : "Please",
+    meaning      : "~해주세요",
+    desc         : "이번에는 Please 뒤에 동사원형을 추가하는 패턴입니다.<br>\"무엇 무엇해주세요\"라고 부탁하는 문장을 연습합니다.<br>그럼 시작해 볼까요?",
+    youtubeUrl   : "https://www.youtube.com/watch?v=Qst_LpDtpg4",
+    grammarPoint : "<strong>Please</strong>는 동사 앞에 붙여 <strong>정중한 요청이나 부탁</strong>을 표현하는 가장 기본적인 방법이에요.<br>명령문의 직접적인 느낌을 부드럽게 만들어주며, 상대방에 대한 <strong>예의와 배려</strong>를 담고 있어요.<br>격식체와 비격식체 모두에서 자연스럽게 사용할 수 있어요.",
+
+    examples: [
+        {   // 01
+            s1_eng : "Please help.",
+            s1_kor : "도와주세요.",
+            s2_s1  : "Please help",
+            s2_s2  : "me set up the TV.",
+            s2_kor : "티비 설치하는 거 좀 도와주세요.",
+            s3_s1  : "Please help",
+            s3_s2  : "me set up the TV",
+            s3_s3  : "because the remote isn\'t working properly.",
+            s3_kor : "티비 설치하는 거 좀 도와주세요. 리모컨이 제대로 작동을 안 해서요.",
+            voca   : "<strong>set</strong> up 설치하다, 설정하다 <span class=\'voca-sep\'>|</span> <strong>properly</strong> 제대로, 올바르게"
+        },
+        {   // 02
+            s1_eng : "Please wait.",
+            s1_kor : "기다려 주세요.",
+            s2_s1  : "Please wait",
+            s2_s2  : "at the front desk.",
+            s2_kor : "안내 데스크에서 기다려 주세요.",
+            s3_s1  : "Please wait",
+            s3_s2  : "at the front desk",
+            s3_s3  : "while I check your documents.",
+            s3_kor : "안내 데스크에서 기다려 주세요. 제가 서류를 확인하는 동안요.",
+            voca   : "<strong>front</strong> desk 안내 데스크, 프런트 <span class=\'voca-sep\'>|</span> <strong>document</strong> 서류, 문서"
+        },
+        {   // 03
+            s1_eng : "Please sit.",
+            s1_kor : "앉으세요.",
+            s2_s1  : "Please sit",
+            s2_s2  : "on the couch and relax.",
+            s2_kor : "거실 소파에 앉아서 편히 쉬세요.",
+            s3_s1  : "Please sit",
+            s3_s2  : "on the couch and relax",
+            s3_s3  : "while I prepare some tea for you.",
+            s3_kor : "차를 준비하는 동안 소파에 앉아서 편히 쉬세요.",
+            voca   : "<strong>relax</strong> 편히 쉬다, 긴장을 풀다 <span class=\'voca-sep\'>|</span> <strong>prepare</strong> 준비하다"
+        },
+        {   // 04
+            s1_eng : "Please call.",
+            s1_kor : "전화 주세요.",
+            s2_s1  : "Please call",
+            s2_s2  : "me back when you get home.",
+            s2_kor : "집에 도착하면 저한테 전화 주세요.",
+            s3_s1  : "Please call",
+            s3_s2  : "me back when you get home,",
+            s3_s3  : "because I need to discuss something important.",
+            s3_kor : "집에 도착하면 저한테 전화 주세요, 중요한 얘기가 있어서요.",
+            voca   : "<strong>call</strong> back 다시 전화하다 <span class=\'voca-sep\'>|</span> <strong>discuss</strong> 논의하다, 이야기하다"
+        },
+        {   // 05
+            s1_eng : "Please listen.",
+            s1_kor : "잘 들어주세요.",
+            s2_s1  : "Please listen",
+            s2_s2  : "carefully.",
+            s2_kor : "제가 하는 말을 주의 깊게 들어주세요.",
+            s3_s1  : "Please listen",
+            s3_s2  : "carefully",
+            s3_s3  : "to the important instructions.",
+            s3_kor : "제가 하는 말을 주의 깊게 들어주세요, 중요한 지시 사항입니다.",
+            voca   : "<strong>carefully</strong> 주의 깊게, 신중하게 <span class=\'voca-sep\'>|</span> <strong>instructions</strong> 지시 사항, 안내"
+        },
+        {   // 06
+            s1_eng : "Please tell.",
+            s1_kor : "말해 주세요.",
+            s2_s1  : "Please tell",
+            s2_s2  : "me about your volunteer work this weekend.",
+            s2_kor : "이번 주말에 하는 봉사 활동에 대해 말씀해 주세요.",
+            s3_s1  : "Please tell",
+            s3_s2  : "me about your volunteer work this weekend,",
+            s3_s3  : "so that I can help you prepare.",
+            s3_kor : "이번 주말에 하는 봉사 활동에 대해 말씀해 주세요, 제가 준비하는 걸 도와드릴 수 있게요.",
+            voca   : "<strong>volunteer</strong> work 봉사 활동 <span class=\'voca-sep\'>|</span> <strong>so</strong> that ~할 수 있도록"
+        },
+        {   // 07
+            s1_eng : "Please stop.",
+            s1_kor : "멈추세요.",
+            s2_s1  : "Please stop",
+            s2_s2  : "making that loud noise.",
+            s2_kor : "그 시끄러운 소리 좀 그만 내주세요.",
+            s3_s1  : "Please stop",
+            s3_s2  : "making that loud noise",
+            s3_s3  : "because I am trying to focus.",
+            s3_kor : "집중하려고 하니 그 시끄러운 소리 좀 그만 내주세요",
+            voca   : "<strong>focus</strong> 집중하다 <span class=\'voca-sep\'>|</span> <strong>because</strong> ~때문에"
+        },
+        {   // 08
+            s1_eng : "Please come.",
+            s1_kor : "와 주세요.",
+            s2_s1  : "Please come",
+            s2_s2  : "if you are available.",
+            s2_kor : "시간이 되시면 와 주세요.",
+            s3_s1  : "Please come",
+            s3_s2  : "if you are available",
+            s3_s3  : "to discuss the project details tomorrow morning.",
+            s3_kor : "내일 아침 프로젝트 세부 사항을 논의하기 위해 시간이 되시면 와 주세요.",
+            voca   : "<strong>available</strong> 시간이 되는, 가능한 <span class=\'voca-sep\'>|</span> <strong>details</strong> 세부 사항"
+        },
+        {   // 09
+            s1_eng : "Please give.",
+            s1_kor : "주세요.",
+            s2_s1  : "Please give",
+            s2_s2  : "me the movie ticket.",
+            s2_kor : "영화표 좀 주세요.",
+            s3_s1  : "Please give",
+            s3_s2  : "me the movie ticket",
+            s3_s3  : "before the show starts.",
+            s3_kor : "상영 시작 전에 영화표 좀 주세요.",
+            voca   : "<strong>before</strong> ~하기 전에 <span class=\'voca-sep\'>|</span> <strong>show</strong> 상영, 공연"
+        },
+        {   // 10
+            s1_eng : "Please be quiet.",
+            s1_kor : "조용히 해주세요.",
+            s2_s1  : "Please be quiet",
+            s2_s2  : "in the library.",
+            s2_kor : "도서관에서 조용히 해 주세요.",
+            s3_s1  : "Please be quiet",
+            s3_s2  : "in the library",
+            s3_s3  : "because other people are studying.",
+            s3_kor : "도서관에서 조용히 해 주세요. 다른 사람들이 공부하고 있거든요.",
+            voca   : "<strong>quiet</strong> 조용한 <span class=\'voca-sep\'>|</span> <strong>because</strong> ~때문에"
+        }
+    ],
+
+    dialogueA_eng : "Can you help me with this form?",
+    dialogueA_kor : "이 양식 작성하는 것 좀 도와주실 수 있나요?",
+    dialogueB_eng : "Please wait at the front desk.",
+    dialogueB_kor : "안내 데스크에서 기다려 주세요."
+};
+    // =====================================================
+    // ★ 이 아래는 렌더링 엔진 — 절대 수정하지 마세요 ★
+    // =====================================================
+    </script>
+
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        :root {
+            --primary:#1F2937; --secondary:#4F46E5; --border-color:#E5E7EB;
+            
+            /* [조합 1 적용] 화면과 인쇄가 일치하는 인쇄 안전 색상 세팅 */
+            --c-step1:#000000; /* 1단계: 순수 검정 */
+            --c-step2:#C2185B; /* 2단계: 클래식 마젠타 */
+            --c-step3:#0F9D58; /* 3단계: 딥 그린 */
+        }
+        @page { size:A4; margin:0; }
+        
+        body { 
+            font-family:'Pretendard',sans-serif; margin:0; padding:20px 0; background-color:#555; 
+            display:flex; flex-direction:column; align-items:center; gap:20px; 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale; 
+            text-rendering: optimizeLegibility; 
+        }
+        
+        .page-container { width:210mm; height:297mm; background-color:#FFF; box-sizing:border-box; padding:12mm 15mm; display:flex; flex-direction:column; box-shadow:0 10px 25px rgba(0,0,0,0.3); page-break-after:always; position:relative; }
+        
+        .header { display:flex; justify-content:space-between; align-items:center; margin-bottom:2.5mm; border-bottom:2px solid var(--primary); padding-bottom:3mm; flex-shrink:0; }
+        .header-left { display:flex; flex-direction:column; justify-content:center; flex:1; padding-right:15px; } 
+        .day-badge { background-color:var(--primary); color:white; padding:4px 16px; border-radius:20px; font-size:17px; font-weight:800; letter-spacing:1px; margin-bottom:8px; width:fit-content; }
+        
+        .pattern-title   { font-size:38px; font-weight:900; color:var(--primary); margin:0 0 6px 0; line-height:1; }
+        .pattern-meaning { font-size:24px; font-weight:700; color:var(--secondary); margin:0; line-height:1.2; letter-spacing:-0.5px; word-break:keep-all; }
+        
+        .header-right { display:flex; align-items:center; padding-top:0; flex-shrink:0; }
+        .qr-link-box { text-decoration:none; display:flex; transition:transform 0.2s; }
+        .qr-link-box:hover { transform:scale(1.02); }
+        .qr-box { display:grid; grid-template-columns:auto 15mm; grid-template-rows:auto 15mm; column-gap:6px; row-gap:3px; align-items:end; background:#F8FAFC; padding:6px 8px; border:1px solid var(--border-color); border-radius:8px; box-sizing:border-box; }
+        
+        .qr-top-text { grid-column:2; grid-row:1; font-size:12px; font-weight:800; color:var(--secondary); text-align:center; letter-spacing:-0.5px; line-height:1;}
+        .qr-left-text { grid-column:1; grid-row:2; font-size:11px; font-weight:800; color:var(--secondary); text-align:right; line-height:1.3; letter-spacing:-0.5px; align-self:center; }
+        .qr-image { grid-column:2; grid-row:2; width:15mm; height:15mm; border:1px solid var(--border-color); padding:2px; background-color:#fff; margin:0; box-sizing:border-box; }
+        
+        .grammar-prep { background-color:#FFFBEB; border-left:4px solid #F59E0B; padding:10px 14px; border-radius:6px; margin-bottom:2.5mm; font-size:15.5px; font-weight:500; color:#374155; display:flex; flex-direction:column; gap:5px; line-height:1.65; flex-shrink:0; word-break:keep-all; }
+        .grammar-prep-title { font-weight:800; color:#D97706; font-size:16px; }
+
+        .mini-header { border-bottom:2px solid var(--border-color); margin-bottom:3.5mm; padding-bottom:3mm; display:flex; justify-content:space-between; align-items:center; flex-shrink:0; }
+        .mini-title { font-size:19px; font-weight:800; color:var(--primary); }
+        .table-container { width:100%; border:1px solid var(--border-color); border-radius:10px; overflow:hidden; flex-grow:1; display:flex; flex-direction:column; }
+        .table-header { display:flex; flex-shrink:0; }
+        .th-no { background-color:#E0E7FF; color:#1E3A5F; width:6%; text-align:center; padding:8px 0; font-size:13.5px; font-weight:800; flex-shrink:0; }
+        .th-content { background-color:#EFF6FF; color:#1E3A5F; flex:1; text-align:left; padding:8px 12px; font-size:13.5px; font-weight:800; letter-spacing:0.3px; }
+        
+        .ex-row { display:flex; flex:1; border-top:1px solid var(--border-color); }
+        .ex-row:nth-child(even) .ex-content { background-color:#F8FAFC; }
+        .td-no { width:6%; flex-shrink:0; text-align:center; font-weight:800; color:#9CA3AF; font-size:15px; display:flex; align-items:center; justify-content:center; border-right:1px solid #F3F4F6; }
+        .ex-content { flex:1; padding:9px 14px; display:flex; flex-direction:column; justify-content:center; }
+        
+        .line-inline { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px; margin-bottom:2px; }
+        .line-block  { margin-bottom:2px; }
+        
+        .eng-text { font-size:16px; font-weight:700; word-break:keep-all; }
+        .kor-text { font-size:13.5px; font-weight:500; color:#4B5563; word-break:keep-all; }
+        
+        .c-s1 { color:var(--c-step1); } .c-s2 { color:var(--c-step2); } .c-s3 { color:var(--c-step3); }
+        .inline-voca { display:inline-block; margin-top:5px; background-color:rgba(0,0,0,0.04); padding:3px 8px; border-radius:4px; font-size:13px; color:#334155; line-height:1.35; font-weight:500; }
+        .inline-voca strong { color:#0F172A; font-weight:700; }
+        .voca-sep { color:#CBD5E1; margin:0 5px; }
+        
+        .footer { margin-top:4mm; height:32mm; flex-shrink:0; display:flex; gap:15px; }
+        .tip-box { flex-grow:1; background-color:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; padding:12px 16px; display:flex; flex-direction:column; justify-content:center; }
+        .tip-title { font-size:15.5px; font-weight:800; color:var(--secondary); margin-bottom:6px; }
+        .tip-content { font-size:15.5px; color:#333; font-weight:500; line-height:1.6; }
+        .dialogue-box { display:grid; grid-template-columns:24px 1fr; gap:6px; margin-top:2px; }
+        .dialogue-speaker { font-weight:800; color:var(--primary); font-size:16px; }
+        .dialogue-text { color:#1F2937; font-size:16px; font-weight:700; }
+        
+        .page-number { font-size:12.5px; color:#9CA3AF; text-align:center; font-weight:500; margin-top:auto; padding-top:10px; letter-spacing:1px; }
+
+        #tbody-p1, #tbody-p2 { display:contents; }
+        
+        @media print {
+            @page { size:A4; margin:0; }
+            body { padding:0!important; margin:0!important; gap:0!important; background-color:#FFF!important; }
+            .page-container { box-shadow:none!important; margin:0!important; height:296.5mm!important; page-break-after:always!important; page-break-inside:avoid!important; overflow:hidden!important; }
+            .page-container:last-child { page-break-after:auto!important; }
+            
+            .pattern-title, .eng-text, .dialogue-speaker, .dialogue-text { color: #000000 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page-container">
+    <div class="header">
+        <div class="header-left">
+            <div class="day-badge" id="badge"></div>
+            <h1 class="pattern-title" id="title"></h1>
+            <p class="pattern-meaning" id="meaning"></p>
+        </div>
+        <div class="header-right">
+            <a id="qr-link" href="#" target="_blank" class="qr-link-box">
+                <div class="qr-box">
+                    <div class="qr-top-text">영상 강의</div>
+                    <div class="qr-left-text">클릭<br>또는<br>스캔</div>
+                    <img id="qr-img" class="qr-image" src="" alt="QR Code">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="grammar-prep">
+        <div class="grammar-prep-title">※ Grammar Point</div>
+        <div id="grammar"></div>
+    </div>
+    <div class="table-container">
+        <div class="table-header">
+            <div class="th-no">번호</div>
+            <!-- [수정됨] 화살표를 플러스 기호로 바꾸고 각 단계별 색상 적용 -->
+            <div class="th-content">
+                <span class="c-s1">짧게 말하기(초급)</span> &nbsp;+&nbsp; 
+                <span class="c-s2">확장해서 말하기(중급)</span> &nbsp;+&nbsp; 
+                <span class="c-s3">더 추가해서 말하기(고급)</span>
+            </div>
+        </div>
+        <div id="tbody-p1"></div>
+    </div>
+    
+    <div class="page-number" id="page-num-1"></div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page-container">
+    <div class="mini-header">
+        <div class="mini-title" id="mini-title"></div>
+        <div id="mini-sub" style="font-size:13.5px;color:#6B7280;font-weight:700;"></div>
+    </div>
+    <div class="table-container">
+        <div id="tbody-p2"></div>
+    </div>
+    <div class="footer">
+        <div class="tip-box">
+            <div class="tip-title">💬 실전 롤플레이 (Mini Dialogue)</div>
+            <div class="tip-content">
+                <div class="dialogue-box">
+                    <div class="dialogue-speaker">A:</div>
+                    <div class="dialogue-text" id="dlg-a"></div>
+                    <div class="dialogue-speaker">B:</div>
+                    <div class="dialogue-text" id="dlg-b"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page-number" id="page-num-2"></div>
+</div>
+
+<!-- 렌더링 엔진 -->
+<script>
+(function() {
+    document.getElementById('page-title').textContent = `패턴 ${DATA.patternNo} - ${DATA.patternTitle}`;
+    document.getElementById('badge').textContent   = `패턴 ${DATA.patternNo}`;
+    document.getElementById('title').textContent   = DATA.patternTitle;
+    document.getElementById('meaning').textContent = DATA.meaning;
+    
+    document.getElementById('qr-link').href        = DATA.youtubeUrl;
+    document.getElementById('qr-img').src          = `https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(DATA.youtubeUrl)}`;
+    
+    document.getElementById('grammar').innerHTML   = DATA.grammarPoint;
+    document.getElementById('mini-title').textContent = `패턴 ${DATA.patternNo} - 추가 예문으로 확실하게 내 것 만들기`;
+    document.getElementById('mini-sub').textContent   = DATA.patternTitle;
+
+    let pNo = parseInt(DATA.patternNo);
+    if(!isNaN(pNo)) {
+        document.getElementById('page-num-1').textContent = `- ${(pNo * 2) - 1} -`;
+        document.getElementById('page-num-2').textContent = `- ${pNo * 2} -`;
+    }
+
+    function buildRow(ex, no) {
+        const num = String(no).padStart(2, '0');
+        return `
+        <div class="ex-row">
+            <div class="td-no">${num}</div>
+            <div class="ex-content">
+                <div class="line-inline">
+                    <div class="eng-text"><span class="c-s1">${ex.s1_eng}</span></div>
+                    <div class="kor-text">${ex.s1_kor}</div>
+                </div>
+                <div class="line-inline">
+                    <div class="eng-text">
+                        <span class="c-s1">${ex.s2_s1}</span>
+                        <span class="c-s2"> ${ex.s2_s2}</span>
+                    </div>
+                    <div class="kor-text">${ex.s2_kor}</div>
+                </div>
+                <div class="line-block">
+                    <div class="eng-text">
+                        <span class="c-s1">${ex.s3_s1}</span>
+                        <span class="c-s2"> ${ex.s3_s2}</span>
+                        <span class="c-s3"> ${ex.s3_s3}</span>
+                    </div>
+                    <div class="kor-text" style="margin-bottom:2px;">${ex.s3_kor}</div>
+                </div>
+                <div class="inline-voca">${ex.voca}</div>
+            </div>
+        </div>`;
+    }
+
+    let p1html = '';
+    for (let i = 0; i < 5; i++) p1html += buildRow(DATA.examples[i], i + 1);
+    document.getElementById('tbody-p1').innerHTML = p1html;
+
+    let p2html = '';
+    for (let i = 5; i < 10; i++) p2html += buildRow(DATA.examples[i], i + 1);
+    document.getElementById('tbody-p2').innerHTML = p2html;
+
+    document.getElementById('dlg-a').innerHTML =
+        `${DATA.dialogueA_eng} <span style="color:#6B7280;font-size:13.5px;font-weight:500;margin-left:6px;">(${DATA.dialogueA_kor})</span>`;
+    document.getElementById('dlg-b').innerHTML =
+        `${DATA.dialogueB_eng} <span style="color:#6B7280;font-size:13.5px;font-weight:500;margin-left:6px;">(${DATA.dialogueB_kor})</span>`;
+})();
+</script>
+</body>
+</html>

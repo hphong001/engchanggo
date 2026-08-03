@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">패턴 로딩중...</title>
+
+    <script>
+    // =====================================================
+    // ★ C#이 이 DATA 블록만 통째로 교체합니다 ★
+    // ★ 이 블록 외에는 절대 수정하지 마세요 ★
+    // =====================================================
+    const DATA = {
+    patternNo    : "20",
+    patternTitle : "I want to",
+    meaning      : "~하고 싶어요",
+    desc         : "이번에는 I want to 뒤에 동사원형을 추가하는 패턴입니다.<br>\"무엇 무엇하고 싶어요\"라고 하고 싶은 행동을 넣는 문장을 연습합니다.<br>그럼 시작해 볼까요?",
+    youtubeUrl   : "https://www.youtube.com/watch?v=Pyn-Rdfp6KA",
+    grammarPoint : "\'I want to + 동사원형\' 형태로, 말하는 사람의 <strong>바람이나 욕구</strong>를 표현하는 패턴이에요.<br>\'~하고 싶다\'는 의미로, 격식체와 비격식체 모두에서 자연스럽게 사용할 수 있어요.<br>정중하게 말할 때는 <strong>I\'d like to</strong>로 바꿔 쓸 수 있답니다.",
+
+    examples: [
+        {   // 01
+            s1_eng : "I want to go home.",
+            s1_kor : "나는 집에 가고 싶어요.",
+            s2_s1  : "I want to go home",
+            s2_s2  : "after this long flight.",
+            s2_kor : "이 긴 비행 후에 집에 가고 싶어요.",
+            s3_s1  : "I want to go home",
+            s3_s2  : "after this long flight",
+            s3_s3  : "because I\'m really exhausted.",
+            s3_kor : "이 긴 비행 후에 집에 가고 싶어요 왜냐하면 정말 지쳤거든요.",
+            voca   : "<strong>exhausted</strong> 완전히 지친, 기진맥진한"
+        },
+        {   // 02
+            s1_eng : "I want to eat pizza.",
+            s1_kor : "나는 피자를 먹고 싶어요.",
+            s2_s1  : "I want to eat pizza",
+            s2_s2  : "for dinner tonight.",
+            s2_kor : "오늘 저녁에 피자를 먹고 싶어요.",
+            s3_s1  : "I want to eat pizza",
+            s3_s2  : "for dinner tonight,",
+            s3_s3  : "but I need to clean the kitchen first.",
+            s3_kor : "오늘 저녁에 피자를 먹고 싶은데, 먼저 부엌을 청소해야 해요.",
+            voca   : "<strong>after</strong> ~후에 <span class=\'voca-sep\'>|</span> <strong>tonight</strong> 오늘 밤"
+        },
+        {   // 03
+            s1_eng : "I want to sleep.",
+            s1_kor : "나는 자고 싶어요.",
+            s2_s1  : "I want to sleep",
+            s2_s2  : "after this phone call.",
+            s2_kor : "이 전화 통화 끝나고 자고 싶어요.",
+            s3_s1  : "I want to sleep",
+            s3_s2  : "after this phone call",
+            s3_s3  : "because I\'ve been awake since early morning.",
+            s3_kor : "이 전화 통화 끝나고 자고 싶어요 왜냐하면 새벽부터 깨어 있었거든요.",
+            voca   : "<strong>awake</strong> 깨어 있는 <span class=\'voca-sep\'>|</span> <strong>since</strong> ~부터"
+        },
+        {   // 04
+            s1_eng : "I want to buy a car.",
+            s1_kor : "나는 차를 사고 싶어요.",
+            s2_s1  : "I want to buy a car",
+            s2_s2  : "next month.",
+            s2_kor : "다음 달에 차를 사고 싶어요.",
+            s3_s1  : "I want to buy a car",
+            s3_s2  : "next month",
+            s3_s3  : "if I can save enough money.",
+            s3_kor : "돈을 충분히 모을 수 있으면 다음 달에 차를 사고 싶어요.",
+            voca   : "<strong>save</strong> 저축하다, 모으다 <span class=\'voca-sep\'>|</span> <strong>enough</strong> 충분한"
+        },
+        {   // 05
+            s1_eng : "I want to travel.",
+            s1_kor : "저는 여행하고 싶어요.",
+            s2_s1  : "I want to travel",
+            s2_s2  : "the world.",
+            s2_kor : "저는 세계를 여행하고 싶어요.",
+            s3_s1  : "I want to travel",
+            s3_s2  : "the world",
+            s3_s3  : "to experience different cultures.",
+            s3_kor : "저는 다양한 문화를 경험하기 위해 세계를 여행하고 싶어요.",
+            voca   : "<strong>experience</strong> 경험하다 <span class=\'voca-sep\'>|</span> <strong>culture</strong> 문화"
+        },
+        {   // 06
+            s1_eng : "I want to meet him.",
+            s1_kor : "나는 그를 만나고 싶어요.",
+            s2_s1  : "I want to meet him",
+            s2_s2  : "at the new restaurant.",
+            s2_kor : "저는 그를 새로운 레스토랑에서 만나고 싶어요.",
+            s3_s1  : "I want to meet him",
+            s3_s2  : "at the new restaurant",
+            s3_s3  : "because he recommended their desserts.",
+            s3_kor : "저는 그를 새로운 레스토랑에서 만나고 싶어요 왜냐하면 그가 거기 디저트를 추천했거든요.",
+            voca   : "<strong>recommend</strong> 추천하다 <span class=\'voca-sep\'>|</span> <strong>dessert</strong> 디저트"
+        },
+        {   // 07
+            s1_eng : "I want to learn piano.",
+            s1_kor : "나는 피아노를 배우고 싶어요.",
+            s2_s1  : "I want to learn piano",
+            s2_s2  : "this summer.",
+            s2_kor : "저는 이번 여름에 피아노를 배우고 싶어요.",
+            s3_s1  : "I want to learn piano",
+            s3_s2  : "this summer",
+            s3_s3  : "because it\'s always been my dream.",
+            s3_kor : "저는 이번 여름에 피아노를 배우고 싶어요, 왜냐하면 그게 항상 제 꿈이었거든요.",
+            voca   : "<strong>dream</strong> 꿈 <span class=\'voca-sep\'>|</span> <strong>this</strong> summer 이번 여름에"
+        },
+        {   // 08
+            s1_eng : "I want to quit smoking.",
+            s1_kor : "담배를 끊고 싶어요.",
+            s2_s1  : "I want to quit smoking",
+            s2_s2  : "to save money and improve my overall well-being.",
+            s2_kor : "돈도 절약하고 전반적인 건강도 개선하기 위해 담배를 끊고 싶어요.",
+            s3_s1  : "I want to quit smoking",
+            s3_s2  : "to save money and improve my overall well-being,",
+            s3_s3  : "as the cost of cigarettes has become exorbitant.",
+            s3_kor : "돈도 절약하고 전반적인 건강도 개선하기 위해 담배를 끊고 싶어요. 담뱃값이 너무 비싸졌거든요.",
+            voca   : "<strong>quit</strong> 그만두다, 끊다 <span class=\'voca-sep\'>|</span> <strong>improve</strong> 개선하다 <span class=\'voca-sep\'>|</span> <strong>exorbitant</strong> 터무니없이 비싼"
+        },
+        {   // 09
+            s1_eng : "I want to help you.",
+            s1_kor : "당신을 돕고 싶어요.",
+            s2_s1  : "I want to help you",
+            s2_s2  : "achieve your goals.",
+            s2_kor : "당신의 목표를 달성하도록 돕고 싶어요.",
+            s3_s1  : "I want to help you",
+            s3_s2  : "achieve your goals,",
+            s3_s3  : "leveraging my experience and resources.",
+            s3_kor : "당신의 목표를 달성하도록 돕고 싶으니, 저의 경험과 자원을 활용해 보세요.",
+            voca   : "<strong>achieve</strong> 달성하다 <span class=\'voca-sep\'>|</span> <strong>leverage</strong> 활용하다 <span class=\'voca-sep\'>|</span> <strong>resource</strong> 자원"
+        },
+        {   // 10
+            s1_eng : "I want to be a teacher.",
+            s1_kor : "나는 선생님이 되고 싶어요.",
+            s2_s1  : "I want to be a teacher",
+            s2_s2  : "someday.",
+            s2_kor : "저는 언젠가 선생님이 되고 싶어요.",
+            s3_s1  : "I want to be a teacher",
+            s3_s2  : "someday",
+            s3_s3  : "because I enjoy sharing knowledge with others.",
+            s3_kor : "저는 언젠가 선생님이 되고 싶어요 왜냐하면 다른 사람들과 지식을 나누는 것을 즐기거든요.",
+            voca   : "<strong>someday</strong> 언젠가 <span class=\'voca-sep\'>|</span> <strong>share</strong> 나누다, 공유하다 <span class=\'voca-sep\'>|</span> <strong>knowledge</strong> 지식"
+        }
+    ],
+
+    dialogueA_eng : "What are your plans for the weekend?",
+    dialogueA_kor : "주말에 어떤 계획 있어요?",
+    dialogueB_eng : "I want to travel to the coast.",
+    dialogueB_kor : "해안가로 여행하고 싶어요."
+};
+    // =====================================================
+    // ★ 이 아래는 렌더링 엔진 — 절대 수정하지 마세요 ★
+    // =====================================================
+    </script>
+
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        :root {
+            --primary:#1F2937; --secondary:#4F46E5; --border-color:#E5E7EB;
+            
+            /* [조합 1 적용] 화면과 인쇄가 일치하는 인쇄 안전 색상 세팅 */
+            --c-step1:#000000; /* 1단계: 순수 검정 */
+            --c-step2:#C2185B; /* 2단계: 클래식 마젠타 */
+            --c-step3:#0F9D58; /* 3단계: 딥 그린 */
+        }
+        @page { size:A4; margin:0; }
+        
+        body { 
+            font-family:'Pretendard',sans-serif; margin:0; padding:20px 0; background-color:#555; 
+            display:flex; flex-direction:column; align-items:center; gap:20px; 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale; 
+            text-rendering: optimizeLegibility; 
+        }
+        
+        .page-container { width:210mm; height:297mm; background-color:#FFF; box-sizing:border-box; padding:12mm 15mm; display:flex; flex-direction:column; box-shadow:0 10px 25px rgba(0,0,0,0.3); page-break-after:always; position:relative; }
+        
+        .header { display:flex; justify-content:space-between; align-items:center; margin-bottom:2.5mm; border-bottom:2px solid var(--primary); padding-bottom:3mm; flex-shrink:0; }
+        .header-left { display:flex; flex-direction:column; justify-content:center; flex:1; padding-right:15px; } 
+        .day-badge { background-color:var(--primary); color:white; padding:4px 16px; border-radius:20px; font-size:17px; font-weight:800; letter-spacing:1px; margin-bottom:8px; width:fit-content; }
+        
+        .pattern-title   { font-size:38px; font-weight:900; color:var(--primary); margin:0 0 6px 0; line-height:1; }
+        .pattern-meaning { font-size:24px; font-weight:700; color:var(--secondary); margin:0; line-height:1.2; letter-spacing:-0.5px; word-break:keep-all; }
+        
+        .header-right { display:flex; align-items:center; padding-top:0; flex-shrink:0; }
+        .qr-link-box { text-decoration:none; display:flex; transition:transform 0.2s; }
+        .qr-link-box:hover { transform:scale(1.02); }
+        .qr-box { display:grid; grid-template-columns:auto 15mm; grid-template-rows:auto 15mm; column-gap:6px; row-gap:3px; align-items:end; background:#F8FAFC; padding:6px 8px; border:1px solid var(--border-color); border-radius:8px; box-sizing:border-box; }
+        
+        .qr-top-text { grid-column:2; grid-row:1; font-size:12px; font-weight:800; color:var(--secondary); text-align:center; letter-spacing:-0.5px; line-height:1;}
+        .qr-left-text { grid-column:1; grid-row:2; font-size:11px; font-weight:800; color:var(--secondary); text-align:right; line-height:1.3; letter-spacing:-0.5px; align-self:center; }
+        .qr-image { grid-column:2; grid-row:2; width:15mm; height:15mm; border:1px solid var(--border-color); padding:2px; background-color:#fff; margin:0; box-sizing:border-box; }
+        
+        .grammar-prep { background-color:#FFFBEB; border-left:4px solid #F59E0B; padding:10px 14px; border-radius:6px; margin-bottom:2.5mm; font-size:15.5px; font-weight:500; color:#374155; display:flex; flex-direction:column; gap:5px; line-height:1.65; flex-shrink:0; word-break:keep-all; }
+        .grammar-prep-title { font-weight:800; color:#D97706; font-size:16px; }
+
+        .mini-header { border-bottom:2px solid var(--border-color); margin-bottom:3.5mm; padding-bottom:3mm; display:flex; justify-content:space-between; align-items:center; flex-shrink:0; }
+        .mini-title { font-size:19px; font-weight:800; color:var(--primary); }
+        .table-container { width:100%; border:1px solid var(--border-color); border-radius:10px; overflow:hidden; flex-grow:1; display:flex; flex-direction:column; }
+        .table-header { display:flex; flex-shrink:0; }
+        .th-no { background-color:#E0E7FF; color:#1E3A5F; width:6%; text-align:center; padding:8px 0; font-size:13.5px; font-weight:800; flex-shrink:0; }
+        .th-content { background-color:#EFF6FF; color:#1E3A5F; flex:1; text-align:left; padding:8px 12px; font-size:13.5px; font-weight:800; letter-spacing:0.3px; }
+        
+        .ex-row { display:flex; flex:1; border-top:1px solid var(--border-color); }
+        .ex-row:nth-child(even) .ex-content { background-color:#F8FAFC; }
+        .td-no { width:6%; flex-shrink:0; text-align:center; font-weight:800; color:#9CA3AF; font-size:15px; display:flex; align-items:center; justify-content:center; border-right:1px solid #F3F4F6; }
+        .ex-content { flex:1; padding:9px 14px; display:flex; flex-direction:column; justify-content:center; }
+        
+        .line-inline { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px; margin-bottom:2px; }
+        .line-block  { margin-bottom:2px; }
+        
+        .eng-text { font-size:16px; font-weight:700; word-break:keep-all; }
+        .kor-text { font-size:13.5px; font-weight:500; color:#4B5563; word-break:keep-all; }
+        
+        .c-s1 { color:var(--c-step1); } .c-s2 { color:var(--c-step2); } .c-s3 { color:var(--c-step3); }
+        .inline-voca { display:inline-block; margin-top:5px; background-color:rgba(0,0,0,0.04); padding:3px 8px; border-radius:4px; font-size:13px; color:#334155; line-height:1.35; font-weight:500; }
+        .inline-voca strong { color:#0F172A; font-weight:700; }
+        .voca-sep { color:#CBD5E1; margin:0 5px; }
+        
+        .footer { margin-top:4mm; height:32mm; flex-shrink:0; display:flex; gap:15px; }
+        .tip-box { flex-grow:1; background-color:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; padding:12px 16px; display:flex; flex-direction:column; justify-content:center; }
+        .tip-title { font-size:15.5px; font-weight:800; color:var(--secondary); margin-bottom:6px; }
+        .tip-content { font-size:15.5px; color:#333; font-weight:500; line-height:1.6; }
+        .dialogue-box { display:grid; grid-template-columns:24px 1fr; gap:6px; margin-top:2px; }
+        .dialogue-speaker { font-weight:800; color:var(--primary); font-size:16px; }
+        .dialogue-text { color:#1F2937; font-size:16px; font-weight:700; }
+        
+        .page-number { font-size:12.5px; color:#9CA3AF; text-align:center; font-weight:500; margin-top:auto; padding-top:10px; letter-spacing:1px; }
+
+        #tbody-p1, #tbody-p2 { display:contents; }
+        
+        @media print {
+            @page { size:A4; margin:0; }
+            body { padding:0!important; margin:0!important; gap:0!important; background-color:#FFF!important; }
+            .page-container { box-shadow:none!important; margin:0!important; height:296.5mm!important; page-break-after:always!important; page-break-inside:avoid!important; overflow:hidden!important; }
+            .page-container:last-child { page-break-after:auto!important; }
+            
+            .pattern-title, .eng-text, .dialogue-speaker, .dialogue-text { color: #000000 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page-container">
+    <div class="header">
+        <div class="header-left">
+            <div class="day-badge" id="badge"></div>
+            <h1 class="pattern-title" id="title"></h1>
+            <p class="pattern-meaning" id="meaning"></p>
+        </div>
+        <div class="header-right">
+            <a id="qr-link" href="#" target="_blank" class="qr-link-box">
+                <div class="qr-box">
+                    <div class="qr-top-text">영상 강의</div>
+                    <div class="qr-left-text">클릭<br>또는<br>스캔</div>
+                    <img id="qr-img" class="qr-image" src="" alt="QR Code">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="grammar-prep">
+        <div class="grammar-prep-title">※ Grammar Point</div>
+        <div id="grammar"></div>
+    </div>
+    <div class="table-container">
+        <div class="table-header">
+            <div class="th-no">번호</div>
+            <!-- [수정됨] 화살표를 플러스 기호로 바꾸고 각 단계별 색상 적용 -->
+            <div class="th-content">
+                <span class="c-s1">짧게 말하기(초급)</span> &nbsp;+&nbsp; 
+                <span class="c-s2">확장해서 말하기(중급)</span> &nbsp;+&nbsp; 
+                <span class="c-s3">더 추가해서 말하기(고급)</span>
+            </div>
+        </div>
+        <div id="tbody-p1"></div>
+    </div>
+    
+    <div class="page-number" id="page-num-1"></div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page-container">
+    <div class="mini-header">
+        <div class="mini-title" id="mini-title"></div>
+        <div id="mini-sub" style="font-size:13.5px;color:#6B7280;font-weight:700;"></div>
+    </div>
+    <div class="table-container">
+        <div id="tbody-p2"></div>
+    </div>
+    <div class="footer">
+        <div class="tip-box">
+            <div class="tip-title">💬 실전 롤플레이 (Mini Dialogue)</div>
+            <div class="tip-content">
+                <div class="dialogue-box">
+                    <div class="dialogue-speaker">A:</div>
+                    <div class="dialogue-text" id="dlg-a"></div>
+                    <div class="dialogue-speaker">B:</div>
+                    <div class="dialogue-text" id="dlg-b"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page-number" id="page-num-2"></div>
+</div>
+
+<!-- 렌더링 엔진 -->
+<script>
+(function() {
+    document.getElementById('page-title').textContent = `패턴 ${DATA.patternNo} - ${DATA.patternTitle}`;
+    document.getElementById('badge').textContent   = `패턴 ${DATA.patternNo}`;
+    document.getElementById('title').textContent   = DATA.patternTitle;
+    document.getElementById('meaning').textContent = DATA.meaning;
+    
+    document.getElementById('qr-link').href        = DATA.youtubeUrl;
+    document.getElementById('qr-img').src          = `https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(DATA.youtubeUrl)}`;
+    
+    document.getElementById('grammar').innerHTML   = DATA.grammarPoint;
+    document.getElementById('mini-title').textContent = `패턴 ${DATA.patternNo} - 추가 예문으로 확실하게 내 것 만들기`;
+    document.getElementById('mini-sub').textContent   = DATA.patternTitle;
+
+    let pNo = parseInt(DATA.patternNo);
+    if(!isNaN(pNo)) {
+        document.getElementById('page-num-1').textContent = `- ${(pNo * 2) - 1} -`;
+        document.getElementById('page-num-2').textContent = `- ${pNo * 2} -`;
+    }
+
+    function buildRow(ex, no) {
+        const num = String(no).padStart(2, '0');
+        return `
+        <div class="ex-row">
+            <div class="td-no">${num}</div>
+            <div class="ex-content">
+                <div class="line-inline">
+                    <div class="eng-text"><span class="c-s1">${ex.s1_eng}</span></div>
+                    <div class="kor-text">${ex.s1_kor}</div>
+                </div>
+                <div class="line-inline">
+                    <div class="eng-text">
+                        <span class="c-s1">${ex.s2_s1}</span>
+                        <span class="c-s2"> ${ex.s2_s2}</span>
+                    </div>
+                    <div class="kor-text">${ex.s2_kor}</div>
+                </div>
+                <div class="line-block">
+                    <div class="eng-text">
+                        <span class="c-s1">${ex.s3_s1}</span>
+                        <span class="c-s2"> ${ex.s3_s2}</span>
+                        <span class="c-s3"> ${ex.s3_s3}</span>
+                    </div>
+                    <div class="kor-text" style="margin-bottom:2px;">${ex.s3_kor}</div>
+                </div>
+                <div class="inline-voca">${ex.voca}</div>
+            </div>
+        </div>`;
+    }
+
+    let p1html = '';
+    for (let i = 0; i < 5; i++) p1html += buildRow(DATA.examples[i], i + 1);
+    document.getElementById('tbody-p1').innerHTML = p1html;
+
+    let p2html = '';
+    for (let i = 5; i < 10; i++) p2html += buildRow(DATA.examples[i], i + 1);
+    document.getElementById('tbody-p2').innerHTML = p2html;
+
+    document.getElementById('dlg-a').innerHTML =
+        `${DATA.dialogueA_eng} <span style="color:#6B7280;font-size:13.5px;font-weight:500;margin-left:6px;">(${DATA.dialogueA_kor})</span>`;
+    document.getElementById('dlg-b').innerHTML =
+        `${DATA.dialogueB_eng} <span style="color:#6B7280;font-size:13.5px;font-weight:500;margin-left:6px;">(${DATA.dialogueB_kor})</span>`;
+})();
+</script>
+</body>
+</html>
