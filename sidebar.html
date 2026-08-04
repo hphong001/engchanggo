@@ -43,23 +43,22 @@
 </div>
 <script>
 (function(){
-  // fetch 경로는 이 스크립트가 실행되는 페이지 기준
-  var base = '';
-  var loc = window.location.pathname;
-  // patterns/001-i-can/ 구조이면 ../../ 로 루트 접근
-  var depth = (loc.match(/\//g) || []).length;
-  for(var d=0; d<depth-1; d++) base += '../';
-  var jsonUrl = base + 'pattern-list.json';
+  // 현재 페이지 URL에서 /patterns/ 앞까지의 경로를 루트로 사용
+  var loc = window.location.href;
+  var rootUrl = loc.indexOf('/patterns/') !== -1
+    ? loc.substring(0, loc.indexOf('/patterns/') + 1)
+    : loc.substring(0, loc.lastIndexOf('/') + 1);
+  var jsonUrl = rootUrl + 'pattern-list.json';
 
   fetch(jsonUrl)
-    .then(r => r.json())
-    .then(list => {
+    .then(function(r){ return r.json(); })
+    .then(function(list){
       var ul = document.getElementById('sb-list');
       if(!ul) return;
       var currentSlug = (typeof CURRENT_SLUG !== 'undefined') ? CURRENT_SLUG : '';
       ul.innerHTML = list.map(function(p){
         var isActive = p.slug === currentSlug;
-        var href = isActive ? '#' : base + 'patterns/' + p.slug + '/';
+        var href = isActive ? '#' : rootUrl + 'patterns/' + p.slug + '/';
         return '<li class="sb-pattern-item' + (isActive ? ' active' : '') + '" data-slug="' + p.slug + '">'
              + '<a href="' + href + '">'
              + '<span class="sb-no">' + p.no + '</span>'
@@ -67,6 +66,6 @@
              + '</a></li>';
       }).join('');
     })
-    .catch(function(){});
+    .catch(function(e){ console.log('sidebar fetch error:', e); });
 })();
 </script>
