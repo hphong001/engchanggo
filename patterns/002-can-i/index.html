@@ -271,7 +271,14 @@ fetch('../../sidebar.html')
 fetch('../../ad-footer.html')
   .then(r => r.text())
   .then(html => {
-    document.getElementById('ad-footer-container').innerHTML = html;
+    var container = document.getElementById('ad-footer-container');
+    container.innerHTML = html;
+    // innerHTML로 삽입된 script는 실행 안 되므로 동적으로 재실행
+    Array.from(container.querySelectorAll('script')).forEach(function(old){
+      var s = document.createElement('script');
+      s.textContent = old.textContent;
+      old.parentNode.replaceChild(s, old);
+    });
   })
   .catch(() => {});
 
