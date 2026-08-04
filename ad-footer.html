@@ -1,12 +1,50 @@
 ﻿<style>
-.adf-section-div{display:flex;align-items:center;gap:14px;margin:32px 0 16px;}
+.adf-wrap{margin-top:32px;}
+.adf-section-div{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
 .adf-section-div-line{flex:1;height:1px;background:#E2E2DF;}
-.adf-section-div-label{font-size:12px;font-weight:800;color:#A0A0A0;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;}
-.adf-ad-label{font-size:11px;font-weight:700;color:#A0A0A0;letter-spacing:1px;text-align:center;margin-bottom:5px;}
-.adf-ad-banner{width:100%;border:1px dashed #E2E2DF;background:#FFFFFF;padding:20px;text-align:center;font-size:14px;color:#A0A0A0;}
+.adf-section-div-label{font-size:11px;font-weight:800;color:#A0A0A0;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;}
+.adf-ad-label{font-size:11px;font-weight:700;color:#A0A0A0;letter-spacing:1px;text-align:right;margin-bottom:4px;}
+.adf-banner-wrap{position:relative;width:100%;display:block;margin-bottom:12px;overflow:hidden;cursor:pointer;}
+.adf-banner-wrap img{width:100%;height:auto;display:block;transition:opacity .6s ease;}
+.adf-banner-wrap img.adf-active{opacity:1;position:relative;}
+.adf-banner-wrap img.adf-inactive{opacity:0;position:absolute;top:0;left:0;pointer-events:none;}
 </style>
-<div class="adf-section-div"><div class="adf-section-div-line"></div><div class="adf-section-div-label">광고</div><div class="adf-section-div-line"></div></div>
-<!-- ===== 광고 1: 쿠팡파트너스 영어학습 제품 (추후 활성화) ===== -->
-<div><div class="adf-ad-label">AD</div><div class="adf-ad-banner">[ 쿠팡파트너스 영어학습 제품 광고 ]</div></div>
-<!-- ===== 광고 2: 개인 광고 배너 (추후 활성화) ===== -->
-<div style="margin-top:10px;"><div class="adf-ad-label">AD</div><div class="adf-ad-banner">[ 개인 광고 배너 ]</div></div>
+<div class="adf-wrap">
+<div class="adf-section-div">
+  <div class="adf-section-div-line"></div>
+  <div class="adf-section-div-label">광고</div>
+  <div class="adf-section-div-line"></div>
+</div>
+<div class="adf-ad-label">AD</div>
+<a id="adf-cupang-link" href="#" target="_blank" class="adf-banner-wrap">
+  <img src="../../image/cupang_banner_1.png" alt="쿠팡파트너스 영어학습 도서" class="adf-active" id="adf-c0">
+  <img src="../../image/cupang_banner_2.png" alt="쿠팡파트너스 영어학습 도서" class="adf-inactive" id="adf-c1">
+</a>
+<div class="adf-ad-label" style="margin-top:6px;">AD</div>
+<a id="adf-aibase-link" href="https://aibaselab.com" target="_blank" class="adf-banner-wrap">
+  <img src="../../image/aibaselab_banner_1.png" alt="AIBaseLab 영상편집 솔루션" class="adf-active" id="adf-a0">
+  <img src="../../image/aibaselab_banner_2.png" alt="AIBaseLab 영상편집 솔루션" class="adf-inactive" id="adf-a1">
+</a>
+</div>
+<script>
+(function(){
+  // TODO: 쿠팡파트너스 실제 URL로 교체
+  var cupangUrl = '#';
+  var cl = document.getElementById('adf-cupang-link');
+  if(cl) cl.href = cupangUrl;
+
+  function roll(ids, ms){
+    var imgs = ids.map(function(id){ return document.getElementById(id); });
+    if(imgs.some(function(i){ return !i; })) return;
+    var cur = 0;
+    setInterval(function(){
+      imgs[cur].className = 'adf-inactive';
+      cur = (cur + 1) % imgs.length;
+      imgs[cur].className = 'adf-active';
+    }, ms);
+  }
+
+  roll(['adf-c0','adf-c1'], 5000); // 쿠팡 5초
+  roll(['adf-a0','adf-a1'], 4000); // 개인광고 4초
+})();
+</script>
