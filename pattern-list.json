@@ -1,62 +1,14 @@
 ﻿[
   {
-    "no": "001",
-    "name": "I can",
-    "slug": "001-i-can",
-    "video": "https://www.youtube.com/watch?v=bwwKi2c4HyY"
-  },
-  {
-    "no": "002",
-    "name": "Can I",
-    "slug": "002-can-i",
-    "video": "https://www.youtube.com/watch?v=YseF-WvMpgo"
-  },
-  {
-    "no": "003",
-    "name": "May I",
-    "slug": "003-may-i",
-    "video": "https://www.youtube.com/watch?v=ExHTg45uoTY"
-  },
-  {
-    "no": "004",
-    "name": "It is",
-    "slug": "004-it-is",
-    "video": "https://www.youtube.com/watch?v=_-m0Z9FvgM8"
-  },
-  {
-    "no": "005",
-    "name": "Don’t",
-    "slug": "005-dont",
-    "video": "https://www.youtube.com/watch?v=m2Y5GGtFNIc"
-  },
-  {
-    "no": "006",
-    "name": "Let’s",
-    "slug": "006-lets",
-    "video": "https://www.youtube.com/watch?v=GZxdb4ZkZtI"
-  },
-  {
-    "no": "007",
-    "name": "Do you",
-    "slug": "007-do-you",
-    "video": "https://www.youtube.com/watch?v=1GdIWIOKR4M"
-  },
-  {
-    "no": "008",
-    "name": "How is",
-    "slug": "008-how-is",
-    "video": "https://www.youtube.com/watch?v=XG466jtvrh4"
-  },
-  {
-    "no": "009",
-    "name": "Please",
-    "slug": "009-please",
-    "video": "https://www.youtube.com/watch?v=Qst_LpDtpg4"
-  },
-  {
     "no": "010",
     "name": "I think",
     "slug": "010-i-think",
     "video": "https://www.youtube.com/watch?v=9m9o3e8mB8c"
+  },
+  {
+    "no": "011",
+    "name": "Can you",
+    "slug": "011-can-you",
+    "video": "https://www.youtube.com/watch?v=X4mcHM1QBf0"
   }
 ]
