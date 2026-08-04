@@ -43,13 +43,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap">
 <style>
-:root{
-  --bg:#FBFBF9;--white:#FFFFFF;--black:#1A1A1A;
-  --gray:#555;--gray-lt:#A0A0A0;--accent:#4F46E5;--border:#E2E2DF;
-  --c-s1:#000;--c-s2:#C2185B;--c-s3:#0F9D58;
-  --font:'Pretendard','Malgun Gothic',sans-serif;
-  --font-en:'Montserrat',sans-serif;
-}
+:root{--bg:#FBFBF9;--white:#FFFFFF;--black:#1A1A1A;--gray:#555;--gray-lt:#A0A0A0;--accent:#4F46E5;--border:#E2E2DF;--c-s1:#000;--c-s2:#C2185B;--c-s3:#0F9D58;--font:'Pretendard','Malgun Gothic',sans-serif;--font-en:'Montserrat',sans-serif;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:var(--font);background:var(--bg);color:var(--black);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px;}
 a{text-decoration:none;color:inherit;}
@@ -69,13 +63,15 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
 .mobile-menu.open{display:flex;}
 .mobile-menu a{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;font-size:15px;font-weight:700;border:1px solid var(--border);transition:all .2s;}
 .mobile-menu a.accent{background:var(--accent);color:white;border-color:var(--accent);}
-.mobile-menu a.accent:hover{background:var(--black);border-color:var(--black);}
+.mobile-menu a.accent:hover{background:var(--black);}
 .mobile-menu a:not(.accent):hover{background:var(--black);color:white;}
 .breadcrumb{max-width:1100px;margin:0 auto;padding:11px 24px;font-size:13px;color:var(--gray-lt);display:flex;align-items:center;gap:5px;}
 .breadcrumb a{color:var(--gray-lt);transition:color .2s;}
 .breadcrumb a:hover{color:var(--accent);}
 .layout{max-width:1100px;margin:0 auto;padding:0 24px 60px;display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:start;}
 .main-col{min-width:0;}
+.sidebar{position:sticky;top:76px;}
+#sidebar-container{display:flex;flex-direction:column;gap:18px;}
 .rank-bar{padding:16px 0 20px;border-bottom:1px solid var(--border);margin-bottom:24px;display:flex;justify-content:space-between;align-items:center;}
 .rank-label{font-size:14px;font-weight:600;color:var(--gray);}
 .rank-value{font-size:14px;font-weight:800;color:var(--accent);}
@@ -91,15 +87,6 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
 .step-plus{font-size:22px;font-weight:900;color:var(--gray-lt);padding:0 10px;line-height:1;}
 .summary-video-note{font-size:14px;color:var(--gray);line-height:1.7;}
 .summary-video-note a{color:var(--accent);font-weight:700;border-bottom:1px solid var(--accent);padding-bottom:1px;}
-.ebook-inline-banner{background:var(--white);border:1px solid var(--border);padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px;}
-.ebook-inline-left{flex:1;min-width:0;}
-.ebook-inline-badge{font-size:19px;font-weight:900;color:var(--black);letter-spacing:-.3px;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
-.ebook-inline-title{font-size:15px;font-weight:700;color:var(--gray);margin-bottom:7px;word-break:keep-all;line-height:1.5;}
-.ebook-inline-desc{font-size:14px;color:var(--gray);line-height:1.7;word-break:keep-all;}
-.ebook-inline-right{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:10px;}
-.ebook-inline-discount{font-size:13px;font-weight:700;color:#DC2626;white-space:nowrap;display:flex;align-items:center;gap:5px;}
-.ebook-inline-btn{display:block;padding:12px 22px;background:var(--black);color:white;font-size:14px;font-weight:700;white-space:nowrap;transition:background .2s;text-align:center;}
-.ebook-inline-btn:hover{background:var(--accent);}
 .pattern-hd{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:16px;border-bottom:2px solid var(--black);margin-bottom:18px;}
 .pattern-hd-left{flex:1;padding-right:14px;min-width:0;}
 .pattern-no-badge{display:inline-block;background:var(--black);color:white;padding:4px 14px;font-size:13px;font-weight:800;letter-spacing:1px;margin-bottom:10px;}
@@ -147,34 +134,10 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
 .subscribe-bar-text{font-size:15px;color:var(--gray);font-weight:500;word-break:keep-all;margin-bottom:12px;display:block;}
 .subscribe-bar-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 22px;background:var(--accent);color:white;font-size:14px;font-weight:700;transition:background .2s;}
 .subscribe-bar-btn:hover{background:var(--black);}
-.ad-label{font-size:11px;font-weight:700;color:var(--gray-lt);letter-spacing:1px;text-align:center;margin-bottom:5px;}
-.ad-banner{width:100%;border:1px dashed var(--border);background:var(--white);padding:20px;text-align:center;font-size:14px;color:var(--gray-lt);}
+#ad-footer-container{margin-top:32px;}
 .list-btn-wrap{text-align:center;margin-top:24px;}
 .list-btn{display:inline-flex;align-items:center;gap:7px;padding:11px 28px;border:1px solid var(--border);background:var(--white);font-size:14px;font-weight:700;color:var(--black);transition:all .2s;}
 .list-btn:hover{background:var(--black);color:white;}
-.sidebar{position:sticky;top:76px;display:flex;flex-direction:column;gap:18px;}
-.sb-card{background:var(--white);border:1px solid var(--border);padding:22px;}
-.sb-ebook-eyebrow{font-size:20px;font-weight:900;color:var(--black);letter-spacing:-.3px;text-align:center;margin-bottom:10px;display:block;}
-.sb-ebook-title{font-size:14px;font-weight:600;color:var(--gray);text-align:center;margin-bottom:16px;line-height:1.6;word-break:keep-all;}
-.sb-ebook-3step{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
-.sb-ebook-step{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--gray);}
-.sb-ebook-step-icon{width:30px;height:30px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);}
-.sb-ebook-divider{height:1px;background:var(--border);margin-bottom:14px;}
-.sb-ebook-discount{font-size:13.5px;font-weight:700;color:#DC2626;text-align:center;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:5px;}
-.sb-ebook-btn{display:block;width:100%;padding:13px;background:var(--black);color:white;font-size:15px;font-weight:800;text-align:center;transition:background .2s;}
-.sb-ebook-btn:hover{background:var(--accent);}
-.sb-section-title{font-size:12px;font-weight:800;color:var(--black);letter-spacing:.5px;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid var(--border);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
-#sb-pattern-list{list-style:none;max-height:340px;overflow-y:auto;display:flex;flex-direction:column;gap:1px;}
-#sb-pattern-list li a{display:flex;align-items:center;gap:8px;padding:7px 8px;font-size:14px;font-weight:600;color:var(--gray);transition:all .2s;}
-#sb-pattern-list li a:hover{background:var(--bg);color:var(--accent);}
-#sb-pattern-list li.active a{color:var(--accent);font-weight:800;background:var(--bg);}
-.sb-no{font-size:12px;font-weight:700;color:var(--gray-lt);min-width:28px;}
-.sb-name{font-family:var(--font-en);font-size:14px;}
-.sb-yt-title{font-size:12px;font-weight:800;color:var(--black);letter-spacing:.5px;text-transform:uppercase;text-align:center;margin-bottom:14px;display:block;}
-.sb-ch-btn{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:11px;border:1px solid var(--border);background:var(--bg);color:var(--black);font-size:14px;font-weight:700;text-align:center;transition:all .2s;}
-.sb-ch-btn:hover{background:var(--accent);color:white;border-color:var(--accent);}
-#rank-total{color:var(--gray-lt);}
-footer{text-align:center;padding:30px 20px;color:var(--gray-lt);font-size:14px;border-top:1px solid var(--border);background:var(--white);margin-top:40px;}
 @media(max-width:900px){
   .layout{grid-template-columns:1fr;padding:0 16px 40px;}
   .sidebar{display:none;}
@@ -183,11 +146,9 @@ footer{text-align:center;padding:30px 20px;color:var(--gray-lt);font-size:14px;b
   .header-inner .hd-right{margin-right:0;}
   .pattern-title-h1{font-size:32px;}
   .summary-main{font-size:34px;}
-  .ebook-inline-banner{flex-direction:column;}
-  .subscribe-bar{text-align:center;}
+  .step-chips{flex-direction:column;align-items:center;gap:6px;}
 }
 @media(max-width:480px){
-  .step-chips{flex-direction:column;align-items:center;gap:6px;}
   .th-content{font-size:13px;padding:9px;word-break:break-all;}
   .eng-text{font-size:15px;}
   .grammar-body{font-size:15px;}
@@ -201,14 +162,14 @@ footer{text-align:center;padding:30px 20px;color:var(--gray-lt);font-size:14px;b
 <div class="header-inner">
   <a href="../../index.html" class="logo">영어창고 <span>MyEnglishVault</span></a>
   <div class="hd-right">
-    <a href="#" class="hd-ebook-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> 전자책 구매</a>
+    <a href="#" class="hd-ebook-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> 전자책 안내</a>
     <a href="../../index.html" class="hd-list-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> 패턴 목록</a>
     <button class="hamburger" onclick="toggleMenu()" aria-label="메뉴"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
 </div>
 </header>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#" class="accent"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> 전자책 구매하기</a>
+  <a href="#" class="accent"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> 전자책 안내</a>
   <a href="../../index.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> 전체 패턴 목록</a>
   <a href="https://www.youtube.com/channel/UCojiD-GS8WSeNXigr6EKhMA" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg> 유튜브 채널 구독</a>
 </div>
@@ -289,8 +250,7 @@ footer{text-align:center;padding:30px 20px;color:var(--gray-lt);font-size:14px;b
     <div class="dialogue-txt">Don't worry, you've prepared so well! <span class="dialogue-kor">(걱정하지 마, 너 정말 잘 준비했잖아!)</span></div>
   </div>
 </div>
-<div class="section-div"><div class="section-div-line"></div><div class="section-div-label">전자책 안내</div><div class="section-div-line"></div></div>
-<div class="ebook-inline-banner"><div class="ebook-inline-left"><div class="ebook-inline-badge">전자책 구매</div><div class="ebook-inline-title">웹페이지 + 영상 + 전자책으로<br>확실히 내 것으로 만드세요!</div><div class="ebook-inline-desc">웹페이지로 예문을 학습하고, 영상으로 원어민 발음을 익히고,<br>전자책은 항상 곁에 두고 언제 어디서나 예습·복습까지 — <strong>3단계 완전학습 시스템</strong></div></div><div class="ebook-inline-right"><div class="ebook-inline-discount"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg> 지금 구매 시 할인 혜택!</div><a href="#" class="ebook-inline-btn">전자책 구매하기</a></div></div><div class="section-div"><div class="section-div-line"></div><div class="section-div-label">영상 반복학습</div><div class="section-div-line"></div></div>
+<div class="section-div"><div class="section-div-line"></div><div class="section-div-label">영상 반복학습</div><div class="section-div-line"></div></div>
 <div class="yt-section">
   <div class="yt-heading-main"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> 위에서 학습한 내용을 영상으로 반복 학습하세요</div>
   <div class="yt-heading-sub">글로 익힌 패턴을 원어민 발음과 함께 다시 확인하면 <strong>장기 기억으로 확실하게 굳어집니다.</strong></div>
@@ -302,63 +262,47 @@ footer{text-align:center;padding:30px 20px;color:var(--gray-lt);font-size:14px;b
     <a href="https://www.youtube.com/channel/UCojiD-GS8WSeNXigr6EKhMA" target="_blank" class="subscribe-bar-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg> 채널 구독</a>
   </div>
 </div>
-<div class="section-div"><div class="section-div-line"></div><div class="section-div-label">광고</div><div class="section-div-line"></div></div>
-<div><div class="ad-label">AD</div><div class="ad-banner">[ 쿠팡파트너스 영어학습 제품 광고 ]</div></div>
-<div style="margin-top:10px;"><div class="ad-label">AD</div><div class="ad-banner">[ 개인 광고 배너 ]</div></div>
+<div id="ad-footer-container"></div>
 <div class="list-btn-wrap">
   <a href="../../index.html" class="list-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> 전체 패턴 목록 보기</a>
 </div>
 </main>
 <aside class="sidebar">
-  <div class="sb-card">
-    <span class="sb-ebook-eyebrow">전자책 구매</span>
-    <div class="sb-ebook-title">웹페이지 + 영상 + 전자책으로<br>확실히 내 것으로!</div>
-    <div class="sb-ebook-3step">
-      <div class="sb-ebook-step"><span class="sb-ebook-step-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><span>웹페이지로 <strong>예문 학습</strong></span></div>
-      <div class="sb-ebook-step"><span class="sb-ebook-step-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span><span>영상으로 <strong>원어민 발음</strong> 확인</span></div>
-      <div class="sb-ebook-step"><span class="sb-ebook-step-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span>항상 곁에 두고 <strong>예습·복습</strong> 완성</span></div>
-    </div>
-    <div class="sb-ebook-divider"></div>
-    <div class="sb-ebook-discount"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg> 지금 구매 시 할인 혜택!</div>
-    <a href="#" class="sb-ebook-btn">전자책 구매하기</a>
-  </div>
-  <div class="sb-card">
-    <span class="sb-section-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> 패턴 목록</span>
-    <ul id="sb-pattern-list"><li style="padding:8px;color:var(--gray-lt);font-size:13px;">목록 불러오는 중...</li></ul>
-  </div>
-  <div class="sb-card">
-    <span class="sb-yt-title">유튜브 채널</span>
-    <a href="https://www.youtube.com/channel/UCojiD-GS8WSeNXigr6EKhMA" target="_blank" class="sb-ch-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg> 채널 구독하기</a>
-  </div>
+  <div id="sidebar-container"></div>
 </aside>
 </div>
-<footer><p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p></footer>
+<footer style="text-align:center;padding:30px 20px;color:var(--gray-lt);font-size:14px;border-top:1px solid var(--border);background:var(--white);margin-top:40px;"><p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p></footer>
 <script>
-const CURRENT_NO = '005';
 const CURRENT_SLUG = '005-dont';
 
+// pattern-list.json → 순번 전체수 업데이트
 fetch('../../pattern-list.json')
   .then(r => r.json())
   .then(list => {
-    // 전체 패턴 수 업데이트
-    const total = String(list.length).padStart(3, '0');
+    const total = String(list.length).padStart(3,'0');
     document.getElementById('rank-total').textContent = total;
-
-    // 사이드바 패턴 목록 렌더링
-    const ul = document.getElementById('sb-pattern-list');
-    ul.innerHTML = list.map(p => {
-      const isActive = p.slug === CURRENT_SLUG;
-      const href = isActive ? '#' : '../' + p.slug + '/';
-      return '<li class="' + (isActive ? 'active' : '') + '">'
-           + '<a href="' + href + '">'
-           + '<span class="sb-no">' + p.no + '</span>'
-           + '<span class="sb-name">' + p.name + '</span>'
-           + '</a></li>';
-    }).join('');
   })
-  .catch(() => {
-    document.getElementById('rank-total').textContent = '---';
-  });
+  .catch(() => { document.getElementById('rank-total').textContent = '---'; });
+
+// sidebar.html fetch → 사이드바 삽입
+fetch('../../sidebar.html')
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById('sidebar-container').innerHTML = html;
+    // 사이드바 로드 후 현재 패턴 활성화
+    document.querySelectorAll('.sb-pattern-item').forEach(el => {
+      if(el.dataset.slug === CURRENT_SLUG) el.classList.add('active');
+    });
+  })
+  .catch(() => {});
+
+// ad-footer.html fetch → 하단 광고 삽입
+fetch('../../ad-footer.html')
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById('ad-footer-container').innerHTML = html;
+  })
+  .catch(() => {});
 
 function toggleMenu(){
   document.getElementById('mobileMenu').classList.toggle('open');
