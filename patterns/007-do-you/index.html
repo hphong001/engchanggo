@@ -50,21 +50,6 @@ a{text-decoration:none;color:inherit;}
 svg{display:inline-block;vertical-align:middle;flex-shrink:0;}
 header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;}
 .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:100%;display:flex;justify-content:space-between;align-items:center;}
-.header-inner .hd-right{margin-right:336px;}
-.logo{font-family:var(--font-en);font-size:18px;font-weight:900;display:flex;align-items:center;gap:6px;}
-.logo span{color:var(--accent);font-size:16px;}
-.hd-right{display:flex;align-items:center;gap:16px;}
-.hd-ebook-btn{background:var(--accent);color:white;padding:8px 18px;font-size:14px;font-weight:700;transition:background .2s;display:flex;align-items:center;gap:6px;}
-.hd-ebook-btn:hover{background:var(--black);}
-.hd-list-btn{border:1px solid var(--border);padding:8px 16px;font-size:14px;font-weight:700;background:var(--bg);transition:all .2s;display:flex;align-items:center;gap:6px;}
-.hd-list-btn:hover{background:var(--black);color:white;border-color:var(--black);}
-.hamburger{display:none;cursor:pointer;padding:6px;background:none;border:none;color:var(--black);}
-.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);padding:16px 20px;z-index:199;flex-direction:column;gap:10px;}
-.mobile-menu.open{display:flex;}
-.mobile-menu a{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;font-size:15px;font-weight:700;border:1px solid var(--border);transition:all .2s;}
-.mobile-menu a.accent{background:var(--accent);color:white;border-color:var(--accent);}
-.mobile-menu a.accent:hover{background:var(--black);}
-.mobile-menu a:not(.accent):hover{background:var(--black);color:white;}
 .breadcrumb{max-width:1100px;margin:0 auto;padding:11px 24px;font-size:13px;color:var(--gray-lt);display:flex;align-items:center;gap:5px;}
 .breadcrumb a{color:var(--gray-lt);transition:color .2s;}
 .breadcrumb a:hover{color:var(--accent);}
@@ -141,11 +126,6 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
 @media(max-width:900px){
   .layout{grid-template-columns:1fr;padding:0 16px 40px;}
   .sidebar{display:none;}
-  .hamburger{display:flex;}
-  .hd-ebook-btn{display:none;}
-  .hd-list-btn{display:none;}
-  .header-inner{padding:0 16px;}
-  .header-inner .hd-right{margin-right:0;}
   .pattern-title-h1{font-size:32px;}
   .summary-main{font-size:34px;}
   .step-chips{flex-direction:column;align-items:center;gap:6px;}
@@ -160,21 +140,7 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
 </style>
 </head>
 <body>
-<header>
-<div class="header-inner">
-  <a href="../../index.html" class="logo">영어창고 <span>MyEnglishVault</span></a>
-  <div class="hd-right">
-    <a href="#" class="hd-ebook-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> 전자책 안내</a>
-    <a href="../../index.html" class="hd-list-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> 패턴 목록</a>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="메뉴"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-  </div>
-</div>
-</header>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#" class="accent"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> 전자책 안내</a>
-  <a href="../../index.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> 전체 패턴 목록</a>
-  <a href="https://www.youtube.com/channel/UCojiD-GS8WSeNXigr6EKhMA" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg> 유튜브 채널 구독</a>
-</div>
+<div id="header-container"></div>
 <nav class="breadcrumb" aria-label="breadcrumb">
   <a href="../../index.html">영어창고</a><span>›</span>
   <a href="../../index.html">패턴 목록</a><span>›</span>
@@ -309,15 +275,20 @@ fetch('../../ad-footer.html')
   })
   .catch(() => {});
 
-function toggleMenu(){
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
-document.addEventListener('click',function(e){
-  var m=document.getElementById('mobileMenu');
-  var b=document.querySelector('.hamburger');
-  if(m&&m.classList.contains('open')&&!m.contains(e.target)&&!b.contains(e.target))
-    m.classList.remove('open');
-});
+// header.html fetch → 헤더 삽입
+fetch('../../header.html')
+  .then(r => r.text())
+  .then(html => {
+    var container = document.getElementById('header-container');
+    container.innerHTML = html;
+    Array.from(container.querySelectorAll('script')).forEach(function(old){
+      var s = document.createElement('script');
+      s.textContent = old.textContent;
+      old.parentNode.replaceChild(s, old);
+    });
+  })
+  .catch(() => {});
+
 </script>
 </body>
 </html>
