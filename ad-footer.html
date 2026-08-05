@@ -3,74 +3,41 @@
 .adf-section-div{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
 .adf-section-div-line{flex:1;height:1px;background:#E2E2DF;}
 .adf-inner-div{height:1px;background:#E2E2DF;margin:16px 0;}
-.adf-banner-wrap{position:relative;width:100%;display:block;overflow:hidden;cursor:pointer;}
-.adf-banner-wrap img{width:100%;height:auto;display:block;}
-.adf-banner-wrap img.adf-active{opacity:1;position:relative;}
-.adf-banner-wrap img.adf-inactive{opacity:0;position:absolute;top:0;left:0;pointer-events:none;}
 .adf-notice{font-size:12px;color:#999999;text-align:center;margin-top:4px;line-height:1.4;}
+.adf-slide{position:relative;width:100%;display:block;}
+.adf-slide a{display:block;width:100%;}
+.adf-slide img{width:100%;height:auto;display:block;}
+.adf-img-2{position:absolute;top:0;left:0;width:100%;}
+@keyframes cupang1{0%,49%{opacity:1;}50%,99%{opacity:0;}100%{opacity:1;}}
+@keyframes cupang2{0%,49%{opacity:0;}50%,99%{opacity:1;}100%{opacity:0;}}
+.adf-cupang-1{animation:cupang1 4s infinite;}
+.adf-cupang-2{animation:cupang2 4s infinite;}
+@keyframes aibase1{0%,49%{opacity:1;}50%,99%{opacity:0;}100%{opacity:1;}}
+@keyframes aibase2{0%,49%{opacity:0;}50%,99%{opacity:1;}100%{opacity:0;}}
+.adf-aibase-1{animation:aibase1 6s infinite;}
+.adf-aibase-2{animation:aibase2 6s infinite;}
 </style>
 <div class="adf-wrap">
 <div class="adf-section-div">
   <div class="adf-section-div-line"></div>
   <div class="adf-section-div-line"></div>
 </div>
-<a id="adf-group-0" href="https://link.coupang.com/a/fWwirS2G4a" target="_blank" class="adf-banner-wrap">
-  <img src="../../image/cupang_banner_1.png" alt="쿠팡파트너스 영어학습 도서" class="adf-active">
-  <img src="../../image/cupang_banner_2.png" alt="쿠팡파트너스 영어학습 도서" class="adf-inactive">
-</a>
+<div class="adf-slide">
+  <a href="https://link.coupang.com/a/fWwirS2G4a" target="_blank">
+    <img src="../../image/cupang_banner_1.png" class="adf-cupang-1" alt="쿠팡파트너스 영어학습 도서">
+  </a>
+  <a href="https://link.coupang.com/a/fWwirS2G4a" target="_blank" class="adf-img-2">
+    <img src="../../image/cupang_banner_2.png" class="adf-cupang-2" alt="쿠팡파트너스 영어학습 도서">
+  </a>
+</div>
 <p class="adf-notice">이 포스팅은 쿠팡파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 <div class="adf-inner-div"></div>
-<a id="adf-group-1" href="https://aibaselab.com" target="_blank" class="adf-banner-wrap">
-  <img src="../../image/aibaselab_banner_1.png" alt="AIBaseLab 영상편집 솔루션" class="adf-active">
-  <img src="../../image/aibaselab_banner_2.png" alt="AIBaseLab 영상편집 솔루션" class="adf-inactive">
-</a>
+<div class="adf-slide">
+  <a href="https://aibaselab.com" target="_blank">
+    <img src="../../image/aibaselab_banner_1.png" class="adf-aibase-1" alt="AIBaseLab 영상편집 솔루션">
+  </a>
+  <a href="https://aibaselab.com" target="_blank" class="adf-img-2">
+    <img src="../../image/aibaselab_banner_2.png" class="adf-aibase-2" alt="AIBaseLab 영상편집 솔루션">
+  </a>
 </div>
-<script>
-// ================================================================
-// ★ 배너 설정 — 여기서만 수정하세요
-// ================================================================
-var BANNER_CONFIG = [
-  {
-    groupId   : 'adf-group-0',   // 배너 그룹 ID
-    enabled   : true,             // true: 롤링 켜기 / false: 끄기
-    interval  : 2000,             // 이미지 표시 시간 (밀리초, 2000 = 2초)
-    fadeMs    : 200,              // 페이드 전환 시간 (밀리초, 200 = 0.2초)
-  },
-  {
-    groupId   : 'adf-group-1',   // 배너 그룹 ID
-    enabled   : true,             // true: 롤링 켜기 / false: 끄기
-    interval  : 3000,             // 이미지 표시 시간 (밀리초, 3000 = 3초)
-    fadeMs    : 300,              // 페이드 전환 시간 (밀리초, 300 = 0.3초)
-  },
-  // ★ 배너 추가 시 아래에 복붙하세요:
-  // {
-  //   groupId  : 'adf-group-2',
-  //   enabled  : true,
-  //   interval : 2000,
-  //   fadeMs   : 200,
-  // },
-];
-// ================================================================
-
-(function(){
-  BANNER_CONFIG.forEach(function(cfg){
-    if(!cfg.enabled) return; // 끄기 설정이면 롤링 안 함
-    var wrap = document.getElementById(cfg.groupId);
-    if(!wrap) return;
-    var imgs = Array.from(wrap.querySelectorAll('img'));
-    if(imgs.length < 2) return;
-
-    // 각 배너 개별 fadeMs 적용
-    imgs.forEach(function(img){
-      img.style.transition = 'opacity ' + (cfg.fadeMs/1000) + 's ease';
-    });
-
-    var cur = 0;
-    setInterval(function(){
-      imgs[cur].className = 'adf-inactive';
-      cur = (cur + 1) % imgs.length;
-      imgs[cur].className = 'adf-active';
-    }, cfg.interval);
-  });
-})();
-</script>
+</div>
