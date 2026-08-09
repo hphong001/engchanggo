@@ -2,42 +2,44 @@
 .adf-wrap{margin-top:32px;}
 .adf-section-div{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
 .adf-section-div-line{flex:1;height:1px;background:#E2E2DF;}
+.adf-section-div-label{font-size:11px;font-weight:800;color:#A0A0A0;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;}
 .adf-inner-div{height:1px;background:#E2E2DF;margin:16px 0;}
+.adf-banner-wrap{position:relative;width:100%;display:block;overflow:hidden;cursor:pointer;}
+.adf-banner-wrap img{width:100%;height:auto;display:block;transition:opacity .6s ease;}
+.adf-banner-wrap img.adf-active{opacity:1;position:relative;}
+.adf-banner-wrap img.adf-inactive{opacity:0;position:absolute;top:0;left:0;pointer-events:none;}
 .adf-notice{font-size:12px;color:#999999;text-align:center;margin-top:4px;line-height:1.4;}
-.adf-slide{position:relative;width:100%;display:block;}
-.adf-slide a{display:block;width:100%;}
-.adf-slide img{width:100%;height:auto;display:block;}
-.adf-img-2{position:absolute;top:0;left:0;width:100%;}
-@keyframes cupang1{0%,49%{opacity:1;}50%,99%{opacity:0;}100%{opacity:1;}}
-@keyframes cupang2{0%,49%{opacity:0;}50%,99%{opacity:1;}100%{opacity:0;}}
-.adf-cupang-1{animation:cupang1 2.5s infinite;}
-.adf-cupang-2{animation:cupang2 2.5s infinite;}
-@keyframes aibase1{0%,49%{opacity:1;}50%,99%{opacity:0;}100%{opacity:1;}}
-@keyframes aibase2{0%,49%{opacity:0;}50%,99%{opacity:1;}100%{opacity:0;}}
-.adf-aibase-1{animation:aibase1 6s infinite;}
-.adf-aibase-2{animation:aibase2 6s infinite;}
 </style>
 <div class="adf-wrap">
 <div class="adf-section-div">
   <div class="adf-section-div-line"></div>
   <div class="adf-section-div-line"></div>
 </div>
-<div class="adf-slide">
-  <a href="https://link.coupang.com/a/fWwirS2G4a" target="_blank">
-    <img src="../../image/cupang_banner_1.png" class="adf-cupang-1" alt="쿠팡파트너스 영어학습 도서">
-  </a>
-  <a href="https://link.coupang.com/a/fWwirS2G4a" target="_blank" class="adf-img-2">
-    <img src="../../image/cupang_banner_2.png" class="adf-cupang-2" alt="쿠팡파트너스 영어학습 도서">
-  </a>
-</div>
+<a id="adf-cupang-link" href="https://link.coupang.com/a/fWwirS2G4a" target="_blank" class="adf-banner-wrap">
+  <img src="../../image/cupang_banner_1.png" alt="쿠팡파트너스 영어학습 도서" class="adf-active" id="adf-c0">
+  <img src="../../image/cupang_banner_2.png" alt="쿠팡파트너스 영어학습 도서" class="adf-inactive" id="adf-c1">
+</a>
 <p class="adf-notice">이 포스팅은 쿠팡파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 <div class="adf-inner-div"></div>
-<div class="adf-slide">
-  <a href="https://aibaselab.com" target="_blank">
-    <img src="../../image/aibaselab_banner_1.png" class="adf-aibase-1" alt="AIBaseLab 영상편집 솔루션">
-  </a>
-  <a href="https://aibaselab.com" target="_blank" class="adf-img-2">
-    <img src="../../image/aibaselab_banner_2.png" class="adf-aibase-2" alt="AIBaseLab 영상편집 솔루션">
-  </a>
+<a id="adf-aibase-link" href="https://aibaselab.com" target="_blank" class="adf-banner-wrap">
+  <img src="../../image/aibaselab_banner_1.png" alt="AIBaseLab 영상편집 솔루션" class="adf-active" id="adf-a0">
+  <img src="../../image/aibaselab_banner_2.png" alt="AIBaseLab 영상편집 솔루션" class="adf-inactive" id="adf-a1">
+</a>
 </div>
-</div>
+<script>
+(function(){
+  function roll(ids, ms){
+    var imgs = ids.map(function(id){ return document.getElementById(id); });
+    if(imgs.some(function(i){ return !i; })) return;
+    var cur = 0;
+    setInterval(function(){
+      imgs[cur].className = 'adf-inactive';
+      cur = (cur + 1) % imgs.length;
+      imgs[cur].className = 'adf-active';
+    }, ms);
+  }
+
+  roll(['adf-c0','adf-c1'], 3000); // 쿠팡 3초
+  roll(['adf-a0','adf-a1'], 3000); // 개인광고 3초
+})();
+</script>
