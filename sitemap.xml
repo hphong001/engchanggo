@@ -5,6 +5,13 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <url>
+    <loc>https://hphong.com/ebook-info.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <url>
     <loc>https://hphong.com/english/ko/001-i-can/</loc>
     <changefreq>weekly</changefreq>
