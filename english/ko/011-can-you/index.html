@@ -110,41 +110,31 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
 .dialogue-txt{color:var(--black);font-size:16px;font-weight:600;line-height:1.6;word-break:keep-all;}
 .dialogue-kor{color:var(--gray-lt);font-size:13.5px;font-weight:500;margin-left:6px;}
 .yt-section{background:var(--white);border:1px solid var(--border);padding:26px;}
-.yt-heading-main{font-size:20px;font-weight:900;color:var(--black);margin-bottom:7px;display:flex;align-items:center;gap:8px;}
-.yt-heading-sub{font-size:15px;color:var(--gray);line-height:1.7;word-break:keep-all;margin-bottom:18px;}
+.yt-heading-main{font-size:18px;font-weight:800;color:var(--black);margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;}
 .yt-wrapper{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;}
 .yt-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
 .subscribe-bar{margin-top:16px;padding:16px 20px;background:var(--bg);border:1px solid var(--border);text-align:center;}
-.subscribe-bar-line1{display:block;font-size:15px;color:var(--gray);font-weight:600;margin-bottom:4px;}
-.subscribe-bar-line2{display:block;font-size:14px;color:var(--gray);font-weight:500;margin-bottom:12px;}
+.subscribe-bar-text{display:block;font-size:14px;color:var(--gray);font-weight:500;margin-bottom:12px;word-break:keep-all;}
 .subscribe-bar-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 22px;background:var(--accent);color:white;font-size:14px;font-weight:700;transition:background .2s;}
 .subscribe-bar-btn:hover{background:var(--black);}
-.mobile-ebook-bar{display:none;margin-top:14px;padding:20px;background:#FFF8EC;border:1px solid #D4A843;text-align:center;}
-.mobile-ebook-line1{display:block;font-size:14px;color:var(--gray);font-weight:600;margin-bottom:4px;word-break:keep-all;}
-.mobile-ebook-line2{display:block;font-size:13px;color:var(--gray);font-weight:500;margin-bottom:14px;word-break:keep-all;}
-.mobile-ebook-line3{display:block;font-size:13px;color:var(--gray);font-weight:500;margin-bottom:14px;word-break:keep-all;}
-.mobile-ebook-btn{display:inline-flex;flex-direction:column;align-items:center;gap:2px;padding:13px 28px;background:#C9A050;color:white;font-size:15px;font-weight:800;border-radius:8px;box-shadow:0 4px 12px rgba(201,160,80,0.45);transition:all .2s;}
+.pattern-nav{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:28px;margin-bottom:8px;flex-wrap:wrap;}
+.nav-btn{display:inline-flex;flex-direction:column;align-items:center;gap:3px;padding:12px 20px;border:1px solid var(--border);background:var(--white);text-decoration:none;transition:all .2s;min-width:130px;text-align:center;}
+.nav-btn:hover{background:var(--black);border-color:var(--black);}
+.nav-label{font-size:12px;font-weight:600;color:var(--gray-lt);display:flex;align-items:center;gap:4px;}
+.nav-name{font-family:var(--font-en);font-size:16px;font-weight:900;color:var(--black);}
+.nav-btn:hover .nav-label{color:rgba(255,255,255,0.7);}
+.nav-btn:hover .nav-name{color:white;}
+.nav-disabled{display:inline-flex;align-items:center;padding:12px 20px;font-size:13px;color:var(--gray-lt);border:1px solid var(--border);background:var(--bg);min-width:130px;justify-content:center;}
+.mobile-ebook-bar{display:none;margin-top:14px;padding:22px 20px;background:#FFF8EC;border:1px solid #D4A843;text-align:center;}
+.mobile-ebook-line{display:block;font-size:14px;color:var(--gray);font-weight:500;line-height:1.8;word-break:keep-all;}
+.mobile-ebook-line:last-of-type{margin-bottom:16px;}
+.mobile-ebook-btn{display:inline-flex;flex-direction:column;align-items:center;gap:3px;padding:13px 32px;background:#C9A050;color:white;font-size:15px;font-weight:800;border-radius:8px;box-shadow:0 4px 14px rgba(201,160,80,0.45);transition:all .2s;}
 .mobile-ebook-btn:hover{background:#b08a3e;box-shadow:0 2px 6px rgba(201,160,80,0.3);transform:translateY(1px);}
-.mobile-ebook-btn-price{font-size:13px;font-weight:700;opacity:.95;letter-spacing:.3px;}
-.mobile-ebook-btn-discount{font-size:11px;font-weight:600;opacity:.85;}
-.pattern-nav{display:flex;border:1px solid var(--border);margin-bottom:16px;overflow:hidden;background:var(--white);min-height:64px;}
-.nav-btn{flex:1;padding:12px 16px;font-size:13px;font-weight:600;color:var(--gray);transition:all .2s;display:flex;align-items:center;gap:8px;text-decoration:none;}
-.nav-btn:hover{background:var(--black);color:white;}
-.nav-btn.prev{justify-content:flex-start;border-right:1px solid var(--border);}
-.nav-btn.next{justify-content:flex-end;border-left:1px solid var(--border);}
-.nav-arrow{font-size:20px;font-weight:900;line-height:1;flex-shrink:0;}
-.nav-inner{display:flex;flex-direction:column;}
-.nav-inner.right{text-align:right;}
-.nav-label{font-size:11px;font-weight:600;color:var(--gray-lt);margin-bottom:2px;}
-.nav-name{font-family:var(--font-en);font-size:14px;font-weight:800;color:var(--black);}
-.nav-btn:hover .nav-label,.nav-btn:hover .nav-name{color:white;}
-.nav-btn:hover .nav-arrow{color:white;}
-.nav-disabled{flex:1;padding:12px 16px;display:flex;align-items:center;color:var(--gray-lt);font-size:13px;}
-.nav-disabled.prev{justify-content:flex-start;border-right:1px solid var(--border);}
-.nav-disabled.next{justify-content:flex-end;border-left:1px solid var(--border);}
+.mobile-ebook-btn-price{font-size:12px;font-weight:700;opacity:.9;}
+.mobile-ebook-btn-amount{font-size:13px;font-weight:800;opacity:.95;letter-spacing:.5px;}
 .seo-h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
 #ad-footer-container{margin-top:32px;}
-.list-btn-wrap{text-align:center;margin-top:16px;}
+.list-btn-wrap{text-align:center;margin-top:20px;}
 .list-btn{display:inline-flex;align-items:center;gap:7px;padding:11px 28px;border:1px solid var(--border);background:var(--white);font-size:14px;font-weight:700;color:var(--black);transition:all .2s;}
 .list-btn:hover{background:var(--black);color:white;}
 @media(max-width:900px){
@@ -154,6 +144,8 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
   .summary-main{font-size:34px;}
   .step-chips{flex-direction:column;align-items:center;gap:6px;}
   .mobile-ebook-bar{display:block;}
+  .pattern-nav{gap:10px;}
+  .nav-btn{min-width:110px;padding:10px 14px;}
 }
 @media(max-width:480px){
   .th-content{font-size:13px;padding:9px;word-break:break-all;}
@@ -161,7 +153,8 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
   .grammar-body{font-size:15px;}
   .pattern-title-h1{font-size:28px;}
   .summary-main{font-size:28px;}
-  .nav-name{font-size:12px;}
+  .nav-name{font-size:14px;}
+  .nav-btn{min-width:100px;}
 }
 </style>
 </head>
@@ -219,11 +212,11 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
     <div class="th-content"><span class="c-s1">짧게 말하기(초급)</span> &nbsp;+&nbsp; <span class="c-s2">확장해서 말하기(중급)</span> &nbsp;+&nbsp; <span class="c-s3">더 추가해서 말하기(고급)</span></div>
   </div>
 
-<div class="ex-row"><div class="td-no">01</div><div class="ex-content"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you help me?</span></div><div class="kor-text">도와주실 수 있어요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you help me</span><span class="c-s2"> tune this guitar?</span></div><div class="kor-text">이 기타 조율하는 거 도와줄 수 있어요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you help me</span><span class="c-s2"> tune this guitar</span><span class="c-s3"> before the rehearsal starts?</span></div><div class="kor-text">리허설 시작하기 전에 이 기타 조율하는 거 도와줄 수 있어요?</div></div><div class="voca-row"><span class="voca-chip"><strong>tune</strong> 조율하다 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>before</strong> ~하기 전에 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>rehearsal</strong> 리허설, 예행연습</span></div></div></div>
-<div class="ex-row"><div class="td-no">02</div><div class="ex-content" style="background:#FAFAF8;"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you call me?</span></div><div class="kor-text">전화해 줄래요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you call me</span><span class="c-s2"> after you finish grocery shopping?</span></div><div class="kor-text">장 보고 나서 전화해 줄래요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you call me</span><span class="c-s2"> after you finish grocery shopping</span><span class="c-s3"> so that we can decide what to cook tonight?</span></div><div class="kor-text">장 보고 나서 전화해 줄래요? 그래야 오늘 저녁에 뭘 요리할지 정할 수 있어요.</div></div><div class="voca-row"><span class="voca-chip"><strong>finish</strong> ~을 끝내다 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>grocery</strong> shopping 장보기 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>so</strong> that ~할 수 있도록</span></div></div></div>
-<div class="ex-row"><div class="td-no">03</div><div class="ex-content"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you open the door?</span></div><div class="kor-text">문 좀 열어주시겠어요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you open the door</span><span class="c-s2"> to the office?</span></div><div class="kor-text">사무실 문 좀 열어주시겠어요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you open the door</span><span class="c-s2"> to the office</span><span class="c-s3"> for our meeting?</span></div><div class="kor-text">저희 회의를 위해 사무실 문 좀 열어주시겠어요?</div></div><div class="voca-row"><span class="voca-chip"><strong>open</strong> 열다 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>office</strong> 사무실 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>meeting</strong> 회의</span></div></div></div>
-<div class="ex-row"><div class="td-no">04</div><div class="ex-content" style="background:#FAFAF8;"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you tell me?</span></div><div class="kor-text">말씀해 주시겠어요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you tell me</span><span class="c-s2"> how to get to the library?</span></div><div class="kor-text">도서관에 어떻게 가는지 말씀해 주시겠어요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you tell me</span><span class="c-s2"> how to get to the library</span><span class="c-s3"> from around here?</span></div><div class="kor-text">이 근처에서 도서관에 어떻게 가는지 말씀해 주시겠어요?</div></div><div class="voca-row"><span class="voca-chip"><strong>how</strong> to ~하는 방법 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>get</strong> to ~에 도착하다 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>from</strong> around here 이 근처에서</span></div></div></div>
-<div class="ex-row"><div class="td-no">05</div><div class="ex-content"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you show me?</span></div><div class="kor-text">보여주실 수 있으세요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you show me</span><span class="c-s2"> how to do that?</span></div><div class="kor-text">그것을 어떻게 하는지 보여주실 수 있으세요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you show me</span><span class="c-s2"> how to do that</span><span class="c-s3"> again, so I can learn?</span></div><div class="kor-text">제가 배울 수 있도록 그것을 어떻게 하는지 다시 한번 보여주실 수 있으세요?</div></div><div class="voca-row"><span class="voca-chip"><strong>show</strong> 보여주다 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>again</strong> 다시 한번 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>so</strong> that ~할 수 있도록</span></div></div></div></div>
+<div class="ex-row"><div class="td-no">01</div><div class="ex-content"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you help me?</span></div><div class="kor-text">도와주실 수 있어요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you help me</span><span class="c-s2"> tune this guitar?</span></div><div class="kor-text">이 기타 조율하는 거 도와줄 수 있어요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you help me</span><span class="c-s2"> tune this guitar</span><span class="c-s3"> before the rehearsal starts?</span></div><div class="kor-text">리허설 시작하기 전에 이 기타 조율하는 거 도와줄 수 있어요?</div></div><div class="voca-row"><span class="voca-chip">tune  조율하다</span><span class="voca-chip">before  ~하기 전에</span><span class="voca-chip">rehearsal  리허설, 예행연습</span></div></div></div>
+<div class="ex-row"><div class="td-no">02</div><div class="ex-content" style="background:#FAFAF8;"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you call me?</span></div><div class="kor-text">전화해 줄래요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you call me</span><span class="c-s2"> after you finish grocery shopping?</span></div><div class="kor-text">장 보고 나서 전화해 줄래요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you call me</span><span class="c-s2"> after you finish grocery shopping</span><span class="c-s3"> so that we can decide what to cook tonight?</span></div><div class="kor-text">장 보고 나서 전화해 줄래요? 그래야 오늘 저녁에 뭘 요리할지 정할 수 있어요.</div></div><div class="voca-row"><span class="voca-chip">finish  ~을 끝내다</span><span class="voca-chip">grocery  shopping 장보기</span><span class="voca-chip">so  that ~할 수 있도록</span></div></div></div>
+<div class="ex-row"><div class="td-no">03</div><div class="ex-content"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you open the door?</span></div><div class="kor-text">문 좀 열어주시겠어요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you open the door</span><span class="c-s2"> to the office?</span></div><div class="kor-text">사무실 문 좀 열어주시겠어요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you open the door</span><span class="c-s2"> to the office</span><span class="c-s3"> for our meeting?</span></div><div class="kor-text">저희 회의를 위해 사무실 문 좀 열어주시겠어요?</div></div><div class="voca-row"><span class="voca-chip">open  열다</span><span class="voca-chip">office  사무실</span><span class="voca-chip">meeting  회의</span></div></div></div>
+<div class="ex-row"><div class="td-no">04</div><div class="ex-content" style="background:#FAFAF8;"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you tell me?</span></div><div class="kor-text">말씀해 주시겠어요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you tell me</span><span class="c-s2"> how to get to the library?</span></div><div class="kor-text">도서관에 어떻게 가는지 말씀해 주시겠어요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you tell me</span><span class="c-s2"> how to get to the library</span><span class="c-s3"> from around here?</span></div><div class="kor-text">이 근처에서 도서관에 어떻게 가는지 말씀해 주시겠어요?</div></div><div class="voca-row"><span class="voca-chip">how  to ~하는 방법</span><span class="voca-chip">get  to ~에 도착하다</span><span class="voca-chip">from  around here 이 근처에서</span></div></div></div>
+<div class="ex-row"><div class="td-no">05</div><div class="ex-content"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you show me?</span></div><div class="kor-text">보여주실 수 있으세요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you show me</span><span class="c-s2"> how to do that?</span></div><div class="kor-text">그것을 어떻게 하는지 보여주실 수 있으세요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you show me</span><span class="c-s2"> how to do that</span><span class="c-s3"> again, so I can learn?</span></div><div class="kor-text">제가 배울 수 있도록 그것을 어떻게 하는지 다시 한번 보여주실 수 있으세요?</div></div><div class="voca-row"><span class="voca-chip">show  보여주다</span><span class="voca-chip">again  다시 한번</span><span class="voca-chip">so  that ~할 수 있도록</span></div></div></div></div>
 <div class="section-div"><div class="section-div-line"></div><div class="section-div-label">더 학습해서 기억에 남기기</div><div class="section-div-line"></div></div>
 <div class="ex2-header">
   <div class="ex2-header-main">패턴 011 — 추가 예문으로 확실하게 내 것 만들기</div>
@@ -231,11 +224,11 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
 </div>
 <div class="table-wrap">
 
-<div class="ex-row"><div class="td-no">06</div><div class="ex-content" style="background:#FAFAF8;"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you give me directions?</span></div><div class="kor-text">길 좀 알려주시겠어요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you give me directions</span><span class="c-s2"> to the nearest gas station?</span></div><div class="kor-text">가장 가까운 주유소로 가는 길 좀 알려주시겠어요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you give me directions</span><span class="c-s2"> to the nearest gas station</span><span class="c-s3"> because my fuel gauge is almost empty?</span></div><div class="kor-text">연료 게이지가 거의 비어서 가장 가까운 주유소로 가는 길 좀 알려주시겠어요?</div></div><div class="voca-row"><span class="voca-chip"><strong>give directions</strong> 길을 알려주다 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>nearest</strong> 가장 가까운 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>fuel gauge</strong> 연료 게이지</span></div></div></div>
-<div class="ex-row"><div class="td-no">07</div><div class="ex-content"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you wait?</span></div><div class="kor-text">기다려 주실 수 있으세요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you wait</span><span class="c-s2"> quietly for a moment?</span></div><div class="kor-text">잠시만 조용히 기다려 주실 수 있으세요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you wait</span><span class="c-s2"> quietly for a moment</span><span class="c-s3"> while I make a call?</span></div><div class="kor-text">제가 전화 통화를 하는 동안 잠시만 조용히 기다려 주실 수 있으세요?</div></div><div class="voca-row"><span class="voca-chip"><strong>wait</strong> 기다리다 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>quietly</strong> 조용히 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>while</strong> ~하는 동안</span></div></div></div>
-<div class="ex-row"><div class="td-no">08</div><div class="ex-content" style="background:#FAFAF8;"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you hear me?</span></div><div class="kor-text">제 말 들리세요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you hear me</span><span class="c-s2"> through the speaker?</span></div><div class="kor-text">스피커로 제 목소리 들리세요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you hear me</span><span class="c-s2"> through the speaker,</span><span class="c-s3"> or should I adjust the volume?</span></div><div class="kor-text">스피커로 제 목소리 들리세요, 아니면 볼륨을 조정할까요?</div></div><div class="voca-row"><span class="voca-chip"><strong>through</strong> ~을 통해 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>speaker</strong> 스피커 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>adjust</strong> 조정하다</span></div></div></div>
-<div class="ex-row"><div class="td-no">09</div><div class="ex-content"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you speak?</span></div><div class="kor-text">말씀하실 수 있으세요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you speak</span><span class="c-s2"> English?</span></div><div class="kor-text">영어로 말씀하실 수 있으세요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you speak</span><span class="c-s2"> English</span><span class="c-s3"> fluently for the presentation?</span></div><div class="kor-text">발표를 위해 영어를 유창하게 말씀하실 수 있으세요?</div></div><div class="voca-row"><span class="voca-chip"><strong>fluently</strong> 유창하게 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>presentation</strong> 발표 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>speak</strong> 말하다</span></div></div></div>
-<div class="ex-row"><div class="td-no">10</div><div class="ex-content" style="background:#FAFAF8;"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you explain?</span></div><div class="kor-text">설명해 주실 수 있어요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you explain</span><span class="c-s2"> this camera setting to me?</span></div><div class="kor-text">이 카메라 설정을 설명해 주실래요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you explain</span><span class="c-s2"> this camera setting to me</span><span class="c-s3"> before we start shooting?</span></div><div class="kor-text">촬영 시작하기 전에 이 카메라 설정을 설명해 주실래요?</div></div><div class="voca-row"><span class="voca-chip"><strong>explain</strong> 설명하다 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>camera</strong> setting 카메라 설정 <span class='voca-sep'></span><span class="voca-chip"></span> <strong>before</strong> ~하기 전에</span></div></div></div></div>
+<div class="ex-row"><div class="td-no">06</div><div class="ex-content" style="background:#FAFAF8;"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you give me directions?</span></div><div class="kor-text">길 좀 알려주시겠어요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you give me directions</span><span class="c-s2"> to the nearest gas station?</span></div><div class="kor-text">가장 가까운 주유소로 가는 길 좀 알려주시겠어요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you give me directions</span><span class="c-s2"> to the nearest gas station</span><span class="c-s3"> because my fuel gauge is almost empty?</span></div><div class="kor-text">연료 게이지가 거의 비어서 가장 가까운 주유소로 가는 길 좀 알려주시겠어요?</div></div><div class="voca-row"><span class="voca-chip">give directions  길을 알려주다</span><span class="voca-chip">nearest  가장 가까운</span><span class="voca-chip">fuel gauge  연료 게이지</span></div></div></div>
+<div class="ex-row"><div class="td-no">07</div><div class="ex-content"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you wait?</span></div><div class="kor-text">기다려 주실 수 있으세요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you wait</span><span class="c-s2"> quietly for a moment?</span></div><div class="kor-text">잠시만 조용히 기다려 주실 수 있으세요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you wait</span><span class="c-s2"> quietly for a moment</span><span class="c-s3"> while I make a call?</span></div><div class="kor-text">제가 전화 통화를 하는 동안 잠시만 조용히 기다려 주실 수 있으세요?</div></div><div class="voca-row"><span class="voca-chip">wait  기다리다</span><span class="voca-chip">quietly  조용히</span><span class="voca-chip">while  ~하는 동안</span></div></div></div>
+<div class="ex-row"><div class="td-no">08</div><div class="ex-content" style="background:#FAFAF8;"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you hear me?</span></div><div class="kor-text">제 말 들리세요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you hear me</span><span class="c-s2"> through the speaker?</span></div><div class="kor-text">스피커로 제 목소리 들리세요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you hear me</span><span class="c-s2"> through the speaker,</span><span class="c-s3"> or should I adjust the volume?</span></div><div class="kor-text">스피커로 제 목소리 들리세요, 아니면 볼륨을 조정할까요?</div></div><div class="voca-row"><span class="voca-chip">through  ~을 통해</span><span class="voca-chip">speaker  스피커</span><span class="voca-chip">adjust  조정하다</span></div></div></div>
+<div class="ex-row"><div class="td-no">09</div><div class="ex-content"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you speak?</span></div><div class="kor-text">말씀하실 수 있으세요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you speak</span><span class="c-s2"> English?</span></div><div class="kor-text">영어로 말씀하실 수 있으세요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you speak</span><span class="c-s2"> English</span><span class="c-s3"> fluently for the presentation?</span></div><div class="kor-text">발표를 위해 영어를 유창하게 말씀하실 수 있으세요?</div></div><div class="voca-row"><span class="voca-chip">fluently  유창하게</span><span class="voca-chip">presentation  발표</span><span class="voca-chip">speak  말하다</span></div></div></div>
+<div class="ex-row"><div class="td-no">10</div><div class="ex-content" style="background:#FAFAF8;"><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you explain?</span></div><div class="kor-text">설명해 주실 수 있어요?</div></div><div class="line-inline"><div class="eng-text"><span class="c-s1">Can you explain</span><span class="c-s2"> this camera setting to me?</span></div><div class="kor-text">이 카메라 설정을 설명해 주실래요?</div></div><div class="line-block"><div class="eng-text"><span class="c-s1">Can you explain</span><span class="c-s2"> this camera setting to me</span><span class="c-s3"> before we start shooting?</span></div><div class="kor-text">촬영 시작하기 전에 이 카메라 설정을 설명해 주실래요?</div></div><div class="voca-row"><span class="voca-chip">explain  설명하다</span><span class="voca-chip">camera  setting 카메라 설정</span><span class="voca-chip">before  ~하기 전에</span></div></div></div></div>
 <h2 class="seo-h2">Can you 실전 대화 연습 — Mini Dialogue</h2>
 <div class="section-div"><div class="section-div-line"></div><div class="section-div-label">Mini Dialogue</div><div class="section-div-line"></div></div>
 <div class="dialogue-wrap">
@@ -250,24 +243,22 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
 <h2 class="seo-h2">영상으로 반복 학습 — Can you 원어민 발음 확인</h2>
 <div class="section-div"><div class="section-div-line"></div><div class="section-div-label">영상 반복학습</div><div class="section-div-line"></div></div>
 <div class="yt-section">
-  <div class="yt-heading-main"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> 위에서 학습한 내용을 영상으로 반복 학습하세요</div>
-  <div class="yt-heading-sub">글로 익힌 패턴을 원어민 발음과 함께 다시 확인하면 <strong>장기 기억으로 확실하게 굳어집니다.</strong></div>
+  <div class="yt-heading-main"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> 위에서 학습한 내용을 영상으로 복습해 보세요.</div>
   <div class="yt-wrapper">
     <iframe src="https://www.youtube.com/embed/X4mcHM1QBf0?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div class="subscribe-bar">
-    <span class="subscribe-bar-line1">다음 패턴도 바로 학습하고 싶다면?</span>
-    <span class="subscribe-bar-line2">채널을 구독하시면 최신 영상을 가장 빠르게 만나보실 수 있습니다.</span>
+    <span class="subscribe-bar-text">채널을 구독하시면 최신 영상을 가장 빠르게 만나보실 수 있습니다.</span>
     <a href="https://www.youtube.com/channel/UCojiD-GS8WSeNXigr6EKhMA" target="_blank" class="subscribe-bar-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg> 채널 구독</a>
   </div>
   <div class="mobile-ebook-bar">
-    <span class="mobile-ebook-line1">오늘 학습한 내용이 마음에 드세요?</span>
-    <span class="mobile-ebook-line2">PDF 전자책으로 언제 어디서나 학습하세요.</span>
-    <span class="mobile-ebook-line3">100편의 유튜브 영상 내용이 이 한 권에 모두 담겨 있습니다.</span>
+    <span class="mobile-ebook-line">오늘 학습한 내용이 마음에 드셨나요?</span>
+    <span class="mobile-ebook-line">100편의 유튜브 영상 내용을 이 한 권에 모두 담았습니다.</span>
+    <span class="mobile-ebook-line">PDF 전자책으로 언제 어디서나 편하게 학습하세요.</span>
     <a href="/ebook-info.html" target="_blank" class="mobile-ebook-btn">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>&nbsp; 전자책 안내 보기
       <span class="mobile-ebook-btn-price">사전 할인가</span>
-      <span class="mobile-ebook-btn-discount">₩9,900</span>
+      <span class="mobile-ebook-btn-amount">₩9,900</span>
     </a>
   </div>
 </div>
@@ -296,31 +287,27 @@ fetch('/pattern-list.json')
 fetch('/pattern-list.json')
   .then(function(r){ return r.json(); })
   .then(function(list){
-    var idx  = -1;
+    var idx = -1;
     for(var k=0; k<list.length; k++){
       if(list[k].slug === CURRENT_SLUG){ idx = k; break; }
     }
     if(idx < 0) return;
     var prev = idx > 0 ? list[idx-1] : null;
     var next = idx < list.length-1 ? list[idx+1] : null;
-    var nav  = document.getElementById('pattern-nav');
+    var nav = document.getElementById('pattern-nav');
     if(!nav) return;
     var prevHtml = prev
-      ? '<a class="nav-btn prev" href="/english/ko/' + prev.slug + '/">'
-        + '<span class="nav-arrow">&#8592;</span>'
-        + '<span class="nav-inner">'
-        + '<span class="nav-label">이전 패턴 ' + prev.no + '</span>'
-        + '<span class="nav-name">' + prev.name + '</span>'
-        + '</span></a>'
-      : '<span class="nav-disabled prev">처음 패턴입니다</span>';
+      ? '<a class="nav-btn" href="/english/ko/'+prev.slug+'/">'
+        + '<span class="nav-label">&#8592; 이전 패턴 '+prev.no+'</span>'
+        + '<span class="nav-name">'+prev.name+'</span>'
+        + '</a>'
+      : '<span class="nav-disabled">&#8592; 처음 패턴</span>';
     var nextHtml = next
-      ? '<a class="nav-btn next" href="/english/ko/' + next.slug + '/">'
-        + '<span class="nav-inner right">'
-        + '<span class="nav-label">다음 패턴 ' + next.no + '</span>'
-        + '<span class="nav-name">' + next.name + '</span>'
-        + '</span>'
-        + '<span class="nav-arrow">&#8594;</span></a>'
-      : '<span class="nav-disabled next">마지막 패턴입니다</span>';
+      ? '<a class="nav-btn" href="/english/ko/'+next.slug+'/">'
+        + '<span class="nav-label">다음 패턴 '+next.no+' &#8594;</span>'
+        + '<span class="nav-name">'+next.name+'</span>'
+        + '</a>'
+      : '<span class="nav-disabled">마지막 패턴 &#8594;</span>';
     nav.innerHTML = prevHtml + nextHtml;
   })
   .catch(function(){});
