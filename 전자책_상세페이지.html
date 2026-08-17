@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>영어창고 문장꼬리물기 영어패턴 100 상세페이지</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Noto Sans KR',sans-serif; background:#fff; color:#1a1a1a; width:860px; margin:0 auto; }
+
+  /* ── 공통 ── */
+  .section-label { font-size:12px; font-weight:700; letter-spacing:2px; color:#C9A050; text-transform:uppercase; margin-bottom:10px; }
+  .section-title { font-size:28px; font-weight:900; color:#1a1a1a; margin-bottom:32px; line-height:1.35; word-break:keep-all; }
+
+  /* ━━ 01. 후킹 배너 ━━ */
+  .hook { background:#0b4f5e; padding:72px 60px 64px; text-align:center; position:relative; overflow:hidden; }
+  .hook::before { content:''; position:absolute; top:-80px; right:-80px; width:340px; height:340px; border-radius:50%; background:rgba(255,255,255,0.04); }
+  .hook-eyebrow { display:inline-block; background:rgba(201,160,80,0.2); color:#C9A050; font-size:13px; font-weight:700; letter-spacing:2px; padding:6px 18px; border-radius:20px; margin-bottom:28px; }
+  .hook h1 { font-size:38px; font-weight:900; color:#fff; line-height:1.35; margin-bottom:20px; word-break:keep-all; }
+  .hook h1 em { color:#C9A050; font-style:normal; }
+  .hook-sub { font-size:17px; color:rgba(255,255,255,0.7); line-height:1.7; word-break:keep-all; }
+
+  /* ━━ 02. 책 목업 + 스펙 ━━ */
+  .book-section { background:#f7f8fa; padding:64px 60px; display:flex; align-items:center; gap:52px; }
+  .book-mockup { flex-shrink:0; width:210px; }
+  .book-cover { width:210px; display:block; border-radius:4px; }
+  .book-info h2 {
+    font-size:26px; font-weight:900; color:#0b4f5e; margin-bottom:8px; line-height:1.4;
+    display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:8px;
+  }
+  .pdf-ribbon-title {
+    display:inline-block;
+    background:#C9A050;
+    color:#fff;
+    font-size:15px;
+    font-weight:900;
+    letter-spacing:1px;
+    padding:6px 16px;
+    border-radius:6px;
+    white-space:nowrap;
+    align-self:flex-end;
+    margin-bottom:2px;
+  }
+  .book-info { flex:1; }
+  .book-info h2 { font-size:26px; font-weight:900; color:#0b4f5e; margin-bottom:8px; line-height:1.3; }
+  .book-info .book-sub { font-size:15px; color:#666; margin-bottom:28px; }
+  .spec-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:28px; }
+  .spec-item { background:#fff; border:1px solid #e8eaed; border-radius:10px; padding:14px 16px; display:flex; align-items:center; gap:12px; }
+  .spec-icon { width:36px; height:36px; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+  .spec-icon svg { width:22px; height:22px; stroke:#0b4f5e; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+  .spec-label { font-size:12px; color:#888; margin-bottom:2px; }
+  .spec-val { font-size:15px; font-weight:700; color:#1a1a1a; }
+  .badge-row { display:flex; gap:8px; flex-wrap:wrap; }
+  .badge { display:inline-flex; align-items:center; gap:6px; padding:7px 14px; border-radius:20px; font-size:13px; font-weight:700; }
+  .badge svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+  .badge-teal { background:#e6f4f7; color:#0b4f5e; }
+  .badge-gold { background:#fdf3dc; color:#9a7020; }
+  .badge-gray { background:#f0f0f2; color:#555; }
+
+  /* ━━ 03. 이런 분께 추천 ━━ */
+  .who { background:#fff; padding:64px 60px; }
+  .who-list { display:flex; flex-direction:column; gap:14px; }
+  .who-item { display:flex; align-items:flex-start; gap:16px; background:#f7f8fa; border-radius:12px; padding:20px 22px; border-left:4px solid #0b4f5e; }
+  .who-check { width:24px; height:24px; border:2px solid #0b4f5e; border-radius:4px; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+  .who-check svg { width:14px; height:14px; stroke:#0b4f5e; fill:none; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
+  .who-text { font-size:16px; font-weight:500; color:#2a2a2a; line-height:1.55; word-break:keep-all; }
+  .who-text strong { color:#0b4f5e; font-weight:700; }
+
+  /* ━━ 04. 차별점 ━━ */
+  .diff { background:#0b4f5e; padding:64px 60px; }
+  .diff .section-title { color:#fff; }
+  .diff-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .diff-card { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:32px 24px; text-align:center; }
+  .diff-num { font-size:44px; font-weight:900; color:#C9A050; line-height:1; margin-bottom:4px; }
+  .diff-unit { font-size:14px; color:rgba(255,255,255,0.55); margin-bottom:14px; }
+  .diff-desc { font-size:14px; color:rgba(255,255,255,0.85); line-height:1.65; word-break:keep-all; }
+
+  /* ━━ 05. 3단계 학습법 ━━ */
+  .method { background:#fff; padding:64px 60px; }
+  .step-visual { display:flex; flex-direction:column; gap:12px; margin-top:32px; }
+  .step-row { display:flex; align-items:stretch; gap:16px; }
+  .step-left { width:64px; flex-shrink:0; display:flex; flex-direction:column; align-items:center; }
+  .step-block {
+    width:56px; height:40px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:11px; font-weight:900; letter-spacing:0.5px;
+    border-radius:6px; flex-shrink:0; line-height:1.2; text-align:center;
+  }
+  .step-block-1 { background:#0b4f5e; color:#fff; }
+  .step-block-2 { background:#C9A050; color:#fff; }
+  .step-block-3 { background:#1a1a1a; color:#fff; }
+  .step-connector { width:2px; flex:1; background:#e8eaed; margin:4px auto; }
+  .step-content { flex:1; background:#f7f8fa; border-radius:12px; padding:20px 24px; }
+  .step-tag { font-size:11px; font-weight:700; letter-spacing:1.5px; color:#888; text-transform:uppercase; margin-bottom:8px; }
+  .step-eng { font-size:21px; font-weight:900; margin-bottom:4px; font-family:Georgia,serif; line-height:1.4; }
+  .step-eng .s1 { color:#1a1a1a; }
+  .step-eng .s2 { color:#C2185B; }
+  .step-eng .s3 { color:#0F9D58; }
+  .step-kor { font-size:14px; color:#666; margin-bottom:8px; }
+  .step-badge-pill { display:inline-block; font-size:12px; padding:3px 10px; border-radius:10px; font-weight:600; }
+  .pill-1 { background:#e8f4f7; color:#0b4f5e; }
+  .pill-2 { background:#fdf3dc; color:#9a7020; }
+  .pill-3 { background:#1a1a1a; color:#fff; }
+
+  /* ━━ 06. 내지 샘플 ━━ */
+  .sample { background:#f7f8fa; padding:64px 60px; }
+  .sample-note { font-size:13.5px; color:#555; margin-bottom:24px; padding:12px 16px; background:#fff; border-radius:8px; border-left:3px solid #C9A050; }
+
+  /* 실제 내지 스타일 재현 */
+  .inner-page {
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 2px 16px rgba(0,0,0,0.09);
+    margin-bottom:16px;
+  }
+  .inner-header {
+    display:flex;
+    align-items:stretch;
+    border-bottom:2px solid #1F2937;
+    padding:14px 18px;
+    gap:14px;
+  }
+  .inner-header-left { flex:1; }
+  .inner-day-badge {
+    display:inline-block;
+    background:#4F46E5;
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+    padding:3px 10px;
+    border-radius:10px;
+    margin-bottom:4px;
+    letter-spacing:0.5px;
+  }
+  .inner-pattern-title { font-size:26px; font-weight:900; color:#1F2937; line-height:1.1; }
+  .inner-pattern-meaning { font-size:14px; color:#4B5563; font-weight:500; margin-top:2px; }
+  .inner-header-right {
+    flex-shrink:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border:1.5px solid #E5E7EB;
+    border-radius:8px;
+    padding:10px 12px;
+    gap:4px;
+    min-width:80px;
+  }
+  .inner-qr-top { font-size:10px; font-weight:700; color:#4F46E5; letter-spacing:0.5px; }
+  .inner-qr-mock {
+    width:54px; height:54px;
+    background:#f3f4f6;
+    border-radius:4px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:9px;
+    color:#9CA3AF;
+    text-align:center;
+    font-weight:600;
+    line-height:1.3;
+  }
+  .inner-qr-hint { font-size:9px; color:#9CA3AF; font-weight:600; text-align:center; }
+  .inner-grammar {
+    padding:12px 18px;
+    background:#F8FAFC;
+    border-bottom:1px solid #E5E7EB;
+    font-size:13px;
+    color:#374151;
+    line-height:1.65;
+    word-break:keep-all;
+  }
+  .inner-grammar-title { font-size:11px; font-weight:800; color:#4F46E5; letter-spacing:1px; margin-bottom:5px; }
+  .inner-table-header {
+    display:flex;
+    background:#F8FAFC;
+    border-bottom:1px solid #E5E7EB;
+    padding:8px 14px;
+    gap:8px;
+  }
+  .inner-th-no { width:38px; font-size:12px; font-weight:700; color:#9CA3AF; flex-shrink:0; }
+  .inner-th-content { flex:1; font-size:12px; font-weight:700; color:#374151; }
+  .inner-th-content .cs1 { color:#000; }
+  .inner-th-content .cs2 { color:#C2185B; }
+  .inner-th-content .cs3 { color:#0F9D58; }
+  .inner-ex-row { display:flex; border-top:1px solid #E5E7EB; }
+  .inner-ex-row:nth-child(even) .inner-ex-content { background:#F8FAFC; }
+  .inner-td-no { width:38px; flex-shrink:0; text-align:center; font-weight:800; color:#9CA3AF; font-size:13px; display:flex; align-items:center; justify-content:center; border-right:1px solid #F3F4F6; }
+  .inner-ex-content { flex:1; padding:9px 14px; display:flex; flex-direction:column; justify-content:center; }
+  .inner-line { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px; margin-bottom:1px; }
+  .inner-eng { font-size:14px; font-weight:700; }
+  .inner-kor { font-size:12px; font-weight:500; color:#4B5563; }
+  .inner-voca { display:inline-block; margin-top:3px; background:rgba(0,0,0,0.04); padding:2px 7px; border-radius:4px; font-size:11.5px; color:#334155; font-weight:500; }
+  .inner-voca strong { color:#0F172A; font-weight:700; }
+  .inner-footer { padding:12px 18px; background:#F8FAFC; border-top:1px solid #E5E7EB; }
+  .inner-dlg-title { font-size:12px; font-weight:800; color:#4F46E5; margin-bottom:8px; }
+  .inner-dlg-row { display:grid; grid-template-columns:20px 1fr; gap:6px; margin-bottom:4px; }
+  .inner-dlg-who { font-weight:900; color:#1F2937; font-size:14px; }
+  .inner-dlg-text { font-size:14px; font-weight:700; color:#1F2937; line-height:1.5; }
+  .inner-dlg-kor { font-size:12px; font-weight:500; color:#6B7280; margin-left:4px; }
+  .inner-page-no { font-size:11px; color:#9CA3AF; text-align:center; padding:6px; letter-spacing:1px; }
+
+  /* ━━ 07. QR 섹션 ━━ */
+  .qr-section { background:#fff; padding:64px 60px; }
+  .qr-inner { background:linear-gradient(135deg,#0b4f5e 0%,#0a3d49 100%); border-radius:20px; padding:44px 48px; display:flex; align-items:center; gap:44px; }
+  .qr-icon-box { flex-shrink:0; width:80px; height:80px; background:rgba(255,255,255,0.1); border-radius:14px; display:flex; align-items:center; justify-content:center; }
+  .qr-icon-box svg { width:40px; height:40px; stroke:#C9A050; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+  .qr-text h3 { font-size:22px; font-weight:900; color:#fff; margin-bottom:10px; line-height:1.4; word-break:keep-all; }
+  .qr-text h3 em { color:#C9A050; font-style:normal; }
+  .qr-text p { font-size:15px; color:rgba(255,255,255,0.72); line-height:1.7; word-break:keep-all; }
+
+  /* ━━ 08. 구매 안내 ━━ */
+  .purchase { background:#f7f8fa; padding:64px 60px; }
+  .info-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:40px; }
+  .info-card { background:#fff; border-radius:12px; padding:22px; border:1px solid #e8eaed; }
+  .info-card-icon { width:36px; height:36px; margin-bottom:12px; }
+  .info-card-icon svg { width:36px; height:36px; stroke:#0b4f5e; fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+  .info-card-title { font-size:14px; font-weight:700; color:#0b4f5e; margin-bottom:6px; }
+  .info-card-desc { font-size:14px; color:#444; line-height:1.65; word-break:keep-all; }
+  .faq-list { display:flex; flex-direction:column; gap:12px; }
+  .faq-item { background:#fff; border-radius:12px; padding:20px 22px; border:1px solid #e8eaed; }
+  .faq-q { font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:8px; display:flex; gap:10px; align-items:flex-start; }
+  .faq-q-badge { background:#0b4f5e; color:#fff; font-size:12px; font-weight:900; padding:2px 8px; border-radius:5px; flex-shrink:0; margin-top:1px; }
+  .faq-a { font-size:14px; color:#555; line-height:1.65; padding-left:34px; word-break:keep-all; }
+
+  /* ━━ 09. CTA ━━ */
+  .cta { background:#0b4f5e; padding:64px 60px; text-align:center; }
+  .cta h2 { font-size:30px; font-weight:900; color:#fff; margin-bottom:14px; line-height:1.35; word-break:keep-all; }
+  .cta h2 em { color:#C9A050; font-style:normal; }
+  .cta p { font-size:16px; color:rgba(255,255,255,0.7); margin-bottom:32px; line-height:1.65; word-break:keep-all; }
+  .cta-sub { margin-top:16px; font-size:13px; color:rgba(255,255,255,0.4); }
+</style>
+</head>
+<body>
+
+<!-- ① 후킹 배너 -->
+<section class="hook">
+  <div class="hook-eyebrow">영어창고 · 코어북스</div>
+  <h1>머릿속에 맴도는 영단어,<br>이제 <em>긴 문장으로 시원하게</em> 내뱉어 보세요!</h1>
+  <p class="hook-sub">
+    단순 암기식 공부가 아니라,<br>
+    기초 패턴 하나에 살을 붙여 나가는 <strong style="color:#fff;">문장 꼬리물기 훈련</strong>으로<br>
+    누구나 막힘없이 원어민처럼 말할 수 있도록 도와드립니다.<br><br>
+    <strong style="color:#fff;">이 책은 딱 한 가지..!!</strong><br>
+    <strong style="color:#C9A050;">핵심패턴으로 문장을 길게 말하는 훈련에 집중합니다.</strong>
+  </p>
+</section>
+
+<!-- ② 책 정면 이미지 + 스펙 -->
+<section class="book-section">
+  <div class="book-mockup">
+    <img src="책표지2.png" alt="영어창고 문장꼬리물기 영어패턴 100 표지" class="book-cover"
+      onerror="this.style.background='#0b4f5e';this.style.height='296px';" />
+  </div>
+  <div class="book-info">
+    <h2>
+      <span>문장 꼬리물기<br>영어패턴 100</span>
+      <span class="pdf-ribbon-title">PDF 전자책</span>
+    </h2>
+    <p class="book-sub">원어민처럼 길게 말하는 100가지 말하기 훈련</p>
+    <div class="spec-grid">
+      <div class="spec-item">
+        <div class="spec-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div><div class="spec-label">총 페이지</div><div class="spec-val">약 200페이지</div></div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div><div class="spec-label">핵심 패턴</div><div class="spec-val">100개</div></div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div>
+          <div class="spec-label">수록 예문</div>
+          <div class="spec-val">1,000개</div>
+          <div style="font-size:11px;color:#aaa;margin-top:2px;">패턴당 10개 × 3단계 확장</div>
+        </div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-icon">
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <div><div class="spec-label">영상 강의</div><div class="spec-val">QR코드 연계</div></div>
+      </div>
+    </div>
+    <div class="badge-row">
+      <span class="badge badge-teal">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        PDF 전자책
+      </span>
+      <span class="badge badge-gold">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        ISBN 공식 등록 전자책
+      </span>
+      <span class="badge badge-gray">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        초·중·고급 모두 가능
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 이런 분께 추천 -->
+<section class="who">
+  <div class="section-label">For whom</div>
+  <h2 class="section-title">이런 분이라면<br>꼭 필요한 책입니다</h2>
+  <div class="who-list">
+    <div class="who-item">
+      <div class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="who-text">영어 공부를 했는데 <strong>막상 말하려면 짧은 문장만 나오는 분</strong></div>
+    </div>
+    <div class="who-item">
+      <div class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="who-text">패턴은 외웠는데 <strong>실제 대화에서 응용이 안 되는 분</strong></div>
+    </div>
+    <div class="who-item">
+      <div class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="who-text">해외여행, 출장, 업무에서 <strong>자연스럽게 긴 문장으로 말하고 싶은 분</strong></div>
+    </div>
+    <div class="who-item">
+      <div class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="who-text">단순 암기가 아닌 <strong>입에서 자동으로 나오는 말하기 훈련</strong>이 필요한 분</div>
+    </div>
+    <div class="who-item">
+      <div class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="who-text">책만 보는 것이 아니라 <strong>영상과 함께 반복 학습</strong>하고 싶은 분</div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ 핵심 차별점 -->
+<section class="diff">
+  <div class="section-label" style="color:#C9A050;">Why this book</div>
+  <h2 class="section-title">다른 영어책과 무엇이 다른가요</h2>
+  <div class="diff-grid">
+    <div class="diff-card">
+      <div class="diff-num">100</div>
+      <div class="diff-unit">개 핵심 패턴</div>
+      <div class="diff-desc">원어민이 가장 많이 쓰는 핵심 표현 100개를 엄선했어요</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-num">1,000</div>
+      <div class="diff-unit">개 실전 예문</div>
+      <div class="diff-desc">패턴마다 10개 예문으로 다양한 상황을 완전히 내 것으로 만들어요</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-num">3</div>
+      <div class="diff-unit">단계 확장 훈련</div>
+      <div class="diff-desc">짧은 문장에서 긴 문장으로 단계별로 늘려가며 말하기 근육을 키워요</div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ 3단계 학습법 -->
+<section class="method">
+  <div class="section-label">How it works</div>
+  <h2 class="section-title">문장 꼬리물기<br>3단계 확장 훈련법</h2>
+  <div class="step-visual">
+    <!-- STEP 1 -->
+    <div class="step-row">
+      <div class="step-left">
+        <div class="step-block step-block-1">STEP<br>1</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-tag">초급 · 핵심 패턴</div>
+        <div class="step-eng"><span class="s1">Don't forget.</span></div>
+        <div class="step-kor">잊지 마세요.</div>
+        <span class="step-badge-pill pill-1">짧게 말하기</span>
+      </div>
+    </div>
+    <!-- STEP 2 -->
+    <div class="step-row">
+      <div class="step-left">
+        <div class="step-block step-block-2">STEP<br>2</div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-tag">중급 · 문장 확장</div>
+        <div class="step-eng"><span class="s1">Don't forget </span><span class="s2">to lock the door.</span></div>
+        <div class="step-kor">문 잠그는 것을 잊지 마세요.</div>
+        <span class="step-badge-pill pill-2">확장해서 말하기</span>
+      </div>
+    </div>
+    <!-- STEP 3 -->
+    <div class="step-row">
+      <div class="step-left">
+        <div class="step-block step-block-3">STEP<br>3</div>
+      </div>
+      <div class="step-content">
+        <div class="step-tag">고급 · 완성 문장</div>
+        <div class="step-eng"><span class="s1">Don't forget </span><span class="s2">to lock the door </span><span class="s3">before you leave.</span></div>
+        <div class="step-kor">나가기 전에 문 잠그는 것을 잊지 마세요.</div>
+        <span class="step-badge-pill pill-3">원어민처럼 말하기</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ 실제 내지 샘플 -->
+<section class="sample">
+  <div class="section-label">Preview</div>
+  <h2 class="section-title">실제 책 내용을 미리 확인해보세요</h2>
+  <div class="sample-note">📌 아래는 패턴 6번 (Let's) 실제 내지 샘플입니다. 모든 패턴이 동일한 구성으로 제공됩니다.</div>
+
+  <!-- 실제 내지 PAGE 1 재현 -->
+  <div class="inner-page">
+    <div class="inner-header">
+      <div class="inner-header-left">
+        <div class="inner-day-badge">패턴 6</div>
+        <div class="inner-pattern-title">Let's</div>
+        <div class="inner-pattern-meaning"><strong style="font-weight:900;color:#1F2937;">~합시다</strong></div>
+      </div>
+      <div class="inner-header-right">
+        <div class="inner-qr-top">영상 강의</div>
+        <div class="inner-qr-mock">클릭<br>또는<br>스캔</div>
+        <div class="inner-qr-hint">QR코드</div>
+      </div>
+    </div>
+    <div class="inner-grammar">
+      <div class="inner-grammar-title">※ Grammar Point</div>
+      'Let's'는 'Let us'의 줄임말로, 상대방에게 함께 어떤 행동을 하자고 제안하거나 권유할 때 사용해요.
+      'Let's + 동사원형' 형태로 쓰이며, 말하는 사람도 그 행동에 포함된다는 점이 특징이에요.
+      명령문보다 훨씬 부드럽고 협력적인 뉘앙스를 가지며, 일상 대화에서 매우 자주 쓰이는 표현이에요.
+    </div>
+    <div class="inner-table-header">
+      <div class="inner-th-no">번호</div>
+      <div class="inner-th-content">
+        <span class="cs1">짧게 말하기(초급)</span> &nbsp;+&nbsp;
+        <span class="cs2">확장해서 말하기(중급)</span> &nbsp;+&nbsp;
+        <span class="cs3">더 추가해서 말하기(고급)</span>
+      </div>
+    </div>
+    <!-- 예문 01~05 -->
+    <div class="inner-ex-row">
+      <div class="inner-td-no">01</div>
+      <div class="inner-ex-content">
+        <div class="inner-line"><span class="inner-eng" style="color:#000">Let's go.</span><span class="inner-kor">갑시다.</span></div>
+        <div class="inner-line"><span class="inner-eng"><span style="color:#000">Let's go</span> <span style="color:#C2185B">to the subway station now.</span></span><span class="inner-kor">지금 지하철역으로 가요.</span></div>
+        <div class="inner-line"><span class="inner-eng"><span style="color:#000">Let's go</span> <span style="color:#C2185B">to the subway station now</span> <span style="color:#0F9D58">before the rush hour starts.</span></span><span class="inner-kor">지금 지하철역으로 가요, 출근 시간이 시작되기 전에.</span></div>
+        <span class="inner-voca"><strong>rush</strong> hour 출퇴근 혼잡 시간대 | <strong>before</strong> ~하기 전에</span>
+      </div>
+    </div>
+    <div class="inner-ex-row">
+      <div class="inner-td-no">02</div>
+      <div class="inner-ex-content">
+        <div class="inner-line"><span class="inner-eng" style="color:#000">Let's eat.</span><span class="inner-kor">먹읍시다.</span></div>
+        <div class="inner-line"><span class="inner-eng"><span style="color:#000">Let's eat</span> <span style="color:#C2185B">something light at the cafe.</span></span><span class="inner-kor">카페에서 가볍게 뭐 좀 먹어요.</span></div>
+        <div class="inner-line"><span class="inner-eng"><span style="color:#000">Let's eat</span> <span style="color:#C2185B">something light at the cafe</span> <span style="color:#0F9D58">before we start the lesson.</span></span><span class="inner-kor">카페에서 가볍게 뭐 좀 먹어요, 수업 시작하기 전에.</span></div>
+        <span class="inner-voca"><strong>something</strong> light 가벼운 것 | <strong>before</strong> ~하기 전에</span>
+      </div>
+    </div>
+    <div class="inner-ex-row">
+      <div class="inner-td-no">03</div>
+      <div class="inner-ex-content">
+        <div class="inner-line"><span class="inner-eng" style="color:#000">Let's meet.</span><span class="inner-kor">만납시다.</span></div>
+        <div class="inner-line"><span class="inner-eng"><span style="color:#000">Let's meet</span> <span style="color:#C2185B">at the coffee shop near the park.</span></span><span class="inner-kor">공원 근처 커피숍에서 만나요.</span></div>
+        <div class="inner-line"><span class="inner-eng"><span style="color:#000">Let's meet</span> <span style="color:#C2185B">at the coffee shop near the park</span> <span style="color:#0F9D58">to catch up after so long.</span></span><span class="inner-kor">오랜만에 근황 나누러 공원 근처 커피숍에서 만나요.</span></div>
+        <span class="inner-voca"><strong>catch</strong> up 근황을 나누다 | <strong>near</strong> ~근처에</span>
+      </div>
+    </div>
+    <div class="inner-page-no">- 11 -</div>
+  </div>
+
+  <!-- 실제 내지 PAGE 2 재현 -->
+  <div class="inner-page">
+    <div style="padding:10px 18px 6px; border-bottom:1px solid #E5E7EB; display:flex; justify-content:space-between; align-items:center;">
+      <div style="font-size:13px;font-weight:700;color:#1F2937;">패턴 6 - 추가 예문으로 확실하게 내 것 만들기</div>
+      <div style="font-size:13px;font-weight:700;color:#6B7280;">Let's</div>
+    </div>
+    <div class="inner-ex-row">
+      <div class="inner-td-no">06</div>
+      <div class="inner-ex-content">
+        <div class="inner-line"><span class="inner-eng" style="color:#000">Let's try.</span><span class="inner-kor">해봅시다.</span></div>
+        <div class="inner-line"><span class="inner-eng"><span style="color:#000">Let's try</span> <span style="color:#C2185B">a different approach this time.</span></span><span class="inner-kor">이번엔 다른 방식으로 해봅시다.</span></div>
+        <div class="inner-line"><span class="inner-eng"><span style="color:#000">Let's try</span> <span style="color:#C2185B">a different approach this time</span> <span style="color:#0F9D58">to see if it gets better results.</span></span><span class="inner-kor">더 좋은 결과가 나오는지 이번엔 다른 방식으로 해봅시다.</span></div>
+        <span class="inner-voca"><strong>approach</strong> 방식, 접근법 | <strong>result</strong> 결과</span>
+      </div>
+    </div>
+    <div class="inner-ex-row">
+      <div class="inner-td-no">07</div>
+      <div class="inner-ex-content">
+        <div class="inner-line"><span class="inner-eng" style="color:#000">Let's talk.</span><span class="inner-kor">얘기합시다.</span></div>
+        <div class="inner-line"><span class="inner-eng"><span style="color:#000">Let's talk</span> <span style="color:#C2185B">about what happened yesterday.</span></span><span class="inner-kor">어제 무슨 일이 있었는지 얘기해요.</span></div>
+        <div class="inner-line"><span class="inner-eng"><span style="color:#000">Let's talk</span> <span style="color:#C2185B">about what happened yesterday</span> <span style="color:#0F9D58">before things get worse.</span></span><span class="inner-kor">상황이 더 나빠지기 전에 어제 일에 대해 얘기해요.</span></div>
+        <span class="inner-voca"><strong>happen</strong> 일어나다 | <strong>worse</strong> 더 나쁜</span>
+      </div>
+    </div>
+    <div class="inner-footer">
+      <div class="inner-dlg-title">💬 실전 롤플레이 (Mini Dialogue)</div>
+      <div class="inner-dlg-row">
+        <div class="inner-dlg-who">A:</div>
+        <div class="inner-dlg-text">I'm tired of working on this project alone. <span class="inner-dlg-kor">(이 프로젝트를 혼자 하는 게 지쳤어요.)</span></div>
+      </div>
+      <div class="inner-dlg-row">
+        <div class="inner-dlg-who">B:</div>
+        <div class="inner-dlg-text">Let's work on it together and finish it faster! <span class="inner-dlg-kor">(같이 해서 더 빨리 끝내요!)</span></div>
+      </div>
+    </div>
+    <div class="inner-page-no">- 12 -</div>
+  </div>
+</section>
+
+<!-- ⑦ QR 영상 연계 -->
+<section class="qr-section">
+  <div class="qr-inner">
+    <div class="qr-icon-box">
+      <!-- 재생버튼 형태 아이콘 (유튜브 연상) -->
+      <svg viewBox="0 0 24 24" style="width:44px;height:44px;stroke:none;">
+        <rect x="2" y="2" width="20" height="20" rx="5" fill="#C9A050"/>
+        <polygon points="9.5,7 9.5,17 17,12" fill="#fff"/>
+      </svg>
+    </div>
+    <div class="qr-text">
+      <h3>책 + 영상을 함께<br><em>QR코드로 유튜브 영상 강의 연계 학습</em></h3>
+      <p>각 패턴 페이지에 QR코드가 삽입되어 있어요.<br>
+      스캔 한 번으로 유튜브 영상 강의를 바로 시청하며<br>
+      눈으로 읽고 귀로 듣고 입으로 말하는 3박자 학습이 가능합니다.<br><br>
+      <strong style="color:#C9A050;">틀에 박힌 뻔한 영어가 아닌, 지금 당장 써먹을 수 있는 실전 영어회화</strong>를 배우세요.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ⑧ 구매 안내 + FAQ -->
+<section class="purchase">
+  <div class="section-label">Purchase Guide</div>
+  <h2 class="section-title">구매 안내</h2>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <div class="info-card-title">파일 형식</div>
+      <div class="info-card-desc">PDF 전자책 1종이 제공됩니다. PC, 태블릿, 스마트폰 모두에서 열람 가능합니다.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <div class="info-card-title">파일 전달 방법</div>
+      <div class="info-card-desc">구매 시 입력하신 이메일 주소로 <strong>24시간 이내</strong> 발송됩니다. 이메일 주소를 정확히 입력해 주세요.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <div class="info-card-title">환불 정책</div>
+      <div class="info-card-desc">디지털 상품 특성상 파일 전송 이후에는 환불이 불가합니다. 구매 전 샘플을 꼭 확인해 주세요.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="info-card-title">문의</div>
+      <div class="info-card-desc">파일 미수신 등 문의는 hp.biz001@gmail.com 으로 연락해 주세요. 빠르게 처리해 드립니다.</div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:40px;">FAQ</div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q"><span class="faq-q-badge">Q</span>구매 후 파일은 언제 받을 수 있나요?</div>
+      <div class="faq-a">구매 완료 후 24시간 이내에 입력하신 이메일로 PDF 파일을 발송해 드립니다. 스팸함도 확인해 주세요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="faq-q-badge">Q</span>어떤 기기에서 볼 수 있나요?</div>
+      <div class="faq-a">PDF 파일이라 PC, 맥, 아이패드, 갤럭시 탭, 스마트폰 모두에서 열람 가능합니다. 별도 앱 설치는 불필요합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="faq-q-badge">Q</span>영어 초보도 볼 수 있나요?</div>
+      <div class="faq-a">네, 초급부터 시작해 중·고급까지 단계별로 학습할 수 있도록 설계되어 있어요. 처음 공부하시는 분도 무리 없이 시작할 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="faq-q-badge">Q</span>QR코드 영상은 무료로 볼 수 있나요?</div>
+      <div class="faq-a">네, QR코드로 연결되는 유튜브 영상은 무료입니다. 별도 구독이나 결제 없이 바로 시청하실 수 있어요.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ 최종 CTA -->
+<section class="cta">
+  <h2>지금 구매하고<br><em>영어를 길게 말하는 경험</em>을 시작해 보세요!</h2>
+  <p>
+    100개 패턴 × 10개 예문 × 3단계 확장 훈련<br>
+    QR코드 영상 강의 연계로 언제 어디서나 반복 학습<br><br>
+    <strong style="color:rgba(255,255,255,0.85);">PDF 전자책 · ISBN 공식 등록 · 구매 후 24시간 이내 이메일 발송</strong>
+  </p>
+  <div class="cta-sub" style="margin-top:20px;font-size:14px;color:rgba(255,255,255,0.55);">문의: hp.biz001@gmail.com</div>
+</section>
+
+</body>
+</html>
