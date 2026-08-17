@@ -28,7 +28,7 @@
     <div class="sb-ebook-step"><span class="sb-ebook-step-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span>항상 곁에 두고 <strong>예습·복습</strong> 완성</span></div>
   </div>
   <div class="sb-ebook-divider"></div>
-  <a href="#" class="sb-ebook-btn">자세히 보기 →</a>
+  <a href="/#premium" class="sb-ebook-btn">자세히 보기 →</a>
 </div>
 <div class="sb-card">
   <span class="sb-section-title">패턴 목록</span>
@@ -43,12 +43,7 @@
 </div>
 <script>
 (function(){
-  // 현재 페이지 URL에서 /patterns/ 앞까지의 경로를 루트로 사용
-  var loc = window.location.href;
-  var rootUrl = loc.indexOf('/patterns/') !== -1
-    ? loc.substring(0, loc.indexOf('/patterns/') + 1)
-    : loc.substring(0, loc.lastIndexOf('/') + 1);
-  var jsonUrl = rootUrl + 'pattern-list.json';
+  var jsonUrl = '/pattern-list.json';
 
   fetch(jsonUrl)
     .then(function(r){ return r.json(); })
@@ -58,7 +53,7 @@
       var currentSlug = (typeof CURRENT_SLUG !== 'undefined') ? CURRENT_SLUG : '';
       ul.innerHTML = list.map(function(p){
         var isActive = p.slug === currentSlug;
-        var href = isActive ? '#' : rootUrl + 'patterns/' + p.slug + '/';
+        var href = isActive ? '#' : '/english/ko/' + p.slug + '/';
         return '<li class="sb-pattern-item' + (isActive ? ' active' : '') + '" data-slug="' + p.slug + '">'
              + '<a href="' + href + '">'
              + '<span class="sb-no">' + p.no + '</span>'
