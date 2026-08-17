@@ -869,6 +869,13 @@
 </div>
 
 <script>
+/* ========================================================
+   팝업 자동 표시 설정
+   true  = 페이지 진입 시 팝업 자동 출력
+   false = 자동 출력 안 함 (구매 버튼 클릭 시에만 표시)
+   ======================================================== */
+var POPUP_AUTO_SHOW = false;  // 팝업 출력
+
 (function() {
   window.openEbookPopup = function() {
     document.getElementById('ebookPopupOverlay').classList.add('active');
@@ -886,9 +893,9 @@
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeEbookPopup();
   });
-  // 페이지 로드 후 0.4초 뒤 팝업 표시
+  // 페이지 로드 후 0.4초 뒤 팝업 표시 (플래그가 true일 때만)
   window.addEventListener('load', function() {
-    setTimeout(openEbookPopup, 400);
+    if (POPUP_AUTO_SHOW) setTimeout(openEbookPopup, 400);
   });
 })();
 </script>
