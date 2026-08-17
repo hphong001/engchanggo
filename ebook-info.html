@@ -57,6 +57,22 @@
   .badge-teal { background:#e6f4f7; color:#0b4f5e; }
   .badge-gold { background:#fdf3dc; color:#9a7020; }
   .badge-gray { background:#f0f0f2; color:#555; }
+  .buy-btn-wrap { margin-top:24px; }
+  .buy-btn {
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    width: 100%;
+    background:#0b4f5e; color:#fff;
+    font-family:'Noto Sans KR',sans-serif; font-size:16px; font-weight:900;
+    padding:22px 36px; border-radius:10px; border:none; cursor:pointer;
+    letter-spacing:0.2px; transition:background 0.2s, transform 0.15s;
+    box-shadow:0 4px 16px rgba(11,79,94,0.25);
+  }
+  .buy-btn:hover { background:#0d6478; transform:translateY(-2px); }
+  .buy-btn:active { transform:translateY(0); }
+  .buy-btn-price {
+    background:rgba(255,255,255,0.15); border-radius:6px;
+    padding:3px 10px; font-size:15px; font-weight:700; letter-spacing:0.5px;
+  }
 
   /* ━━ 03. 이런 분께 추천 ━━ */
   .who { background:#fff; padding:64px 60px; }
@@ -303,6 +319,13 @@
         <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         초·중·고급 모두 가능
       </span>
+    </div>
+    <div class="buy-btn-wrap">
+      <button class="buy-btn" onclick="openEbookPopup()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        지금 구매하기
+        <span class="buy-btn-price">₩9,900</span>
+      </button>
     </div>
   </div>
 </section>
@@ -594,6 +617,279 @@
   </p>
   <div class="cta-sub" style="margin-top:20px;font-size:14px;color:rgba(255,255,255,0.55);">문의: hp.biz001@gmail.com</div>
 </section>
+
+
+<!-- ══ 사전 구매 안내 팝업 ══ -->
+<style>
+#ebookPopupOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+#ebookPopupOverlay.active {
+  display: flex;
+}
+#ebookPopup {
+  background: #fff;
+  border-radius: 14px;
+  max-width: 560px;
+  width: 100%;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+  overflow: hidden;
+  font-family: 'Noto Sans KR', sans-serif;
+  animation: popupIn 0.28s cubic-bezier(0.34,1.4,0.64,1) both;
+}
+@keyframes popupIn {
+  from { transform: scale(0.88); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+.popup-header {
+  background: #0b4f5e;
+  padding: 24px 28px 20px;
+  position: relative;
+  text-align: center;
+}
+.popup-badge {
+  display: inline-block;
+  background: rgba(201,160,80,0.22);
+  color: #C9A050;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  padding: 6px 18px;
+  border-radius: 22px;
+  white-space: nowrap;
+  margin-bottom: 12px;
+}
+.popup-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.popup-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: rgba(255,255,255,0.12);
+  border: none;
+  color: rgba(255,255,255,0.8);
+  font-size: 18px;
+  line-height: 1;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.popup-close:hover { background: rgba(255,255,255,0.25); }
+.popup-body {
+  padding: 28px 32px 32px;
+  text-align: center;
+}
+.popup-desc {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  word-break: keep-all;
+  text-align: center;
+}
+/* 계좌 정보 박스 */
+.popup-bank-box {
+  background: #f7f8fa;
+  border: 1px solid #e4e6ea;
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+}
+.popup-bank-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding: 8px 0;
+  font-size: 16px;
+  border-bottom: 1px dashed #e4e6ea;
+}
+.popup-bank-row:last-child { border-bottom: none; }
+.popup-bank-label {
+  color: #888;
+  font-weight: 600;
+  white-space: nowrap;
+  width: 86px;
+  text-align: right;
+}
+.popup-bank-colon {
+  color: #bbb;
+  margin: 0 12px;
+}
+.popup-bank-value {
+  color: #1a1a1a;
+  font-weight: 700;
+  width: 210px;
+  text-align: left;
+}
+.popup-bank-value.price {
+  color: #0b4f5e;
+  font-size: 20px;
+  font-weight: 900;
+}
+/* 이메일 발송 안내 박스 */
+.popup-send-box {
+  background: #fff8ec;
+  border: 1px solid #f0d89a;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.popup-send-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #9a7520;
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+.popup-send-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px 0;
+  display: inline-block;
+  text-align: left;
+}
+.popup-send-list li {
+  font-size: 15px;
+  color: #555;
+  padding: 4px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.6;
+}
+.popup-send-list li::before {
+  content: '·';
+  color: #C9A050;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.popup-email-link {
+  display: block;
+  text-align: center;
+  background: #0b4f5e;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  transition: background 0.2s;
+}
+.popup-email-link:hover { background: #0d6478; }
+.popup-notice {
+  font-size: 15px;
+  color: #666;
+  text-align: center;
+  line-height: 1.7;
+}
+.popup-notice strong {
+  color: #333;
+  font-size: 15px;
+}
+</style>
+
+<div id="ebookPopupOverlay">
+  <div id="ebookPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-header">
+      <button class="popup-close" onclick="closeEbookPopup()" aria-label="닫기">✕</button>
+      <span class="popup-badge">📦 사전 구매 안내</span>
+      <p class="popup-title" id="popupTitle">현재 ISBN 등록 및<br>온라인 판매 준비 중입니다</p>
+    </div>
+    <div class="popup-body">
+      <p class="popup-desc">
+        지금 바로 구입을 원하시는 분께는<br>
+        <strong>계좌 직접 입금</strong>으로 먼저 발송해 드립니다.
+      </p>
+
+      <!-- 계좌 정보 -->
+      <div class="popup-bank-box">
+        <div class="popup-bank-row">
+          <span class="popup-bank-label">은행명</span>
+          <span class="popup-bank-colon">:</span>
+          <span class="popup-bank-value">하나은행</span>
+        </div>
+        <div class="popup-bank-row">
+          <span class="popup-bank-label">계좌번호</span>
+          <span class="popup-bank-colon">:</span>
+          <span class="popup-bank-value">346-911021-08307</span>
+        </div>
+        <div class="popup-bank-row">
+          <span class="popup-bank-label">예금주</span>
+          <span class="popup-bank-colon">:</span>
+          <span class="popup-bank-value">홍O표</span>
+        </div>
+        <div class="popup-bank-row">
+          <span class="popup-bank-label">입금 금액</span>
+          <span class="popup-bank-colon">:</span>
+          <span class="popup-bank-value price">₩9,900</span>
+        </div>
+      </div>
+
+      <!-- 이메일 발송 안내 -->
+      <div class="popup-send-box">
+        <p class="popup-send-title">✉️ 입금 후 아래 내용을 이메일로 보내주세요</p>
+        <ul class="popup-send-list">
+          <li>송금자 성함 (또는 입금 시 메모 내용)</li>
+          <li>전자책 받으실 이메일 주소</li>
+        </ul>
+        <a href="mailto:hp.biz001@gmail.com" class="popup-email-link">
+          📧 hp.biz001@gmail.com
+        </a>
+      </div>
+
+      <p class="popup-notice">
+        <strong>※ 매일 저녁 일괄 발송 예정입니다.</strong><br>
+        당일 저녁 이후 입금 건은 익일 저녁에 발송됩니다.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  function openEbookPopup() {
+    document.getElementById('ebookPopupOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  window.closeEbookPopup = function() {
+    document.getElementById('ebookPopupOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+  };
+  // 오버레이 클릭 시 닫기
+  document.getElementById('ebookPopupOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeEbookPopup();
+  });
+  // ESC 키로 닫기
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeEbookPopup();
+  });
+  // 페이지 로드 후 0.4초 뒤 팝업 표시
+  window.addEventListener('load', function() {
+    setTimeout(openEbookPopup, 400);
+  });
+})();
+</script>
 
 </body>
 </html>
