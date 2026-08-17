@@ -1,11 +1,13 @@
-﻿<style>
+<style>
+/* html/body에 overflow 제한 없어야 sticky 작동 */
+html, body { overflow-x: hidden; }
 header{background:#FFFFFF;padding:0;height:60px;border-bottom:1px solid #E2E2DF;position:sticky;top:0;z-index:200;font-family:'Pretendard','Malgun Gothic',sans-serif;}
 .hd-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:100%;display:flex;justify-content:space-between;align-items:center;}
 .hd-inner .hd-right{margin-right:336px;}
 .hd-logo{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;color:#1A1A1A;display:flex;align-items:center;gap:6px;text-decoration:none;}
 .hd-logo span{color:#4F46E5;font-size:16px;}
 .hd-right{display:flex;align-items:center;gap:16px;}
-.hd-ebook-btn{background:#4F46E5;color:white;padding:8px 18px;font-size:14px;font-weight:700;transition:background .2s;display:flex;align-items:center;gap:6px;text-decoration:none;}
+.hd-ebook-btn{background:#C9A050;color:white;padding:8px 18px;font-size:14px;font-weight:700;transition:background .2s;display:flex;align-items:center;gap:6px;text-decoration:none;}
 .hd-ebook-btn:hover{background:#1A1A1A;}
 .hd-list-btn{border:1px solid #E2E2DF;padding:8px 16px;font-size:14px;font-weight:700;background:#FBFBF9;transition:all .2s;display:flex;align-items:center;gap:6px;text-decoration:none;color:#1A1A1A;}
 .hd-list-btn:hover{background:#1A1A1A;color:white;border-color:#1A1A1A;}
@@ -13,7 +15,7 @@ header{background:#FFFFFF;padding:0;height:60px;border-bottom:1px solid #E2E2DF;
 .hd-mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:#FFFFFF;border-bottom:1px solid #E2E2DF;padding:16px 20px;z-index:199;flex-direction:column;gap:10px;}
 .hd-mobile-menu.open{display:flex;}
 .hd-mobile-menu a{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;font-size:15px;font-weight:700;border:1px solid #E2E2DF;transition:all .2s;text-decoration:none;color:#1A1A1A;}
-.hd-mobile-menu a.accent{background:#4F46E5;color:white;border-color:#4F46E5;}
+.hd-mobile-menu a.accent{background:#C9A050;color:white;border-color:#C9A050;}
 .hd-mobile-menu a.accent:hover{background:#1A1A1A;}
 .hd-mobile-menu a:not(.accent):hover{background:#1A1A1A;color:white;}
 @media(max-width:900px){
@@ -32,16 +34,33 @@ header{background:#FFFFFF;padding:0;height:60px;border-bottom:1px solid #E2E2DF;
   <div class="hd-inner">
     <a id="hd-logo-link" href="/" class="hd-logo">영어창고 <span>MyEnglishVault</span></a>
     <div class="hd-right">
-      <a href="/#premium" class="hd-ebook-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> 전자책 안내</a>
-      <a id="hd-list-link" href="/" class="hd-list-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> 패턴 목록</a>
-      <button class="hd-hamburger" onclick="toggleHdMenu()" aria-label="메뉴"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <a href="/ebook-info.html" target="_blank" class="hd-ebook-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        전자책 안내
+      </a>
+      <a id="hd-list-link" href="/" class="hd-list-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        패턴 목록
+      </a>
+      <button class="hd-hamburger" onclick="toggleHdMenu()" aria-label="메뉴">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
   </div>
 </header>
 <div class="hd-mobile-menu" id="hdMobileMenu">
-  <a href="/#premium" class="accent"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> 전자책 안내</a>
-  <a id="hd-mob-list" href="/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> 전체 패턴 목록</a>
-  <a href="https://www.youtube.com/channel/UCojiD-GS8WSeNXigr6EKhMA" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg> 유튜브 채널 구독</a>
+  <a href="/ebook-info.html" target="_blank" class="accent">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    전자책 안내
+  </a>
+  <a id="hd-mob-list" href="/">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+    전체 패턴 목록
+  </a>
+  <a href="https://www.youtube.com/@MyEnglishVault" target="_blank">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+    유튜브 채널 구독
+  </a>
 </div>
 <script>
 function toggleHdMenu(){
