@@ -108,6 +108,48 @@ header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:c
 .premium-btn{background:var(--text-black);color:var(--bg-white);padding:14px 32px;font-size:15px;font-weight:700;display:inline-block;transition:background 0.3s;}
 .premium-btn:hover{background:var(--accent-color);}
 footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px;margin-top:20px;border-top:1px solid var(--border-color);background:var(--bg-white);}
+/* ── 사이드바 레이아웃 ── */
+.page-wrapper{display:flex;align-items:flex-start;max-width:1400px;margin:0 auto;}
+.main-content{flex:1;min-width:0;}
+.sidebar{width:240px;flex-shrink:0;padding:24px 16px;align-self:flex-start;position:sticky;top:72px;}
+.sidebar-sticky{display:flex;flex-direction:column;gap:16px;}
+
+/* 전자책 카드 */
+.sb-ebook{background:var(--bg-white);border:1px solid var(--border-color);padding:16px;}
+.sb-ebook-cover{width:100%;display:block;border-radius:4px;margin-bottom:12px;box-shadow:0 4px 12px rgba(0,0,0,0.12);}
+.sb-ebook-cover-placeholder{width:100%;aspect-ratio:3/4;background:#e8eaed;border-radius:4px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#999;}
+.sb-ebook-desc{font-size:14px;color:#222;font-weight:500;line-height:1.75;margin-bottom:14px;word-break:keep-all;}
+.sb-ebook-desc strong{color:#111;font-weight:800;}
+.sb-buy-btn{display:block;background:#C9A050;color:#fff;text-align:center;padding:15px 8px;font-size:15px;font-weight:800;border-radius:6px;text-decoration:none;transition:background 0.2s;line-height:1.5;}
+.sb-buy-btn:hover{background:#b08a3e;}
+.sb-buy-price{font-size:14px;font-weight:700;margin-top:3px;color:#fff;}
+
+/* 채널 소개 카드 */
+.sb-channel{background:var(--bg-white);border:1px solid var(--border-color);padding:16px;}
+.sb-section-label{font-size:13px;font-weight:800;letter-spacing:0.5px;color:var(--accent-color);margin-bottom:10px;display:flex;align-items:center;gap:5px;}
+.sb-channel-desc{font-size:14px;color:#222;font-weight:500;line-height:1.75;margin-bottom:12px;word-break:keep-all;}
+.sb-yt-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:transparent;color:#0b4f5e;border:2px solid #0b4f5e;padding:11px 8px;font-size:13px;font-weight:700;border-radius:6px;text-decoration:none;transition:all 0.2s;}
+.sb-yt-btn:hover{background:#0b4f5e;color:#fff;}
+.sb-yt-btn svg{width:16px;height:16px;fill:#0b4f5e;flex-shrink:0;transition:fill 0.2s;}
+.sb-yt-btn:hover svg{fill:#fff;}
+
+/* 인기 패턴 카드 */
+.sb-top{background:var(--bg-white);border:1px solid var(--border-color);padding:16px;}
+.sb-top-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0;}
+.sb-top-item{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border-color);text-decoration:none;color:#111;transition:color 0.2s;}
+.sb-top-item:last-child{border-bottom:none;}
+.sb-top-item:hover{color:var(--accent-color);}
+.sb-top-rank{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;color:#aaa;width:20px;flex-shrink:0;text-align:center;}
+.sb-top-rank.gold{color:#C9A050;}
+.sb-top-rank.silver{color:#888;}
+.sb-top-rank.bronze{color:#a0704a;}
+.sb-top-pattern{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;flex:1;color:#111;}
+.sb-top-views{font-size:12px;color:#888;flex-shrink:0;}
+
+@media(max-width:1024px){
+  .sidebar{display:none;}
+  .page-wrapper{display:block;}
+}
 @media(max-width:768px){
   .hero h1{font-size:28px;}
   .section-header{flex-direction:column;align-items:flex-start;gap:12px;}
@@ -130,6 +172,8 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
   <a class="logo" href="/">영어창고 <span>MyEnglishVault</span></a>
   <a href="ebook-info.html" class="nav-btn" target="_blank" rel="noopener">전자책 안내</a>
 </header>
+<div class="page-wrapper">
+<div class="main-content">
 <section class="hero">
   <span class="hero-badge">기초부터 실전까지 필수 패턴 완결판</span>
   <h1>머릿속에 맴도는 영단어,<br>이제 긴 문장으로 시원하게 내뱉으세요!</h1>
@@ -274,6 +318,86 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
     <a href="ebook-info.html" class="premium-btn" target="_blank" rel="noopener">전자책 자세히 보기</a>
   </div>
 </section>
+</div><!-- /main-content -->
+
+<!-- 오른쪽 사이드바 -->
+<aside class="sidebar">
+  <div class="sidebar-sticky">
+
+    <!-- ① 채널 소개 -->
+    <div class="sb-channel">
+      <div class="sb-section-label">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+        영어창고 유튜브 채널
+      </div>
+      <p class="sb-channel-desc">
+        꼬리물기 방식으로 짧은 문장을<br>
+        길게 늘려가는 영어회화 패턴<br>
+        영상으로 말하기 실력을<br>
+        업그레이드 하세요.
+      </p>
+      <a href="https://www.youtube.com/@MyEnglishVault" target="_blank" rel="noopener" class="sb-yt-btn" style="margin-bottom:8px;">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        채널 구독하러 가기
+      </a>
+    </div>
+
+    <!-- ② 인기 패턴 TOP 5 -->
+    <div class="sb-top">
+      <div class="sb-section-label">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"/><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>
+        인기 패턴 TOP 5
+      </div>
+      <ul class="sb-top-list">
+        <li><a href="https://www.youtube.com/watch?v=093zUhT_9ao" target="_blank" class="sb-top-item">
+          <span class="sb-top-rank gold">1</span>
+          <span class="sb-top-pattern">It's hard to</span>
+        </a></li>
+        <li><a href="https://www.youtube.com/@MyEnglishVault" target="_blank" class="sb-top-item">
+          <span class="sb-top-rank silver">2</span>
+          <span class="sb-top-pattern">I've been</span>
+        </a></li>
+        <li><a href="https://www.youtube.com/watch?v=AD8lJ1xUiNg" target="_blank" class="sb-top-item">
+          <span class="sb-top-rank bronze">3</span>
+          <span class="sb-top-pattern">I'm used to</span>
+        </a></li>
+        <li><a href="https://www.youtube.com/watch?v=RI2ydNWFs40" target="_blank" class="sb-top-item">
+          <span class="sb-top-rank">4</span>
+          <span class="sb-top-pattern">I'm interested in</span>
+        </a></li>
+        <li><a href="https://www.youtube.com/watch?v=gsF_Mx4gdgo" target="_blank" class="sb-top-item">
+          <span class="sb-top-rank">5</span>
+          <span class="sb-top-pattern">How do I</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <!-- ③ 전자책 구매 유도 -->
+    <div class="sb-ebook">
+      <div class="sb-section-label" style="margin-bottom:10px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        전자책 안내
+      </div>
+      <img src="image/book-cover.png" alt="영어창고 전자책 표지" class="sb-ebook-cover"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="sb-ebook-cover-placeholder" style="display:none;">📚 책 표지</div>
+      <p class="sb-ebook-desc">
+        100편의 유튜브 영상<br>
+        내용이 이 한 권에<br>
+        <strong>모두 담겨 있습니다.</strong><br>
+        PC · 태블릿 · 스마트폰에<br>
+        저장하여 언제 어디서든<br>
+        꺼내 학습하세요.
+      </p>
+      <a href="ebook-info.html" target="_blank" rel="noopener" class="sb-buy-btn">
+        사전 할인가로<br>구매하기
+        <div class="sb-buy-price">₩9,900</div>
+      </a>
+    </div>
+
+  </div>
+</aside>
+</div><!-- /page-wrapper -->
 <footer><p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p></footer>
 <script>
 var allCards = Array.from(document.querySelectorAll('#patternGrid .card'));
