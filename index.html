@@ -374,7 +374,7 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 
     <!-- ③ 패턴 목록 -->
     <div class="sb-card">
-      <span class="sb-section-title">패턴 목록</span>
+      <span class="sb-section-title" style="text-align:center;">패턴 목록</span>
       <ul class="sb-pattern-list" id="sb-list">
         <li style="padding:8px;color:#A0A0A0;font-size:13px;">목록 불러오는 중...</li>
       </ul>
@@ -385,26 +385,24 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 </div><!-- /page-wrapper -->
 <footer><p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p></footer>
 <script>
-<script>
 (function(){
-  var jsonUrl = '/pattern-list.json';
-  fetch(jsonUrl)
+  fetch('/pattern-list.json')
     .then(function(r){ return r.json(); })
     .then(function(list){
       var ul = document.getElementById('sb-list');
       if(!ul) return;
+      var currentSlug = (typeof CURRENT_SLUG !== 'undefined') ? CURRENT_SLUG : '';
       ul.innerHTML = list.map(function(p){
-        return '<li class="sb-pattern-item">'
-             + '<a href="/english/ko/' + p.slug + '/">'
+        var isActive = p.slug === currentSlug;
+        var href = isActive ? '#' : '/english/ko/' + p.slug + '/';
+        return '<li class="sb-pattern-item' + (isActive ? ' active' : '') + '">'
+             + '<a href="' + href + '">'
              + '<span class="sb-no">' + p.no + '</span>'
              + '<span class="sb-name">' + p.name + '</span>'
              + '</a></li>';
       }).join('');
     })
-    .catch(function(){
-      var ul = document.getElementById('sb-list');
-      if(ul) ul.innerHTML = '';
-    });
+    .catch(function(e){ console.log('sidebar fetch error:', e); });
 })();
 </script>
 <script>
