@@ -868,10 +868,10 @@
 
 <script>
 (function() {
-  function openEbookPopup() {
+  window.openEbookPopup = function() {
     document.getElementById('ebookPopupOverlay').classList.add('active');
     document.body.style.overflow = 'hidden';
-  }
+  };
   window.closeEbookPopup = function() {
     document.getElementById('ebookPopupOverlay').classList.remove('active');
     document.body.style.overflow = '';
