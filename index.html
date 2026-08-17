@@ -111,7 +111,7 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 /* ── 사이드바 레이아웃 ── */
 .page-wrapper{display:flex;align-items:flex-start;max-width:1400px;margin:0 auto;}
 .main-content{flex:1;min-width:0;}
-.sidebar{width:260px;flex-shrink:0;padding:24px 16px;align-self:flex-start;position:sticky;top:72px;}
+.sidebar{width:300px;flex-shrink:0;padding:24px 16px;align-self:flex-start;position:sticky;top:72px;}
 .sidebar-sticky{display:flex;flex-direction:column;gap:0;}
 
 /* sidebar.html 기준 통일 스타일 */
@@ -395,7 +395,7 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
       ul.innerHTML = list.map(function(p){
         var isActive = p.slug === currentSlug;
         var href = isActive ? '#' : '/english/ko/' + p.slug + '/';
-        return '<li class="sb-pattern-item' + (isActive ? ' active' : '') + '">'
+        return '<li class="sb-pattern-item' + (isActive ? ' active' : '') + '" data-slug="' + p.slug + '">'
              + '<a href="' + href + '">'
              + '<span class="sb-no">' + p.no + '</span>'
              + '<span class="sb-name">' + p.name + '</span>'
