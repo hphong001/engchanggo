@@ -90,6 +90,8 @@ header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:c
   border-radius:0;
 }
 #patternGrid.view-list .card:hover{background:#FAFAF9;box-shadow:none;transform:none;}
+/* wrapper div를 grid에서 투명하게 — 자식이 직접 grid 셀 참여 */
+#patternGrid.view-list .card > div:not(.card-actions){display:contents;}
 /* 번호 */
 #patternGrid.view-list .card-top{margin-bottom:0;width:auto;flex-shrink:0;text-align:left;padding:0;display:flex;align-items:center;}
 #patternGrid.view-list .card-no{font-size:13px;font-weight:700;color:var(--accent-color);}
