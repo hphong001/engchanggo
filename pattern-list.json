@@ -1,702 +1,602 @@
-[
+﻿[
   {
     "no": "001",
     "name": "I can",
     "slug": "001-i-can",
-    "video": "https://www.youtube.com/watch?v=bwwKi2c4HyY",
-    "meaning": "~할 수 있어요"
+    "video": "https://www.youtube.com/watch?v=bwwKi2c4HyY"
   },
   {
     "no": "002",
     "name": "Can I",
     "slug": "002-can-i",
-    "video": "https://www.youtube.com/watch?v=YseF-WvMpgo",
-    "meaning": "제가 ~해도 될까요?"
+    "video": "https://www.youtube.com/watch?v=YseF-WvMpgo"
   },
   {
     "no": "003",
     "name": "May I",
     "slug": "003-may-i",
-    "video": "https://www.youtube.com/watch?v=ExHTg45uoTY",
-    "meaning": "제가 ~해도 될까요?"
+    "video": "https://www.youtube.com/watch?v=ExHTg45uoTY"
   },
   {
     "no": "004",
     "name": "It is",
     "slug": "004-it-is",
-    "video": "https://www.youtube.com/watch?v=_-m0Z9FvgM8",
-    "meaning": "~예요"
+    "video": "https://www.youtube.com/watch?v=_-m0Z9FvgM8"
   },
   {
     "no": "005",
-    "name": "Don't",
+    "name": "Don’t",
     "slug": "005-dont",
-    "video": "https://www.youtube.com/watch?v=m2Y5GGtFNIc",
-    "meaning": "~하지 마세요"
+    "video": "https://www.youtube.com/watch?v=m2Y5GGtFNIc"
   },
   {
     "no": "006",
-    "name": "Let's",
+    "name": "Let’s",
     "slug": "006-lets",
-    "video": "https://www.youtube.com/watch?v=GZxdb4ZkZtI",
-    "meaning": "~합시다"
+    "video": "https://www.youtube.com/watch?v=GZxdb4ZkZtI"
   },
   {
     "no": "007",
     "name": "Do you",
     "slug": "007-do-you",
-    "video": "https://www.youtube.com/watch?v=1GdIWIOKR4M",
-    "meaning": "~하나요?"
+    "video": "https://www.youtube.com/watch?v=1GdIWIOKR4M"
   },
   {
     "no": "008",
     "name": "How is",
     "slug": "008-how-is",
-    "video": "https://www.youtube.com/watch?v=XG466jtvrh4",
-    "meaning": "~는 어떤가요?"
+    "video": "https://www.youtube.com/watch?v=XG466jtvrh4"
   },
   {
     "no": "009",
     "name": "Please",
     "slug": "009-please",
-    "video": "https://www.youtube.com/watch?v=Qst_LpDtpg4",
-    "meaning": "~해주세요"
+    "video": "https://www.youtube.com/watch?v=Qst_LpDtpg4"
   },
   {
     "no": "010",
     "name": "I think",
     "slug": "010-i-think",
-    "video": "https://www.youtube.com/watch?v=9m9o3e8mB8c",
-    "meaning": "제 생각에는 ~인 것 같아요"
+    "video": "https://www.youtube.com/watch?v=9m9o3e8mB8c"
   },
   {
     "no": "011",
     "name": "Can you",
     "slug": "011-can-you",
-    "video": "https://www.youtube.com/watch?v=X4mcHM1QBf0",
-    "meaning": "~해 줄 수 있어요?"
+    "video": "https://www.youtube.com/watch?v=X4mcHM1QBf0"
   },
   {
     "no": "012",
     "name": "Are you",
     "slug": "012-are-you",
-    "video": "https://www.youtube.com/watch?v=ZitmeGEl_vw",
-    "meaning": "당신은 ~인가요?"
+    "video": "https://www.youtube.com/watch?v=ZitmeGEl_vw"
   },
   {
     "no": "013",
     "name": "When is",
     "slug": "013-when-is",
-    "video": "https://www.youtube.com/watch?v=vE1rZCbp1Y8",
-    "meaning": "~가 언제인가요?"
+    "video": "https://www.youtube.com/watch?v=vE1rZCbp1Y8"
   },
   {
     "no": "014",
     "name": "How was",
     "slug": "014-how-was",
-    "video": "https://www.youtube.com/watch?v=YVPdHyOmPng",
-    "meaning": "~는 어땠나요?"
+    "video": "https://www.youtube.com/watch?v=YVPdHyOmPng"
   },
   {
     "no": "015",
     "name": "This is",
     "slug": "015-this-is",
-    "video": "https://www.youtube.com/watch?v=VBWG-g1XsqA",
-    "meaning": "이것은 ~입니다"
+    "video": "https://www.youtube.com/watch?v=VBWG-g1XsqA"
   },
   {
     "no": "016",
-    "name": "I'm sure",
+    "name": "I’m sure",
     "slug": "016-im-sure",
-    "video": "https://www.youtube.com/watch?v=VUACnYkQV_A",
-    "meaning": "확실히 ~예요"
+    "video": "https://www.youtube.com/watch?v=VUACnYkQV_A"
   },
   {
     "no": "017",
     "name": "Where is",
     "slug": "017-where-is",
-    "video": "https://www.youtube.com/watch?v=Htgnm3eA1P0",
-    "meaning": "~가 어디인가요?"
+    "video": "https://www.youtube.com/watch?v=Htgnm3eA1P0"
   },
   {
     "no": "018",
     "name": "Is there",
     "slug": "018-is-there",
-    "video": "https://www.youtube.com/watch?v=VzAWUJ8FTO0",
-    "meaning": "~가 있나요?"
+    "video": "https://www.youtube.com/watch?v=VzAWUJ8FTO0"
   },
   {
     "no": "019",
     "name": "Shall we",
     "slug": "019-shall-we",
-    "video": "https://www.youtube.com/watch?v=zgUzRZESymg",
-    "meaning": "우리 ~할까요?"
+    "video": "https://www.youtube.com/watch?v=zgUzRZESymg"
   },
   {
     "no": "020",
     "name": "I want to",
     "slug": "020-i-want-to",
-    "video": "https://www.youtube.com/watch?v=Pyn-Rdfp6KA",
-    "meaning": "~하고 싶어요"
+    "video": "https://www.youtube.com/watch?v=Pyn-Rdfp6KA"
   },
   {
     "no": "021",
     "name": "I need to",
     "slug": "021-i-need-to",
-    "video": "https://www.youtube.com/watch?v=RcC4WqEi6Ts",
-    "meaning": "~해야 해요"
+    "video": "https://www.youtube.com/watch?v=RcC4WqEi6Ts"
   },
   {
     "no": "022",
     "name": "I have to",
     "slug": "022-i-have-to",
-    "video": "https://www.youtube.com/watch?v=kqb3XiJY2HI",
-    "meaning": "~해야만 해요"
+    "video": "https://www.youtube.com/watch?v=kqb3XiJY2HI"
   },
   {
     "no": "023",
     "name": "I like to",
     "slug": "023-i-like-to",
-    "video": "https://www.youtube.com/watch?v=vX9r5IgMeu0",
-    "meaning": "~하는 걸 좋아해요"
+    "video": "https://www.youtube.com/watch?v=vX9r5IgMeu0"
   },
   {
     "no": "024",
     "name": "I hate to",
     "slug": "024-i-hate-to",
-    "video": "https://www.youtube.com/watch?v=rvBqWVeOg_c",
-    "meaning": "~하기 정말 싫어요"
+    "video": "https://www.youtube.com/watch?v=rvBqWVeOg_c"
   },
   {
     "no": "025",
     "name": "I hope to",
     "slug": "025-i-hope-to",
-    "video": "https://www.youtube.com/watch?v=Wkc9SHWJit0",
-    "meaning": "~하기를 바래요"
+    "video": "https://www.youtube.com/watch?v=Wkc9SHWJit0"
   },
   {
     "no": "026",
     "name": "I used to",
     "slug": "026-i-used-to",
-    "video": "https://www.youtube.com/watch?v=h8255wloZQ4",
-    "meaning": "예전에 ~하곤 했어요"
+    "video": "https://www.youtube.com/watch?v=h8255wloZQ4"
   },
   {
     "no": "027",
     "name": "Could you",
     "slug": "027-could-you",
-    "video": "https://www.youtube.com/watch?v=ZxuU8ERrxbA",
-    "meaning": "~해 주실 수 있나요?"
+    "video": "https://www.youtube.com/watch?v=ZxuU8ERrxbA"
   },
   {
     "no": "028",
     "name": "How about",
     "slug": "028-how-about",
-    "video": "https://www.youtube.com/watch?v=T6zhTEr1xq0",
-    "meaning": "~는 어때요?"
+    "video": "https://www.youtube.com/watch?v=T6zhTEr1xq0"
   },
   {
     "no": "029",
-    "name": "I'm afraid",
+    "name": "I’m afraid",
     "slug": "029-im-afraid",
-    "video": "https://www.youtube.com/watch?v=Gd_3LX0uDq4",
-    "meaning": "유감스럽게도 ~인 것 같아요"
+    "video": "https://www.youtube.com/watch?v=Gd_3LX0uDq4"
   },
   {
     "no": "030",
     "name": "I remember",
     "slug": "030-i-remember",
-    "video": "https://www.youtube.com/watch?v=WektQcOHu8c",
-    "meaning": "~한 게 기억나요"
+    "video": "https://www.youtube.com/watch?v=WektQcOHu8c"
   },
   {
     "no": "031",
-    "name": "That's why",
+    "name": "That’s why",
     "slug": "031-thats-why",
-    "video": "https://www.youtube.com/watch?v=cTeZeojohSo",
-    "meaning": "그게 바로 ~한 이유예요"
+    "video": "https://www.youtube.com/watch?v=cTeZeojohSo"
   },
   {
     "no": "032",
     "name": "What about",
     "slug": "032-what-about",
-    "video": "https://www.youtube.com/watch?v=1byLSIJSnwg",
-    "meaning": "~는요?"
+    "video": "https://www.youtube.com/watch?v=1byLSIJSnwg"
   },
   {
     "no": "033",
-    "name": "I'm good at",
+    "name": "I’m good at",
     "slug": "033-im-good-at",
-    "video": "https://www.youtube.com/watch?v=5UL97VaVeEI",
-    "meaning": "~를 잘해요"
+    "video": "https://www.youtube.com/watch?v=5UL97VaVeEI"
   },
   {
     "no": "034",
-    "name": "I'd like to",
+    "name": "I’d like to",
     "slug": "034-id-like-to",
-    "video": "https://www.youtube.com/watch?v=9oyKxpfdnb8",
-    "meaning": "~하고 싶어요"
+    "video": "https://www.youtube.com/watch?v=9oyKxpfdnb8"
   },
   {
     "no": "035",
     "name": "I feel like",
     "slug": "035-i-feel-like",
-    "video": "https://www.youtube.com/watch?v=W60CE5M_ASM",
-    "meaning": "~하고 싶은 기분이에요"
+    "video": "https://www.youtube.com/watch?v=W60CE5M_ASM"
   },
   {
     "no": "036",
     "name": "I forgot to",
     "slug": "036-i-forgot-to",
-    "video": "https://www.youtube.com/watch?v=CtkSuJ_HdKE",
-    "meaning": "~하는 걸 깜빡했어요"
+    "video": "https://www.youtube.com/watch?v=CtkSuJ_HdKE"
   },
   {
     "no": "037",
     "name": "Do you like",
     "slug": "037-do-you-like",
-    "video": "https://www.youtube.com/watch?v=Dqrr88CIoec",
-    "meaning": "~를 좋아하나요?"
+    "video": "https://www.youtube.com/watch?v=Dqrr88CIoec"
   },
   {
     "no": "038",
     "name": "Do you have",
     "slug": "038-do-you-have",
-    "video": "https://www.youtube.com/watch?v=qXEVvZ6T5tE",
-    "meaning": "~가 있나요?"
+    "video": "https://www.youtube.com/watch?v=qXEVvZ6T5tE"
   },
   {
     "no": "039",
     "name": "Do you need",
     "slug": "039-do-you-need",
-    "video": "https://www.youtube.com/watch?v=wJA8ywOSmR4",
-    "meaning": "~가 필요한가요?"
+    "video": "https://www.youtube.com/watch?v=wJA8ywOSmR4"
   },
   {
     "no": "040",
     "name": "Do you know",
     "slug": "040-do-you-know",
-    "video": "https://www.youtube.com/watch?v=El2ufNXYSd4",
-    "meaning": "~를 아나요?"
+    "video": "https://www.youtube.com/watch?v=El2ufNXYSd4"
   },
   {
     "no": "041",
     "name": "Why are you",
     "slug": "041-why-are-you",
-    "video": "https://www.youtube.com/watch?v=HMbsu0Zp01A",
-    "meaning": "왜 ~하고 있어요?"
+    "video": "https://www.youtube.com/watch?v=HMbsu0Zp01A"
   },
   {
     "no": "042",
     "name": "There is no",
     "slug": "042-there-is-no",
-    "video": "https://www.youtube.com/watch?v=w_rrkSSg7Cs",
-    "meaning": "~가 없어요"
+    "video": "https://www.youtube.com/watch?v=w_rrkSSg7Cs"
   },
   {
     "no": "043",
-    "name": "I'm ready to",
+    "name": "I’m ready to",
     "slug": "043-im-ready-to",
-    "video": "https://www.youtube.com/watch?v=eQSBM6sbFH0",
-    "meaning": "~할 준비됐어요"
+    "video": "https://www.youtube.com/watch?v=eQSBM6sbFH0"
   },
   {
     "no": "044",
-    "name": "I don't like",
+    "name": "I don’t like",
     "slug": "044-i-dont-like",
-    "video": "https://www.youtube.com/watch?v=AgmqaWeRNjA",
-    "meaning": "~를 좋아하지 않아요"
+    "video": "https://www.youtube.com/watch?v=AgmqaWeRNjA"
   },
   {
     "no": "045",
     "name": "I decided to",
     "slug": "045-i-decided-to",
-    "video": "https://www.youtube.com/watch?v=l80MgXNSsZ0",
-    "meaning": "~하기로 결정했어요"
+    "video": "https://www.youtube.com/watch?v=l80MgXNSsZ0"
   },
   {
     "no": "046",
     "name": "Are you sure",
     "slug": "046-are-you-sure",
-    "video": "https://www.youtube.com/watch?v=X6mAA8D3XIg",
-    "meaning": "확실한가요?"
+    "video": "https://www.youtube.com/watch?v=X6mAA8D3XIg"
   },
   {
     "no": "047",
     "name": "What are you",
     "slug": "047-what-are-you",
-    "video": "https://www.youtube.com/watch?v=04XYQnkTG4A",
-    "meaning": "무엇을 ~하고 있나요?"
+    "video": "https://www.youtube.com/watch?v=04XYQnkTG4A"
   },
   {
     "no": "048",
-    "name": "It's time to",
+    "name": "It’s time to",
     "slug": "048-its-time-to",
-    "video": "https://www.youtube.com/watch?v=kDxglhekYEA",
-    "meaning": "~할 시간이에요"
+    "video": "https://www.youtube.com/watch?v=kDxglhekYEA"
   },
   {
     "no": "049",
-    "name": "It's hard to",
+    "name": "It’s hard to",
     "slug": "049-its-hard-to",
-    "video": "https://www.youtube.com/watch?v=093zUhT_9ao",
-    "meaning": "~하는 건 어려워요"
+    "video": "https://www.youtube.com/watch?v=093zUhT_9ao"
   },
   {
     "no": "050",
-    "name": "It's easy to",
+    "name": "It’s easy to",
     "slug": "050-its-easy-to",
-    "video": "https://www.youtube.com/watch?v=sMyQB62dNOw",
-    "meaning": "~하는 건 쉬워요"
+    "video": "https://www.youtube.com/watch?v=sMyQB62dNOw"
   },
   {
     "no": "051",
-    "name": "It's nice to",
+    "name": "It’s nice to",
     "slug": "051-its-nice-to",
-    "video": "https://www.youtube.com/watch?v=nmIzd4Mi2Fw",
-    "meaning": "~해서 좋아요"
+    "video": "https://www.youtube.com/watch?v=nmIzd4Mi2Fw"
   },
   {
     "no": "052",
-    "name": "I'm sorry for",
+    "name": "I’m sorry for",
     "slug": "052-im-sorry-for",
-    "video": "https://www.youtube.com/watch?v=mFz1W5cynKo",
-    "meaning": "~해서 미안해요"
+    "video": "https://www.youtube.com/watch?v=mFz1W5cynKo"
   },
   {
     "no": "053",
-    "name": "I don't think",
+    "name": "I don’t think",
     "slug": "053-i-dont-think",
-    "video": "https://www.youtube.com/watch?v=yOvUTXsw0dU",
-    "meaning": "~인 것 같지 않아요"
+    "video": "https://www.youtube.com/watch?v=yOvUTXsw0dU"
   },
   {
     "no": "054",
     "name": "I promised to",
     "slug": "054-i-promised-to",
-    "video": "https://www.youtube.com/watch?v=9LAk6thTpdU",
-    "meaning": "~하기로 약속했어요"
+    "video": "https://www.youtube.com/watch?v=9LAk6thTpdU"
   },
   {
     "no": "055",
     "name": "I know how to",
     "slug": "055-i-know-how-to",
-    "video": "https://www.youtube.com/watch?v=A9az263ydOo",
-    "meaning": "~하는 법을 알아요"
+    "video": "https://www.youtube.com/watch?v=A9az263ydOo"
   },
   {
     "no": "056",
-    "name": "That's what I",
+    "name": "That’s what I",
     "slug": "056-thats-what-i",
-    "video": "https://www.youtube.com/watch?v=mWAL5SzpMkE",
-    "meaning": "그게 바로 제가 ~한 것이에요"
+    "video": "https://www.youtube.com/watch?v=mWAL5SzpMkE"
   },
   {
     "no": "057",
-    "name": "Why don't you",
+    "name": "Why don’t you",
     "slug": "057-why-dont-you",
-    "video": "https://www.youtube.com/watch?v=7OdFmYekktA",
-    "meaning": "~하는 게 어때요?"
+    "video": "https://www.youtube.com/watch?v=7OdFmYekktA"
   },
   {
     "no": "058",
     "name": "Thank you for",
     "slug": "058-thank-you-for",
-    "video": "https://www.youtube.com/watch?v=paGx-1NQlJg",
-    "meaning": "~해줘서 고마워요"
+    "video": "https://www.youtube.com/watch?v=paGx-1NQlJg"
   },
   {
     "no": "059",
     "name": "I wish I could",
     "slug": "059-i-wish-i-could",
-    "video": "https://www.youtube.com/watch?v=e13w9y88p1E",
-    "meaning": "~할 수 있으면 좋을 텐데"
+    "video": "https://www.youtube.com/watch?v=e13w9y88p1E"
   },
   {
     "no": "060",
     "name": "Do you want to",
     "slug": "060-do-you-want-to",
-    "video": "https://www.youtube.com/watch?v=ShJZx8A6eq4",
-    "meaning": "~하고 싶나요?"
+    "video": "https://www.youtube.com/watch?v=ShJZx8A6eq4"
   },
   {
     "no": "061",
-    "name": "I'm looking for",
+    "name": "I’m looking for",
     "slug": "061-im-looking-for",
-    "video": "https://www.youtube.com/watch?v=J3UKimFv5kE",
-    "meaning": "~를 찾고 있어요"
+    "video": "https://www.youtube.com/watch?v=J3UKimFv5kE"
   },
   {
     "no": "062",
-    "name": "I can't wait to",
+    "name": "I can’t wait to",
     "slug": "062-i-cant-wait-to",
-    "video": "https://www.youtube.com/watch?v=nCiBoVT462U",
-    "meaning": "얼른 ~하고 싶어요"
+    "video": "https://www.youtube.com/watch?v=nCiBoVT462U"
   },
   {
     "no": "063",
-    "name": "I'm planning to",
+    "name": "I’m planning to",
     "slug": "063-im-planning-to",
-    "video": "https://www.youtube.com/watch?v=W4QExkKDETw",
-    "meaning": "~할 계획이에요"
+    "video": "https://www.youtube.com/watch?v=W4QExkKDETw"
   },
   {
     "no": "064",
-    "name": "I'm thinking of",
+    "name": "I’m thinking of",
     "slug": "064-im-thinking-of",
-    "video": "https://www.youtube.com/watch?v=2WkKLlHHqIk",
-    "meaning": "~할까 생각 중이에요"
+    "video": "https://www.youtube.com/watch?v=2WkKLlHHqIk"
   },
   {
     "no": "065",
     "name": "Is it okay if I",
     "slug": "065-is-it-okay-if-i",
-    "video": "https://www.youtube.com/watch?v=HsLod1VK-xI",
-    "meaning": "제가 ~해도 괜찮을까요?"
+    "video": "https://www.youtube.com/watch?v=HsLod1VK-xI"
   },
   {
     "no": "066",
     "name": "Are you ready to",
     "slug": "066-are-you-ready-to",
-    "video": "https://www.youtube.com/watch?v=z6eTiPxi7KM",
-    "meaning": "~할 준비됐나요?"
+    "video": "https://www.youtube.com/watch?v=z6eTiPxi7KM"
   },
   {
     "no": "067",
-    "name": "I'm interested in",
+    "name": "I’m interested in",
     "slug": "067-im-interested-in",
-    "video": "https://www.youtube.com/watch?v=RI2ydNWFs40",
-    "meaning": "~에 관심 있어요"
+    "video": "https://www.youtube.com/watch?v=RI2ydNWFs40"
   },
   {
     "no": "068",
-    "name": "It's important to",
+    "name": "It’s important to",
     "slug": "068-its-important-to",
-    "video": "https://www.youtube.com/watch?v=RHN_p4po1Lg",
-    "meaning": "~하는 건 중요해요"
+    "video": "https://www.youtube.com/watch?v=RHN_p4po1Lg"
   },
   {
     "no": "069",
     "name": "Do you know how to",
     "slug": "069-do-you-know-how-to",
-    "video": "https://www.youtube.com/watch?v=1NAzXGIeP_M",
-    "meaning": "~할 줄 아나요?"
+    "video": "https://www.youtube.com/watch?v=1NAzXGIeP_M"
   },
   {
     "no": "070",
     "name": "What if",
     "slug": "070-what-if",
-    "video": "https://www.youtube.com/watch?v=zpE3Jv5sGJY",
-    "meaning": "~하면 어쩌죠?"
+    "video": "https://www.youtube.com/watch?v=zpE3Jv5sGJY"
   },
   {
     "no": "071",
     "name": "How do I",
     "slug": "071-how-do-i",
-    "video": "https://www.youtube.com/watch?v=gsF_Mx4gdgo",
-    "meaning": "어떻게 ~하나요?"
+    "video": "https://www.youtube.com/watch?v=gsF_Mx4gdgo"
   },
   {
     "no": "072",
     "name": "How come",
     "slug": "072-how-come",
-    "video": "https://www.youtube.com/watch?v=_vscRzW6xSs",
-    "meaning": "어째서 ~인가요?"
+    "video": "https://www.youtube.com/watch?v=_vscRzW6xSs"
   },
   {
     "no": "073",
-    "name": "I've been",
+    "name": "I’ve been",
     "slug": "073-ive-been",
-    "video": "https://www.youtube.com/watch?v=EvaTs7dgVIA",
-    "meaning": "~해오고 있어요"
+    "video": "https://www.youtube.com/watch?v=EvaTs7dgVIA"
   },
   {
     "no": "074",
-    "name": "I'm used to",
+    "name": "I’m used to",
     "slug": "074-im-used-to",
-    "video": "https://www.youtube.com/watch?v=AD8lJ1xUiNg",
-    "meaning": "~에 익숙해요"
+    "video": "https://www.youtube.com/watch?v=AD8lJ1xUiNg"
   },
   {
     "no": "075",
     "name": "I wonder if",
     "slug": "075-i-wonder-if",
-    "video": "https://www.youtube.com/watch?v=M-bYXLg39E0",
-    "meaning": "~일지 궁금해요"
+    "video": "https://www.youtube.com/watch?v=M-bYXLg39E0"
   },
   {
     "no": "076",
-    "name": "I'm here to",
+    "name": "I’m here to",
     "slug": "076-im-here-to",
-    "video": "https://www.youtube.com/watch?v=QHpIr_gmceo",
-    "meaning": "~하러 여기 왔어요"
+    "video": "https://www.youtube.com/watch?v=QHpIr_gmceo"
   },
   {
     "no": "077",
-    "name": "I'm about to",
+    "name": "I’m about to",
     "slug": "077-im-about-to",
-    "video": "https://www.youtube.com/watch?v=-kXjtF35LUs",
-    "meaning": "막 ~하려던 참이에요"
+    "video": "https://www.youtube.com/watch?v=-kXjtF35LUs"
   },
   {
     "no": "078",
-    "name": "I don't mind",
+    "name": "I don’t mind",
     "slug": "078-i-dont-mind",
-    "video": "https://www.youtube.com/watch?v=wip4M4kSz9k",
-    "meaning": "~해도 상관없어요"
+    "video": "https://www.youtube.com/watch?v=wip4M4kSz9k"
   },
   {
     "no": "079",
     "name": "What kind of",
     "slug": "079-what-kind-of",
-    "video": "https://www.youtube.com/watch?v=hf3YXdBrBck",
-    "meaning": "어떤 종류의 ~인가요?"
+    "video": "https://www.youtube.com/watch?v=hf3YXdBrBck"
   },
   {
     "no": "080",
     "name": "Whatever you",
     "slug": "080-whatever-you",
-    "video": "https://www.youtube.com/watch?v=1_8B17umnHk",
-    "meaning": "당신이 무엇을 ~하든"
+    "video": "https://www.youtube.com/watch?v=1_8B17umnHk"
   },
   {
     "no": "081",
     "name": "Whenever you",
     "slug": "081-whenever-you",
-    "video": "https://www.youtube.com/watch?v=DltCdZOkqtA",
-    "meaning": "당신이 언제 ~하든"
+    "video": "https://www.youtube.com/watch?v=DltCdZOkqtA"
   },
   {
     "no": "082",
     "name": "Wherever you",
     "slug": "082-wherever-you",
-    "video": "https://www.youtube.com/watch?v=JC0kqj10H6A",
-    "meaning": "당신이 어디를 ~하든"
+    "video": "https://www.youtube.com/watch?v=JC0kqj10H6A"
   },
   {
     "no": "083",
-    "name": "You'd better",
+    "name": "You’d better",
     "slug": "083-youd-better",
-    "video": "https://www.youtube.com/watch?v=qpyzPecgplw",
-    "meaning": "~하는 게 좋을 거예요"
+    "video": "https://www.youtube.com/watch?v=qpyzPecgplw"
   },
   {
     "no": "084",
     "name": "Make sure to",
     "slug": "084-make-sure-to",
-    "video": "https://www.youtube.com/watch?v=lWdhHzHWaBA",
-    "meaning": "반드시 ~하세요"
+    "video": "https://www.youtube.com/watch?v=lWdhHzHWaBA"
   },
   {
     "no": "085",
     "name": "Feel free to",
     "slug": "085-feel-free-to",
-    "video": "https://www.youtube.com/watch?v=3cbnzGhhmB8",
-    "meaning": "마음 편히 ~하세요"
+    "video": "https://www.youtube.com/watch?v=3cbnzGhhmB8"
   },
   {
     "no": "086",
     "name": "Let me check",
     "slug": "086-let-me-check",
-    "video": "https://www.youtube.com/watch?v=WRiFQlwrkq8",
-    "meaning": "확인해 볼게요"
+    "video": "https://www.youtube.com/watch?v=WRiFQlwrkq8"
   },
   {
     "no": "087",
     "name": "It looks like",
     "slug": "087-it-looks-like",
-    "video": "https://www.youtube.com/watch?v=fAPgVurbtdM",
-    "meaning": "~처럼 보여요"
+    "video": "https://www.youtube.com/watch?v=fAPgVurbtdM"
   },
   {
     "no": "088",
     "name": "It seems like",
     "slug": "088-it-seems-like",
-    "video": "https://www.youtube.com/watch?v=CiLOPVsbsJI",
-    "meaning": "~인 것 같아요"
+    "video": "https://www.youtube.com/watch?v=CiLOPVsbsJI"
   },
   {
     "no": "089",
-    "name": "It doesn't seem like",
+    "name": "It doesn’t seem like",
     "slug": "089-it-doesnt-seem-like",
-    "video": "https://www.youtube.com/watch?v=SyQQlbnLI9w",
-    "meaning": "~인 것 같지 않아요"
+    "video": "https://www.youtube.com/watch?v=SyQQlbnLI9w"
   },
   {
     "no": "090",
     "name": "It feels like",
     "slug": "090-it-feels-like",
-    "video": "https://www.youtube.com/watch?v=uF2J0FgXgi8",
-    "meaning": "~인 것 같은 느낌이에요"
+    "video": "https://www.youtube.com/watch?v=uF2J0FgXgi8"
   },
   {
     "no": "091",
-    "name": "I'm busy -ing",
+    "name": "I’m busy -ing",
     "slug": "091-im-busy--ing",
-    "video": "https://www.youtube.com/watch?v=nCaPvmwghUg",
-    "meaning": "~하느라 바빠요"
+    "video": "https://www.youtube.com/watch?v=nCaPvmwghUg"
   },
   {
     "no": "092",
     "name": "I have no idea",
     "slug": "092-i-have-no-idea",
-    "video": "https://www.youtube.com/watch?v=00bjBlNwZyo",
-    "meaning": "전혀 모르겠어요"
+    "video": "https://www.youtube.com/watch?v=00bjBlNwZyo"
   },
   {
     "no": "093",
     "name": "It sounds like",
     "slug": "093-it-sounds-like",
-    "video": "https://www.youtube.com/watch?v=gl8N05pwN_c",
-    "meaning": "~인것 같아요"
+    "video": "https://www.youtube.com/watch?v=gl8N05pwN_c"
   },
   {
     "no": "094",
-    "name": "It's better to",
+    "name": "It’s better to",
     "slug": "094-its-better-to",
-    "video": "https://www.youtube.com/watch?v=ehayQPF_RAk",
-    "meaning": "~하는 게 더 나아요"
+    "video": "https://www.youtube.com/watch?v=ehayQPF_RAk"
   },
   {
     "no": "095",
     "name": "What makes you",
     "slug": "095-what-makes-you",
-    "video": "https://www.youtube.com/watch?v=b0GNeMQuRLk",
-    "meaning": "무엇이 ~하게 하나요?"
+    "video": "https://www.youtube.com/watch?v=b0GNeMQuRLk"
   },
   {
     "no": "096",
     "name": "Let me know if",
     "slug": "096-let-me-know-if",
-    "video": "https://www.youtube.com/watch?v=7QvPDEMw5cg",
-    "meaning": "~라면 알려주세요"
+    "video": "https://www.youtube.com/watch?v=7QvPDEMw5cg"
   },
   {
     "no": "097",
-    "name": "I'm calling to",
+    "name": "I’m calling to",
     "slug": "097-im-calling-to",
-    "video": "https://www.youtube.com/watch?v=Vs-7GwmA8j0",
-    "meaning": "~하려고 전화했어요"
+    "video": "https://www.youtube.com/watch?v=Vs-7GwmA8j0"
   },
   {
     "no": "098",
-    "name": "I'm supposed to",
+    "name": "I’m supposed to",
     "slug": "098-im-supposed-to",
-    "video": "https://www.youtube.com/watch?v=A6gZUQzEllE",
-    "meaning": "~하기로 되어 있어요"
+    "video": "https://www.youtube.com/watch?v=A6gZUQzEllE"
   },
   {
     "no": "099",
-    "name": "I'm not sure if",
+    "name": "I’m not sure if",
     "slug": "099-im-not-sure-if",
-    "video": "https://www.youtube.com/watch?v=_UgmlIxrn0A",
-    "meaning": "~인지 잘 모르겠어요"
+    "video": "https://www.youtube.com/watch?v=_UgmlIxrn0A"
   },
   {
     "no": "100",
-    "name": "I've decided to",
+    "name": "I’ve decided to",
     "slug": "100-ive-decided-to",
-    "video": "https://www.youtube.com/watch?v=9bVhx2Bq52w",
-    "meaning": "~하기로 했어요"
+    "video": "https://www.youtube.com/watch?v=9bVhx2Bq52w"
   }
 ]
