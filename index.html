@@ -43,7 +43,7 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'SUIT',sans-serif;letter-spacing:-0.02em;}
 body{background-color:var(--bg-paper);color:var(--text-black);line-height:1.6;-webkit-font-smoothing:antialiased;}
 a{text-decoration:none;color:inherit;}
-header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:center;align-items:center;gap:48px;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}
+header{background:var(--bg-white);padding:16px 5%;padding-right:calc(5% + 316px);display:flex;justify-content:center;align-items:center;gap:48px;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}
 .logo{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:900;color:var(--text-black);display:flex;align-items:center;gap:6px;letter-spacing:-0.03em;white-space:nowrap;}
 .logo span{color:var(--accent-color);font-weight:800;font-size:18px;margin-top:1px;}
 .nav-btn{color:var(--text-black);border:1px solid var(--border-color);padding:8px 18px;font-weight:700;font-size:14px;transition:all 0.3s ease;background:var(--bg-paper);white-space:nowrap;}
@@ -165,6 +165,7 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 @media(max-width:1024px){
   .sidebar{display:none;}
   .page-wrapper{display:block;}
+  header{padding-right:5%;}
 }
 @media(max-width:768px){
   .hero h1{font-size:28px;}
