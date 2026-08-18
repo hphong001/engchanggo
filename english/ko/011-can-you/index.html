@@ -117,14 +117,16 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
 .subscribe-bar-text{display:block;font-size:14px;color:var(--gray);font-weight:500;margin-bottom:12px;word-break:keep-all;}
 .subscribe-bar-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 22px;background:var(--accent);color:white;font-size:14px;font-weight:700;transition:background .2s;}
 .subscribe-bar-btn:hover{background:var(--black);}
-.pattern-nav{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:28px;margin-bottom:8px;flex-wrap:wrap;}
-.nav-btn{display:inline-flex;flex-direction:column;align-items:center;gap:3px;padding:12px 20px;border:1px solid var(--border);background:var(--white);text-decoration:none;transition:all .2s;min-width:130px;text-align:center;}
-.nav-btn:hover{background:var(--black);border-color:var(--black);}
-.nav-label{font-size:12px;font-weight:600;color:var(--gray-lt);display:flex;align-items:center;gap:4px;}
+.pattern-nav{display:flex;align-items:stretch;margin-top:28px;width:100%;border:1px solid var(--border);overflow:hidden;background:var(--white);}
+.nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:18px 20px;background:var(--white);text-decoration:none;transition:all .2s;text-align:center;}
+.nav-btn.prev{border-right:1px solid var(--border);}
+.nav-btn:hover{background:var(--black);}
+.nav-label{font-size:12px;font-weight:600;color:var(--gray-lt);}
 .nav-name{font-family:var(--font-en);font-size:16px;font-weight:900;color:var(--black);}
 .nav-btn:hover .nav-label{color:rgba(255,255,255,0.7);}
 .nav-btn:hover .nav-name{color:white;}
-.nav-disabled{display:inline-flex;align-items:center;padding:12px 20px;font-size:13px;color:var(--gray-lt);border:1px solid var(--border);background:var(--bg);min-width:130px;justify-content:center;}
+.nav-disabled{flex:1;display:flex;align-items:center;justify-content:center;padding:18px 20px;font-size:13px;color:var(--gray-lt);background:var(--bg);text-align:center;}
+.nav-disabled.prev{border-right:1px solid var(--border);}
 .mobile-ebook-bar{display:none;margin-top:14px;padding:22px 20px;background:#FFF8EC;border:1px solid #D4A843;text-align:center;}
 .mobile-ebook-line{display:block;font-size:14px;color:var(--gray);font-weight:500;line-height:1.8;word-break:keep-all;}
 .mobile-ebook-line:last-of-type{margin-bottom:16px;}
@@ -144,8 +146,8 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
   .summary-main{font-size:34px;}
   .step-chips{flex-direction:column;align-items:center;gap:6px;}
   .mobile-ebook-bar{display:block;}
-  .pattern-nav{gap:10px;}
-  .nav-btn{min-width:110px;padding:10px 14px;}
+  .pattern-nav{margin-top:20px;}
+  .nav-btn{padding:14px 12px;}
 }
 @media(max-width:480px){
   .th-content{font-size:13px;padding:9px;word-break:break-all;}
@@ -154,7 +156,6 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
   .pattern-title-h1{font-size:28px;}
   .summary-main{font-size:28px;}
   .nav-name{font-size:14px;}
-  .nav-btn{min-width:100px;}
 }
 </style>
 </head>
@@ -262,8 +263,8 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
     </a>
   </div>
 </div>
-<div id="ad-footer-container"></div>
 <div class="pattern-nav" id="pattern-nav"></div>
+<div id="ad-footer-container"></div>
 <div class="list-btn-wrap">
   <a href="/" class="list-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> 전체 패턴 목록 보기</a>
 </div>
@@ -297,17 +298,17 @@ fetch('/pattern-list.json')
     var nav = document.getElementById('pattern-nav');
     if(!nav) return;
     var prevHtml = prev
-      ? '<a class="nav-btn" href="/english/ko/'+prev.slug+'/">'
+      ? '<a class="nav-btn prev" href="/english/ko/'+prev.slug+'/">'
         + '<span class="nav-label">&#8592; 이전 패턴 '+prev.no+'</span>'
         + '<span class="nav-name">'+prev.name+'</span>'
         + '</a>'
-      : '<span class="nav-disabled">&#8592; 처음 패턴</span>';
+      : '<span class="nav-disabled prev">&#8592; 처음 패턴</span>';
     var nextHtml = next
-      ? '<a class="nav-btn" href="/english/ko/'+next.slug+'/">'
+      ? '<a class="nav-btn next" href="/english/ko/'+next.slug+'/">'
         + '<span class="nav-label">다음 패턴 '+next.no+' &#8594;</span>'
         + '<span class="nav-name">'+next.name+'</span>'
         + '</a>'
-      : '<span class="nav-disabled">마지막 패턴 &#8594;</span>';
+      : '<span class="nav-disabled next">마지막 패턴 &#8594;</span>';
     nav.innerHTML = prevHtml + nextHtml;
   })
   .catch(function(){});
