@@ -107,8 +107,9 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
 .dialogue-title{font-size:13px;font-weight:800;color:var(--black);letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:7px;text-transform:uppercase;}
 .dialogue-grid{display:grid;grid-template-columns:30px 1fr;gap:10px;}
 .dialogue-sp{font-weight:800;color:var(--black);font-size:16px;}
-.dialogue-txt{color:var(--black);font-size:16px;font-weight:600;line-height:1.6;word-break:keep-all;}
-.dialogue-kor{color:var(--gray-lt);font-size:13.5px;font-weight:500;margin-left:6px;}
+.dialogue-txt{color:var(--black);font-size:16px;font-weight:600;line-height:1.6;word-break:keep-all;display:flex;flex-direction:column;gap:3px;}
+.dialogue-eng{color:var(--black);font-size:16px;font-weight:600;}
+.dialogue-kor{color:var(--gray-lt);font-size:13.5px;font-weight:500;margin-left:0;}
 .yt-section{background:var(--white);border:1px solid var(--border);padding:26px;}
 .yt-heading-main{font-size:18px;font-weight:800;color:var(--black);margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;}
 .yt-wrapper{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;}
@@ -236,9 +237,13 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
   <div class="dialogue-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 실전 롤플레이</div>
   <div class="dialogue-grid">
     <div class="dialogue-sp">A:</div>
-    <div class="dialogue-txt">Do you know how to use this new coffee machine? <span class="dialogue-kor">(이 새 커피 머신을 어떻게 사용하는지 아세요?)</span></div>
+    <div class="dialogue-txt">      <span class="dialogue-eng">Do you know how to use this new coffee machine?</span>
+      <span class="dialogue-kor">(이 새 커피 머신을 어떻게 사용하는지 아세요?)</span>
+    </div>
     <div class="dialogue-sp">B:</div>
-    <div class="dialogue-txt">Can you show me how to use it? <span class="dialogue-kor">(어떻게 사용하는지 보여줄 수 있어요?)</span></div>
+    <div class="dialogue-txt">      <span class="dialogue-eng">Can you show me how to use it?</span>
+      <span class="dialogue-kor">(어떻게 사용하는지 보여줄 수 있어요?)</span>
+    </div>
   </div>
 </div>
 <h2 class="seo-h2">영상으로 반복 학습 — Can you 원어민 발음 확인</h2>
@@ -282,12 +287,6 @@ fetch('/pattern-list.json')
   .then(function(list){
     var total = String(list.length).padStart(3,'0');
     document.getElementById('rank-total').textContent = total;
-  })
-  .catch(function(){ document.getElementById('rank-total').textContent = '---'; });
-
-fetch('/pattern-list.json')
-  .then(function(r){ return r.json(); })
-  .then(function(list){
     var idx = -1;
     for(var k=0; k<list.length; k++){
       if(list[k].slug === CURRENT_SLUG){ idx = k; break; }
