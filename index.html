@@ -435,7 +435,7 @@ function setView(v){
 function renderCards(){
   allCards.forEach(function(c){ c.style.display='none'; });
   var show = filteredCards.slice(0, displayCount);
-  show.forEach(function(c){ c.style.display='flex'; });
+  show.forEach(function(c){ c.style.display=''; });
 
   var lm        = document.getElementById('loadMoreContainer');
   var btnMore   = document.getElementById('btnLoadMore');
