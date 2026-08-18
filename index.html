@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -57,6 +57,7 @@ header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:c
 .view-btn{padding:7px 12px;border:1px solid var(--border-color);background:var(--bg-white);font-size:13px;font-weight:700;color:var(--text-gray);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:5px;}
 .view-btn:hover{border-color:var(--accent-color);color:var(--accent-color);}
 .view-btn.active{background:var(--accent-color);color:white;border-color:var(--accent-color);}
+.view-btn-card{} 
 .card{background:var(--bg-white);border:1px solid var(--border-color);transition:all 0.2s;display:flex;cursor:pointer;position:relative;}
 .card:hover{border-color:var(--accent-color);}
 .card-link{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;}
@@ -76,7 +77,8 @@ header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:c
 .btn-load:hover{background:var(--text-black);color:var(--bg-white);}
 .btn-collapse{background:var(--bg-white);border:1px solid var(--border-color);color:var(--text-gray);}
 .btn-collapse:hover{background:var(--border-color);color:var(--text-black);}
-/* ── 리스트 뷰 ── */
+
+/* ── 리스트 뷰: 3등분 grid + 수평/수직 중앙정렬 ── */
 #patternGrid.view-list{display:flex;flex-direction:column;border-top:1px solid var(--border-color);}
 #patternGrid.view-list .card{display:grid;grid-template-columns:80px 1fr 1fr 1fr;align-items:center;padding:13px 24px;border:none;border-bottom:1px solid var(--border-color);gap:0;border-radius:0;}
 #patternGrid.view-list .card:hover{background:#FAFAF9;box-shadow:none;transform:none;}
@@ -87,7 +89,7 @@ header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:c
 #patternGrid.view-list .pattern-desc{display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;color:var(--text-gray);font-weight:500;overflow:visible;-webkit-line-clamp:unset;}
 #patternGrid.view-list .card-actions{display:flex;align-items:center;justify-content:center;border-top:none;padding-top:0;gap:8px;margin-left:0;}
 #patternGrid.view-list .action-link{padding:7px 16px;font-size:13px;flex:none;white-space:nowrap;text-align:center;}
-/* ── 카드 뷰 ── */
+
 #patternGrid.view-card{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 #patternGrid.view-card .card{flex-direction:column;justify-content:space-between;padding:28px;border-radius:0;}
 #patternGrid.view-card .card:hover{box-shadow:0 8px 25px rgba(79,70,229,0.06);transform:translateY(-3px);}
@@ -96,7 +98,6 @@ header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:c
 #patternGrid.view-card .pattern-desc{display:-webkit-box;margin-bottom:30px;}
 #patternGrid.view-card .card-actions{border-top:1px solid var(--border-color);padding-top:20px;gap:10px;}
 #patternGrid.view-card .action-link{padding:10px 0;font-size:14px;flex:1;}
-/* ── 컴팩트 뷰 ── */
 #patternGrid.view-compact{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
 #patternGrid.view-compact .card{flex-direction:column;justify-content:space-between;padding:14px;border-radius:0;}
 #patternGrid.view-compact .card:hover{box-shadow:0 4px 12px rgba(79,70,229,0.06);transform:translateY(-2px);}
@@ -117,9 +118,14 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 .main-content{flex:1;min-width:0;}
 .sidebar{width:300px;flex-shrink:0;padding:24px 16px;align-self:flex-start;position:sticky;top:72px;}
 .sidebar-sticky{display:flex;flex-direction:column;gap:0;}
+
+/* sidebar.html 기준 통일 스타일 */
 .sb-card{background:#FFFFFF;border:1px solid #E2E2DF;padding:20px;margin-bottom:16px;}
 .sb-section-title{font-size:12px;font-weight:800;color:#1A1A1A;letter-spacing:.5px;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid #E2E2DF;margin-bottom:12px;display:block;text-align:center;}
+
+/* 전자책 카드 */
 .sb-ebook-cover{width:100%;display:block;border-radius:4px;margin-bottom:12px;box-shadow:0 4px 12px rgba(0,0,0,0.12);}
+.sb-ebook-cover-placeholder{width:100%;aspect-ratio:3/4;background:#e8eaed;border-radius:4px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#999;}
 .sb-ebook-copy{font-size:14px;font-weight:500;color:#555;line-height:1.75;margin-bottom:6px;word-break:keep-all;}
 .sb-ebook-copy strong{color:#1A1A1A;font-weight:800;}
 .sb-ebook-3step{display:flex;flex-direction:column;gap:8px;margin-bottom:14px;}
@@ -130,17 +136,22 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 .sb-buy-btn{display:block;width:100%;padding:14px 8px;background:#C9A050;color:#fff;font-size:15px;font-weight:800;text-align:center;border-radius:0;text-decoration:none;line-height:1.5;transition:background .2s;box-sizing:border-box;}
 .sb-buy-btn:hover{background:#b08a3e;}
 .sb-buy-price{font-size:13px;font-weight:700;margin-top:3px;color:#fff;}
+
+/* 패턴 목록 */
 .sb-pattern-list{list-style:none;padding:0;margin:0;max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:1px;}
 .sb-pattern-item a{display:flex;align-items:center;gap:8px;padding:7px 6px;font-size:13.5px;font-weight:600;color:#555;transition:all .2s;text-decoration:none;}
 .sb-pattern-item a:hover{background:#FBFBF9;color:#4F46E5;}
 .sb-no{font-size:11px;font-weight:700;color:#A0A0A0;min-width:26px;}
 .sb-name{font-family:'DM Sans',sans-serif;font-size:13px;}
+
+/* 유튜브 채널 */
 .sb-yt-title{font-size:12px;font-weight:800;color:#1A1A1A;letter-spacing:.5px;text-transform:uppercase;text-align:center;margin-bottom:12px;display:block;padding-bottom:10px;border-bottom:1px solid #E2E2DF;}
 .sb-ebook-eyebrow{font-size:12px;font-weight:800;color:#1A1A1A;letter-spacing:.5px;text-transform:uppercase;text-align:center;margin-bottom:12px;display:block;padding-bottom:10px;border-bottom:1px solid #E2E2DF;}
 .sb-ch-btn{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:11px;border:1px solid #E2E2DF;background:#FBFBF9;color:#1A1A1A;font-size:13px;font-weight:700;text-align:center;transition:all .2s;text-decoration:none;box-sizing:border-box;}
 .sb-ch-btn:hover{background:#0b4f5e;color:white;border-color:#0b4f5e;}
 .sb-ch-btn svg{width:15px;height:15px;stroke:#1A1A1A;fill:none;stroke-width:2;flex-shrink:0;transition:stroke .2s;}
 .sb-ch-btn:hover svg{stroke:#fff;}
+
 @media(max-width:1024px){
   .sidebar{display:none;}
   .page-wrapper{display:block;}
@@ -314,12 +325,13 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
     <a href="ebook-info.html" class="premium-btn" target="_blank" rel="noopener">전자책 자세히 보기</a>
   </div>
 </section>
-</div>
+</div><!-- /main-content -->
 
-
+<!-- 오른쪽 사이드바 -->
 <aside class="sidebar">
   <div class="sidebar-sticky">
-    
+
+    <!-- ① 유튜브 채널 -->
     <div class="sb-card">
       <span class="sb-yt-title">유튜브 채널</span>
       <p class="sb-ebook-copy" style="text-align:center;margin-bottom:14px;">
@@ -333,7 +345,8 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
         채널 구독하기
       </a>
     </div>
-    
+
+    <!-- ② 전자책 안내 -->
     <div class="sb-card">
       <span class="sb-ebook-eyebrow">전자책 안내</span>
       <p class="sb-ebook-copy" style="text-align:center;">
@@ -343,9 +356,10 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
       </p>
       <img src="image/book-cover.png" alt="영어창고 전자책 표지" class="sb-ebook-cover"
            onerror="this.style.display='none';">
+
       <div class="sb-ebook-3step">
         <div class="sb-ebook-step">
-          <span class="sb-ebook-step-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+          <span class="sb-ebook-step-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
           <span>웹페이지로 <strong>예문 학습</strong></span>
         </div>
         <div class="sb-ebook-step">
@@ -363,16 +377,18 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
         <div class="sb-buy-price">₩9,900</div>
       </a>
     </div>
-    
+
+    <!-- ③ 패턴 목록 -->
     <div class="sb-card">
       <span class="sb-section-title" style="text-align:center;">패턴 목록</span>
       <ul class="sb-pattern-list" id="sb-list">
         <li style="padding:8px;color:#A0A0A0;font-size:13px;">목록 불러오는 중...</li>
       </ul>
     </div>
+
   </div>
 </aside>
-</div>
+</div><!-- /page-wrapper -->
 <footer>
   <p>© 2026 영어창고 MyEnglishVault. All rights reserved.<br>문의 : hphong@hphong.com</p>
 </footer>
@@ -387,10 +403,10 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
       ul.innerHTML = list.map(function(p){
         var isActive = p.slug === currentSlug;
         var href = isActive ? '#' : '/english/ko/' + p.slug + '/';
-        return '<li class="sb-pattern-item' + (isActive ? ' active' : '') + '" data-slug="' + p.slug + '">' 
-             + '<a href="' + href + '">' 
-             + '<span class="sb-no">' + p.no + '</span>' 
-             + '<span class="sb-name">' + p.name + '</span>' 
+        return '<li class="sb-pattern-item' + (isActive ? ' active' : '') + '" data-slug="' + p.slug + '">'
+             + '<a href="' + href + '">'
+             + '<span class="sb-no">' + p.no + '</span>'
+             + '<span class="sb-name">' + p.name + '</span>'
              + '</a></li>';
       }).join('');
     })
@@ -402,8 +418,10 @@ var allCards = Array.from(document.querySelectorAll('#patternGrid .card'));
 var filteredCards = allCards;
 var currentView = 'card';
 var displayCount = 9;
+
 var initCount = { card: 9, compact: 16, list: 9999 };
 var addCount  = { card: 9, compact: 16, list: 9999 };
+
 function setView(v){
   currentView = v;
   var grid = document.getElementById('patternGrid');
@@ -415,14 +433,17 @@ function setView(v){
   renderCards();
   try{ localStorage.setItem('engchanggo_view', v); } catch(e){}
 }
+
 function renderCards(){
   allCards.forEach(function(c){ c.style.display='none'; });
   var show = filteredCards.slice(0, displayCount);
   show.forEach(function(c){ c.style.display=''; });
+
   var lm        = document.getElementById('loadMoreContainer');
   var btnMore   = document.getElementById('btnLoadMore');
   var btnCollapse = document.getElementById('btnCollapse');
   var init = initCount[currentView] || 12;
+
   if(currentView === 'list'){
     lm.classList.add('hidden');
   } else {
@@ -442,10 +463,13 @@ function renderCards(){
     }
   }
 }
+
 function loadMore(){
   displayCount += addCount[currentView] || 12;
   renderCards();
 }
+
+// ── 리스트 뷰: pattern-list.json의 meaning을 pattern-desc에 주입 ──
 var meaningMap = {};
 fetch('/pattern-list.json')
   .then(function(r){ return r.json(); })
@@ -454,11 +478,13 @@ fetch('/pattern-list.json')
     injectMeanings();
   })
   .catch(function(){});
+
 function injectMeanings(){
   allCards.forEach(function(card){
     var link = card.querySelector('.card-link');
     if(!link) return;
     var href = link.getAttribute('href') || '';
+    // slug 추출: english/ko/001-i-can/ → 001-i-can
     var match = href.match(/\/([^\/]+)\/$/);
     var slug = match ? match[1] : '';
     var desc = card.querySelector('.pattern-desc');
@@ -467,16 +493,20 @@ function injectMeanings(){
     }
   });
 }
+
+// setView 오버라이드 — 리스트 전환 시 meaning 재주입
 var _origSetView = setView;
 setView = function(v){
   _origSetView(v);
   if(v === 'list') setTimeout(injectMeanings, 0);
 };
+
 function collapseCards(){
   displayCount = initCount[currentView] || 12;
   renderCards();
   document.getElementById('curriculum').scrollIntoView({behavior:'smooth'});
 }
+
 function filterPatterns(){
   var q = document.getElementById('searchInput').value.toLowerCase().trim();
   filteredCards = q === '' ? allCards : allCards.filter(function(c){
@@ -495,6 +525,7 @@ function filterPatterns(){
   }
   renderCards();
 }
+
 (function(){
   var saved;
   try{ saved = localStorage.getItem('engchanggo_view'); } catch(e){}
