@@ -1,4 +1,4 @@
-﻿<style>
+<style>
 .adf-wrap{margin-top:32px;}
 .adf-section-div{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
 .adf-section-div-line{flex:1;height:1px;background:#E2E2DF;}
@@ -26,6 +26,10 @@
   <img src="/image/aibaselab_banner_2.png" alt="AIBaseLab 영상편집 솔루션" class="adf-inactive" id="adf-a1">
 </a>
 </div>
+
+<!-- ── 패턴 페이지 방문 카운터 표시 ── -->
+<p id="page-visit-counter" style="font-size:11px;color:#C0C0C0;text-align:center;margin-top:10px;"></p>
+
 <script>
 (function(){
   function roll(ids, ms){
@@ -38,8 +42,59 @@
       imgs[cur].className = 'adf-active';
     }, ms);
   }
-
   roll(['adf-c0','adf-c1'], 3000);
   roll(['adf-a0','adf-a1'], 3000);
+})();
+
+// ── 카운터 표시 (CURRENT_SLUG는 각 패턴 페이지에 선언되어 있음) ──
+(function(){
+  var slug = (typeof CURRENT_SLUG !== 'undefined') ? CURRENT_SLUG : null;
+  if(!slug) return;
+
+  function todayKey(){
+    var d = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'}));
+    return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  }
+  function ydayKey(){
+    var d = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'}));
+    d.setDate(d.getDate()-1);
+    return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  }
+  function monthKey(){
+    var d = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'}));
+    return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');
+  }
+
+  // Firestore REST API로 해당 패턴 데이터 읽기
+  var projectId = 'hphong-2cb03';
+  var url = 'https://firestore.googleapis.com/v1/projects/' + projectId +
+            '/databases/(default)/documents/visits/' + slug;
+
+  fetch(url)
+    .then(function(r){ return r.json(); })
+    .then(function(doc){
+      if(!doc.fields) return;
+
+      var fields  = doc.fields;
+      var days    = (fields.days    && fields.days.mapValue    && fields.days.mapValue.fields)    || {};
+      var monthly = (fields.monthly && fields.monthly.mapValue && fields.monthly.mapValue.fields) || {};
+
+      function getInt(obj, key){
+        if(!obj[key]) return 0;
+        return parseInt(obj[key].integerValue || obj[key].doubleValue || 0);
+      }
+
+      var y = getInt(days,    ydayKey());
+      var t = getInt(days,    todayKey());
+      var w = getInt(fields,  'weekly');
+      var m = getInt(monthly, monthKey());
+      var a = getInt(fields,  'total');
+
+      var el = document.getElementById('page-visit-counter');
+      if(el){
+        el.textContent = 'y.' + y + ' / t.' + t + ' / w.' + w + ' / m.' + m + ' / a.' + a;
+      }
+    })
+    .catch(function(){});
 })();
 </script>
