@@ -488,6 +488,7 @@
 
   <!-- ⑩ 헌정 문구 -->
   <footer style="padding: 80px 20px 72px; text-align:center; background:#fff;">
+    <p id="visit-counter" style="font-size:11px;color:#C0C0C0;margin-bottom:20px;"></p>
     <p style="font-family:'Noto Sans KR',sans-serif; font-size:24px; font-weight:400; color:#aaa; line-height:2.6; letter-spacing:0.02em;">
       수없이 시작하고<br>
       수없이 포기했던<br>
@@ -590,5 +591,55 @@ var POPUP_AUTO_SHOW = true;
 })();
 </script>
 
+<!-- ── Firebase 방문자 카운터 ── -->
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+import { getFirestore, doc, getDoc, setDoc, updateDoc, increment }
+  from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+const firebaseConfig = {
+  apiKey: "AIzaSyAKeViXh35CF8NClSUCf--gnhFzjJDyz_Q",
+  authDomain: "hphong-2cb03.firebaseapp.com",
+  projectId: "hphong-2cb03",
+  storageBucket: "hphong-2cb03.firebasestorage.app",
+  messagingSenderId: "163690208469",
+  appId: "1:163690208469:web:b71f18af431c649d0e165c"
+};
+const _app = initializeApp(firebaseConfig);
+const _db  = getFirestore(_app);
+const PAGE_SLUG = 'ebook-info';
+function _todayKey(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'}));return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function _ydayKey(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'}));d.setDate(d.getDate()-1);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function _weekKey(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'}));var day=d.getDay();d.setDate(d.getDate()+((day===0)?-6:1-day));return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function _monthKey(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'}));return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');}
+(async function(){
+  var todayKey=_todayKey(), monthKey=_monthKey(), weekStart=_weekKey();
+  var sessionKey='visited_'+PAGE_SLUG+'_'+todayKey;
+  var ref=doc(_db,'visits',PAGE_SLUG);
+  try{
+    if(!sessionStorage.getItem(sessionKey)){
+      var snap=await getDoc(ref);
+      if(!snap.exists()){
+        await setDoc(ref,{total:1,weekly:1,weekStart:weekStart,monthly:{[monthKey]:1},days:{[todayKey]:1}});
+      } else {
+        var data=snap.data();
+        var upd={total:increment(1),[`days.${todayKey}`]:increment(1),[`monthly.${monthKey}`]:increment(1)};
+        upd.weekly=(data.weekStart!==weekStart)?1:increment(1);
+        if(data.weekStart!==weekStart) upd.weekStart=weekStart;
+        await updateDoc(ref,upd);
+      }
+      sessionStorage.setItem(sessionKey,'1');
+    }
+    var snap=await getDoc(ref);
+    var data=snap.data()||{};
+    var days=data.days||{};
+    var monthly=data.monthly||{};
+    function gi(obj,key){return parseInt(obj[key]||0);}
+    var y=gi(days,_ydayKey()), t=gi(days,_todayKey());
+    var w=gi(data,'weekly'), m=gi(monthly,_monthKey()), a=gi(data,'total');
+    var el=document.getElementById('visit-counter');
+    if(el) el.textContent='y.'+y+' / t.'+t+' / w.'+w+' / m.'+m+' / a.'+a;
+  } catch(e){ console.log('counter error:',e); }
+})();
+</script>
 </body>
 </html>
