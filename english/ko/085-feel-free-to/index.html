@@ -278,7 +278,7 @@ header{background:var(--white);padding:0;height:60px;border-bottom:1px solid var
   <div id="sidebar-container"></div>
 </aside>
 </div>
-<footer style="text-align:center;padding:30px 20px;color:var(--gray-lt);font-size:14px;border-top:1px solid var(--border);background:var(--white);margin-top:40px;"><p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p><p style="margin-top:6px;">문의 : <a href="mailto:hphong@hphong.com" style="color:inherit;text-decoration:none;">hphong@hphong.com</a></p></footer>
+<footer style="text-align:center;padding:30px 20px;color:var(--gray-lt);font-size:14px;border-top:1px solid var(--border);background:var(--white);margin-top:40px;"><p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p><p style="margin-top:6px;">문의 : <a href="mailto:hphong@hphong.com" style="color:inherit;text-decoration:none;">hphong@hphong.com</a></p><p id="page-visit-counter" style="font-size:11px;color:#C0C0C0;margin-top:8px;"></p></footer>
 <!-- ── Firebase 방문자 카운터 ── -->
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
@@ -332,6 +332,23 @@ function _monthKey(){
       sessionStorage.setItem(sessionKey,'1');
     }
   } catch(e){ console.log('counter error:',e); }
+  // ── 카운터 표시 (Firestore REST API) ──
+  try{
+    var projectId='hphong-2cb03';
+    var url='https://firestore.googleapis.com/v1/projects/'+projectId+'/databases/(default)/documents/visits/'+PAGE_SLUG;
+    var res=await fetch(url);
+    var docData=await res.json();
+    if(docData.fields){
+      var f=docData.fields;
+      var days=(f.days&&f.days.mapValue&&f.days.mapValue.fields)||{};
+      var monthly=(f.monthly&&f.monthly.mapValue&&f.monthly.mapValue.fields)||{};
+      function gi(obj,key){if(!obj[key])return 0;return parseInt(obj[key].integerValue||obj[key].doubleValue||0);}
+      var y=gi(days,_ydayKey()), t=gi(days,_todayKey());
+      var w=gi(f,'weekly'), m=gi(monthly,_monthKey()), a=gi(f,'total');
+      var el=document.getElementById('page-visit-counter');
+      if(el) el.textContent='y.'+y+' / t.'+t+' / w.'+w+' / m.'+m+' / a.'+a;
+    }
+  } catch(e){ console.log('display error:',e); }
 })();
 </script>
 <script>
