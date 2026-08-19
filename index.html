@@ -340,6 +340,7 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
   <footer>
   <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
   <p style="margin-top: 6px;">문의 : <a href="mailto:hphong@hphong.com">hphong@hphong.com</a></p>
+  <p id="visit-counter" style="margin-top:10px;font-size:11px;color:#C0C0C0;letter-spacing:0.03em;"></p>
 </footer>
   
 </div><!-- /main-content -->
@@ -492,6 +493,115 @@ function filterPatterns(){
   if(saved === 'card' && window.innerWidth <= 768) saved = 'compact';
   setView(saved || 'card');
 })();
+</script>
+<!-- ── Firebase 방문자 카운터 ── -->
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+import { getFirestore, doc, getDoc, setDoc, updateDoc, increment }
+  from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAKeViXh35CF8NClSUCf--gnhFzjJDyz_Q",
+  authDomain: "hphong-2cb03.firebaseapp.com",
+  projectId: "hphong-2cb03",
+  storageBucket: "hphong-2cb03.firebasestorage.app",
+  messagingSenderId: "163690208469",
+  appId: "1:163690208469:web:b71f18af431c649d0e165c"
+};
+
+const app  = initializeApp(firebaseConfig);
+const db   = getFirestore(app);
+
+// 오늘 날짜 키 (KST 기준)
+function getTodayKey() {
+  var d = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Seoul'}));
+  return d.getFullYear() + '-' +
+    String(d.getMonth()+1).padStart(2,'0') + '-' +
+    String(d.getDate()).padStart(2,'0');
+}
+
+// 어제 날짜 키
+function getYesterdayKey() {
+  var d = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Seoul'}));
+  d.setDate(d.getDate() - 1);
+  return d.getFullYear() + '-' +
+    String(d.getMonth()+1).padStart(2,'0') + '-' +
+    String(d.getDate()).padStart(2,'0');
+}
+
+// 이번 주 월요일 키 (주간 기준)
+function getWeekStartKey() {
+  var d = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Seoul'}));
+  var day = d.getDay(); // 0=일, 1=월
+  var diff = (day === 0) ? -6 : 1 - day;
+  d.setDate(d.getDate() + diff);
+  return d.getFullYear() + '-' +
+    String(d.getMonth()+1).padStart(2,'0') + '-' +
+    String(d.getDate()).padStart(2,'0');
+}
+
+async function recordAndDisplayVisit() {
+  var todayKey = getTodayKey();
+  var pageId   = 'main';
+  var ref      = doc(db, 'visits', pageId);
+
+  try {
+    var snap = await getDoc(ref);
+
+    if (!snap.exists()) {
+      // 최초 문서 생성
+      await setDoc(ref, {
+        total: 1,
+        weekly: 1,
+        weekStart: getWeekStartKey(),
+        days: { [todayKey]: 1 }
+      });
+    } else {
+      var data = snap.data();
+      var days = data.days || {};
+      var weekStart = getWeekStartKey();
+
+      // 주간 리셋 여부 확인
+      var needWeekReset = (data.weekStart !== weekStart);
+
+      var updateData = {
+        total: increment(1),
+        [`days.${todayKey}`]: increment(1)
+      };
+
+      if (needWeekReset) {
+        updateData.weekly   = 1;
+        updateData.weekStart = weekStart;
+      } else {
+        updateData.weekly = increment(1);
+      }
+
+      await updateDoc(ref, updateData);
+
+      // 업데이트 후 최신 데이터 다시 읽기
+      snap = await getDoc(ref);
+    }
+
+    // 최신 데이터로 표시
+    var data     = snap.data() || {};
+    var days     = data.days   || {};
+    var todayVal     = (days[getTodayKey()]     || 0).toLocaleString();
+    var yesterdayVal = (days[getYesterdayKey()] || 0).toLocaleString();
+    var weeklyVal    = (data.weekly || 0).toLocaleString();
+    var totalVal     = (data.total  || 0).toLocaleString();
+
+    var el = document.getElementById('visit-counter');
+    if (el) {
+      el.textContent =
+        yesterdayVal + ' / ' + todayVal + ' / ' + weeklyVal + ' / ' + totalVal;
+    }
+
+  } catch(e) {
+    console.log('visit counter error:', e);
+  }
+}
+
+recordAndDisplayVisit();
 </script>
 </body>
 </html>
