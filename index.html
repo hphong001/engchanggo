@@ -545,44 +545,48 @@ async function recordAndDisplayVisit() {
   var pageId   = 'main';
   var ref      = doc(db, 'visits', pageId);
 
+  // ★ 세션 중복 방지 — 이미 이 세션에서 카운트했으면 표시만 하고 종료
+  var sessionKey = 'visited_main_' + todayKey;
+  var alreadyCounted = sessionStorage.getItem(sessionKey);
+
   try {
-    var snap = await getDoc(ref);
+    if (!alreadyCounted) {
+      // 이 세션에서 첫 방문 → 카운트 증가
+      var snap = await getDoc(ref);
 
-    if (!snap.exists()) {
-      // 최초 문서 생성
-      await setDoc(ref, {
-        total: 1,
-        weekly: 1,
-        weekStart: getWeekStartKey(),
-        days: { [todayKey]: 1 }
-      });
-    } else {
-      var data = snap.data();
-      var days = data.days || {};
-      var weekStart = getWeekStartKey();
-
-      // 주간 리셋 여부 확인
-      var needWeekReset = (data.weekStart !== weekStart);
-
-      var updateData = {
-        total: increment(1),
-        [`days.${todayKey}`]: increment(1)
-      };
-
-      if (needWeekReset) {
-        updateData.weekly   = 1;
-        updateData.weekStart = weekStart;
+      if (!snap.exists()) {
+        await setDoc(ref, {
+          total: 1,
+          weekly: 1,
+          weekStart: getWeekStartKey(),
+          days: { [todayKey]: 1 }
+        });
       } else {
-        updateData.weekly = increment(1);
+        var data = snap.data();
+        var weekStart = getWeekStartKey();
+        var needWeekReset = (data.weekStart !== weekStart);
+
+        var updateData = {
+          total: increment(1),
+          [`days.${todayKey}`]: increment(1)
+        };
+
+        if (needWeekReset) {
+          updateData.weekly    = 1;
+          updateData.weekStart = weekStart;
+        } else {
+          updateData.weekly = increment(1);
+        }
+
+        await updateDoc(ref, updateData);
       }
 
-      await updateDoc(ref, updateData);
-
-      // 업데이트 후 최신 데이터 다시 읽기
-      snap = await getDoc(ref);
+      // 세션에 기록 — 탭 닫으면 자동 초기화
+      sessionStorage.setItem(sessionKey, '1');
     }
 
-    // 최신 데이터로 표시
+    // 카운트 여부와 무관하게 최신 데이터 읽어서 표시
+    var snap = await getDoc(ref);
     var data     = snap.data() || {};
     var days     = data.days   || {};
     var todayVal     = (days[getTodayKey()]     || 0).toLocaleString();
