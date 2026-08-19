@@ -220,7 +220,7 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
         </button>
       </div>
       <div class="search-box">
-        <input type="text" id="searchInput" placeholder="패턴 검색" onkeyup="filterPatterns()">
+        <input type="text" id="searchInput" placeholder="영어패턴 또는 한글 뜻으로 검색" onkeyup="filterPatterns()">
       </div>
     </div>
   </div>
@@ -525,7 +525,9 @@ function filterPatterns(){
   var q = document.getElementById('searchInput').value.toLowerCase().trim();
   filteredCards = q === '' ? allCards : allCards.filter(function(c){
     var n = c.querySelector('.pattern-name');
-    return n && n.textContent.toLowerCase().includes(q);
+    var desc = c.querySelector('.pattern-desc');
+    var descText = desc ? desc.textContent.toLowerCase() : '';
+    return (n && n.textContent.toLowerCase().includes(q)) || descText.includes(q);
   });
   displayCount = initCount[currentView] || 12;
   var grid = document.getElementById('patternGrid');
