@@ -509,10 +509,10 @@ const firebaseConfig = {
   appId: "1:163690208469:web:b71f18af431c649d0e165c"
 };
 
-const app  = initializeApp(firebaseConfig);
-const db   = getFirestore(app);
+const app = initializeApp(firebaseConfig);
+const db  = getFirestore(app);
 
-// 오늘 날짜 키 (KST 기준)
+// 오늘 날짜 키 (KST)
 function getTodayKey() {
   var d = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Seoul'}));
   return d.getFullYear() + '-' +
@@ -529,10 +529,10 @@ function getYesterdayKey() {
     String(d.getDate()).padStart(2,'0');
 }
 
-// 이번 주 월요일 키 (주간 기준)
+// 이번 주 월요일 키
 function getWeekStartKey() {
   var d = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Seoul'}));
-  var day = d.getDay(); // 0=일, 1=월
+  var day = d.getDay();
   var diff = (day === 0) ? -6 : 1 - day;
   d.setDate(d.getDate() + diff);
   return d.getFullYear() + '-' +
@@ -540,39 +540,49 @@ function getWeekStartKey() {
     String(d.getDate()).padStart(2,'0');
 }
 
-async function recordAndDisplayVisit() {
-  var todayKey = getTodayKey();
-  var pageId   = 'main';
-  var ref      = doc(db, 'visits', pageId);
+// 이번 달 키 (YYYY-MM)
+function getMonthKey() {
+  var d = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Seoul'}));
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0');
+}
 
-  // ★ 세션 중복 방지 — 이미 이 세션에서 카운트했으면 표시만 하고 종료
-  var sessionKey = 'visited_main_' + todayKey;
+async function recordAndDisplayVisit() {
+  var todayKey   = getTodayKey();
+  var monthKey   = getMonthKey();
+  var weekStart  = getWeekStartKey();
+  var pageId     = 'main';
+  var ref        = doc(db, 'visits', pageId);
+
+  // 세션 중복 방지
+  var sessionKey    = 'visited_main_' + todayKey;
   var alreadyCounted = sessionStorage.getItem(sessionKey);
 
   try {
     if (!alreadyCounted) {
-      // 이 세션에서 첫 방문 → 카운트 증가
       var snap = await getDoc(ref);
 
       if (!snap.exists()) {
+        // 최초 문서 생성
         await setDoc(ref, {
           total: 1,
           weekly: 1,
-          weekStart: getWeekStartKey(),
+          weekStart: weekStart,
+          monthly: { [monthKey]: 1 },
           days: { [todayKey]: 1 }
         });
       } else {
         var data = snap.data();
-        var weekStart = getWeekStartKey();
-        var needWeekReset = (data.weekStart !== weekStart);
+        var needWeekReset  = (data.weekStart !== weekStart);
+        var needMonthReset = !(data.monthly && data.monthly[monthKey]);
 
         var updateData = {
           total: increment(1),
-          [`days.${todayKey}`]: increment(1)
+          [`days.${todayKey}`]: increment(1),
+          [`monthly.${monthKey}`]: increment(1)
         };
 
         if (needWeekReset) {
-          updateData.weekly    = 1;
+          updateData.weekly   = 1;
           updateData.weekStart = weekStart;
         } else {
           updateData.weekly = increment(1);
@@ -581,23 +591,24 @@ async function recordAndDisplayVisit() {
         await updateDoc(ref, updateData);
       }
 
-      // 세션에 기록 — 탭 닫으면 자동 초기화
       sessionStorage.setItem(sessionKey, '1');
     }
 
-    // 카운트 여부와 무관하게 최신 데이터 읽어서 표시
+    // 최신 데이터 읽어서 표시
     var snap = await getDoc(ref);
-    var data     = snap.data() || {};
-    var days     = data.days   || {};
-    var todayVal     = (days[getTodayKey()]     || 0).toLocaleString();
-    var yesterdayVal = (days[getYesterdayKey()] || 0).toLocaleString();
-    var weeklyVal    = (data.weekly || 0).toLocaleString();
-    var totalVal     = (data.total  || 0).toLocaleString();
+    var data    = snap.data() || {};
+    var days    = data.days   || {};
+    var monthly = data.monthly || {};
+
+    var y = (days[getYesterdayKey()] || 0).toLocaleString();
+    var t = (days[getTodayKey()]     || 0).toLocaleString();
+    var w = (data.weekly             || 0).toLocaleString();
+    var m = (monthly[getMonthKey()]  || 0).toLocaleString();
+    var a = (data.total              || 0).toLocaleString();
 
     var el = document.getElementById('visit-counter');
     if (el) {
-      el.textContent =
-        yesterdayVal + ' / ' + todayVal + ' / ' + weeklyVal + ' / ' + totalVal;
+      el.textContent = 'y.' + y + ' / t.' + t + ' / w.' + w + ' / m.' + m + ' / a.' + a;
     }
 
   } catch(e) {
