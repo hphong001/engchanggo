@@ -1,7 +1,6 @@
 <style>
 .sb-card{background:#FFFFFF;border:1px solid #E2E2DF;padding:22px;margin-bottom:18px;box-sizing:border-box;}
 .sb-card *{box-sizing:border-box;}
-/* 사이드바 컨테이너 너비 고정 — 메인과 동일하게 300px */
 #sidebar-wrap, .sidebar-wrap{width:300px;}
 
 /* 전자책 */
@@ -14,8 +13,8 @@
 .sb-ebook-step-icon{width:30px;height:30px;background:#FBFBF9;border:1px solid #E2E2DF;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .sb-ebook-step-icon svg{stroke:#4F46E5;fill:none;stroke-width:2;}
 .sb-ebook-divider{height:1px;background:#E2E2DF;margin-bottom:14px;}
-.sb-ebook-btn{display:block;width:100%;padding:14px;background:#C9A050;color:white;font-size:15px;font-weight:800;text-align:center;transition:background .2s;text-decoration:none;line-height:1.5;box-sizing:border-box;}
-.sb-ebook-btn:hover{background:#b08a3e;}
+.sb-ebook-btn{display:block;width:100%;padding:14px;background:#C9A050;color:white;font-size:15px;font-weight:800;text-align:center;transition:all .2s;text-decoration:none;line-height:1.5;box-sizing:border-box;border-radius:6px;box-shadow:0 3px 6px rgba(0,0,0,0.15),inset 0 1px 0 rgba(255,255,255,0.2);}
+.sb-ebook-btn:hover{background:#b08a3e;box-shadow:0 2px 4px rgba(0,0,0,0.15),inset 0 1px 0 rgba(255,255,255,0.15);transform:translateY(1px);}
 .sb-ebook-btn-price{font-size:13px;font-weight:700;margin-top:3px;opacity:0.9;}
 
 /* 패턴 목록 */
@@ -30,8 +29,8 @@
 /* 유튜브 채널 */
 .sb-yt-title{font-size:12px;font-weight:800;color:#1A1A1A;letter-spacing:.5px;text-transform:uppercase;text-align:center;margin-bottom:10px;display:block;padding-bottom:10px;border-bottom:1px solid #E2E2DF;}
 .sb-yt-desc{font-size:13px;color:#555;text-align:center;line-height:1.7;margin-bottom:12px;word-break:keep-all;}
-.sb-ch-btn{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:11px;border:1px solid #E2E2DF;background:#FBFBF9;color:#1A1A1A;font-size:14px;font-weight:700;text-align:center;transition:all .2s;text-decoration:none;box-sizing:border-box;}
-.sb-ch-btn:hover{background:#0b4f5e;color:white;border-color:#0b4f5e;}
+.sb-ch-btn{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:11px;border:1px solid #E2E2DF;background:#FBFBF9;color:#1A1A1A;font-size:14px;font-weight:700;text-align:center;transition:all .2s;text-decoration:none;box-sizing:border-box;border-radius:6px;box-shadow:0 3px 6px rgba(0,0,0,0.08),inset 0 1px 0 rgba(255,255,255,0.9);}
+.sb-ch-btn:hover{background:#0b4f5e;color:white;border-color:#0b4f5e;box-shadow:0 2px 4px rgba(0,0,0,0.1),inset 0 1px 0 rgba(255,255,255,0.15);transform:translateY(1px);}
 .sb-ch-btn svg{width:15px;height:15px;stroke:#1A1A1A;fill:none;stroke-width:2;flex-shrink:0;transition:stroke .2s;}
 .sb-ch-btn:hover svg{stroke:#fff;}
 </style>
@@ -55,11 +54,13 @@
 <div class="sb-card">
   <span class="sb-ebook-eyebrow">전자책 안내</span>
   <p class="sb-ebook-copy">
-    100편의 유튜브 영상 내용을<br> 
+    100편의 유튜브 영상 내용을<br>
     <strong>이 한 권에 모두 담았습니다.</strong>
   </p>
-  <img src="/image/book-cover.png" alt="영어창고 전자책 표지" class="sb-ebook-cover"
-       onerror="this.style.display='none';">
+  <a href="/ebook-info.html" target="_blank">
+    <img src="/image/book-cover.png" alt="영어창고 전자책 표지" class="sb-ebook-cover"
+         onerror="this.style.display='none';" style="cursor:pointer;">
+  </a>
   <div class="sb-ebook-3step">
     <div class="sb-ebook-step">
       <span class="sb-ebook-step-icon"><svg width="16" height="16" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
