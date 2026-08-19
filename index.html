@@ -344,84 +344,28 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
   
 </div><!-- /main-content -->
 
-<!-- 오른쪽 사이드바 -->
+<!-- 오른쪽 사이드바 — sidebar.html 에서 fetch로 로딩 -->
 <aside class="sidebar">
-  <div class="sidebar-sticky">
-
-    <!-- ① 유튜브 채널 -->
-    <div class="sb-card">
-      <span class="sb-yt-title">유튜브 채널</span>
-      <p class="sb-ebook-copy" style="text-align:center;margin-bottom:14px;">
-        꼬리물기 방식으로 짧은 문장을<br>
-        길게 늘려가는 영어회화 패턴<br>
-        영상으로 말하기 실력을<br>
-        업그레이드 하세요.
-      </p>
-      <a href="https://www.youtube.com/@MyEnglishVault" target="_blank" rel="noopener" class="sb-ch-btn">
-        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-        채널 구독하기
-      </a>
-    </div>
-
-    <!-- ② 전자책 안내 -->
-    <div class="sb-card">
-      <span class="sb-ebook-eyebrow">전자책 안내</span>
-      <p class="sb-ebook-copy" style="text-align:center;">
-        100편의 유튜브 영상 내용을<br>
-        <strong>이 한 권에 모두 담았습니다.</strong>
-      </p>
-      <img src="image/book-cover.png" alt="영어창고 전자책 표지" class="sb-ebook-cover"
-           onerror="this.style.display='none';">
-
-      <div class="sb-ebook-3step">
-        <div class="sb-ebook-step">
-          <span class="sb-ebook-step-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
-          <span>웹페이지로 <strong>예문 학습</strong></span>
-        </div>
-        <div class="sb-ebook-step">
-          <span class="sb-ebook-step-icon"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span>
-          <span>영상으로 <strong>원어민 발음</strong> 확인</span>
-        </div>
-        <div class="sb-ebook-step">
-          <span class="sb-ebook-step-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
-          <span>항상 곁에 두고 <strong>예습·복습</strong> 완성</span>
-        </div>
-      </div>
-      <div class="sb-ebook-divider"></div>
-      <a href="ebook-info.html" target="_blank" rel="noopener" class="sb-buy-btn">
-        사전 할인가로<br>구매하기
-        <div class="sb-buy-price">₩9,900</div>
-      </a>
-    </div>
-
-    <!-- ③ 패턴 목록 -->
-    <div class="sb-card">
-      <span class="sb-section-title" style="text-align:center;">패턴 목록</span>
-      <ul class="sb-pattern-list" id="sb-list">
-        <li style="padding:8px;color:#A0A0A0;font-size:13px;">목록 불러오는 중...</li>
-      </ul>
-    </div>
-
+  <div class="sidebar-sticky" id="sidebar-wrap">
+    <!-- sidebar.html 내용이 여기에 주입됩니다 -->
   </div>
 </aside>
 
 <script>
 (function(){
-  fetch('/pattern-list.json')
-    .then(function(r){ return r.json(); })
-    .then(function(list){
-      var ul = document.getElementById('sb-list');
-      if(!ul) return;
-      var currentSlug = (typeof CURRENT_SLUG !== 'undefined') ? CURRENT_SLUG : '';
-      ul.innerHTML = list.map(function(p){
-        var isActive = p.slug === currentSlug;
-        var href = isActive ? '#' : '/english/ko/' + p.slug + '/';
-        return '<li class="sb-pattern-item' + (isActive ? ' active' : '') + '" data-slug="' + p.slug + '">'
-             + '<a href="' + href + '">'
-             + '<span class="sb-no">' + p.no + '</span>'
-             + '<span class="sb-name">' + p.name + '</span>'
-             + '</a></li>';
-      }).join('');
+  fetch('/sidebar.html')
+    .then(function(r){ return r.text(); })
+    .then(function(html){
+      var wrap = document.getElementById('sidebar-wrap');
+      if(!wrap) return;
+      wrap.innerHTML = html;
+      // sidebar.html 안의 script 태그를 직접 실행
+      var scripts = wrap.querySelectorAll('script');
+      scripts.forEach(function(oldScript){
+        var newScript = document.createElement('script');
+        newScript.textContent = oldScript.textContent;
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+      });
     })
     .catch(function(e){ console.log('sidebar fetch error:', e); });
 })();
