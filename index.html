@@ -7,10 +7,8 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-J9KL65SFTT');
 </script>
-  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>패턴영어 하나로 끝내는 초보 영어회화 | 영어공부 전자책 - 영어창고</title>
@@ -52,22 +50,27 @@ header{background:var(--bg-white);padding:16px 5%;padding-right:calc(5% + 316px)
 .hero-badge{color:var(--accent-color);font-weight:700;font-size:15px;display:block;margin-bottom:20px;}
 .hero h1{font-size:38px;font-weight:900;margin-bottom:24px;line-height:1.35;word-break:keep-all;}
 .hero p{font-size:17px;color:var(--text-gray);margin-bottom:40px;font-weight:500;max-width:650px;margin-inline:auto;word-break:keep-all;line-height:1.6;}
+.hero-cta-label{font-size:14px;font-weight:600;color:var(--text-gray);margin-bottom:16px;}
+.hero-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
 .hero-btn{display:inline-block;background:var(--text-black);color:var(--bg-white);padding:15px 36px;font-size:15px;font-weight:700;transition:all 0.3s ease;}
 .hero-btn:hover{background:var(--accent-color);}
+.hero-btn-sub{display:inline-block;background:var(--bg-white);color:var(--text-black);padding:15px 36px;font-size:15px;font-weight:700;border:1px solid var(--border-color);transition:all 0.3s ease;}
+.hero-btn-sub:hover{background:var(--accent-color);color:var(--bg-white);border-color:var(--accent-color);}
 .container{max-width:1100px;margin:0 auto;padding:70px 5%;}
 .section-header{margin-bottom:30px;text-align:left;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;}
 .section-title{font-size:28px;font-weight:900;color:var(--text-black);}
 .section-count{font-size:14px;font-weight:600;color:var(--text-gray);margin-top:4px;}
 .section-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
-.search-box{width:100%;max-width:260px;}
-.search-box input{width:100%;padding:10px 0;border:none;border-bottom:2px solid var(--border-color);background:transparent;font-size:15px;font-weight:600;outline:none;transition:border-color 0.3s;}
+.search-box{width:100%;max-width:260px;position:relative;}
+.search-box input{width:100%;padding:10px 28px 10px 0;border:none;border-bottom:2px solid var(--border-color);background:transparent;font-size:15px;font-weight:600;outline:none;transition:border-color 0.3s;}
 .search-box input:focus{border-bottom-color:var(--accent-color);}
 .search-box input::placeholder{color:#A0A0A0;font-weight:500;}
+.search-box .search-icon{position:absolute;right:0;top:50%;transform:translateY(-50%);pointer-events:none;color:#A0A0A0;}
+.search-box input:focus ~ .search-icon{color:var(--accent-color);}
 .view-btns{display:flex;gap:4px;}
 .view-btn{padding:7px 12px;border:1px solid var(--border-color);background:var(--bg-white);font-size:13px;font-weight:700;color:var(--text-gray);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:5px;}
 .view-btn:hover{border-color:var(--accent-color);color:var(--accent-color);}
 .view-btn.active{background:var(--accent-color);color:white;border-color:var(--accent-color);}
-.view-btn-card{} 
 .card{background:var(--bg-white);border:1px solid var(--border-color);transition:all 0.2s;display:flex;cursor:pointer;position:relative;}
 .card:hover{border-color:var(--accent-color);}
 .card-link{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;}
@@ -87,8 +90,6 @@ header{background:var(--bg-white);padding:16px 5%;padding-right:calc(5% + 316px)
 .btn-load:hover{background:var(--text-black);color:var(--bg-white);}
 .btn-collapse{background:var(--bg-white);border:1px solid var(--border-color);color:var(--text-gray);}
 .btn-collapse:hover{background:var(--border-color);color:var(--text-black);}
-
-/* ── 리스트 뷰: 3등분 grid + 수평/수직 중앙정렬 ── */
 #patternGrid.view-list{display:flex;flex-direction:column;border-top:1px solid var(--border-color);}
 #patternGrid.view-list .card{display:grid;grid-template-columns:80px 1fr 1fr 1fr;align-items:center;padding:13px 24px;border:none;border-bottom:1px solid var(--border-color);gap:0;border-radius:0;}
 #patternGrid.view-list .card:hover{background:#FAFAF9;box-shadow:none;transform:none;}
@@ -99,7 +100,6 @@ header{background:var(--bg-white);padding:16px 5%;padding-right:calc(5% + 316px)
 #patternGrid.view-list .pattern-desc{display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;color:var(--text-gray);font-weight:500;overflow:visible;-webkit-line-clamp:unset;}
 #patternGrid.view-list .card-actions{display:flex;align-items:center;justify-content:center;border-top:none;padding-top:0;gap:8px;margin-left:0;}
 #patternGrid.view-list .action-link{padding:7px 16px;font-size:13px;flex:none;white-space:nowrap;text-align:center;}
-
 #patternGrid.view-card{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 #patternGrid.view-card .card{flex-direction:column;justify-content:space-between;padding:28px;border-radius:0;}
 #patternGrid.view-card .card:hover{box-shadow:0 8px 25px rgba(79,70,229,0.06);transform:translateY(-3px);}
@@ -123,17 +123,12 @@ header{background:var(--bg-white);padding:16px 5%;padding-right:calc(5% + 316px)
 .premium-btn{background:var(--text-black);color:var(--bg-white);padding:14px 32px;font-size:15px;font-weight:700;display:inline-block;transition:background 0.3s;}
 .premium-btn:hover{background:var(--accent-color);}
 footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px;margin-top:20px;border-top:1px solid var(--border-color);background:var(--bg-white);}
-/* ── 사이드바 레이아웃 ── */
 .page-wrapper{display:flex;align-items:flex-start;max-width:1400px;margin:0 auto;}
 .main-content{flex:1;min-width:0;}
 .sidebar{width:300px;flex-shrink:0;padding:24px 16px;align-self:flex-start;position:sticky;top:72px;}
 .sidebar-sticky{display:flex;flex-direction:column;gap:0;}
-
-/* sidebar.html 기준 통일 스타일 */
 .sb-card{background:#FFFFFF;border:1px solid #E2E2DF;padding:20px;margin-bottom:16px;}
 .sb-section-title{font-size:12px;font-weight:800;color:#1A1A1A;letter-spacing:.5px;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid #E2E2DF;margin-bottom:12px;display:block;text-align:center;}
-
-/* 전자책 카드 */
 .sb-ebook-cover{width:100%;display:block;border-radius:4px;margin-bottom:12px;box-shadow:0 4px 12px rgba(0,0,0,0.12);}
 .sb-ebook-cover-placeholder{width:100%;aspect-ratio:3/4;background:#e8eaed;border-radius:4px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#999;}
 .sb-ebook-copy{font-size:14px;font-weight:500;color:#555;line-height:1.75;margin-bottom:6px;word-break:keep-all;}
@@ -146,22 +141,17 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 .sb-buy-btn{display:block;width:100%;padding:14px 8px;background:#C9A050;color:#fff;font-size:15px;font-weight:800;text-align:center;border-radius:0;text-decoration:none;line-height:1.5;transition:background .2s;box-sizing:border-box;}
 .sb-buy-btn:hover{background:#b08a3e;}
 .sb-buy-price{font-size:13px;font-weight:700;margin-top:3px;color:#fff;}
-
-/* 패턴 목록 */
 .sb-pattern-list{list-style:none;padding:0;margin:0;max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:1px;}
 .sb-pattern-item a{display:flex;align-items:center;gap:8px;padding:7px 6px;font-size:13.5px;font-weight:600;color:#555;transition:all .2s;text-decoration:none;}
 .sb-pattern-item a:hover{background:#FBFBF9;color:#4F46E5;}
 .sb-no{font-size:11px;font-weight:700;color:#A0A0A0;min-width:26px;}
 .sb-name{font-family:'DM Sans',sans-serif;font-size:13px;}
-
-/* 유튜브 채널 */
 .sb-yt-title{font-size:12px;font-weight:800;color:#1A1A1A;letter-spacing:.5px;text-transform:uppercase;text-align:center;margin-bottom:12px;display:block;padding-bottom:10px;border-bottom:1px solid #E2E2DF;}
 .sb-ebook-eyebrow{font-size:12px;font-weight:800;color:#1A1A1A;letter-spacing:.5px;text-transform:uppercase;text-align:center;margin-bottom:12px;display:block;padding-bottom:10px;border-bottom:1px solid #E2E2DF;}
 .sb-ch-btn{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:11px;border:1px solid #E2E2DF;background:#FBFBF9;color:#1A1A1A;font-size:13px;font-weight:700;text-align:center;transition:all .2s;text-decoration:none;box-sizing:border-box;}
 .sb-ch-btn:hover{background:#0b4f5e;color:white;border-color:#0b4f5e;}
 .sb-ch-btn svg{width:15px;height:15px;stroke:#1A1A1A;fill:none;stroke-width:2;flex-shrink:0;transition:stroke .2s;}
 .sb-ch-btn:hover svg{stroke:#fff;}
-
 @media(max-width:1024px){
   .sidebar{display:none;}
   .page-wrapper{display:block;}
@@ -169,6 +159,8 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 }
 @media(max-width:768px){
   .hero h1{font-size:28px;}
+  .hero-btns{flex-direction:column;align-items:center;}
+  .hero-btn,.hero-btn-sub{width:100%;max-width:320px;text-align:center;}
   .section-header{flex-direction:column;align-items:flex-start;gap:12px;}
   .section-controls{width:100%;justify-content:space-between;}
   .search-box{max-width:100%;flex:1;}
@@ -188,16 +180,22 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 <body>
 <header>
   <a class="logo" href="/">영어창고 <span>MyEnglishVault</span></a>
-  
 </header>
 <div class="page-wrapper">
 <div class="main-content">
+
+<!-- ★ 수정된 히어로 섹션 -->
 <section class="hero">
   <span class="hero-badge">기초부터 실전까지 필수 패턴 완결판</span>
   <h1>머릿속에 맴도는 영단어,<br>이제 긴 문장으로 시원하게 내뱉으세요!</h1>
-  <p>단순 암기식 공부는 그만! 기초 패턴 하나에 살을 붙여 나가는 '문장 꼬리물기' 훈련으로 원어민처럼 자연스럽게 말할 수 있습니다.</p>
-  <a href="#curriculum" class="hero-btn">무료 학습 시작하기</a>
+  <p>단순 암기식 공부는 그만!<br>기초 패턴 하나에 살을 붙여 나가는 '문장 꼬리물기' 훈련으로<br>짧은 문장이 자연스러운 대화로 바뀝니다.</p>
+  <p class="hero-cta-label">지금 바로 시작해보세요.</p>
+  <div class="hero-btns">
+    <a href="https://www.youtube.com/@MyEnglishVault" target="_blank" rel="noopener" class="hero-btn">유튜브 영상 학습</a>
+    <a href="ebook-info.html" class="hero-btn-sub">전자책 안내</a>
+  </div>
 </section>
+
 <section id="curriculum" class="container">
   <div class="section-header">
     <div>
@@ -221,6 +219,7 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
       </div>
       <div class="search-box">
         <input type="text" id="searchInput" placeholder="영어패턴 또는 한글 뜻으로 검색" onkeyup="filterPatterns()">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </div>
     </div>
   </div>
@@ -331,25 +330,22 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
     <button class="btn-load btn-collapse hidden" id="btnCollapse" onclick="collapseCards()">목록 줄이기 ↑</button>
   </div>
   <div id="premium" class="premium-banner">
-    <h2>진짜 회화의 완성, 전자책으로 완전정복</h2>
-    <p>실전 대화문과 원어민 표현을 포함한<br>전체 패턴 워크시트를 항상 곁에 두고 예습·복습하세요.</p>
+    <h2>영어 회화의 완성, 전자책으로 완전정복</h2>
+    <p>실전 대화문 · 원어민 표현 · 전체 패턴 워크시트<br>언제 어디서든 펴보는 나만의 영어 참고서</p>
     <a href="ebook-info.html" class="premium-btn" target="_blank" rel="noopener">전자책 자세히 보기</a>
   </div>
 </section>
 
-  <footer>
+<footer>
   <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
   <p style="margin-top: 6px;">문의 : <a href="mailto:hphong@hphong.com">hphong@hphong.com</a></p>
   <p id="visit-counter" style="margin-top:10px;font-size:11px;color:#C0C0C0;letter-spacing:0.03em;"></p>
 </footer>
-  
+
 </div><!-- /main-content -->
 
-<!-- 오른쪽 사이드바 — sidebar.html 에서 fetch로 로딩 -->
 <aside class="sidebar">
-  <div class="sidebar-sticky" id="sidebar-wrap">
-    <!-- sidebar.html 내용이 여기에 주입됩니다 -->
-  </div>
+  <div class="sidebar-sticky" id="sidebar-wrap"></div>
 </aside>
 
 <script>
@@ -360,7 +356,6 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
       var wrap = document.getElementById('sidebar-wrap');
       if(!wrap) return;
       wrap.innerHTML = html;
-      // sidebar.html 안의 script 태그를 직접 실행
       var scripts = wrap.querySelectorAll('script');
       scripts.forEach(function(oldScript){
         var newScript = document.createElement('script');
@@ -376,9 +371,7 @@ var allCards = Array.from(document.querySelectorAll('#patternGrid .card'));
 var filteredCards = allCards;
 var currentView = 'card';
 var displayCount = 9;
-
-// ★ 수정 1: list 뷰도 30개로 제한
-var initCount = { card: 9, compact: 16, list: 30 };
+var initCount = { card: 9, compact: 20, list: 30 };
 var addCount  = { card: 9, compact: 16, list: 30 };
 
 function setView(v){
@@ -397,38 +390,20 @@ function renderCards(){
   allCards.forEach(function(c){ c.style.display='none'; });
   var show = filteredCards.slice(0, displayCount);
   show.forEach(function(c){ c.style.display=''; });
-
-  var lm          = document.getElementById('loadMoreContainer');
-  var btnMore     = document.getElementById('btnLoadMore');
+  var lm = document.getElementById('loadMoreContainer');
+  var btnMore = document.getElementById('btnLoadMore');
   var btnCollapse = document.getElementById('btnCollapse');
-  var init        = initCount[currentView] || 12;
-
-  // ★ 수정 2: list 뷰도 카드/컴팩트와 동일하게 버튼 처리 (if-else 분기 제거)
+  var init = initCount[currentView] || 12;
   lm.classList.remove('hidden');
-
-  if(filteredCards.length > displayCount){
-    btnMore.classList.remove('hidden');
-  } else {
-    btnMore.classList.add('hidden');
-  }
-
-  if(displayCount > init && filteredCards.length > init){
-    btnCollapse.classList.remove('hidden');
-  } else {
-    btnCollapse.classList.add('hidden');
-  }
-
-  if(btnMore.classList.contains('hidden') && btnCollapse.classList.contains('hidden')){
-    lm.classList.add('hidden');
-  }
+  if(filteredCards.length > displayCount){ btnMore.classList.remove('hidden'); }
+  else { btnMore.classList.add('hidden'); }
+  if(displayCount > init && filteredCards.length > init){ btnCollapse.classList.remove('hidden'); }
+  else { btnCollapse.classList.add('hidden'); }
+  if(btnMore.classList.contains('hidden') && btnCollapse.classList.contains('hidden')){ lm.classList.add('hidden'); }
 }
 
-function loadMore(){
-  displayCount += addCount[currentView] || 12;
-  renderCards();
-}
+function loadMore(){ displayCount += addCount[currentView] || 12; renderCards(); }
 
-// ── 리스트 뷰: pattern-list.json의 meaning을 pattern-desc에 주입 ──
 var meaningMap = {};
 fetch('/pattern-list.json')
   .then(function(r){ return r.json(); })
@@ -446,18 +421,12 @@ function injectMeanings(){
     var match = href.match(/\/([^\/]+)\/$/);
     var slug = match ? match[1] : '';
     var desc = card.querySelector('.pattern-desc');
-    if(desc && slug && meaningMap[slug]){
-      desc.textContent = meaningMap[slug];
-    }
+    if(desc && slug && meaningMap[slug]){ desc.textContent = meaningMap[slug]; }
   });
 }
 
-// setView 오버라이드 — 리스트 전환 시 meaning 재주입
 var _origSetView = setView;
-setView = function(v){
-  _origSetView(v);
-  if(v === 'list') setTimeout(injectMeanings, 0);
-};
+setView = function(v){ _origSetView(v); if(v === 'list') setTimeout(injectMeanings, 0); };
 
 function collapseCards(){
   displayCount = initCount[currentView] || 12;
@@ -465,7 +434,6 @@ function collapseCards(){
   document.getElementById('curriculum').scrollIntoView({behavior:'smooth'});
 }
 
-// ★ 수정 3: filterPatterns — list 뷰도 initCount 기준으로 리셋
 function filterPatterns(){
   var q = document.getElementById('searchInput').value.toLowerCase().trim();
   filteredCards = q === '' ? allCards : allCards.filter(function(c){
@@ -491,15 +459,13 @@ function filterPatterns(){
   var saved;
   try{ saved = localStorage.getItem('engchanggo_view'); } catch(e){}
   if(saved === 'card' && window.innerWidth <= 768) saved = 'compact';
-  setView(saved || 'card');
+  setView(saved || 'compact');
 })();
 </script>
-<!-- ── Firebase 방문자 카운터 ── -->
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment }
   from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
-
 const firebaseConfig = {
   apiKey: "AIzaSyAKeViXh35CF8NClSUCf--gnhFzjJDyz_Q",
   authDomain: "hphong-2cb03.firebaseapp.com",
@@ -508,114 +474,64 @@ const firebaseConfig = {
   messagingSenderId: "163690208469",
   appId: "1:163690208469:web:b71f18af431c649d0e165c"
 };
-
 const app = initializeApp(firebaseConfig);
 const db  = getFirestore(app);
-
-// 오늘 날짜 키 (KST)
 function getTodayKey() {
   var d = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Seoul'}));
-  return d.getFullYear() + '-' +
-    String(d.getMonth()+1).padStart(2,'0') + '-' +
-    String(d.getDate()).padStart(2,'0');
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
 }
-
-// 어제 날짜 키
 function getYesterdayKey() {
   var d = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Seoul'}));
   d.setDate(d.getDate() - 1);
-  return d.getFullYear() + '-' +
-    String(d.getMonth()+1).padStart(2,'0') + '-' +
-    String(d.getDate()).padStart(2,'0');
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
 }
-
-// 이번 주 월요일 키
 function getWeekStartKey() {
   var d = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Seoul'}));
   var day = d.getDay();
   var diff = (day === 0) ? -6 : 1 - day;
   d.setDate(d.getDate() + diff);
-  return d.getFullYear() + '-' +
-    String(d.getMonth()+1).padStart(2,'0') + '-' +
-    String(d.getDate()).padStart(2,'0');
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
 }
-
-// 이번 달 키 (YYYY-MM)
 function getMonthKey() {
   var d = new Date(new Date().toLocaleString('en-US', {timeZone:'Asia/Seoul'}));
   return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0');
 }
-
 async function recordAndDisplayVisit() {
-  var todayKey   = getTodayKey();
-  var monthKey   = getMonthKey();
-  var weekStart  = getWeekStartKey();
-  var pageId     = 'main';
-  var ref        = doc(db, 'visits', pageId);
-
-  // 세션 중복 방지
-  var sessionKey    = 'visited_main_' + todayKey;
+  var todayKey = getTodayKey();
+  var monthKey = getMonthKey();
+  var weekStart = getWeekStartKey();
+  var pageId = 'main';
+  var ref = doc(db, 'visits', pageId);
+  var sessionKey = 'visited_main_' + todayKey;
   var alreadyCounted = sessionStorage.getItem(sessionKey);
-
   try {
     if (!alreadyCounted) {
       var snap = await getDoc(ref);
-
       if (!snap.exists()) {
-        // 최초 문서 생성
-        await setDoc(ref, {
-          total: 1,
-          weekly: 1,
-          weekStart: weekStart,
-          monthly: { [monthKey]: 1 },
-          days: { [todayKey]: 1 }
-        });
+        await setDoc(ref, { total: 1, weekly: 1, weekStart: weekStart, monthly: { [monthKey]: 1 }, days: { [todayKey]: 1 } });
       } else {
         var data = snap.data();
-        var needWeekReset  = (data.weekStart !== weekStart);
-        var needMonthReset = !(data.monthly && data.monthly[monthKey]);
-
-        var updateData = {
-          total: increment(1),
-          [`days.${todayKey}`]: increment(1),
-          [`monthly.${monthKey}`]: increment(1)
-        };
-
-        if (needWeekReset) {
-          updateData.weekly   = 1;
-          updateData.weekStart = weekStart;
-        } else {
-          updateData.weekly = increment(1);
-        }
-
+        var needWeekReset = (data.weekStart !== weekStart);
+        var updateData = { total: increment(1), [`days.${todayKey}`]: increment(1), [`monthly.${monthKey}`]: increment(1) };
+        if (needWeekReset) { updateData.weekly = 1; updateData.weekStart = weekStart; }
+        else { updateData.weekly = increment(1); }
         await updateDoc(ref, updateData);
       }
-
       sessionStorage.setItem(sessionKey, '1');
     }
-
-    // 최신 데이터 읽어서 표시
     var snap = await getDoc(ref);
-    var data    = snap.data() || {};
-    var days    = data.days   || {};
+    var data = snap.data() || {};
+    var days = data.days || {};
     var monthly = data.monthly || {};
-
     var y = (days[getYesterdayKey()] || 0).toLocaleString();
-    var t = (days[getTodayKey()]     || 0).toLocaleString();
-    var w = (data.weekly             || 0).toLocaleString();
-    var m = (monthly[getMonthKey()]  || 0).toLocaleString();
-    var a = (data.total              || 0).toLocaleString();
-
+    var t = (days[getTodayKey()] || 0).toLocaleString();
+    var w = (data.weekly || 0).toLocaleString();
+    var m = (monthly[getMonthKey()] || 0).toLocaleString();
+    var a = (data.total || 0).toLocaleString();
     var el = document.getElementById('visit-counter');
-    if (el) {
-      el.textContent = 'y.' + y + ' / t.' + t + ' / w.' + w + ' / m.' + m + ' / a.' + a;
-    }
-
-  } catch(e) {
-    console.log('visit counter error:', e);
-  }
+    if (el) { el.textContent = 'y.' + y + ' / t.' + t + ' / w.' + w + ' / m.' + m + ' / a.' + a; }
+  } catch(e) { console.log('visit counter error:', e); }
 }
-
 recordAndDisplayVisit();
 </script>
 </body>
