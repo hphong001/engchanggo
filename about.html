@@ -1,142 +1,118 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>소개 | 영어창고</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #333;
-            line-height: 1.8;
-            background: #fafafa;
-        }
-        header {
-            background: #1a1a2e;
-            padding: 16px 24px;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        .container {
-            max-width: 800px;
-            margin: 48px auto;
-            padding: 0 24px 80px;
-        }
-        h1 {
-            font-size: 1.8rem;
-            margin-bottom: 24px;
-            color: #1a1a2e;
-        }
-        h2 {
-            font-size: 1.15rem;
-            margin: 32px 0 12px;
-            color: #1a1a2e;
-            border-left: 4px solid #4f6ef7;
-            padding-left: 12px;
-        }
-        p { margin-bottom: 14px; }
-        .highlight {
-            background: #f0f4ff;
-            border-radius: 12px;
-            padding: 24px 28px;
-            margin: 24px 0;
-        }
-        .highlight p { margin-bottom: 8px; }
-        .step {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 16px;
-            align-items: flex-start;
-        }
-        .step-num {
-            background: #4f6ef7;
-            color: #fff;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            flex-shrink: 0;
-            font-size: 0.9rem;
-        }
-        a { color: #4f6ef7; }
-        footer {
-            text-align: center;
-            padding: 32px;
-            color: #888;
-            font-size: 0.85rem;
-            border-top: 1px solid #eee;
-        }
-        footer a { color: #888; margin: 0 8px; text-decoration: none; }
-        footer a:hover { color: #4f6ef7; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>소개 | 영어창고 MyEnglishVault</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap">
+<style>
+:root{--bg-paper:#FBFBF9;--bg-white:#FFFFFF;--text-black:#1A1A1A;--text-gray:#555555;--accent-color:#4F46E5;--border-color:#E2E2DF;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'SUIT',sans-serif;letter-spacing:-0.02em;}
+body{background-color:var(--bg-paper);color:var(--text-black);line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+header{background:var(--bg-white);padding:16px 5%;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}.logo{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:900;color:var(--text-black);display:flex;align-items:center;gap:6px;letter-spacing:-0.03em;white-space:nowrap;}
+.logo span{color:var(--accent-color);font-weight:800;font-size:18px;margin-top:1px;}
+.container{max-width:760px;margin:0 auto;padding:64px 5% 100px;}
+.page-title{font-size:30px;font-weight:900;color:var(--text-black);margin-bottom:8px;letter-spacing:-0.03em;}
+.page-sub{font-size:16px;color:var(--text-gray);font-weight:500;margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid var(--border-color);word-break:keep-all;line-height:1.7;}
+.section{margin-bottom:48px;}
+.section-title{font-size:16px;font-weight:800;color:var(--text-black);margin-bottom:14px;padding-left:12px;border-left:3px solid var(--accent-color);}
+.section p{font-size:15px;color:var(--text-gray);font-weight:500;line-height:1.8;margin-bottom:10px;word-break:keep-all;}
+.section a{color:var(--accent-color);font-weight:700;}
+.section a:hover{text-decoration:underline;}
+.steps{display:flex;flex-direction:column;gap:14px;margin-top:4px;}
+.step{background:var(--bg-white);border:1px solid var(--border-color);padding:20px 24px;display:flex;gap:16px;align-items:flex-start;}
+.step-no{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:800;color:var(--accent-color);min-width:28px;padding-top:2px;}
+.step-body{}
+.step-label{font-size:14px;font-weight:800;color:var(--text-black);margin-bottom:4px;}
+.step-desc{font-size:14px;color:var(--text-gray);font-weight:500;line-height:1.7;word-break:keep-all;}
+.step-ex{font-size:13px;color:var(--accent-color);font-weight:600;margin-top:4px;font-family:'DM Sans',sans-serif;}
+.highlight{background:var(--bg-white);border:1px solid var(--border-color);padding:24px 28px;margin-bottom:20px;}
+.highlight p{font-size:15px;color:var(--text-gray);font-weight:500;line-height:1.8;word-break:keep-all;}
+.highlight strong{color:var(--text-black);font-weight:800;}
+.contact-box{background:var(--bg-white);border:1px solid var(--border-color);padding:24px 28px;}
+.contact-box p{font-size:15px;color:var(--text-gray);font-weight:500;line-height:1.8;}
+.contact-box a{color:var(--accent-color);font-weight:700;}
+footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px;border-top:1px solid var(--border-color);background:var(--bg-white);}
+.footer-links{margin-bottom:12px;}
+.footer-links a{color:var(--text-gray);font-weight:600;font-size:13px;margin:0 10px;}
+.footer-links a:hover{color:var(--accent-color);}
+</style>
 </head>
 <body>
 
 <header>
-    <a href="/">🏠 영어창고 홈으로</a>
+  <a class="logo" href="/">영어창고 <span>MyEnglishVault</span></a>
 </header>
 
 <div class="container">
-    <h1>영어창고 소개</h1>
+  <h1 class="page-title">영어창고 소개</h1>
+  <p class="page-sub">영어창고(MyEnglishVault)는 영어를 처음 시작하거나 오랫동안 공부했지만 막막한 분들을 위한 <strong style="color:var(--text-black);font-weight:800;">무료 영어 패턴 학습 사이트</strong>입니다.</p>
 
-    <p>안녕하세요! <strong>영어창고(MyEnglishVault)</strong>에 오신 것을 환영합니다.</p>
-
-    <p>영어창고는 영어를 처음 시작하거나 오랫동안 공부했지만 막막한 분들을 위해 만든 <strong>무료 영어 패턴 학습 사이트</strong>입니다.</p>
-
-    <h2>영어창고의 학습 방법</h2>
-
+  <div class="section">
+    <h2 class="section-title">학습 방법 — 꼬리물기 문장 확장</h2>
     <div class="highlight">
-        <p>영어창고는 <strong>"꼬리물기 문장 확장"</strong> 방식으로 학습합니다.</p>
-        <p>짧고 간단한 문장에서 시작해서, 단계적으로 살을 붙여가며 자연스럽게 긴 문장을 말할 수 있도록 훈련합니다.</p>
+      <p>짧고 간단한 문장에서 시작해 단계적으로 살을 붙여가며<br><strong>자연스럽게 긴 문장을 말할 수 있도록</strong> 훈련합니다.</p>
     </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-no">1단계</div>
+        <div class="step-body">
+          <div class="step-label">짧게 말하기 (초급)</div>
+          <div class="step-desc">가장 핵심적인 패턴 문장만으로 시작합니다.</div>
+          <div class="step-ex">"I can do it."</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-no">2단계</div>
+        <div class="step-body">
+          <div class="step-label">확장해서 말하기 (중급)</div>
+          <div class="step-desc">문장에 살을 붙여 더 풍부하게 표현합니다.</div>
+          <div class="step-ex">"I can definitely do it by myself."</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-no">3단계</div>
+        <div class="step-body">
+          <div class="step-label">더 추가해서 말하기 (고급)</div>
+          <div class="step-desc">실제 대화에서 쓰이는 완성된 문장으로 훈련합니다.</div>
+          <div class="step-ex">"I can definitely do it by myself if you give me a chance."</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div class="step">
-        <div class="step-num">1</div>
-        <div><strong>1단계 (초급)</strong> — 가장 짧고 핵심적인 패턴 문장을 익힙니다.<br><em>예: "I can do it."</em></div>
-    </div>
-    <div class="step">
-        <div class="step-num">2</div>
-        <div><strong>2단계 (중급)</strong> — 문장을 확장해 더 풍부하게 표현합니다.<br><em>예: "I can definitely do it by myself."</em></div>
-    </div>
-    <div class="step">
-        <div class="step-num">3</div>
-        <div><strong>3단계 (고급)</strong> — 실제 대화에서 쓰이는 완성된 문장으로 훈련합니다.<br><em>예: "I can definitely do it by myself if you give me a chance."</em></div>
-    </div>
+  <div class="section">
+    <h2 class="section-title">제공 콘텐츠</h2>
+    <p>총 <strong style="color:var(--text-black);font-weight:800;">100개의 필수 영어 패턴</strong>을 무료로 제공합니다. 각 패턴마다 3단계 꼬리물기 예문 10세트, 핵심 어휘(VOCA) 정리, 실전 롤플레이 다이얼로그, 문법 포인트 설명, 유튜브 영상 강의가 포함되어 있습니다.</p>
+  </div>
 
-    <h2>제공 콘텐츠</h2>
-    <p>총 <strong>100개의 필수 영어 패턴</strong>을 제공합니다. 각 패턴마다 다음 내용이 포함되어 있습니다.</p>
-    <ul style="margin: 8px 0 16px 20px;">
-        <li>3단계 꼬리물기 예문 (10개 세트)</li>
-        <li>핵심 어휘(VOCA) 정리</li>
-        <li>실전 롤플레이 다이얼로그</li>
-        <li>문법 포인트 설명</li>
-        <li>유튜브 영상 강의 연동</li>
-    </ul>
-
-    <h2>유튜브 채널</h2>
+  <div class="section">
+    <h2 class="section-title">유튜브 채널</h2>
     <p>영어창고 유튜브 채널에서 각 패턴을 영상으로도 학습할 수 있습니다.</p>
-    <p>👉 <a href="https://www.youtube.com/@MyEnglishVault" target="_blank">영어창고 유튜브 채널 바로가기</a></p>
+    <p style="margin-top:12px;"><a href="https://www.youtube.com/@MyEnglishVault" target="_blank">→ 영어창고 유튜브 채널 바로가기</a></p>
+  </div>
 
-    <h2>문의</h2>
-    <p>사이트 관련 문의는 아래 이메일로 연락해 주세요.</p>
-    <p>📧 <a href="mailto:hphong@hphong.com">hphong@hphong.com</a></p>
+  <div class="section">
+    <h2 class="section-title">문의</h2>
+    <div class="contact-box">
+      <p>사이트 관련 문의는 아래 이메일로 연락해 주세요.</p>
+      <p style="margin-top:10px;"><a href="mailto:hphong@hphong.com">hphong@hphong.com</a></p>
+    </div>
+  </div>
 </div>
 
 <footer>
-    <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
-    <p style="margin-top:8px;">
-        <a href="/privacy-policy.html">개인정보처리방침</a>
-        <a href="/about.html">소개</a>
-        <a href="/contact.html">문의</a>
-    </p>
+  <div class="footer-links">
+    <a href="/privacy-policy.html">개인정보처리방침</a>
+    <a href="/about.html">소개</a>
+    <a href="/contact.html">문의</a>
+  </div>
+  <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
+  <p style="margin-top:6px;">문의 : <a href="mailto:hphong@hphong.com" style="color:var(--text-gray);">hphong@hphong.com</a></p>
 </footer>
 
 </body>
