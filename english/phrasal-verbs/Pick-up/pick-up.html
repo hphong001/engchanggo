@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[구동사 완벽 정리] Pick up — 줍다·데리러 가다·배우다·전화받다 4가지 의미 총정리 | 영어창고</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        :root{--bg-paper:#FBFBF9;--bg-white:#FFFFFF;--text-black:#1A1A1A;--text-gray:#555555;--accent-color:#4F46E5;--border-color:#E2E2DF;}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'SUIT','Pretendard',sans-serif;letter-spacing:-0.02em;}
+        body{background-color:var(--bg-paper);color:var(--text-black);line-height:1.6;-webkit-font-smoothing:antialiased;padding:0;}
+        a{text-decoration:none;color:inherit;}
+
+        /* ── 헤더 ── */
+        header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:center;align-items:center;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}
+        .logo{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:900;color:var(--text-black);display:flex;align-items:center;gap:6px;}
+        .logo span{color:var(--accent-color);font-weight:800;font-size:18px;}
+
+        /* ── 본문 컨테이너 ── */
+        .post-container{max-width:760px;margin:40px auto;background-color:var(--bg-white);padding:40px 30px;border:1px solid var(--border-color);box-shadow:0 4px 20px rgba(0,0,0,0.02);}
+
+        /* ── 메타 정보 (아이콘 뱃지 방식) ── */
+        .post-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;border-bottom:1px solid #f1f5f9;padding-bottom:16px;}
+        .meta-badge{display:inline-flex;align-items:center;gap:5px;font-size:0.8rem;color:#64748b;background:#F8F9FA;border:1px solid var(--border-color);border-radius:999px;padding:4px 10px;}
+        .meta-badge svg{flex-shrink:0;}
+
+        /* ── 타이포그래피 ── */
+        h1{font-size:1.8rem;color:var(--text-black);margin-bottom:20px;line-height:1.4;word-break:keep-all;font-weight:900;}
+        p{font-size:1rem;color:var(--text-gray);margin-bottom:16px;word-break:keep-all;font-weight:500;}
+        .highlight{color:var(--accent-color);font-weight:700;background:#F0F0FC;padding:2px 6px;border-radius:4px;}
+
+        /* ── h2: 아이콘 뱃지 + 텍스트 ── */
+        h2{font-size:1.3rem;color:var(--bg-white);margin-top:45px;margin-bottom:15px;font-weight:800;display:flex;align-items:center;gap:10px;}
+        .h2-inner{display:flex;align-items:center;gap:10px;background:var(--accent-color);padding:8px 16px 8px 12px;border-radius:8px;}
+        .h2-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(255,255,255,0.2);border-radius:6px;flex-shrink:0;}
+        .h2-icon svg{width:16px;height:16px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+        /* ── 핵심 개념 박스 ── */
+        .concept-box{background-color:#F8F9FA;border:1px solid var(--border-color);border-radius:8px;padding:24px;margin:30px 0;}
+        .concept-box-title{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+        .concept-title-icon{display:flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--accent-color);border-radius:8px;flex-shrink:0;}
+        .concept-title-icon svg{width:18px;height:18px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .concept-box-title strong{color:var(--text-black);font-size:1.05rem;font-weight:800;}
+        .concept-desc{margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--border-color);}
+        .concept-desc:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+        .concept-word{color:var(--accent-color);font-weight:800;font-size:1.05rem;}
+
+        /* ── 예문 박스 ── */
+        .example-box{background-color:#FFFFFF;border-left:4px solid var(--accent-color);padding:18px;margin:16px 0;border:1px solid var(--border-color);border-left-width:4px;}
+        .example-en{display:block;font-weight:700;color:var(--text-black);font-size:1.05rem;margin-bottom:4px;}
+        .example-ko{display:block;color:var(--text-gray);font-size:0.95rem;margin-bottom:8px;font-weight:500;}
+        .example-desc{display:block;font-size:0.9rem;color:#666;background-color:#FBFBF9;padding:10px 14px;border-radius:4px;border:1px solid var(--border-color);}
+
+        /* ── 대화문 박스 ── */
+        .dialogue-box{background-color:#FFFBEB;border:1px solid #FDE68A;padding:24px;border-radius:8px;margin:35px 0;}
+        .dialogue-title{font-weight:800;color:#B45309;margin-bottom:14px;font-size:1.05rem;display:flex;align-items:center;gap:8px;}
+        .dialogue-title-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#B45309;border-radius:6px;flex-shrink:0;}
+        .dialogue-title-icon svg{width:15px;height:15px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .dialogue-line{margin-bottom:10px;font-size:0.95rem;display:flex;align-items:flex-start;gap:8px;}
+        .speaker{color:#92400e;font-weight:800;min-width:20px;}
+        .speech{flex:1;color:#1A1A1A;font-weight:600;}
+        .speech-desc{color:#78350F;font-size:0.9rem;margin-top:4px;margin-bottom:14px;margin-left:28px;}
+
+        /* ── 실수 박스 ── */
+        .mistake-box{background-color:#FEF2F2;border:1px solid #FECACA;padding:24px;border-radius:8px;margin:35px 0;}
+        .mistake-title{font-weight:800;color:#B91C1C;margin-bottom:12px;display:flex;align-items:center;gap:8px;font-size:1.05rem;}
+        .mistake-title-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#B91C1C;border-radius:6px;flex-shrink:0;}
+        .mistake-title-icon svg{width:15px;height:15px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .mistake-box p{color:#7F1D1D;margin-bottom:0;}
+
+        /* ── 푸터 ── */
+        footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px;margin-top:40px;border-top:1px solid var(--border-color);background:var(--bg-white);}
+
+        @media(max-width:768px){
+            .post-container{margin:0;padding:20px 16px;border:none;}
+            h1{font-size:1.5rem;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a class="logo" href="/">영어창고 <span>MyEnglishVault</span></a>
+</header>
+
+<article class="post-container">
+
+    <!-- ── 메타 뱃지 (Heroicons: pencil / calendar / clock) ── -->
+    <div class="post-meta">
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+            영어창고
+        </span>
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            2026. 09. 04
+        </span>
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            읽는 시간: 12분
+        </span>
+    </div>
+
+    <h1>[구동사 완벽 정리] Pick up, 이거 하나로 원어민이 된다 — 줍다·데리러 가다·배우다·전화받다, 4가지 의미 총정리</h1>
+
+    <p>미드나 유튜브 영상을 보다 보면 <span class="highlight">pick up</span>이라는 표현이 정말 자주 등장한다는 걸 느끼신 적 있으신가요? 어떤 장면에서는 바닥에 떨어진 펜을 집어 드는 행동을 묘사하고, 또 다른 장면에서는 공항에서 누군가를 데리러 간다고 쓰이고, 대화 중에는 "I just picked that up"이라며 기술을 배운 걸 표현하기도 합니다. 심지어 전화를 받을 때도 "Just pick up!"이라고 소리치죠.</p>
+    <p>하나의 구동사가 이렇게 다양한 상황에서 쓰이니 헷갈릴 수밖에 없습니다. 오늘은 원어민들이 하루에도 수십 번 입에 올리는 <span class="highlight">Pick up</span>의 핵심 의미 4가지를 어원부터 실전 예문까지, 과외 선생님처럼 밀착해서 설명해 드리겠습니다. 이 글을 끝까지 읽으시면 어느 맥락에서 나오든 1초 안에 자연스럽게 이해하고 사용할 수 있게 됩니다.</p>
+
+    <!-- ── 개념 박스 (Heroicons: academic-cap / book-open) ── -->
+    <div class="concept-box">
+        <div class="concept-box-title">
+            <div class="concept-title-icon">
+                <!-- Heroicons: academic-cap -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+            </div>
+            <strong>핵심 개념 전문 요약 — Pick up의 뿌리를 알면 전부 보인다</strong>
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">어원 해설</span><br><br>
+            "Pick up"은 동사 <strong>pick</strong>(골라 집다, 뾰족한 것으로 콕 찍어 선택하다)과 부사 <strong>up</strong>(위로, 위를 향해, 완전히)이 결합된 구동사입니다. 핵심 이미지는 '아래에 있는 것을 위로 들어 올리는 행위'입니다. 이 물리적 이미지가 의미를 확장하면서, 바닥에 있는 물건을 집어 드는 것(물리적), 어딘가에 있는 사람을 차에 태우는 것(이동), 주변 환경에서 지식이나 기술을 자연스럽게 흡수하는 것(학습), 그리고 끊겨 있던 통화를 연결 상태로 들어 올리는 것(전화)으로 각각 자연스럽게 파생됩니다. 네 가지 의미 모두 '낮은 상태에서 위로 끌어올린다'는 단 하나의 공통된 감각을 공유합니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ① 물건을 줍다 / 집어 들다</span><br><br>
+            가장 기본적인 물리적 의미입니다. 땅이나 테이블처럼 낮은 곳에 있는 물건을 손으로 골라서 위로 들어 올리는 동작을 가리킵니다. 단순히 "들다(lift)"보다 '대상을 골라서 집는다'는 선택의 뉘앙스가 살아 있어, 여러 물건 중 하나를 집어 드는 상황뿐 아니라 가게에서 물건을 사 오는 것까지 자연스럽게 확장됩니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ② 사람을 데리러 가다 / 차로 태워 오다</span><br><br>
+            이동 수단(주로 자동차)을 가지고 특정 장소에 있는 사람을 태워 데려오는 행위를 의미합니다. 공항, 학교, 역 같은 장소에서 기다리는 상대방을 픽업하는 이 표현은 원어민들이 일상에서 매우 빈번하게 사용합니다. "Pick you up at 7"처럼 간결하게 쓰이는 경우가 많습니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ③ (언어·기술 등을) 자연스럽게 익히다</span><br><br>
+            가르침을 받거나 책을 통해 공식적으로 공부하는 것이 아니라, 주변 환경에 노출되어 어깨너머로 자연스럽게 습득하는 것을 의미합니다. 아이가 모국어를 배우듯, 그 안에서 생활하며 자신도 모르는 사이에 흡수하는 학습 방식을 표현할 때 사용합니다. 이 맥락에서는 적극적인 노력보다 '자연스러운 흡수'에 방점이 찍힙니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ④ 전화를 받다</span><br><br>
+            옛날 유선 전화기 수화기를 들어 올리던(pick up the receiver) 물리적 행위에서 비롯된 표현입니다. 오늘날에는 스마트폰 시대가 되었음에도 이 표현은 전혀 사라지지 않고, '걸려 온 전화를 받다'는 뜻으로 원어민들의 일상 언어에 완벽하게 자리 잡고 있습니다. "Answer the phone"과 같은 의미지만, 구어체에서는 "Pick up"이 훨씬 더 자주 사용됩니다.
+        </div>
+    </div>
+
+    <!-- ===== 의미 1 : Heroicons arrow-up-tray ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: arrow-up-tray (줍다/들어올리다) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/></svg>
+            </span>
+            의미 ① 물건을 줍다 / 집어 들다
+        </span>
+    </h2>
+    <p>가장 먼저 익혀야 할 기본 의미입니다. 바닥에 떨어진 것을 줍거나, 상점에서 물건을 집어 드는 행동 모두 <strong>pick up</strong>으로 표현할 수 있습니다. "Please pick up your toys"처럼 정리 정돈을 요청하거나, 장을 보면서 "Can you pick up some milk?"처럼 무언가를 사다 주길 부탁할 때도 이 의미로 쓰인다는 점이 특히 흥미롭습니다.</p>
+
+    <div class="example-box"><span class="example-en">1. She picked up the pen that fell on the floor.</span><span class="example-ko">(그녀는 바닥에 떨어진 펜을 주웠습니다.)</span><span class="example-desc">물리적으로 낮은 위치에 있는 물건을 손으로 들어 올리는 가장 전형적인 상황입니다. "picked up"을 사용함으로써 그냥 들어올린 것이 아니라 바닥에서 골라 집었다는 뉘앙스가 살아납니다.</span></div>
+    <div class="example-box"><span class="example-en">2. Can you pick up a few things from the grocery store on your way home?</span><span class="example-ko">(집에 오는 길에 마트에서 물건 몇 가지만 사 와 줄 수 있어?)</span><span class="example-desc">이 문장에서 pick up은 '구매하다(buy)'의 의미로 확장된 경우입니다. 진열대에서 물건을 집어 드는 행위가 곧 구매로 이어지기 때문입니다. 원어민들이 일상에서 가장 많이 쓰는 활용 중 하나입니다.</span></div>
+    <div class="example-box"><span class="example-en">3. Hey, could you pick up that trash? Someone might trip on it.</span><span class="example-ko">(저기, 저 쓰레기 좀 주워 줄래? 누군가 걸려 넘어질 수 있어.)</span><span class="example-desc">공공장소에서 위험 요소가 될 수 있는 물건을 주울 것을 정중하게 부탁하는 상황입니다. "throw away"가 '버리다'라면 "pick up"은 그 전 단계인 '집어 드는 행위' 자체에 집중합니다.</span></div>
+    <div class="example-box"><span class="example-en">4. I picked up a beautiful vintage jacket at the flea market.</span><span class="example-ko">(벼룩시장에서 멋진 빈티지 재킷을 하나 득템했어.)</span><span class="example-desc">쇼핑 맥락에서 '구매하다'의 의미로 쓰인 예문입니다. 예상치 못한 곳에서 마음에 드는 물건을 발견하여 집어 든 상황에 pick up이 매우 잘 어울립니다. 한국어로는 '득템'에 가까운 느낌입니다.</span></div>
+    <div class="example-box"><span class="example-en">5. Please pick up your room before your grandma arrives.</span><span class="example-ko">(할머니 오시기 전에 방 좀 치워 놓아라.)</span><span class="example-desc">"Pick up your room"은 방을 들어 올리라는 게 아니라, 방 안에 어지럽게 놓인 물건들을 하나씩 집어서 제자리에 놓으라는 의미입니다. 미국 가정에서 부모가 아이에게 흔히 쓰는 표현입니다.</span></div>
+    <div class="example-box"><span class="example-en">6. The dog picked up the ball and dropped it at my feet.</span><span class="example-ko">(개가 공을 주워서 내 발 앞에 가져다 놓았습니다.)</span><span class="example-desc">사람뿐 아니라 동물의 행동을 묘사할 때도 자연스럽게 쓰입니다. 입으로 물건을 물어서 들어 올리는 행위도 pick up으로 표현한다는 것이 포인트입니다.</span></div>
+    <div class="example-box"><span class="example-en">7. I picked up the wrong bag at the airport by mistake.</span><span class="example-ko">(공항에서 실수로 다른 사람 가방을 집어 들었어.)</span><span class="example-desc">여러 짐 중에서 하나를 '골라서' 집어 든다는 pick up의 선택적 뉘앙스가 잘 드러나는 예문입니다. 실수로 잘못 고른 상황을 묘사하고 있어 더욱 자연스럽습니다.</span></div>
+    <div class="example-box"><span class="example-en">8. Could you pick up some coffee and bagels for the morning meeting?</span><span class="example-ko">(아침 회의용으로 커피랑 베이글 좀 사다 줄 수 있어요?)</span><span class="example-desc">직장에서 동료에게 요청하는 상황입니다. '사다 오다'라는 뉘앙스로, 가게에 들러 물건을 집어 드는 행위와 구매가 하나로 묶인 표현입니다.</span></div>
+    <div class="example-box"><span class="example-en">9. He bent down and picked up the coin from the sidewalk.</span><span class="example-ko">(그는 몸을 구부려 인도에서 동전을 주웠습니다.)</span><span class="example-desc">"Bent down(몸을 구부리다)"과 함께 쓰여 물리적으로 바닥에서 물건을 줍는 행위가 생생하게 묘사됩니다. 이처럼 pick up 전에 동작을 추가하면 장면이 더 구체적으로 살아납니다.</span></div>
+    <div class="example-box"><span class="example-en">10. I need to pick up my prescription at the pharmacy today.</span><span class="example-ko">(오늘 약국에 가서 처방전 약을 받아와야 해.)</span><span class="example-desc">약국에서 처방된 약을 받아 오는 상황입니다. 이미 준비된 물건을 지정된 장소에서 '집어 오다'라는 의미로, 원어민들이 매우 실용적으로 쓰는 표현입니다.</span></div>
+
+    <!-- ===== 의미 2 : Heroicons truck ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: truck (데리러 가다) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M8.25 18.75H14.25m0 0V6.75m0 12V6.75m0 0H20.25"/></svg>
+            </span>
+            의미 ② 사람을 데리러 가다 / 차로 태워 오다
+        </span>
+    </h2>
+    <p>두 번째 의미는 한국어의 '픽업하다'로도 이미 일상에서 쓰이고 있어 비교적 친숙한 표현입니다. 차를 몰고 가서 특정 장소에 있는 사람을 태워 데려오는 행위 전체를 <strong>pick up</strong> 하나로 표현합니다. "Give someone a ride"와 유사하지만, pick up은 특히 '이동해서 데리러 간다'는 출발 행위에 더 집중되어 있습니다.</p>
+
+    <div class="example-box"><span class="example-en">1. Can you pick me up from the airport at 6 p.m.?</span><span class="example-ko">(오후 6시에 공항으로 나 좀 데리러 올 수 있어?)</span><span class="example-desc">픽업 의미의 가장 전형적인 예문입니다. "Pick me up"처럼 목적어를 pick과 up 사이에 넣는 것이 가능합니다. 공항은 이 표현이 가장 자주 등장하는 배경 중 하나입니다.</span></div>
+    <div class="example-box"><span class="example-en">2. I'll pick you up at seven. Be ready outside.</span><span class="example-ko">(7시에 데리러 갈게. 밖에서 준비하고 있어.)</span><span class="example-desc">데이트나 약속 전에 원어민들이 가장 자연스럽게 쓰는 표현입니다. "I will come to pick you up" 같은 긴 표현 대신 이렇게 간결하게 씁니다.</span></div>
+    <div class="example-box"><span class="example-en">3. She picks her kids up from school every day at 3 o'clock.</span><span class="example-ko">(그녀는 매일 오후 3시에 학교에서 아이들을 데려옵니다.)</span><span class="example-desc">자녀를 하원시키는 일상적인 행동을 표현합니다. 목적어가 대명사가 아닐 경우 "pick up her kids"처럼 up 뒤에 목적어를 놓는 것이 더 자연스럽습니다.</span></div>
+    <div class="example-box"><span class="example-en">4. The taxi driver came to pick up the passenger from the hotel lobby.</span><span class="example-ko">(택시 기사가 호텔 로비에서 승객을 태우러 왔습니다.)</span><span class="example-desc">택시, 우버 같은 교통 서비스에서 이 표현이 광범위하게 사용됩니다. '승객을 태우다'를 "pick up"으로 깔끔하게 처리하는 것이 영어 특유의 효율성을 보여줍니다.</span></div>
+    <div class="example-box"><span class="example-en">5. My mom is picking me up after the concert. I don't need a ride.</span><span class="example-ko">(콘서트 끝나고 엄마가 데리러 오실 거야. 차 안 태워줘도 돼.)</span><span class="example-desc">다른 사람의 호의를 정중히 거절하는 상황입니다. 이미 데리러 오는 사람이 있다는 것을 자연스럽게 설명할 때 쓰이는 실용적인 패턴입니다.</span></div>
+    <div class="example-box"><span class="example-en">6. Could you swing by and pick up your sister on the way here?</span><span class="example-ko">(여기 오는 길에 잠깐 들러서 네 여동생도 좀 데려올 수 있어?)</span><span class="example-desc">"Swing by(잠깐 들르다)"와 함께 쓰여 '경유해서 데려오다'라는 뉘앙스를 만들어냅니다. 이렇게 다른 구동사와 자연스럽게 결합해 쓰이는 경우가 많습니다.</span></div>
+    <div class="example-box"><span class="example-en">7. The bus picks up passengers at every stop along the route.</span><span class="example-ko">(버스는 노선의 매 정류장에서 승객들을 태웁니다.)</span><span class="example-desc">대중교통 맥락에서도 pick up은 광범위하게 사용됩니다. '정류장에서 승객을 태우다'는 행위를 가장 간결하게 표현하는 방식입니다.</span></div>
+    <div class="example-box"><span class="example-en">8. Don't forget to pick up Grandpa from the train station tomorrow morning.</span><span class="example-ko">(내일 아침에 기차역에서 할아버지 모시러 가는 거 잊지 마.)</span><span class="example-desc">가족 어른을 모셔 오는 상황에서도 pick up을 자연스럽게 씁니다. 한국어로는 '모시러 가다'처럼 더 존칭스럽게 번역하면 자연스럽습니다.</span></div>
+    <div class="example-box"><span class="example-en">9. I picked up a hitchhiker on the highway and drove him to the next town.</span><span class="example-ko">(고속도로에서 히치하이커를 태워서 다음 마을까지 데려다줬어.)</span><span class="example-desc">낯선 사람을 도중에 태우는 상황입니다. 차를 멈추어 사람을 태운 행위를 pick up 하나로 담아냅니다.</span></div>
+    <div class="example-box"><span class="example-en">10. He asked if I could pick him up after his car broke down.</span><span class="example-ko">(그는 차가 고장 났다고 나에게 데리러 와 줄 수 있냐고 물었습니다.)</span><span class="example-desc">긴급 상황에서 도움을 요청하는 현실적인 예문입니다. "after his car broke down"이라는 배경 설명이 더해져 상황의 긴박함이 느껴집니다.</span></div>
+
+    <!-- ===== 의미 3 : Heroicons light-bulb ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: light-bulb (배우다/습득하다) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
+            </span>
+            의미 ③ (언어·기술 등을) 자연스럽게 익히다 / 어깨너머로 배우다
+        </span>
+    </h2>
+    <p>세 번째 의미가 가장 세련된 원어민 표현이라고 할 수 있습니다. 학원에 다니거나 책으로 공부하는 'learn'과 달리, <strong>pick up</strong>은 자연스럽게 환경에 스며들어 익히는 습득의 뉘앙스가 강합니다. 해외에 몇 달 살다 보니 언어가 늘었다거나, 요리하는 엄마 옆에서 보고 배운 레시피를 표현할 때 딱 맞는 구동사입니다.</p>
+
+    <div class="example-box"><span class="example-en">1. She picked up Spanish really fast while living in Madrid for a year.</span><span class="example-ko">(그녀는 마드리드에서 1년 살면서 스페인어를 정말 빨리 익혔어.)</span><span class="example-desc">유학이나 이민 생활에서 언어를 자연스럽게 흡수하는 것이 pick up의 핵심입니다. 학원을 다닌 것이 아니라 생활 속에서 스며들어 배웠다는 것이 포인트입니다.</span></div>
+    <div class="example-box"><span class="example-en">2. I picked up a few Korean phrases from my Korean coworker.</span><span class="example-ko">(한국인 동료에게서 한국어 표현 몇 가지를 배웠어.)</span><span class="example-desc">공식적인 수업 없이 주변 사람으로부터 자연스럽게 언어를 습득하는 상황입니다. "a few phrases"라는 표현과 함께 써서 casual하게 익힌 느낌을 살렸습니다.</span></div>
+    <div class="example-box"><span class="example-en">3. He picked up coding skills by watching YouTube tutorials every evening.</span><span class="example-ko">(그는 매일 저녁 유튜브 튜토리얼을 보면서 코딩 실력을 익혔어요.)</span><span class="example-desc">독학으로 기술을 습득하는 상황에도 pick up이 완벽하게 어울립니다. 학원이나 공식 교육 과정 없이 스스로 노출과 반복으로 배운 경우입니다.</span></div>
+    <div class="example-box"><span class="example-en">4. Kids pick up languages so much faster than adults, it's amazing.</span><span class="example-ko">(아이들은 어른보다 언어를 훨씬 빨리 익히잖아요, 정말 놀라워요.)</span><span class="example-desc">어린아이가 모국어나 외국어를 자연스럽게 습득하는 현상을 설명할 때 pick up이 가장 정확한 표현입니다. 의식적인 노력 없이 흡수한다는 뉘앙스가 완벽하게 맞아떨어집니다.</span></div>
+    <div class="example-box"><span class="example-en">5. I picked up some great tips on negotiation at last week's seminar.</span><span class="example-ko">(지난주 세미나에서 협상에 관한 좋은 팁을 몇 가지 얻었어.)</span><span class="example-desc">세미나나 강연을 들으며 유용한 정보를 흡수하는 것에도 pick up을 씁니다. 정식 커리큘럼이 아닌 비공식 습득이라는 뉘앙스가 담겨 있습니다.</span></div>
+    <div class="example-box"><span class="example-en">6. Where did you pick up that accent? You didn't have it before!</span><span class="example-ko">(그 억양 어디서 배운 거야? 예전엔 없었는데!)</span><span class="example-desc">사람은 자신도 모르는 사이에 주변 환경의 억양을 흡수하기도 합니다. 이처럼 의도하지 않았는데 자연스럽게 몸에 밴 습관이나 말투를 묘사할 때 pick up이 제격입니다.</span></div>
+    <div class="example-box"><span class="example-en">7. I picked up the recipe for this cake from my grandmother years ago.</span><span class="example-ko">(이 케이크 레시피는 몇 년 전에 할머니한테서 배운 거야.)</span><span class="example-desc">요리책이 아닌 사람에게서, 함께 요리하는 과정을 통해 자연스럽게 익힌 레시피를 표현합니다. 지식이나 기술이 사람과 사람 사이에 자연스럽게 전수되는 이미지가 담겨 있습니다.</span></div>
+    <div class="example-box"><span class="example-en">8. He picked up a lot of bad habits from his college roommate.</span><span class="example-ko">(그는 대학 룸메이트에게서 나쁜 습관을 많이 배웠어.)</span><span class="example-desc">좋은 것뿐 아니라 나쁜 습관이나 행동 방식도 pick up으로 표현합니다. 의도적으로 배운 게 아니라 함께 살다 보니 자연스럽게 물들었다는 뉘앙스가 잘 살아납니다.</span></div>
+    <div class="example-box"><span class="example-en">9. She picked up basic guitar chords in just a few weeks by practicing daily.</span><span class="example-ko">(그녀는 매일 연습하면서 단 몇 주 만에 기본 기타 코드를 익혔어요.)</span><span class="example-desc">악기를 독학으로 빠르게 습득하는 상황입니다. 선생님 없이 스스로 반복하며 익혔다는 의미에서 pick up이 가장 잘 어울립니다.</span></div>
+    <div class="example-box"><span class="example-en">10. You'll pick up the company culture quickly once you start working here.</span><span class="example-ko">(여기서 일을 시작하면 회사 문화를 금방 익히게 될 거예요.)</span><span class="example-desc">직장에 적응하는 과정을 자연스럽게 표현합니다. 교육을 받는 게 아니라 일하면서 자연스럽게 조직 문화를 흡수한다는 뉘앙스가 담겨 있습니다. 신입 사원에게 자주 건네는 격려의 말이기도 합니다.</span></div>
+
+    <!-- ===== 의미 4 : Heroicons phone ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: phone (전화를 받다) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+            </span>
+            의미 ④ 전화를 받다
+        </span>
+    </h2>
+    <p>마지막 의미는 역사적 맥락을 알면 더 재미있습니다. 과거 유선 전화기 시절에는 수화기(receiver)가 거치대에 올려져 있었고, 전화가 오면 그것을 들어 올려서(pick up) 귀에 갖다 댔습니다. 바로 그 물리적인 동작에서 유래한 표현입니다. 스마트폰 시대가 된 지금도 "Just pick up!"은 여전히 가장 자연스러운 표현으로 살아있습니다. 친구나 가족 사이에서 재촉하거나 캐주얼하게 말할 때는 "Answer the phone"보다 pick up이 훨씬 구어체답습니다.</p>
+
+    <div class="example-box"><span class="example-en">1. Why didn't you pick up when I called you?</span><span class="example-ko">(내가 전화했을 때 왜 안 받았어?)</span><span class="example-desc">전화 관련 표현 중 원어민들이 가장 자주 쓰는 패턴입니다. "Answer my call"보다 훨씬 자연스럽고 일상적인 표현으로, 섭섭함이나 궁금함을 담아 물을 때 씁니다.</span></div>
+    <div class="example-box"><span class="example-en">2. Just pick up the phone, it might be important!</span><span class="example-ko">(그냥 전화 좀 받아, 중요한 전화일 수도 있잖아!)</span><span class="example-desc">전화를 받기 싫어하거나 미루는 상대방을 재촉하는 상황입니다. 명령문 형태로 써서 긴박함과 답답함을 동시에 전달합니다.</span></div>
+    <div class="example-box"><span class="example-en">3. I tried calling him five times but he never picked up.</span><span class="example-ko">(그에게 다섯 번이나 전화했는데 계속 안 받더라고.)</span><span class="example-desc">"Never picked up"은 계속해서 전화를 받지 않았다는 것을 강조합니다. 한국어의 "계속 안 받더라"에 해당하는 표현으로, 답답함이나 걱정의 뉘앙스를 자연스럽게 담아냅니다.</span></div>
+    <div class="example-box"><span class="example-en">4. She finally picked up after the sixth ring.</span><span class="example-ko">(그녀는 여섯 번째 벨이 울리고 나서야 드디어 전화를 받았어.)</span><span class="example-desc">"After the sixth ring"이라는 구체적인 묘사가 더해져 상황이 생생해집니다. "finally"와 함께 써서 기다림 끝에 연결된 안도감을 표현합니다.</span></div>
+    <div class="example-box"><span class="example-en">5. Can someone pick up the phone? I've got my hands full.</span><span class="example-ko">(누가 전화 좀 받아 줄래요? 저는 지금 손이 없어서요.)</span><span class="example-desc">손이 바쁜 상황에서 다른 사람에게 전화를 받아 달라고 부탁하는 표현입니다. 식당이나 사무실 같은 공간에서 자주 들을 수 있는 현실적인 상황입니다.</span></div>
+    <div class="example-box"><span class="example-en">6. I picked up without checking the caller ID and it turned out to be a scam call.</span><span class="example-ko">(발신자 확인도 안 하고 전화를 받았다가 보이스피싱 전화였어.)</span><span class="example-desc">현대 생활에서 흔히 겪는 보이스피싱 상황을 묘사합니다. "Without checking the caller ID"가 더해져 부주의한 행동의 결과가 생생하게 전달됩니다.</span></div>
+    <div class="example-box"><span class="example-en">7. He's in a meeting. He won't be able to pick up until around noon.</span><span class="example-ko">(그분 지금 회의 중이세요. 정오쯤은 되어야 전화를 받을 수 있을 거예요.)</span><span class="example-desc">직장에서 다른 사람을 대신해 전화 상황을 안내하는 상황입니다. "Won't be able to pick up"은 전화를 받는 것이 당분간 불가능하다는 것을 정중하게 설명하는 방식입니다.</span></div>
+    <div class="example-box"><span class="example-en">8. My dad always picks up on the first ring. He's so reliable.</span><span class="example-ko">(우리 아빠는 항상 첫 번째 벨에 바로 전화를 받으세요. 정말 믿음직스러운 분이에요.)</span><span class="example-desc">"On the first ring"이라는 표현과 함께 써서 얼마나 빠르게 전화를 받는지를 강조합니다. 신뢰감 있는 사람을 묘사할 때 이런 구체적인 표현이 등장합니다.</span></div>
+    <div class="example-box"><span class="example-en">9. Stop ignoring her calls. Just pick up and talk to her.</span><span class="example-ko">(그녀 전화 무시하지 말고, 그냥 받아서 얘기해 봐.)</span><span class="example-desc">누군가에게 용기 내서 전화를 받고 대화하라고 조언하는 상황입니다. "Just pick up"은 '그냥 받아버려'라는 가벼운 독려의 뉘앙스를 줍니다.</span></div>
+    <div class="example-box"><span class="example-en">10. I was in the shower when you called, that's why I couldn't pick up.</span><span class="example-ko">(네가 전화했을 때 샤워 중이었어서 못 받은 거야.)</span><span class="example-desc">전화를 못 받은 이유를 설명하는 매우 일상적인 상황입니다. "Couldn't pick up"은 받고 싶었지만 물리적으로 불가능했다는 뉘앙스를 줍니다.</span></div>
+
+    <!-- ===== 대화문 : Heroicons chat-bubble-left-right ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <!-- Heroicons: chat-bubble-left-right -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — Pick up 4가지 의미를 한 번에
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">친구 두 명이 여행 준비를 하며 나누는 대화입니다. 4가지 의미가 모두 자연스럽게 녹아 있는 것을 확인해 보세요.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Hey, are you still going to <strong>pick me up</strong> at the station tomorrow morning?</span>
+        </div>
+        <div class="speech-desc">야, 내일 아침에 역으로 나 데리러 오기로 한 거 맞지? — 의미 ②: 사람을 데리러 가다</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Of course! I'll also <strong>pick up</strong> some sandwiches and coffee on the way there.</span>
+        </div>
+        <div class="speech-desc">당연하지! 가는 길에 샌드위치랑 커피도 좀 사 갈게. — 의미 ①: 물건을 사다/집어 오다</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">You're the best! By the way, I <strong>picked up</strong> a few basic phrases in Italian for the trip. Want to hear?</span>
+        </div>
+        <div class="speech-desc">최고다! 그나저나, 여행 준비하면서 이탈리아어 기본 표현 몇 가지 익혔거든. 들어볼래? — 의미 ③: 자연스럽게 배우다</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Sure! Oh wait, my phone is ringing. Hold on, let me <strong>pick up</strong>. It might be about the hotel reservation.</span>
+        </div>
+        <div class="speech-desc">좋아! 아, 잠깐, 전화 왔어. 잠깐만, 전화 받을게. 호텔 예약 관련 전화일 수도 있어. — 의미 ④: 전화를 받다</div>
+    </div>
+
+    <!-- ===== 실수 박스 : Heroicons exclamation-triangle ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <!-- Heroicons: exclamation-triangle -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — "Pick up the phone call"은 어색합니다
+        </div>
+        <p>전화를 받는다는 표현을 영어로 옮길 때, "I will pick up the phone call"이라고 하는 경우를 종종 볼 수 있습니다. 그러나 원어민 귀에는 이 표현이 매우 어색하게 들립니다. "Phone call"은 '전화 통화'라는 행위 자체를 의미하는 명사이기 때문에, 그것을 물건처럼 집어 든다는 것이 어색한 조합이 됩니다. 올바른 표현은 <strong>"I'll pick up the phone"</strong> 또는 더 간결하게 <strong>"I'll pick up"</strong>입니다. 전화기(phone)를 들어 올린다는 이미지를 살리거나, 아예 목적어 없이 pick up 단독으로 사용하는 것이 가장 자연스러운 영어입니다.</p>
+    </div>
+
+</article>
+
+<footer>
+    <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
