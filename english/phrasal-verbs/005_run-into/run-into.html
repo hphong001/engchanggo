@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[구동사 완벽 정리] Run into — 우연히 마주치다·문제에 부딪히다, 2가지 핵심 의미 총정리 | 영어창고</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        :root{--bg-paper:#FBFBF9;--bg-white:#FFFFFF;--text-black:#1A1A1A;--text-gray:#555555;--accent-color:#4F46E5;--border-color:#E2E2DF;}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'SUIT','Pretendard',sans-serif;letter-spacing:-0.02em;}
+        body{background-color:var(--bg-paper);color:var(--text-black);line-height:1.6;-webkit-font-smoothing:antialiased;padding:0;}
+        a{text-decoration:none;color:inherit;}
+
+        /* ── 헤더 ── */
+        header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:center;align-items:center;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}
+        .logo{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:900;color:var(--text-black);display:flex;align-items:center;gap:6px;}
+        .logo span{color:var(--accent-color);font-weight:800;font-size:18px;}
+
+        /* ── 본문 컨테이너 ── */
+        .post-container{max-width:760px;margin:40px auto;background-color:var(--bg-white);padding:40px 30px;border:1px solid var(--border-color);box-shadow:0 4px 20px rgba(0,0,0,0.02);}
+
+        /* ── 메타 정보 ── */
+        .post-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;border-bottom:1px solid #f1f5f9;padding-bottom:16px;}
+        .meta-badge{display:inline-flex;align-items:center;gap:5px;font-size:0.8rem;color:#64748b;background:#F8F9FA;border:1px solid var(--border-color);border-radius:999px;padding:4px 10px;}
+        .meta-badge svg{flex-shrink:0;}
+
+        /* ── 타이포그래피 ── */
+        h1{font-size:1.8rem;color:var(--text-black);margin-bottom:20px;line-height:1.4;word-break:keep-all;font-weight:900;}
+        p{font-size:1rem;color:var(--text-gray);margin-bottom:16px;word-break:keep-all;font-weight:500;}
+        .highlight{color:var(--accent-color);font-weight:700;background:#F0F0FC;padding:2px 6px;border-radius:4px;}
+
+        /* ── h2 ── */
+        h2{font-size:1.3rem;color:var(--bg-white);margin-top:45px;margin-bottom:15px;font-weight:800;display:flex;align-items:center;gap:10px;}
+        .h2-inner{display:flex;align-items:center;gap:10px;background:var(--accent-color);padding:8px 16px 8px 12px;border-radius:8px;}
+        .h2-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(255,255,255,0.2);border-radius:6px;flex-shrink:0;}
+        .h2-icon svg{width:16px;height:16px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+        /* ── 핵심 개념 박스 ── */
+        .concept-box{background-color:#F8F9FA;border:1px solid var(--border-color);border-radius:8px;padding:24px;margin:30px 0;}
+        .concept-box-title{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+        .concept-title-icon{display:flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--accent-color);border-radius:8px;flex-shrink:0;}
+        .concept-title-icon svg{width:18px;height:18px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .concept-box-title strong{color:var(--text-black);font-size:1.05rem;font-weight:800;}
+        .concept-desc{margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--border-color);}
+        .concept-desc:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+        .concept-word{color:var(--accent-color);font-weight:800;font-size:1.05rem;}
+
+        /* ── 예문 박스 ── */
+        .example-box{background-color:#FFFFFF;border-left:4px solid var(--accent-color);padding:18px;margin:16px 0;border:1px solid var(--border-color);border-left-width:4px;}
+        .example-en{display:block;font-weight:700;color:var(--text-black);font-size:1.05rem;margin-bottom:4px;}
+        .example-ko{display:block;color:var(--text-gray);font-size:0.95rem;margin-bottom:8px;font-weight:500;}
+        .example-desc{display:block;font-size:0.9rem;color:#666;background-color:#FBFBF9;padding:10px 14px;border-radius:4px;border:1px solid var(--border-color);}
+
+        /* ── 대화문 박스 ── */
+        .dialogue-box{background-color:#FFFBEB;border:1px solid #FDE68A;padding:24px;border-radius:8px;margin:35px 0;}
+        .dialogue-title{font-weight:800;color:#B45309;margin-bottom:14px;font-size:1.05rem;display:flex;align-items:center;gap:8px;}
+        .dialogue-title-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#B45309;border-radius:6px;flex-shrink:0;}
+        .dialogue-title-icon svg{width:15px;height:15px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .dialogue-line{margin-bottom:10px;font-size:0.95rem;display:flex;align-items:flex-start;gap:8px;}
+        .speaker{color:#92400e;font-weight:800;min-width:20px;}
+        .speech{flex:1;color:#1A1A1A;font-weight:600;}
+        .speech-desc{color:#78350F;font-size:0.9rem;margin-top:4px;margin-bottom:14px;margin-left:28px;}
+
+        /* ── 실수 박스 ── */
+        .mistake-box{background-color:#FEF2F2;border:1px solid #FECACA;padding:24px;border-radius:8px;margin:35px 0;}
+        .mistake-title{font-weight:800;color:#B91C1C;margin-bottom:12px;display:flex;align-items:center;gap:8px;font-size:1.05rem;}
+        .mistake-title-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#B91C1C;border-radius:6px;flex-shrink:0;}
+        .mistake-title-icon svg{width:15px;height:15px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .mistake-box p{color:#7F1D1D;margin-bottom:0;}
+
+        /* ── 푸터 ── */
+        footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px;margin-top:40px;border-top:1px solid var(--border-color);background:var(--bg-white);}
+
+        @media(max-width:768px){
+            .post-container{margin:0;padding:20px 16px;border:none;}
+            h1{font-size:1.5rem;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a class="logo" href="/">영어창고 <span>MyEnglishVault</span></a>
+</header>
+
+<article class="post-container">
+
+    <!-- ── 메타 뱃지 ── -->
+    <div class="post-meta">
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+            영어창고
+        </span>
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            2026. 09. 05
+        </span>
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            읽는 시간: 12분
+        </span>
+    </div>
+
+    <h1>[구동사 완벽 정리] "우연히 마주쳤다"와 "문제에 부딪혔다" — Run into, 단 하나의 이미지로 두 가지 의미가 보인다</h1>
+
+    <p>길을 걷다가 10년 만에 옛 친구를 마주쳤을 때, 그리고 프로젝트를 진행하다가 예상치 못한 심각한 문제에 부딪혔을 때. 이 두 상황은 겉보기에 전혀 달라 보이지만, 영어로는 똑같이 <span class="highlight">run into</span> 하나로 표현합니다. "어떻게 이렇게 다른 상황에 같은 표현을 쓰지?"라고 의아할 수 있지만, 어원을 파고들면 두 의미가 하나의 뿌리에서 자라난 것임을 즉시 이해하게 됩니다.</p>
+    <p>많은 분들이 "우연히 마주치다"를 표현하려다 <span class="highlight">meet by chance</span>나 <span class="highlight">happen to meet</span>처럼 길고 어색한 표현을 쓰거나, "문제에 부딪히다"를 <span class="highlight">face a problem</span>으로만 알고 있는 경우가 많습니다. 오늘 이 글을 끝까지 읽으시면 run into의 두 핵심 의미를 몸으로 이해하고, 어느 맥락에서든 망설임 없이 꺼낼 수 있게 됩니다.</p>
+
+    <!-- ── 개념 박스 ── -->
+    <div class="concept-box">
+        <div class="concept-box-title">
+            <div class="concept-title-icon">
+                <!-- Heroicons: academic-cap -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+            </div>
+            <strong>핵심 개념 전문 요약 — Run into의 뿌리를 알면 두 의미가 동시에 보인다</strong>
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">어원 해설 — 두 의미를 하나로 꿰뚫는 단 하나의 이미지</span><br><br>
+            <strong>run into</strong>는 동사 <strong>run</strong>(달리다, 움직이다)과 전치사 <strong>into</strong>(~안으로, ~를 향해 돌진하다)가 결합된 구동사입니다. 핵심 이미지는 <strong>'달리다가 무언가와 충돌하다'</strong>입니다. 길을 걷거나 달리다가 예고 없이 누군가와 정면으로 부딪히는 물리적 장면을 상상해 보세요. 그 '예고 없음'과 '충돌'이라는 두 가지 감각이 그대로 두 가지 의미를 만들어냅니다. 사람과 충돌하면 '우연히 마주치다'가 되고, 눈에 보이지 않는 장벽이나 방해물과 충돌하면 '문제에 부딪히다'가 됩니다. 표현은 하나이지만, 충돌 대상이 사람이냐 추상적인 장애물이냐에 따라 의미가 갈릴 뿐입니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">Run into vs. Meet / Face — 무엇이 다른가요?</span><br><br>
+            <strong>meet</strong>은 약속을 잡고 만나는 것이든, 우연히 만나는 것이든 중립적으로 씁니다. 반면 <strong>run into</strong>는 반드시 <strong>예고 없는 우연의 만남</strong>임을 전제합니다. "I met him yesterday"는 만남의 경위를 알 수 없지만, "I ran into him yesterday"는 계획 없이 우연히 마주쳤다는 것이 자동으로 전달됩니다. 마찬가지로 <strong>face a problem</strong>은 이미 예상하고 있던 어려움에 정면으로 맞서는 뉘앙스인 반면, <strong>run into a problem</strong>은 예상치 못하게 갑자기 문제가 나타났다는 즉흥성과 당혹감이 담겨 있습니다. 이 '예고 없음'과 '즉흥성'이 run into를 특별하게 만드는 핵심입니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ① 길에서 / 어딘가에서 우연히 마주치다</span><br><br>
+            계획하지 않았는데 어딘가에서 아는 사람을 마주치는 상황입니다. 슈퍼마켓, 공항, 거리, 카페 등 어느 장소에서든 쓸 수 있습니다. "bump into"와 거의 동일한 의미로 혼용되며, 원어민들이 일상에서 가장 자주 쓰는 구동사 중 하나입니다. 만남의 온도가 반갑든 불편하든 run into는 그 감정과 무관하게, 단순히 우연성만을 표현합니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ② 예상치 못한 문제나 어려움에 부딪히다</span><br><br>
+            프로젝트, 여행, 일상, 공부 등 무언가를 진행하다가 예상하지 못했던 장애물이 갑자기 나타나는 상황입니다. trouble, difficulty, problems, delays, obstacles 같은 단어들과 가장 자주 짝을 이룹니다. 어원 속 '충돌'의 이미지에서 직접 파생된 의미로, 한국어의 "벽에 부딪히다", "난관에 봉착하다"에 해당합니다. face나 encounter보다 예상 밖이라는 뉘앙스가 훨씬 강합니다.
+        </div>
+    </div>
+
+    <!-- ===== 의미 1 : Heroicons user-plus ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: user (우연히 사람을 마주치다) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+            </span>
+            의미 ① 길에서 / 어딘가에서 우연히 마주치다 — 계획 없는 만남
+        </span>
+    </h2>
+    <p>가장 먼저, 그리고 가장 자주 쓰이는 의미입니다. 이 표현의 아름다움은 <strong>단어 하나가 '우연성'을 통째로 전달한다</strong>는 것입니다. "I ran into my ex at the coffee shop"이라고 하는 순간, 상대방은 이것이 계획된 만남이 아니었음을 자동으로 압니다. 따로 "by chance", "unexpectedly", "randomly"를 붙일 필요가 없습니다. 만남이 반가웠든, 불편했든, 당황스러웠든 그 감정은 맥락이 결정하고, run into는 오직 '우연의 충돌'이라는 사실만을 담담하게 전달합니다.</p>
+
+    <div class="example-box"><span class="example-en">1. I ran into my old college roommate at the airport this morning.</span><span class="example-ko">(오늘 아침에 공항에서 대학 시절 룸메이트를 우연히 마주쳤어.)</span><span class="example-desc">공항처럼 거대한 공간에서 아는 사람을 만나는 상황은 run into의 우연성을 가장 극적으로 보여줍니다. "old college roommate"가 오랜만의 만남임을 나타내어 반가움의 감도를 높입니다.</span></div>
+
+    <div class="example-box"><span class="example-en">2. You'll never guess who I ran into at the supermarket — your sister!</span><span class="example-ko">(마트에서 누굴 우연히 마주쳤는지 절대 못 맞힐 걸 — 네 언니야!)</span><span class="example-desc">"You'll never guess who I ran into"는 run into와 가장 자주 짝을 이루는 구어 패턴입니다. 반가운 혹은 놀라운 우연의 만남을 상대방에게 전달할 때 원어민들이 거의 공식처럼 씁니다.</span></div>
+
+    <div class="example-box"><span class="example-en">3. I try to avoid that neighborhood because I keep running into my ex.</span><span class="example-ko">(그 동네를 피하려고 해. 계속 전 남자친구를 우연히 마주치거든.)</span><span class="example-desc">현재진행형 "keep running into"는 반복적으로 계속 마주치는 상황을 표현합니다. 불편한 만남을 피하고 싶은 심리가 자연스럽게 전달되며, 일상에서 매우 공감받는 표현입니다.</span></div>
+
+    <div class="example-box"><span class="example-en">4. We ran into each other at the conference and ended up having lunch together.</span><span class="example-ko">(컨퍼런스에서 우연히 마주쳐서 결국 같이 점심을 먹게 됐어.)</span><span class="example-desc">"Ran into each other"는 서로가 서로를 마주친 쌍방의 우연을 표현합니다. "ended up"과 함께 쓰이면 우연한 만남이 예상 밖의 결과로 이어진 흐름이 자연스럽게 그려집니다.</span></div>
+
+    <div class="example-box"><span class="example-en">5. I ran into my former boss at the gym and it was incredibly awkward.</span><span class="example-ko">(헬스장에서 전 직장 상사를 우연히 마주쳤는데 정말 어색했어.)</span><span class="example-desc">반갑지 않은 사람과의 우연한 만남을 묘사합니다. run into는 감정을 싣지 않는 중립적 표현이기 때문에, "incredibly awkward"처럼 뒤에 오는 감정 표현이 분위기를 결정합니다.</span></div>
+
+    <div class="example-box"><span class="example-en">6. She ran into an old friend while traveling abroad and they spent the whole day catching up.</span><span class="example-ko">(해외여행 중에 오랜 친구를 우연히 만나서 하루 종일 밀린 이야기를 나눴대.)</span><span class="example-desc">낯선 나라에서 아는 사람을 만나는 드라마틱한 우연입니다. "Catching up"은 오랫동안 못 나눴던 이야기를 나누다는 뜻으로, 오랜만의 반가운 재회를 묘사할 때 run into와 자주 쓰입니다.</span></div>
+
+    <div class="example-box"><span class="example-en">7. I ran into my neighbor on the elevator and we had a surprisingly good conversation.</span><span class="example-ko">(엘리베이터에서 이웃을 우연히 마주쳐서 뜻밖에도 좋은 대화를 나눴어.)</span><span class="example-desc">엘리베이터처럼 좁고 폐쇄적인 공간에서의 마주침은 특유의 긴장감이 있습니다. "Surprisingly good"이 붙으면서 예상을 뒤엎은 긍정적인 결과가 강조됩니다.</span></div>
+
+    <div class="example-box"><span class="example-en">8. Did you know I ran into your dad at the hardware store last weekend?</span><span class="example-ko">(지난 주말에 철물점에서 네 아버지를 우연히 마주친 거 알아?)</span><span class="example-desc">제3자에게 상대방의 가족을 마주쳤다는 소식을 전하는 상황입니다. "Did you know"로 시작하면 흥미로운 소식을 꺼내듯 자연스럽게 대화가 열립니다.</span></div>
+
+    <div class="example-box"><span class="example-en">9. It's such a small world — I ran into my high school English teacher at a restaurant in Paris.</span><span class="example-ko">(세상 참 좁다 — 파리 레스토랑에서 고등학교 영어 선생님을 우연히 마주쳤어.)</span><span class="example-desc">"It's such a small world"는 뜻밖의 장소에서 아는 사람을 만났을 때 원어민들이 가장 자주 쓰는 감탄 표현입니다. 파리라는 먼 이국에서 선생님을 만난 극적인 우연을 생생하게 전달합니다.</span></div>
+
+    <div class="example-box"><span class="example-en">10. I wasn't planning to stay long, but I ran into some friends at the party and lost track of time.</span><span class="example-ko">(오래 있을 생각은 없었는데, 파티에서 친구들을 우연히 마주치는 바람에 시간 가는 줄 몰랐어.)</span><span class="example-desc">"Lost track of time"은 시간 감각을 잃을 만큼 몰두했다는 표현입니다. 우연한 만남이 계획을 완전히 바꿔버리는 흔한 일상 시나리오를 자연스럽게 묘사합니다.</span></div>
+
+    <!-- ===== 대화문 1 ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <!-- Heroicons: chat-bubble-left-right -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — 우연히 옛 친구를 마주친 상황
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">퇴근길에 마트에서 몇 년 만에 옛 친구를 마주친 상황입니다. run into가 얼마나 자연스럽게 대화 속에 녹아드는지 확인해 보세요.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Oh my gosh — Jake? Is that you?</span>
+        </div>
+        <div class="speech-desc">어머, Jake? 너 맞아?</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Sarah! Wow, I can't believe I'm <strong>running into</strong> you here. It's been what, three years?</span>
+        </div>
+        <div class="speech-desc">Sarah! 와, 여기서 너를 우연히 만나다니 믿기지 않는다. 한 3년 됐나? — 현재진행형 "I'm running into you"는 바로 이 순간 일어나고 있는 우연한 만남을 생동감 있게 표현합니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">At least three! I was just thinking about you the other day. What are you up to these days?</span>
+        </div>
+        <div class="speech-desc">적어도 그렇지! 며칠 전에 마침 네 생각을 했는데. 요즘 어떻게 지내?</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Life's been busy. I moved back to the city last year. Do you live around here?</span>
+        </div>
+        <div class="speech-desc">바쁘게 살고 있어. 작년에 다시 시내로 이사 왔거든. 너 이쪽에 살아?</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Just two blocks away! I come here every week. I can't believe we've never <strong>run into</strong> each other before.</span>
+        </div>
+        <div class="speech-desc">딱 두 블록 거리야! 매주 여기 오는데. 그동안 한 번도 마주치지 못했다는 게 믿기지 않는다. — 현재완료 "have never run into"는 지금까지 한 번도 그런 일이 없었다는 것을 강조합니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Right? Well, I'm so glad I <strong>ran into</strong> you today. Let's not lose touch again. Coffee sometime?</span>
+        </div>
+        <div class="speech-desc">그러게. 오늘 우연히 마주쳐서 정말 다행이다. 또 연락 끊기지 말자. 언제 커피 한잔 할까?</div>
+    </div>
+
+    <!-- ===== 실수 박스 1 ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <!-- Heroicons: exclamation-triangle -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — "I met him by chance"는 틀리지 않지만 어색합니다
+        </div>
+        <p>"우연히 만났어"를 영어로 표현할 때 "I met him by chance" 또는 "I happened to meet him"이라고 쓰는 경우가 많습니다. 문법적으로 틀리지는 않지만, 이 표현들은 원어민 귀에 교과서적이고 딱딱하게 들립니다. 실제 원어민들은 이 상황에서 거의 예외 없이 <strong>"I ran into him"</strong> 또는 <strong>"I bumped into him"</strong>을 씁니다. 두 표현 모두 '예고 없는 우연의 만남'을 자동으로 전달하므로 by chance 같은 부연 설명이 전혀 필요 없습니다. 짧고 자연스러운 구동사 하나가 긴 설명을 대체합니다. 영어 실력의 진짜 도약은 이런 구동사를 입에 붙이는 순간에 일어납니다.</p>
+    </div>
+
+    <!-- ===== 의미 2 : Heroicons wrench ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: wrench-screwdriver (문제·어려움에 부딪히다) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+            </span>
+            의미 ② 예상치 못한 문제나 어려움에 부딪히다 — 갑작스러운 장벽
+        </span>
+    </h2>
+    <p>두 번째 의미는 일과 삶의 현장에서 매일 쓰이는 표현입니다. 프로젝트를 진행하다가, 여행 중에, 코드를 짜다가, 협상을 하다가 — 예상하지 못했던 문제가 갑자기 튀어나오는 상황. 그게 바로 <strong>run into</strong>입니다. "We ran into some issues"라고 하면 "문제가 좀 생겼어"라는 뜻인데, face처럼 이미 예상하고 맞선다는 뉘앙스가 아니라, <strong>걷다가 갑자기 벽에 콧날이 닿는 것처럼 예상 밖의 충격</strong>이 담겨 있습니다. 이 표현을 쓰는 것만으로 "나는 예상하지 못했다"는 뉘앙스가 자동으로 전달됩니다.</p>
+
+    <div class="example-box"><span class="example-en">1. We ran into some technical issues during the live demo. It was a disaster.</span><span class="example-ko">(라이브 데모 중에 기술적인 문제가 생겼어. 완전 최악이었어.)</span><span class="example-desc">발표나 시연 도중 기술 문제가 터지는 상황은 IT 현장에서 누구나 공감하는 악몽입니다. "Some technical issues"처럼 다소 완곡하게 표현하면서도 "It was a disaster"로 실제 심각성을 전달하는 패턴입니다.</span></div>
+
+    <div class="example-box"><span class="example-en">2. The construction project ran into delays due to permit issues.</span><span class="example-ko">(건설 프로젝트가 허가 문제로 지연에 부딪혔어.)</span><span class="example-desc">"Run into delays"는 예정보다 일정이 늦어지는 상황을 표현하는 매우 자주 쓰이는 조합입니다. 비즈니스, 건설, IT 등 여러 산업 현장에서 공통적으로 사용됩니다.</span></div>
+
+    <div class="example-box"><span class="example-en">3. I ran into a problem while trying to update the software. It just keeps crashing.</span><span class="example-ko">(소프트웨어 업데이트하려다가 문제가 생겼어. 계속 충돌이 일어나거든.)</span><span class="example-desc">개인이 IT 문제를 겪는 일상적인 상황입니다. "Keeps crashing"이 문제의 반복성을 묘사하며, run into가 이미 예상치 못한 충돌임을 전달하므로 추가 설명이 필요 없습니다.</span></div>
+
+    <div class="example-box"><span class="example-en">4. We ran into some unexpected resistance from the board during the presentation.</span><span class="example-ko">(발표 중에 이사회로부터 예상치 못한 반발에 부딪혔어.)</span><span class="example-desc">"Unexpected resistance"는 run into와 의미적으로 완벽하게 겹칩니다. 이미 run into가 '예상 밖'이라는 뉘앙스를 담고 있어, unexpected를 붙이면 그 당혹감이 두 겹으로 강조됩니다.</span></div>
+
+    <div class="example-box"><span class="example-en">5. She ran into trouble with her visa application and had to postpone the trip.</span><span class="example-ko">(비자 신청 과정에서 문제에 부딪혀서 여행을 미뤄야 했어.)</span><span class="example-desc">"Run into trouble with"는 특정 영역에서 문제가 생겼음을 나타내는 표현입니다. 비자, 행정, 법적 절차처럼 관료적 과정에서 예상치 못한 장벽을 만나는 상황에 자주 씁니다.</span></div>
+
+    <div class="example-box"><span class="example-en">6. My research keeps running into dead ends. I'm starting to lose hope.</span><span class="example-ko">(내 연구가 계속 막다른 곳에 부딪히고 있어. 희망을 잃기 시작했어.)</span><span class="example-desc">"Dead end(막다른 길)"과 run into가 결합하면 진전이 없는 막막한 상황이 선명하게 그려집니다. "Keeps running into"는 한 번이 아니라 반복적으로 벽에 부딪히는 고통을 표현합니다.</span></div>
+
+    <div class="example-box"><span class="example-en">7. The startup ran into serious cash flow problems in its second year.</span><span class="example-ko">(그 스타트업은 2년 차에 심각한 현금 흐름 문제에 부딪혔어.)</span><span class="example-desc">스타트업의 경영 위기를 묘사하는 현실적인 예문입니다. "Cash flow problems"는 비즈니스 맥락에서 run into와 자주 짝을 이루는 표현으로, 재정적 어려움이 갑자기 닥쳤음을 나타냅니다.</span></div>
+
+    <div class="example-box"><span class="example-en">8. I ran into a wall trying to explain the concept without any visuals.</span><span class="example-ko">(시각 자료 없이 개념을 설명하려다 완전히 막혀버렸어.)</span><span class="example-desc">"Hit a wall"과 거의 동일한 맥락에서 run into a wall이라는 표현을 씁니다. 아무리 노력해도 더 이상 앞으로 나아갈 수 없는 상태를 묘사하는 강력한 표현입니다.</span></div>
+
+    <div class="example-box"><span class="example-en">9. We didn't anticipate running into so many regulatory hurdles in the new market.</span><span class="example-ko">(새로운 시장에서 이렇게 많은 규제 장벽에 부딪힐 줄은 예상하지 못했어.)</span><span class="example-desc">"Didn't anticipate running into"는 예상치 못했음을 이중으로 강조합니다. 해외 시장 진출 과정에서의 규제 문제는 글로벌 비즈니스 현장에서 매우 현실적인 시나리오입니다.</span></div>
+
+    <div class="example-box"><span class="example-en">10. If you run into any difficulties with the installation, just give me a call.</span><span class="example-ko">(설치하다가 어려운 점이 생기면 전화해.)</span><span class="example-desc">미래에 발생할 수 있는 문제를 조건절로 표현한 패턴입니다. "If you run into any difficulties"는 기술 지원이나 도움을 제안하는 맥락에서 원어민들이 일상적으로 쓰는 표현입니다.</span></div>
+
+    <!-- ===== 대화문 2 ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — 프로젝트 중 예상치 못한 문제가 터진 상황
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">프로젝트를 진행 중인 팀원 두 명이 나누는 대화입니다. 문제 상황을 전달하는 run into의 용법을 확인해 보세요.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Hey, how's the migration going? Are we still on track for Friday?</span>
+        </div>
+        <div class="speech-desc">야, 마이그레이션 어떻게 돼가? 금요일 일정은 맞출 수 있어?</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">That's actually why I was coming to find you. We <strong>ran into</strong> a pretty serious issue with the database migration.</span>
+        </div>
+        <div class="speech-desc">그게 마침 너 찾으러 가던 참이었어. 데이터베이스 마이그레이션에서 꽤 심각한 문제에 부딪혔거든. — "We ran into"는 예상치 못하게 문제가 발생했음을 자동으로 전달합니다. "Came to find you"와 함께 쓰이면 긴박감이 더해집니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">How serious are we talking?</span>
+        </div>
+        <div class="speech-desc">얼마나 심각한데?</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">About thirty percent of the records are corrupted. We didn't anticipate <strong>running into</strong> this kind of data integrity problem at this stage.</span>
+        </div>
+        <div class="speech-desc">레코드 약 30퍼센트가 손상됐어. 이 단계에서 이런 데이터 무결성 문제에 부딪힐 줄은 예상하지 못했거든. — "Didn't anticipate running into"는 예상치 못했음을 이중으로 강조하는 표현입니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Okay, don't panic. What do you need from me? And if you <strong>run into</strong> anything else, flag it immediately.</span>
+        </div>
+        <div class="speech-desc">알겠어, 당황하지 말고. 나한테 뭐가 필요해? 그리고 또 다른 문제에 부딪히면 바로 알려줘. — 조건절로 미래 문제 발생 가능성을 열어두는 패턴입니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">I need two more engineers and probably a day's extension. I'd rather delay than <strong>run into</strong> even bigger problems later.</span>
+        </div>
+        <div class="speech-desc">엔지니어 두 명이랑 하루 연장이 필요할 것 같아. 나중에 더 큰 문제에 부딪히는 것보다 지금 미루는 게 나아. — 비교급 "rather than run into"로 문제 예방의 논리를 전달합니다.</div>
+    </div>
+
+    <!-- ===== 실수 박스 2 ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — "Run into"와 "Run out of"를 헷갈리지 마세요
+        </div>
+        <p>발음이 비슷하고 구조도 유사해서 run into와 <strong>run out of</strong>를 혼동하는 경우가 종종 있습니다. 두 표현은 완전히 다릅니다. <strong>run into</strong>는 '예기치 않게 부딪히다'이고, <strong>run out of</strong>는 '(재고·시간·에너지 등이) 바닥나다'입니다. "We ran into problems"는 "문제에 부딪혔다"이고, "We ran out of time"은 "시간이 다 떨어졌다"입니다. 또 한 가지 주의할 점은 run into의 전치사 into를 in으로 줄여 "run in"이라고 쓰면 의미가 달라진다는 것입니다. <strong>"run in"</strong>은 "잠깐 들어가다" 혹은 속어로 "경찰에 체포되다"라는 전혀 다른 뜻을 가집니다. 반드시 <strong>run into</strong>로 통째로 기억하세요.</p>
+    </div>
+
+</article>
+
+<footer>
+    <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
