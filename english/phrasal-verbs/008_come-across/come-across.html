@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[구동사 완벽 정리] Come across — 우연히 발견하다·인상을 주다, 2가지 핵심 의미 총정리 | 영어창고</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        :root{--bg-paper:#FBFBF9;--bg-white:#FFFFFF;--text-black:#1A1A1A;--text-gray:#555555;--accent-color:#4F46E5;--border-color:#E2E2DF;}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'SUIT','Pretendard',sans-serif;letter-spacing:-0.02em;}
+        body{background-color:var(--bg-paper);color:var(--text-black);line-height:1.6;-webkit-font-smoothing:antialiased;padding:0;}
+        a{text-decoration:none;color:inherit;}
+
+        /* ── 헤더 ── */
+        header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:center;align-items:center;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}
+        .logo{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:900;color:var(--text-black);display:flex;align-items:center;gap:6px;}
+        .logo span{color:var(--accent-color);font-weight:800;font-size:18px;}
+
+        /* ── 본문 컨테이너 ── */
+        .post-container{max-width:760px;margin:40px auto;background-color:var(--bg-white);padding:40px 30px;border:1px solid var(--border-color);box-shadow:0 4px 20px rgba(0,0,0,0.02);}
+
+        /* ── 메타 정보 ── */
+        .post-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;border-bottom:1px solid #f1f5f9;padding-bottom:16px;}
+        .meta-badge{display:inline-flex;align-items:center;gap:5px;font-size:0.8rem;color:#64748b;background:#F8F9FA;border:1px solid var(--border-color);border-radius:999px;padding:4px 10px;}
+        .meta-badge svg{flex-shrink:0;}
+
+        /* ── 타이포그래피 ── */
+        h1{font-size:1.8rem;color:var(--text-black);margin-bottom:20px;line-height:1.4;word-break:keep-all;font-weight:900;}
+        p{font-size:1rem;color:var(--text-gray);margin-bottom:16px;word-break:keep-all;font-weight:500;}
+        .highlight{color:var(--accent-color);font-weight:700;background:#F0F0FC;padding:2px 6px;border-radius:4px;}
+
+        /* ── h2 ── */
+        h2{font-size:1.3rem;color:var(--bg-white);margin-top:45px;margin-bottom:15px;font-weight:800;display:flex;align-items:center;gap:10px;}
+        .h2-inner{display:flex;align-items:center;gap:10px;background:var(--accent-color);padding:8px 16px 8px 12px;border-radius:8px;}
+        .h2-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(255,255,255,0.2);border-radius:6px;flex-shrink:0;}
+        .h2-icon svg{width:16px;height:16px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+        /* ── 핵심 개념 박스 ── */
+        .concept-box{background-color:#F8F9FA;border:1px solid var(--border-color);border-radius:8px;padding:24px;margin:30px 0;}
+        .concept-box-title{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+        .concept-title-icon{display:flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--accent-color);border-radius:8px;flex-shrink:0;}
+        .concept-title-icon svg{width:18px;height:18px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .concept-box-title strong{color:var(--text-black);font-size:1.05rem;font-weight:800;}
+        .concept-desc{margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--border-color);}
+        .concept-desc:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+        .concept-word{color:var(--accent-color);font-weight:800;font-size:1.05rem;}
+
+        /* ── 예문 박스 ── */
+        .example-box{background-color:#FFFFFF;border-left:4px solid var(--accent-color);padding:18px;margin:16px 0;border:1px solid var(--border-color);border-left-width:4px;}
+        .example-en{display:block;font-weight:700;color:var(--text-black);font-size:1.05rem;margin-bottom:4px;}
+        .example-ko{display:block;color:var(--text-gray);font-size:0.95rem;margin-bottom:8px;font-weight:500;}
+        .example-vocab{display:block;font-size:0.88rem;color:#4F46E5;background:#F0F0FC;padding:7px 12px;border-radius:4px;margin-bottom:8px;font-weight:600;}
+        .example-desc{display:block;font-size:0.9rem;color:#666;background-color:#FBFBF9;padding:10px 14px;border-radius:4px;border:1px solid var(--border-color);}
+
+        /* ── 대화문 박스 ── */
+        .dialogue-box{background-color:#FFFBEB;border:1px solid #FDE68A;padding:24px;border-radius:8px;margin:35px 0;}
+        .dialogue-title{font-weight:800;color:#B45309;margin-bottom:14px;font-size:1.05rem;display:flex;align-items:center;gap:8px;}
+        .dialogue-title-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#B45309;border-radius:6px;flex-shrink:0;}
+        .dialogue-title-icon svg{width:15px;height:15px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .dialogue-line{margin-bottom:10px;font-size:0.95rem;display:flex;align-items:flex-start;gap:8px;}
+        .speaker{color:#92400e;font-weight:800;min-width:20px;}
+        .speech{flex:1;color:#1A1A1A;font-weight:600;}
+        .speech-desc{color:#78350F;font-size:0.9rem;margin-top:4px;margin-bottom:14px;margin-left:28px;}
+
+        /* ── 실수 박스 ── */
+        .mistake-box{background-color:#FEF2F2;border:1px solid #FECACA;padding:24px;border-radius:8px;margin:35px 0;}
+        .mistake-title{font-weight:800;color:#B91C1C;margin-bottom:12px;display:flex;align-items:center;gap:8px;font-size:1.05rem;}
+        .mistake-title-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#B91C1C;border-radius:6px;flex-shrink:0;}
+        .mistake-title-icon svg{width:15px;height:15px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .mistake-box p{color:#7F1D1D;margin-bottom:0;}
+
+        /* ── 푸터 ── */
+        footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px;margin-top:40px;border-top:1px solid var(--border-color);background:var(--bg-white);}
+
+        @media(max-width:768px){
+            .post-container{margin:0;padding:20px 16px;border:none;}
+            h1{font-size:1.5rem;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a class="logo" href="/">영어창고 <span>MyEnglishVault</span></a>
+</header>
+
+<article class="post-container">
+
+    <!-- ── 메타 뱃지 ── -->
+    <div class="post-meta">
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+            영어창고
+        </span>
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            2026. 09. 05
+        </span>
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            읽는 시간: 12분
+        </span>
+    </div>
+
+    <h1>[구동사 완벽 정리] "우연히 발견하다"와 "인상을 주다" — Come across, 단 하나의 이미지로 두 의미가 보이는 순간 영어가 달라집니다</h1>
+
+    <p>오래된 서랍을 뒤지다 잊고 있던 편지를 발견했을 때, 그리고 면접에서 자신도 모르게 거만한 인상을 줬다는 말을 들었을 때. 겉보기에는 전혀 다른 두 상황이지만, 영어로는 둘 다 <span class="highlight">come across</span> 하나로 표현합니다. "어떻게 이렇게 다른 맥락에 같은 표현을 쓰지?"라는 의문은 어원을 알면 단번에 풀립니다.</p>
+    <p>이 구동사를 모르면 "우연히 발견했어"를 <span class="highlight">I found it by accident</span>처럼 길게 돌려 말하거나, "그 사람 인상이 좋더라"를 <span class="highlight">He seemed nice</span>로만 표현하게 됩니다. 틀리지는 않지만, 원어민들이 실제로 쓰는 세련된 방식과는 거리가 있습니다. 오늘 이 글을 끝까지 읽으시면 come across의 두 핵심 의미를 몸으로 이해하고, 어느 맥락에서든 자연스럽게 꺼낼 수 있게 됩니다.</p>
+
+    <!-- ── 개념 박스 ── -->
+    <div class="concept-box">
+        <div class="concept-box-title">
+            <div class="concept-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+            </div>
+            <strong>핵심 개념 전문 요약 — Come across의 뿌리를 알면 두 의미가 동시에 보인다</strong>
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">어원 해설 — "길을 걷다가 무언가와 마주치다"는 이미지 하나가 전부입니다</span><br><br>
+            <strong>come across</strong>는 동사 <strong>come</strong>(오다, 이동하다)과 전치사 <strong>across</strong>(~을 가로질러, ~을 건너서)가 결합된 구동사입니다. across의 핵심 이미지는 넓은 공간을 가로질러 이동하다가 무언가와 마주치는 것입니다. 강을 건너다가 섬을 발견하거나, 넓은 들판을 가로지르다 낯선 사람을 만나는 장면을 상상해 보세요. 이 '이동하다가 예기치 않게 마주치는' 감각이 두 가지 의미를 만들어냅니다. 무언가를 찾으러 나선 게 아닌데 물건이나 정보가 눈앞에 나타나면 '우연히 발견하다'가 되고, 상대방이 나라는 사람을 가로질러 받는 신호나 인상이 있다면 '~한 인상을 주다'가 됩니다. 표현은 하나이지만, 마주치는 대상이 사물이냐 사람에게 전달되는 이미지냐에 따라 의미가 갈립니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">Come across vs. Find / Seem — 무엇이 다른가요?</span><br><br>
+            <strong>find</strong>는 의도적으로 찾아서 발견하는 것입니다. 반면 <strong>come across</strong>는 찾을 의도가 전혀 없었는데 우연히 눈앞에 나타난 것입니다. "I found the document"는 그 문서를 찾으러 나섰다는 뉘앙스가 있지만, "I came across the document"는 다른 일을 하다가 우연히 그 문서를 발견했다는 뉘앙스입니다. 마찬가지로 <strong>seem</strong>은 겉모습에서 받는 단순한 인상이지만, <strong>come across as</strong>는 그 사람이 행동·말투·태도 전체를 통해 상대방에게 전달하는 종합적인 인상입니다. 본인의 의도와 실제 상대방이 받는 인상 사이에 괴리가 생길 수 있다는 뉘앙스가 come across as에 자연스럽게 담겨 있습니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ① (물건·정보를) 우연히 발견하다</span><br><br>
+            찾을 생각이 없었는데 예기치 않게 마주치는 발견을 표현합니다. 책장을 정리하다가 오래된 일기장을 발견하거나, 인터넷을 검색하다가 흥미로운 기사를 우연히 접하거나, 다락방을 정리하다가 조부모의 유품을 찾는 상황이 모두 come across입니다. 발견의 우연성이 핵심이며, 그 순간의 작은 기쁨이나 놀라움이 자연스럽게 표현에 담깁니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ② (사람이) ~한 인상이나 느낌을 주다</span><br><br>
+            사람이 말하고 행동하는 방식을 통해 상대방에게 특정한 인상을 전달하는 것을 표현합니다. 항상 "come across as + 형용사/명사" 형태로 쓰이며, 본인이 의도했든 의도하지 않았든 상대방이 받는 인상을 묘사합니다. "He comes across as very confident"처럼 쓰면 그 사람의 전반적인 태도와 언행이 자신감 넘치는 인상을 전달한다는 뜻입니다. 이 의미의 come across는 면접 준비, 프레젠테이션 피드백, 대인 관계 조언 등 매우 실용적인 맥락에서 자주 등장합니다.
+        </div>
+    </div>
+
+    <!-- ===== 의미 1 ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: sparkles (우연한 발견) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+            </span>
+            의미 ① (물건·정보를) 우연히 발견하다 — 찾지 않았는데 나타난 것들
+        </span>
+    </h2>
+    <p>이 의미의 핵심은 철저한 <strong>우연성</strong>입니다. 능동적으로 찾은 게 아니라, 다른 무언가를 하던 중에 예기치 않게 마주친 것입니다. 그래서 come across로 발견한 것들에는 언제나 작은 행운의 감각, 혹은 뜻밖의 놀라움이 배어 있습니다. 영어권에서 골동품 시장이나 중고 서점을 좋아하는 사람들이 "You never know what you'll come across"(뭘 발견할지 모르잖아)라고 말하는 것도 이 이유입니다. 의도 없는 발견이 주는 그 특별한 설렘, 그게 come across의 감성입니다.</p>
+
+    <div class="example-box">
+        <span class="example-en">1. I came across my grandmother's old diary while cleaning out the attic.</span>
+        <span class="example-ko">(다락방을 정리하다가 할머니의 오래된 일기장을 우연히 발견했어.)</span>
+        <span class="example-vocab">attic : 다락방 / diary : 일기장</span>
+        <span class="example-desc">come across가 등장하는 가장 전형적인 상황입니다. 일기장을 찾으러 다락방에 간 게 아니라, 청소를 하다가 우연히 발견한 것입니다. 이 '의도 없는 발견'의 감각이 come across의 핵심입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">2. I came across this article about sleep deprivation and immediately thought of you.</span>
+        <span class="example-ko">(수면 부족에 관한 이 기사를 우연히 접했는데, 바로 네 생각이 나더라고.)</span>
+        <span class="example-vocab">sleep deprivation : 수면 부족, 수면 박탈 / immediately : 즉시, 바로</span>
+        <span class="example-desc">인터넷이나 책을 읽다가 흥미로운 정보를 우연히 접하는 상황입니다. "Immediately thought of you"가 더해지면 우연한 발견이 상대방과의 연결 고리로 이어지는 따뜻한 뉘앙스가 만들어집니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">3. Have you ever come across a word you've never seen before and had no idea how to pronounce it?</span>
+        <span class="example-ko">(한 번도 본 적 없는 단어를 우연히 마주쳐서 발음을 전혀 모르겠던 적 있어?)</span>
+        <span class="example-vocab">pronounce : 발음하다</span>
+        <span class="example-desc">현재완료 "Have you ever come across"는 살아오면서 그런 경험이 있었는지를 묻는 패턴입니다. 독서나 공부 중 낯선 단어를 마주치는 보편적인 상황으로, 많은 사람들이 공감하는 표현입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">4. She came across a signed first edition of her favorite novel at a flea market.</span>
+        <span class="example-ko">(그녀는 벼룩시장에서 자신이 가장 좋아하는 소설의 서명이 담긴 초판본을 우연히 발견했어.)</span>
+        <span class="example-vocab">signed : 서명이 담긴 / first edition : 초판본 / flea market : 벼룩시장</span>
+        <span class="example-desc">벼룩시장이나 중고 가게는 come across가 가장 자주 등장하는 배경 중 하나입니다. 값진 물건을 의도치 않게 발견하는 행운의 순간을 이 표현이 완벽하게 담아냅니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">5. I came across some old photos of us from college. We looked so young!</span>
+        <span class="example-ko">(대학 시절 우리 사진들을 우연히 발견했어. 우리 정말 어려 보였더라!)</span>
+        <span class="example-desc">오래된 사진을 우연히 발견하는 상황은 come across와 가장 자연스럽게 연결되는 일상의 순간입니다. 발견의 놀라움과 추억에 대한 감정이 자연스럽게 녹아 있습니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">6. While doing research for my thesis, I came across a study that completely contradicted my hypothesis.</span>
+        <span class="example-ko">(논문 자료를 조사하다가, 내 가설을 완전히 반박하는 연구를 우연히 발견했어.)</span>
+        <span class="example-vocab">thesis : 논문 / contradict : 반박하다, 모순되다 / hypothesis : 가설</span>
+        <span class="example-desc">학술 조사 중 예기치 못한 발견을 묘사합니다. 찾던 것이 아닌 다른 것이 우연히 나타나는 상황으로, 연구 현장에서 come across가 얼마나 자주 쓰이는지 보여주는 현실적인 예문입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">7. I came across a really useful productivity app that I think could help your team.</span>
+        <span class="example-ko">(우연히 정말 유용한 생산성 앱을 발견했는데, 네 팀에 도움이 될 것 같아.)</span>
+        <span class="example-vocab">productivity : 생산성</span>
+        <span class="example-desc">새로운 도구나 앱을 우연히 발견하고 주변에 공유하는 상황입니다. 직장 동료나 친구에게 유용한 것을 소개할 때 "I came across"로 시작하면 의도적으로 찾은 것이 아닌 행운의 발견임을 자연스럽게 전달합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">8. He came across an old coin in his backyard and it turned out to be worth thousands.</span>
+        <span class="example-ko">(그는 뒷마당에서 오래된 동전을 우연히 발견했는데, 수천 달러짜리라는 것이 밝혀졌어.)</span>
+        <span class="example-vocab">turn out : ~로 밝혀지다, 알고 보니 ~이다</span>
+        <span class="example-desc">"Turned out to be"가 뒤따르면 우연한 발견이 예상 밖의 결과로 이어지는 흐름이 완성됩니다. come across의 어원 속 '예기치 않은 마주침'이 실제 가치로 이어지는 극적인 상황입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">9. You never know what you'll come across at an antique fair. That's the whole appeal.</span>
+        <span class="example-ko">(앤티크 박람회에서 뭘 발견하게 될지 모르잖아. 그게 바로 매력이지.)</span>
+        <span class="example-vocab">antique : 골동품, 앤티크 / appeal : 매력, 흥미로운 점</span>
+        <span class="example-desc">"You never know what you'll come across"는 우연한 발견의 불확실성 자체를 즐기는 태도를 표현합니다. 골동품 시장, 중고 서점, 여행 등 탐험적인 활동을 설명할 때 원어민들이 즐겨 쓰는 표현입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">10. I wasn't looking for a new job, but I came across a listing that seemed perfect and applied on the spot.</span>
+        <span class="example-ko">(새 직장을 구하고 있던 게 아닌데, 딱 맞는 공고를 우연히 발견하고 그 자리에서 지원했어.)</span>
+        <span class="example-vocab">listing : (채용·판매 등의) 공고, 목록 / on the spot : 즉석에서, 그 자리에서</span>
+        <span class="example-desc">구직 의도가 없었는데 우연히 채용 공고를 발견하는 상황입니다. "On the spot"이 더해지면 발견의 순간이 즉각적인 행동으로 이어지는 박진감 있는 흐름이 만들어집니다.</span>
+    </div>
+
+    <!-- ===== 대화문 1 ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — 이사 정리 중 뜻밖의 발견을 나누는 대화
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">이사 준비를 위해 짐을 정리하다가 오래된 물건들을 발견하는 상황입니다. come across가 얼마나 자연스럽게 흘러가는지 확인해 보세요.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">How's the packing going? You've been at it all day.</span>
+        </div>
+        <div class="speech-desc">짐 싸는 건 어떻게 돼가? 하루 종일 하고 있잖아.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Slower than expected. I keep <strong>coming across</strong> things I forgot I even had. I just found my old guitar from high school.</span>
+        </div>
+        <div class="speech-desc">예상보다 느려. 있는지도 잊고 있던 물건들을 계속 우연히 발견하거든. 방금 고등학교 때 쓰던 기타를 찾았어. — "Keep coming across"는 반복적으로 계속 우연한 발견이 일어나는 상황을 표현합니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">No way! Do you still play?</span>
+        </div>
+        <div class="speech-desc">말도 안 돼! 아직도 연주해?</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Not in years. Oh, and I also <strong>came across</strong> a box of letters my mom wrote to me when I was studying abroad. I had completely forgotten about them.</span>
+        </div>
+        <div class="speech-desc">몇 년은 안 했지. 아, 그리고 유학 시절에 엄마가 써 주신 편지 상자도 발견했어. 완전히 잊고 있었거든. — 의도 없이 발견했다는 come across의 우연성이 "completely forgotten"과 결합해 더욱 선명해집니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">That must have been such a nice surprise. Did you read them?</span>
+        </div>
+        <div class="speech-desc">정말 반가운 발견이었겠다. 읽었어?</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Every single one. That's why the packing is taking so long. You never know what you'll <strong>come across</strong> when you really dig through everything.</span>
+        </div>
+        <div class="speech-desc">한 통 한 통 다 읽었어. 그래서 짐 싸는 게 이렇게 오래 걸리는 거야. 진짜 구석구석 뒤지다 보면 뭘 발견하게 될지 모르잖아.</div>
+    </div>
+
+    <!-- ===== 실수 박스 1 ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — "Come across"와 "Find"는 의도의 유무가 다릅니다
+        </div>
+        <p>"우연히 발견했어"를 표현할 때 <strong>"I found it accidentally"</strong> 또는 <strong>"I found it by chance"</strong>라고 쓰는 분들이 많습니다. 문법적으로 틀리지 않지만, 원어민들은 이런 상황에서 거의 예외 없이 <strong>"I came across it"</strong>을 씁니다. find는 본래 '찾아서 발견하다'라는 뉘앙스가 내장되어 있어서, accidentally나 by chance 같은 부연 설명을 붙여야 우연성이 전달됩니다. 반면 come across는 그 단어 자체에 우연성이 내장되어 있어 추가 설명이 필요 없습니다. 또 한 가지 주의할 점은 come across는 물건이나 정보를 발견할 때 쓰고, 사람을 우연히 마주칠 때는 <strong>run into</strong> 또는 <strong>bump into</strong>를 씁니다. "I came across my old friend"는 어색하고, "I ran into my old friend"가 자연스럽습니다. 대상이 사물·정보면 come across, 사람이면 run into, 이 구분 하나만 기억하세요.</p>
+    </div>
+
+    <!-- ===== 의미 2 ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: user-circle (인상·느낌을 주다) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </span>
+            의미 ② (사람이) ~한 인상이나 느낌을 주다 — 의도와 실제 사이의 간극
+        </span>
+    </h2>
+    <p>두 번째 의미는 커뮤니케이션의 핵심을 건드리는 표현입니다. <strong>"come across as + 형용사/명사"</strong>의 구조로, 그 사람의 말·행동·태도 전체가 상대방에게 전달하는 종합적인 인상을 묘사합니다. 이 표현의 가장 중요한 특징은 <strong>본인의 의도와 상대방이 받는 인상 사이에 괴리가 있을 수 있다</strong>는 것입니다. "You come across as rude"라고 할 때, 그것이 본인의 의도인지 아닌지는 상관없습니다. 상대방이 그렇게 받아들인다는 사실 자체를 표현하는 것입니다. 그래서 이 표현은 피드백을 주거나, 자기 인식을 돌아볼 때 매우 유용합니다.</p>
+
+    <div class="example-box">
+        <span class="example-en">1. She comes across as very confident in meetings, even when she's nervous inside.</span>
+        <span class="example-ko">(그녀는 속으로는 긴장하고 있을 때도 회의에서 매우 자신감 있는 인상을 줘.)</span>
+        <span class="example-vocab">confident : 자신감 있는, 확신에 찬</span>
+        <span class="example-desc">come across as의 핵심 뉘앙스를 가장 잘 보여주는 예문입니다. 내면의 상태(긴장)와 외부에 전달되는 인상(자신감) 사이의 괴리를 명확하게 보여줍니다. 연기력 좋은 전문가를 묘사할 때 자주 씁니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">2. I didn't mean to be rude, but I think I came across as dismissive in that meeting.</span>
+        <span class="example-ko">(무례하게 굴 생각은 없었는데, 그 회의에서 내가 무시하는 인상을 준 것 같아.)</span>
+        <span class="example-vocab">dismissive : 무시하는, 묵살하는</span>
+        <span class="example-desc">"I didn't mean to"가 앞에 붙으면 의도와 인상 사이의 괴리가 극명하게 드러납니다. 자신의 커뮤니케이션 방식을 반성하는 상황에서 come across as는 가장 정확하고 자연스러운 표현입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">3. Be careful with how you word that email. You don't want to come across as pushy.</span>
+        <span class="example-ko">(이메일 표현에 주의해. 너무 강요하는 인상을 주고 싶지는 않잖아.)</span>
+        <span class="example-vocab">pushy : 강요하는, 지나치게 밀어붙이는 / word : (동사) 말로 표현하다, 글로 쓰다</span>
+        <span class="example-desc">이메일이나 메시지를 작성할 때 상대방에게 어떤 인상을 줄지 미리 점검하는 상황입니다. "You don't want to come across as"는 원하지 않는 인상을 주의하라는 친절한 조언의 패턴으로 자주 쓰입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">4. He comes across as arrogant at first, but once you get to know him, he's actually really humble.</span>
+        <span class="example-ko">(처음에는 오만한 인상을 주지만, 알고 나면 사실 정말 겸손한 사람이야.)</span>
+        <span class="example-vocab">arrogant : 오만한, 거만한 / humble : 겸손한</span>
+        <span class="example-desc">첫인상과 실제 성격 사이의 괴리를 묘사합니다. "At first"와 "once you get to know him"의 대비가 come across as의 본질인 '상대방이 받는 인상'이 반드시 실제와 같지 않을 수 있음을 보여줍니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">5. How do I come across in interviews? I always worry I seem too nervous.</span>
+        <span class="example-ko">(나 면접에서 어떤 인상을 주는 것 같아? 항상 너무 긴장해 보일까 봐 걱정돼.)</span>
+        <span class="example-desc">자신이 상대방에게 어떤 인상을 주는지 묻는 표현입니다. 면접 준비나 발표 연습 맥락에서 원어민들이 가장 자주 쓰는 질문 패턴 중 하나입니다. "How do I come across?"는 단독으로도 완성된 질문이 됩니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">6. The CEO came across as genuine and approachable during the town hall meeting.</span>
+        <span class="example-ko">(CEO가 전체 직원 회의에서 진실되고 다가가기 쉬운 인상을 줬어.)</span>
+        <span class="example-vocab">genuine : 진실된, 진정성 있는 / approachable : 다가가기 쉬운 / town hall meeting : 전체 직원 회의, 타운홀 미팅</span>
+        <span class="example-desc">리더십 맥락에서 come across as는 지도자가 구성원들에게 어떤 인상을 주는지를 평가하는 데 자주 쓰입니다. "Genuine and approachable"은 좋은 리더가 갖춰야 할 인상으로 자주 언급되는 조합입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">7. Your presentation was great, but you came across as a little unprepared at the start. Work on your opening.</span>
+        <span class="example-ko">(발표는 훌륭했는데, 처음에 조금 준비가 덜 된 인상을 줬어. 오프닝을 다듬어 봐.)</span>
+        <span class="example-vocab">unprepared : 준비가 덜 된 / opening : 시작 부분, 오프닝</span>
+        <span class="example-desc">발표 피드백을 줄 때 come across as는 전달된 인상을 구체적으로 짚어주는 가장 유용한 도구입니다. 전반적인 평가는 좋지만 개선점을 지적하는 균형 잡힌 피드백 구조를 보여줍니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">8. I want to come across as knowledgeable but not condescending when I explain this to clients.</span>
+        <span class="example-ko">(클라이언트에게 이걸 설명할 때 박식해 보이면서도 거만하지 않은 인상을 주고 싶어.)</span>
+        <span class="example-vocab">knowledgeable : 박식한, 아는 것이 많은 / condescending : 거만한, 깔보는 듯한</span>
+        <span class="example-desc">전달하고 싶은 인상과 피하고 싶은 인상을 동시에 표현하는 패턴입니다. 전문가가 비전문가에게 설명할 때 흔히 고민하는 커뮤니케이션의 딜레마를 담고 있습니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">9. His jokes come across differently in writing than they do in person. They lose something in text.</span>
+        <span class="example-ko">(그의 농담은 글로 쓰면 직접 말할 때와 다른 인상을 줘. 텍스트로는 뭔가 빠지더라고.)</span>
+        <span class="example-vocab">in person : 직접 대면하여</span>
+        <span class="example-desc">같은 내용도 매체에 따라 전달되는 인상이 달라지는 상황을 묘사합니다. 디지털 커뮤니케이션의 한계를 자연스럽게 짚어주는 현대적인 예문입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">10. I know you're passionate about this, but be careful not to come across as too intense. It can put people off.</span>
+        <span class="example-ko">(이 주제에 열정적인 거 알지만, 너무 강렬한 인상을 주지 않도록 조심해. 사람들이 부담스러워할 수 있어.)</span>
+        <span class="example-vocab">passionate : 열정적인 / intense : 강렬한, 강압적인 / put people off : 사람들을 불편하게 하다, 거부감을 주다</span>
+        <span class="example-desc">"Put people off"는 상대방에게 불쾌감이나 거부감을 준다는 뜻입니다. 열정과 강압 사이의 경계를 조심하라는 진심 어린 조언으로, come across as가 얼마나 실용적인 피드백 도구인지 보여줍니다.</span>
+    </div>
+
+    <!-- ===== 대화문 2 ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — 면접 후 피드백을 주고받는 대화
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">면접을 마치고 친구에게 피드백을 구하는 상황입니다. come across as가 인상과 피드백의 맥락에서 어떻게 자연스럽게 쓰이는지 확인해 보세요.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">I just got out of my interview. I'm not sure how it went. How do you think I <strong>come across</strong> in general?</span>
+        </div>
+        <div class="speech-desc">방금 면접 끝났어. 어떻게 됐는지 잘 모르겠어. 나 보통 어떤 인상을 주는 것 같아?</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Honestly? You can sometimes <strong>come across as</strong> a bit too eager. Like you're trying too hard.</span>
+        </div>
+        <div class="speech-desc">솔직히? 가끔 약간 너무 간절한 인상을 줄 때가 있어. 너무 애쓰는 것처럼 보인다고 할까. — 진실되지만 부드러운 피드백을 전달하는 상황입니다. eager(간절한, 열망하는).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Ugh, really? I don't mean to. I just want them to see how much I want the role.</span>
+        </div>
+        <div class="speech-desc">아, 진짜? 그럴 생각은 아닌데. 그냥 이 역할을 얼마나 원하는지 보여주고 싶어서.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">I know, but there's a fine line between passionate and desperate. You want to <strong>come across as</strong> confident, not needy.</span>
+        </div>
+        <div class="speech-desc">알아, 근데 열정적인 것과 절박한 것 사이에는 미묘한 선이 있어. 자신감 있는 인상을 줘야지, 의존적으로 보이면 안 돼. — desperate(절박한), needy(의존적인, 필사적인).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">That's fair. Did I at least <strong>come across as</strong> knowledgeable about the industry?</span>
+        </div>
+        <div class="speech-desc">그건 맞는 말이야. 그래도 업계에 대해 잘 아는 인상은 줬어?</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Definitely. Your answers were sharp. It's just about dialing back the intensity a little.</span>
+        </div>
+        <div class="speech-desc">당연하지. 답변은 날카로웠어. 그냥 강도를 조금 낮추는 문제야. — sharp(날카로운, 명민한), dial back(줄이다, 낮추다).</div>
+    </div>
+
+    <!-- ===== 실수 박스 2 ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — "Come across as"에서 as를 빠뜨리면 안 됩니다
+        </div>
+        <p>"~한 인상을 주다"라는 의미로 쓸 때, 전치사 <strong>as</strong>를 빠뜨리는 실수가 매우 자주 발생합니다. <strong>"He comes across rude"</strong>라고 하면 원어민 귀에는 문장이 완결되지 않은 것처럼 들립니다. 반드시 <strong>"He comes across as rude"</strong>처럼 as를 붙여야 합니다. as 뒤에는 형용사(confident, arrogant, rude)나 명사(a leader, an expert)가 올 수 있습니다. 또 한 가지 자주 하는 실수는 "seem"과 혼동하는 것입니다. <strong>seem</strong>은 "He seems rude"처럼 as 없이 쓰이고, 주로 겉모습에서 오는 단순한 인상을 나타냅니다. 반면 <strong>come across as</strong>는 그 사람의 말투·행동·태도가 종합적으로 전달하는 인상이므로 훨씬 더 깊은 평가를 담습니다. 정리하면 <strong>seem + 형용사(as 없음) / come across as + 형용사(as 필수)</strong>, 이 두 가지 구조만 기억하면 됩니다.</p>
+    </div>
+
+    <!-- ===== 대화문 3 — 두 의미 통합 ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — Come across 두 가지 의미를 한 번에
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">새로운 작가를 발견하고 그 작가의 문체에 대해 이야기하는 대화입니다. come across의 두 가지 의미가 하나의 흐름 안에 자연스럽게 녹아 있습니다.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">I <strong>came across</strong> this novelist last week while browsing the library. I'd never heard of her before.</span>
+        </div>
+        <div class="speech-desc">지난주에 도서관을 둘러보다가 이 소설가를 우연히 발견했어. 전에는 한 번도 들어본 적이 없었는데. — 의미 ①: 의도 없이 우연히 발견한 작가입니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Oh yeah? What's she like?</span>
+        </div>
+        <div class="speech-desc">오, 진짜? 어떤 작가야?</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Her writing <strong>comes across as</strong> very raw and honest. She doesn't sugarcoat anything.</span>
+        </div>
+        <div class="speech-desc">글이 정말 날것 그대로이고 솔직한 인상을 줘. 아무것도 포장하지 않거든. — 의미 ②: 글쓰기 스타일이 독자에게 주는 인상입니다. raw(가공되지 않은, 날것의), sugarcoat(달콤하게 포장하다, 사실을 부드럽게 꾸미다).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">That sounds interesting. Does she <strong>come across as</strong> preachy at all? I hate when writers try to lecture you.</span>
+        </div>
+        <div class="speech-desc">흥미롭다. 설교하는 인상은 안 줘? 작가가 가르치려 드는 게 싫거든. — 의미 ②: 독자가 느낄 수 있는 또 다른 인상을 묻는 표현입니다. preachy(설교하는 듯한, 도덕적으로 가르치려 드는), lecture(강의하다, 훈계하다).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Not at all. That's what I love about her. She <strong>comes across as</strong> someone who's lived through everything she writes about.</span>
+        </div>
+        <div class="speech-desc">전혀. 그게 내가 좋아하는 점이야. 자신이 쓴 것들을 직접 살아낸 사람처럼 느껴져. — 의미 ②가 인상을 넘어 그 작가의 삶 전체를 압축하는 수준으로 확장됩니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">I'll have to check her out. How lucky that you just <strong>came across</strong> her randomly.</span>
+        </div>
+        <div class="speech-desc">꼭 찾아봐야겠다. 우연히 그냥 발견하다니 정말 행운이다. — 의미 ①이 다시 등장하며 우연한 발견의 행운을 대화의 마무리에서 자연스럽게 상기시킵니다.</div>
+    </div>
+
+    <!-- ===== 실수 박스 3 ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — 의미 ①과 ②의 주어가 달라집니다
+        </div>
+        <p>come across의 두 의미를 배운 뒤 가장 흔하게 나오는 혼동이 있습니다. 의미 ①에서는 <strong>사람이 주어</strong>가 됩니다. "I came across an old book"처럼 발견하는 주체가 주어입니다. 그런데 의미 ②에서는 <strong>인상을 주는 사람 또는 사물이 주어</strong>가 됩니다. "He comes across as confident"처럼 인상을 전달하는 주체가 주어입니다. 이 주어 구조를 잘못 이해하면 "I come across him as arrogant"처럼 어색한 문장이 나옵니다. 의미 ②에서 "그가 오만한 인상을 줬다"고 표현하려면 항상 <strong>"He came across as arrogant"</strong>처럼 인상을 주는 사람을 주어로 세워야 합니다. 두 의미를 하나의 뿌리로 이해하면서도, 각 의미에서 주어가 누구인지를 명확히 구분하는 것이 come across를 완전히 내 것으로 만드는 마지막 열쇠입니다.</p>
+    </div>
+
+</article>
+
+<footer>
+    <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

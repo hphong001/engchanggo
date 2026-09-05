@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[구동사 완벽 정리] Bring about — "초래하다·이끌어내다", Cause보다 세련된 표현 총정리 | 영어창고</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        :root{--bg-paper:#FBFBF9;--bg-white:#FFFFFF;--text-black:#1A1A1A;--text-gray:#555555;--accent-color:#4F46E5;--border-color:#E2E2DF;}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'SUIT','Pretendard',sans-serif;letter-spacing:-0.02em;}
+        body{background-color:var(--bg-paper);color:var(--text-black);line-height:1.6;-webkit-font-smoothing:antialiased;padding:0;}
+        a{text-decoration:none;color:inherit;}
+
+        /* ── 헤더 ── */
+        header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:center;align-items:center;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}
+        .logo{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:900;color:var(--text-black);display:flex;align-items:center;gap:6px;}
+        .logo span{color:var(--accent-color);font-weight:800;font-size:18px;}
+
+        /* ── 본문 컨테이너 ── */
+        .post-container{max-width:760px;margin:40px auto;background-color:var(--bg-white);padding:40px 30px;border:1px solid var(--border-color);box-shadow:0 4px 20px rgba(0,0,0,0.02);}
+
+        /* ── 메타 정보 ── */
+        .post-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;border-bottom:1px solid #f1f5f9;padding-bottom:16px;}
+        .meta-badge{display:inline-flex;align-items:center;gap:5px;font-size:0.8rem;color:#64748b;background:#F8F9FA;border:1px solid var(--border-color);border-radius:999px;padding:4px 10px;}
+        .meta-badge svg{flex-shrink:0;}
+
+        /* ── 타이포그래피 ── */
+        h1{font-size:1.8rem;color:var(--text-black);margin-bottom:20px;line-height:1.4;word-break:keep-all;font-weight:900;}
+        p{font-size:1rem;color:var(--text-gray);margin-bottom:16px;word-break:keep-all;font-weight:500;}
+        .highlight{color:var(--accent-color);font-weight:700;background:#F0F0FC;padding:2px 6px;border-radius:4px;}
+
+        /* ── h2 ── */
+        h2{font-size:1.3rem;color:var(--bg-white);margin-top:45px;margin-bottom:15px;font-weight:800;display:flex;align-items:center;gap:10px;}
+        .h2-inner{display:flex;align-items:center;gap:10px;background:var(--accent-color);padding:8px 16px 8px 12px;border-radius:8px;}
+        .h2-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(255,255,255,0.2);border-radius:6px;flex-shrink:0;}
+        .h2-icon svg{width:16px;height:16px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+        /* ── 핵심 개념 박스 ── */
+        .concept-box{background-color:#F8F9FA;border:1px solid var(--border-color);border-radius:8px;padding:24px;margin:30px 0;}
+        .concept-box-title{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+        .concept-title-icon{display:flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--accent-color);border-radius:8px;flex-shrink:0;}
+        .concept-title-icon svg{width:18px;height:18px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .concept-box-title strong{color:var(--text-black);font-size:1.05rem;font-weight:800;}
+        .concept-desc{margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--border-color);}
+        .concept-desc:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+        .concept-word{color:var(--accent-color);font-weight:800;font-size:1.05rem;}
+
+        /* ── 예문 박스 ── */
+        .example-box{background-color:#FFFFFF;border-left:4px solid var(--accent-color);padding:18px;margin:16px 0;border:1px solid var(--border-color);border-left-width:4px;}
+        .example-en{display:block;font-weight:700;color:var(--text-black);font-size:1.05rem;margin-bottom:4px;}
+        .example-ko{display:block;color:var(--text-gray);font-size:0.95rem;margin-bottom:8px;font-weight:500;}
+        .example-vocab{display:block;font-size:0.88rem;color:#4F46E5;background:#F0F0FC;padding:7px 12px;border-radius:4px;margin-bottom:8px;font-weight:600;}
+        .example-desc{display:block;font-size:0.9rem;color:#666;background-color:#FBFBF9;padding:10px 14px;border-radius:4px;border:1px solid var(--border-color);}
+
+        /* ── 대화문 박스 ── */
+        .dialogue-box{background-color:#FFFBEB;border:1px solid #FDE68A;padding:24px;border-radius:8px;margin:35px 0;}
+        .dialogue-title{font-weight:800;color:#B45309;margin-bottom:14px;font-size:1.05rem;display:flex;align-items:center;gap:8px;}
+        .dialogue-title-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#B45309;border-radius:6px;flex-shrink:0;}
+        .dialogue-title-icon svg{width:15px;height:15px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .dialogue-line{margin-bottom:10px;font-size:0.95rem;display:flex;align-items:flex-start;gap:8px;}
+        .speaker{color:#92400e;font-weight:800;min-width:20px;}
+        .speech{flex:1;color:#1A1A1A;font-weight:600;}
+        .speech-desc{color:#78350F;font-size:0.9rem;margin-top:4px;margin-bottom:14px;margin-left:28px;}
+
+        /* ── 실수 박스 ── */
+        .mistake-box{background-color:#FEF2F2;border:1px solid #FECACA;padding:24px;border-radius:8px;margin:35px 0;}
+        .mistake-title{font-weight:800;color:#B91C1C;margin-bottom:12px;display:flex;align-items:center;gap:8px;font-size:1.05rem;}
+        .mistake-title-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#B91C1C;border-radius:6px;flex-shrink:0;}
+        .mistake-title-icon svg{width:15px;height:15px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .mistake-box p{color:#7F1D1D;margin-bottom:0;}
+
+        /* ── 푸터 ── */
+        footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px;margin-top:40px;border-top:1px solid var(--border-color);background:var(--bg-white);}
+
+        @media(max-width:768px){
+            .post-container{margin:0;padding:20px 16px;border:none;}
+            h1{font-size:1.5rem;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a class="logo" href="/">영어창고 <span>MyEnglishVault</span></a>
+</header>
+
+<article class="post-container">
+
+    <!-- ── 메타 뱃지 ── -->
+    <div class="post-meta">
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+            영어창고
+        </span>
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            2026. 09. 05
+        </span>
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            읽는 시간: 12분
+        </span>
+    </div>
+
+    <h1>[구동사 완벽 정리] "일어나게 하다"를 Cause로만 아는 당신이 놓치고 있는 것 — Bring about, 원인과 결과를 말하는 가장 세련된 방법</h1>
+
+    <p>에세이를 쓰거나 보고서를 작성할 때, 또는 발표에서 원인과 결과를 설명할 때 <span class="highlight">cause</span>라는 단어에 지나치게 의존하고 있지는 않으신가요? "The policy caused changes", "The decision caused problems"처럼요. 이 표현들이 틀린 것은 아닙니다. 그러나 원어민들, 특히 글을 잘 쓰는 사람들은 같은 내용을 훨씬 세련되게 표현합니다. <em>"The policy brought about significant changes", "The decision brought about unforeseen consequences."</em></p>
+    <p>오늘 배울 <span class="highlight">bring about</span>은 단순히 cause의 유의어가 아닙니다. 어원 속 이미지를 이해하는 순간, 이 표현이 왜 cause보다 더 많은 것을 담아내는지 바로 느껴지게 됩니다. 비즈니스 글쓰기, 학술 에세이, 뉴스 기사, 그리고 수준 높은 일상 대화까지 — bring about을 자유롭게 구사하는 것만으로 영어 표현의 급이 달라집니다.</p>
+
+    <!-- ── 개념 박스 ── -->
+    <div class="concept-box">
+        <div class="concept-box-title">
+            <div class="concept-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+            </div>
+            <strong>핵심 개념 전문 요약 — Bring about의 뿌리를 알면 세 의미가 동시에 보인다</strong>
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">어원 해설 — "가져와서 눈앞에 펼쳐놓다"는 이미지 하나가 전부입니다</span><br><br>
+            <strong>bring about</strong>은 동사 <strong>bring</strong>(가져오다, 데려오다)과 부사 <strong>about</strong>(주위에, 사방으로, 세상에 퍼지게)이 결합된 구동사입니다. 핵심 이미지는 <strong>'무언가를 직접 손으로 끌어다가 세상에 존재하게 만드는 것'</strong>입니다. 단순히 어떤 일이 저절로 일어나는 게 아니라, 특정 주체가 힘을 기울여 결과를 실현시키는 능동성이 이 표현의 DNA에 새겨져 있습니다. 이것이 cause와 결정적으로 다른 지점입니다. cause는 원인과 결과 사이의 중립적인 연결만을 나타내지만, bring about은 주체가 의도적이든 아니든 결과를 향해 무언가를 이끌어왔다는 역동적인 과정을 담습니다. 항상 <strong>규모 있고 의미 있는 변화나 결과</strong>를 목적어로 취하는 것도 이 때문입니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">Bring about vs. Cause — 결정적인 차이 세 가지</span><br><br>
+            첫째, <strong>격식의 차이</strong>입니다. cause는 일상 대화부터 학술 문서까지 두루 쓰이는 중립적 단어인 반면, bring about은 조금 더 격식 있고 문어체에 가깝습니다. 보고서, 에세이, 발표, 기사처럼 글의 수준을 높이고 싶을 때 bring about이 더 세련되게 들립니다. 둘째, <strong>규모의 차이</strong>입니다. cause는 작은 일에도 씁니다("The noise caused a headache"). 반면 bring about은 역사적 변화, 사회적 전환, 중요한 결과처럼 무게감 있는 사건에 더 잘 어울립니다. 셋째, <strong>능동성의 차이</strong>입니다. bring about은 주어가 그 결과를 향해 무언가를 이끌었다는 주체적인 뉘앙스가 cause보다 강합니다. 이 세 가지 차이를 이해하면 두 표현을 상황에 맞게 정확히 구분할 수 있게 됩니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ① 사회적·역사적 변화를 초래하다 / 이끌어내다</span><br><br>
+            가장 핵심적인 의미입니다. 정책, 기술, 사건, 인물 등이 사회나 역사에 큰 변화를 일으키는 것을 표현합니다. "The invention of the internet brought about a revolution in communication"처럼, 변화의 규모가 크고 그 영향이 광범위할수록 bring about이 더욱 잘 어울립니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ② 특정 결과나 상황을 만들어내다 / 초래하다</span><br><br>
+            정책 결정, 협상, 사업적 행동, 개인의 선택처럼 특정 행위나 요소가 구체적인 결과를 낳는 상황을 표현합니다. 긍정적인 결과(해결책, 합의, 성과)와 부정적인 결과(위기, 붕괴, 피해) 모두에 쓸 수 있으며, 이것이 cause와 같은 중립성을 공유합니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ③ (긍정적인 변화를) 의도적으로 이끌어내다 / 실현시키다</span><br><br>
+            변화나 개선을 의식적으로 추구하고 실현시키는 상황에서 씁니다. 개혁가, 리더, 활동가처럼 더 나은 미래를 만들기 위해 노력하는 주체를 묘사할 때 특히 강력합니다. "She dedicated her career to bringing about change"처럼, 이 의미에서는 bring about 안에 헌신과 의지까지 담깁니다.
+        </div>
+    </div>
+
+    <!-- ===== 의미 1 ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: globe-alt (사회·역사적 변화를 초래하다) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253M3 12a8.959 8.959 0 01.284-2.253"/></svg>
+            </span>
+            의미 ① 사회적·역사적 변화를 초래하다 — 세상을 바꾸는 힘
+        </span>
+    </h2>
+    <p>이 의미에서 bring about은 가장 웅장하게 빛납니다. 산업혁명, 인터넷의 등장, 법률의 개정, 과학적 발견처럼 <strong>세상의 흐름을 바꿔놓은 사건이나 요인을 묘사할 때</strong> 이 표현은 단순한 cause를 압도합니다. "The Industrial Revolution caused changes"라고 쓰면 그냥 변화가 있었다는 사실만 전달됩니다. 그러나 "The Industrial Revolution brought about sweeping changes"라고 쓰는 순간, 그 변화를 밀어붙인 힘과 규모가 함께 느껴집니다. 에세이나 보고서에서 이 표현 하나로 문장의 무게가 달라집니다.</p>
+
+    <div class="example-box">
+        <span class="example-en">1. The invention of the printing press brought about a revolution in the spread of knowledge.</span>
+        <span class="example-ko">(인쇄기의 발명은 지식 전파에 혁명을 가져왔어.)</span>
+        <span class="example-vocab">printing press : 인쇄기 / revolution : 혁명, 혁신적 변화 / spread : 전파, 확산</span>
+        <span class="example-desc">역사적 발명이 사회에 가져온 광범위한 변화를 묘사하는 전형적인 예문입니다. "Revolution in"과 결합하면 변화의 규모가 극적으로 강조됩니다. cause를 쓰면 전달하기 어려운 역사적 무게감이 bring about에 담겨 있습니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">2. The civil rights movement brought about landmark legislation that changed the country forever.</span>
+        <span class="example-ko">(민권 운동은 나라를 영원히 바꿔놓은 획기적인 법률을 이끌어냈어.)</span>
+        <span class="example-vocab">civil rights movement : 민권 운동 / landmark : 획기적인, 역사적인 / legislation : 법률, 입법</span>
+        <span class="example-desc">사회 운동이 제도적 변화를 실현시키는 과정을 묘사합니다. "Landmark legislation"처럼 무게감 있는 명사와 결합할 때 bring about은 단순 원인 연결이 아닌 역사적 성취의 언어가 됩니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">3. Rapid advances in artificial intelligence are bringing about changes that no one fully anticipated.</span>
+        <span class="example-ko">(인공지능의 급격한 발전은 아무도 완전히 예상하지 못했던 변화들을 초래하고 있어.)</span>
+        <span class="example-vocab">rapid : 급격한, 빠른 / advance : 발전, 진보 / anticipate : 예상하다, 예측하다</span>
+        <span class="example-desc">현재진행형 "are bringing about"은 지금 이 순간에도 진행 중인 변화를 묘사합니다. 아직 결론이 나지 않은, 현재 펼쳐지고 있는 역사적 변화를 표현하는 데 bring about의 현재진행형이 매우 유용합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">4. The pandemic brought about an unprecedented shift in how the world thinks about remote work.</span>
+        <span class="example-ko">(팬데믹은 세계가 원격 근무를 바라보는 방식에 전례 없는 변화를 가져왔어.)</span>
+        <span class="example-vocab">pandemic : 세계적 유행병, 팬데믹 / unprecedented : 전례 없는, 유례없는 / shift : 전환, 변화</span>
+        <span class="example-desc">"Unprecedented shift"는 bring about과 자주 짝을 이루는 표현입니다. 팬데믹처럼 갑작스럽고 거대한 사건이 사회 전체의 인식을 바꿔놓은 것을 묘사하는 데 bring about이 cause보다 훨씬 강력합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">5. The discovery of penicillin brought about a new era in modern medicine.</span>
+        <span class="example-ko">(페니실린의 발견은 현대 의학에서 새로운 시대를 열었어.)</span>
+        <span class="example-vocab">penicillin : 페니실린 / era : 시대, 시기</span>
+        <span class="example-desc">"Brought about a new era"는 하나의 발견이나 사건이 시대 자체를 바꿔놓았다는 것을 표현하는 강력한 조합입니다. 과학사·의학사·기술사를 다루는 글에서 반드시 나오는 패턴입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">6. The fall of the Berlin Wall brought about the reunification of Germany and reshaped the entire geopolitical landscape.</span>
+        <span class="example-ko">(베를린 장벽의 붕괴는 독일의 통일을 이끌어냈고 전체 지정학적 판도를 재편했어.)</span>
+        <span class="example-vocab">fall : 붕괴, 몰락 / reunification : 재통일 / reshape : 재편하다, 다시 형성하다 / geopolitical : 지정학적인 / landscape : 판도, 지형</span>
+        <span class="example-desc">하나의 역사적 사건이 복수의 거대한 결과를 연쇄적으로 가져온 상황입니다. bring about 이후 and로 연결되는 두 번째 결과가 이어지면서 변화의 규모와 파급력이 강조됩니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">7. Sustained pressure from activists brought about a complete overhaul of the company's environmental policy.</span>
+        <span class="example-ko">(활동가들의 지속적인 압박이 회사 환경 정책의 전면적인 개편을 이끌어냈어.)</span>
+        <span class="example-vocab">sustained : 지속적인, 꾸준한 / activist : 활동가 / overhaul : 전면 개편, 대대적인 점검</span>
+        <span class="example-desc">"Sustained pressure"가 주어가 되면 bring about의 능동성이 더욱 선명해집니다. 오랜 시간 쌓인 힘이 결국 변화를 이끌어냈다는 과정의 무게가 표현 전체에 실립니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">8. Globalization has brought about both enormous opportunities and complex new challenges for developing nations.</span>
+        <span class="example-ko">(세계화는 개발도상국들에게 엄청난 기회와 복잡한 새로운 도전을 동시에 가져왔어.)</span>
+        <span class="example-vocab">globalization : 세계화 / enormous : 엄청난 / developing nation : 개발도상국</span>
+        <span class="example-desc">현재완료 "has brought about"은 과거에 시작된 변화가 현재까지 이어지고 있음을 나타냅니다. "Both A and B" 구조로 긍정적·부정적 결과를 동시에 담아내며, 세계화처럼 복합적인 현상을 균형 있게 서술합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">9. The widespread adoption of smartphones brought about a fundamental transformation in human communication habits.</span>
+        <span class="example-ko">(스마트폰의 광범위한 보급은 인간의 소통 방식에 근본적인 변화를 가져왔어.)</span>
+        <span class="example-vocab">widespread : 광범위한 / adoption : 채택, 보급 / fundamental : 근본적인 / transformation : 변환, 대변혁</span>
+        <span class="example-desc">"Fundamental transformation"은 bring about과 자주 짝을 이루는 고급 표현입니다. 기술의 보급이 사회 전체의 행동 방식을 바꿔놓은 과정을 묘사하는 데 bring about이 cause보다 훨씬 정교한 뉘앙스를 전달합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">10. A single whistleblower's testimony brought about the collapse of one of the country's most powerful corporations.</span>
+        <span class="example-ko">(내부 고발자 한 명의 증언이 국내 가장 강력한 기업 중 하나의 붕괴를 초래했어.)</span>
+        <span class="example-vocab">whistleblower : 내부 고발자 / testimony : 증언 / collapse : 붕괴, 몰락 / corporation : 대기업, 법인</span>
+        <span class="example-desc">작은 행동(증언 하나)이 거대한 결과(기업 붕괴)를 이끌어낸 극적인 대비가 담긴 예문입니다. 원인과 결과의 규모 차이가 클수록 bring about의 서사적 힘이 더욱 강해집니다.</span>
+    </div>
+
+    <!-- ===== 대화문 1 ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — 역사적 변화를 주제로 나누는 토론
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">두 사람이 기술 발전이 사회에 미친 영향을 이야기하는 대화입니다. bring about이 역사적 변화를 묘사하는 맥락에서 어떻게 쓰이는지 확인해 보세요.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Do you think social media has been a net positive for society?</span>
+        </div>
+        <div class="speech-desc">소셜 미디어가 사회에 전반적으로 긍정적이었다고 생각해?</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">It's complicated. It's <strong>brought about</strong> incredible connectivity — people can organize movements overnight now. But it's also <strong>brought about</strong> a lot of division.</span>
+        </div>
+        <div class="speech-desc">복잡해. 엄청난 연결성을 가져왔어 — 사람들이 이제 하룻밤 사이에 운동을 조직할 수 있잖아. 하지만 많은 분열도 초래했어. — 긍정·부정 양면의 결과에 bring about이 자연스럽게 반복됩니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">That's a fair point. The Arab Spring is a perfect example of how it <strong>brought about</strong> real political change in some places.</span>
+        </div>
+        <div class="speech-desc">타당한 지적이야. 아랍의 봄은 일부 지역에서 실질적인 정치적 변화를 이끌어낸 완벽한 사례야.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Exactly. But the same tools that <strong>brought about</strong> those revolutions also spread misinformation at a scale we've never seen.</span>
+        </div>
+        <div class="speech-desc">맞아. 하지만 그 혁명들을 이끌어낸 것과 동일한 도구들이 전례 없는 규모의 허위정보도 퍼뜨렸잖아. — misinformation(허위정보), scale(규모).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">I guess the question is whether we can steer it to <strong>bring about</strong> more good than harm going forward.</span>
+        </div>
+        <div class="speech-desc">앞으로 해악보다 더 많은 이로움을 이끌어내도록 방향을 잡을 수 있는지가 핵심 문제겠지. — steer(방향을 잡다, 이끌다), going forward(앞으로).</div>
+    </div>
+
+    <!-- ===== 실수 박스 1 ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — Bring about을 작은 일에 쓰면 어색합니다
+        </div>
+        <p>bring about을 배우고 나면 모든 원인-결과 상황에 쓰고 싶어집니다. 그러나 "The noise brought about my headache"처럼 사소한 일에 쓰면 원어민 귀에 지나치게 과장되어 들립니다. bring about은 사회적 변화, 역사적 사건, 정책적 결과, 중요한 전환처럼 <strong>무게감 있는 결과에만</strong> 씁니다. 소음으로 인한 두통처럼 사소한 원인-결과에는 <strong>"The noise gave me a headache"</strong> 또는 그냥 <strong>"caused"</strong>를 쓰는 것이 자연스럽습니다. 결과가 클수록, 주어가 강력할수록, 변화의 범위가 넓을수록 bring about이 빛납니다. 이 규모감의 감각을 익히는 것이 bring about을 제대로 구사하는 핵심입니다.</p>
+    </div>
+
+    <!-- ===== 의미 2 ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: arrow-trending-up (특정 결과·상황을 만들어내다) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>
+            </span>
+            의미 ② 특정 결과나 상황을 만들어내다 — 행동이 낳은 구체적 결과
+        </span>
+    </h2>
+    <p>두 번째 의미는 비즈니스, 법률, 외교, 과학처럼 구체적인 맥락에서 <strong>특정 행위나 결정이 낳은 직접적인 결과</strong>를 표현할 때입니다. 역사적 스케일이 아니더라도, 협상 타결, 정책 시행, 기업의 전략적 결정이 낳은 결과를 말할 때 bring about은 cause보다 훨씬 전문적이고 세련되게 들립니다. 특히 보고서나 발표에서 "The new policy brought about a 30% improvement"처럼 쓰면 원인과 결과 사이의 직접적 연결을 격식 있게 전달할 수 있습니다.</p>
+
+    <div class="example-box">
+        <span class="example-en">1. The new pricing strategy brought about a significant increase in quarterly revenue.</span>
+        <span class="example-ko">(새로운 가격 전략이 분기 수익의 큰 폭 증가를 가져왔어.)</span>
+        <span class="example-vocab">pricing strategy : 가격 전략 / significant : 상당한, 눈에 띄는 / quarterly : 분기별의 / revenue : 수익, 매출</span>
+        <span class="example-desc">비즈니스 결과 보고에서 가장 자주 쓰이는 패턴입니다. "Caused an increase"를 "brought about a significant increase"로 바꾸는 것만으로 보고서의 수준이 한 단계 올라갑니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">2. Years of diplomatic negotiations finally brought about a peace agreement between the two nations.</span>
+        <span class="example-ko">(수년간의 외교 협상이 마침내 두 나라 간의 평화 협정을 이끌어냈어.)</span>
+        <span class="example-vocab">diplomatic : 외교적인 / negotiation : 협상 / peace agreement : 평화 협정</span>
+        <span class="example-desc">"Finally brought about"은 오랜 과정 끝에 결과를 실현했다는 성취의 뉘앙스를 담습니다. 외교·협상처럼 오랜 시간과 노력이 들어간 결과일수록 bring about이 더욱 적절한 표현이 됩니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">3. The merger brought about significant layoffs across both organizations.</span>
+        <span class="example-ko">(합병은 두 조직 전반에 걸쳐 상당한 해고를 초래했어.)</span>
+        <span class="example-vocab">merger : 합병 / layoff : 해고, 인원 감축</span>
+        <span class="example-desc">부정적인 결과에도 bring about을 씁니다. 합병이라는 경영 결정이 직접적으로 초래한 결과를 냉정하게 서술하는 비즈니스 표현으로, 감정을 배제한 객관적 보도나 보고문에서 자주 등장합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">4. The new regulations brought about stricter quality controls throughout the supply chain.</span>
+        <span class="example-ko">(새 규정이 공급망 전반에 걸쳐 더 엄격한 품질 관리를 도입했어.)</span>
+        <span class="example-vocab">regulation : 규정, 규제 / stricter : 더 엄격한 / quality control : 품질 관리 / supply chain : 공급망</span>
+        <span class="example-desc">규제가 업계 전반의 행동 방식을 바꿔놓은 상황입니다. "Throughout the supply chain"처럼 결과의 범위가 넓을수록 bring about이 더욱 자연스럽게 어울립니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">5. His resignation brought about a period of instability within the organization.</span>
+        <span class="example-ko">(그의 사임은 조직 내 불안정한 시기를 초래했어.)</span>
+        <span class="example-vocab">resignation : 사임, 사직 / instability : 불안정, 불안정성</span>
+        <span class="example-desc">한 사람의 결정이 조직 전체에 가져온 파장을 묘사합니다. "A period of instability"처럼 지속되는 상태를 결과로 표현할 때 bring about이 자연스럽게 어울립니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">6. The court ruling brought about sweeping changes to how personal data is collected and stored online.</span>
+        <span class="example-ko">(법원 판결이 온라인에서 개인 데이터를 수집하고 저장하는 방식에 전면적인 변화를 초래했어.)</span>
+        <span class="example-vocab">court ruling : 법원 판결 / sweeping : 전면적인, 광범위한</span>
+        <span class="example-desc">"Sweeping changes"는 bring about과 함께 가장 자주 등장하는 표현 중 하나입니다. 법원 판결처럼 공식적인 결정이 낳은 광범위한 결과를 서술하는 데 bring about이 격식과 무게감을 동시에 제공합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">7. Poor communication between departments brought about costly delays in the project timeline.</span>
+        <span class="example-ko">(부서 간 부실한 소통이 프로젝트 일정에 큰 비용을 치르는 지연을 초래했어.)</span>
+        <span class="example-vocab">costly : 비용이 많이 드는, 대가가 큰 / delay : 지연 / timeline : 일정, 시간표</span>
+        <span class="example-desc">조직 내 문제가 구체적인 업무 결과로 이어지는 상황입니다. 사내 보고서나 사후 분석(post-mortem) 문서에서 자주 쓰이는 패턴으로, 원인과 결과의 연결을 격식 있게 제시합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">8. The unexpected discovery in clinical trials brought about a complete redesign of the drug formula.</span>
+        <span class="example-ko">(임상 시험에서의 예상치 못한 발견이 약물 처방의 완전한 재설계를 초래했어.)</span>
+        <span class="example-vocab">clinical trial : 임상 시험 / redesign : 재설계 / formula : 처방, 공식</span>
+        <span class="example-desc">과학적 발견이 연쇄적인 결과를 만들어내는 상황입니다. 의학·과학 보고서에서 특히 자주 쓰이는 표현으로, "complete redesign"처럼 대대적인 변화를 결과로 표현할 때 bring about이 가장 잘 어울립니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">9. The financial crisis of 2008 brought about a fundamental rethinking of global banking regulations.</span>
+        <span class="example-ko">(2008년 금융 위기는 글로벌 은행 규제에 대한 근본적인 재고를 초래했어.)</span>
+        <span class="example-vocab">financial crisis : 금융 위기 / fundamental : 근본적인 / rethinking : 재고, 재검토 / banking regulation : 은행 규제</span>
+        <span class="example-desc">역사적인 경제 사건이 제도 전체의 패러다임을 바꿔놓은 상황입니다. "Fundamental rethinking"은 단순한 수정이 아닌 근본부터 다시 생각하는 대변혁을 의미하며, bring about의 무게감과 완벽하게 어울립니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">10. A single misread sensor brought about a cascade of system failures that shut down the entire network.</span>
+        <span class="example-ko">(센서 하나의 오작동이 전체 네트워크를 마비시킨 연쇄적인 시스템 장애를 초래했어.)</span>
+        <span class="example-vocab">misread : 잘못 읽다, 오작동하다 / cascade : 연쇄, 폭포처럼 이어지는 / failure : 장애, 고장</span>
+        <span class="example-desc">작은 원인이 연쇄적으로 큰 결과를 만들어내는 상황입니다. "Cascade of failures"처럼 결과가 줄줄이 이어지는 상황을 묘사할 때 bring about이 연쇄 반응의 출발점을 명확히 잡아줍니다.</span>
+    </div>
+
+    <!-- ===== 대화문 2 ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — 사내 정책 변경 결과를 분석하는 회의 대화
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">새 정책을 시행한 후 결과를 검토하는 팀 미팅 상황입니다. bring about이 구체적인 비즈니스 결과를 묘사하는 맥락에서 어떻게 쓰이는지 확인해 보세요.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Let's look at what the flexible working policy has actually <strong>brought about</strong> since we rolled it out in January.</span>
+        </div>
+        <div class="speech-desc">1월에 시행한 이후 유연 근무 정책이 실제로 어떤 결과를 가져왔는지 살펴봅시다. — roll out(시행하다, 출시하다).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">The data's encouraging. It's <strong>brought about</strong> a measurable improvement in employee satisfaction scores — up eighteen percent.</span>
+        </div>
+        <div class="speech-desc">데이터가 고무적입니다. 직원 만족도 점수에서 측정 가능한 개선을 가져왔어요 — 18퍼센트 상승했습니다. — measurable(측정 가능한), encouraging(고무적인).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">That's significant. Has it <strong>brought about</strong> any operational challenges we need to address?</span>
+        </div>
+        <div class="speech-desc">상당하네요. 해결해야 할 운영상의 도전 과제도 초래했나요? — operational(운영상의), address(다루다, 해결하다).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Some. The shift to remote work has <strong>brought about</strong> coordination issues across time zones, which we're still working through.</span>
+        </div>
+        <div class="speech-desc">다소 있습니다. 원격 근무로의 전환이 시간대 간 조정 문제를 초래했는데, 아직 해결 중입니다. — coordination(조정, 협업), time zone(시간대).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Expected, but manageable. Overall, I'd say the policy has <strong>brought about</strong> more good than harm. Let's look at how we refine it further.</span>
+        </div>
+        <div class="speech-desc">예상된 일이지만 관리 가능합니다. 전반적으로, 정책이 해악보다 이로움을 더 많이 가져왔다고 봅니다. 더 개선할 방법을 살펴봅시다.</div>
+    </div>
+
+    <!-- ===== 실수 박스 2 ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — "Bring about"은 분리 가능하지만, 이렇게 써야 합니다
+        </div>
+        <p>bring about은 분리 가능한 구동사(separable phrasal verb)입니다. 따라서 목적어를 bring과 about 사이에 넣을 수도 있습니다. <strong>"The policy brought about significant changes"</strong>와 <strong>"The policy brought significant changes about"</strong> 둘 다 문법적으로 맞습니다. 그러나 목적어가 길거나 무거울 때는 about을 뒤에 붙이면 어색해지므로, 실제로는 대부분 <strong>about을 바로 뒤에 붙이는 형태</strong>를 씁니다. 가장 중요한 규칙은 대명사입니다. 목적어가 대명사(it, them)일 때는 반드시 중간에 넣어야 합니다. <strong>"What brought it about?"</strong>(무엇이 그것을 초래했는가?)은 맞지만, <strong>"What brought about it?"</strong>은 틀립니다. 대명사는 언제나 bring과 about 사이에 위치합니다. 이 규칙은 pick up, call off처럼 다른 분리 가능 구동사와 완전히 동일합니다.</p>
+    </div>
+
+    <!-- ===== 의미 3 ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: rocket-launch (의도적으로 변화를 실현시키다) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+            </span>
+            의미 ③ (긍정적인 변화를) 의도적으로 이끌어내다 — 더 나은 세상을 향한 의지
+        </span>
+    </h2>
+    <p>세 번째 의미는 bring about이 가장 빛나는 순간입니다. 단순히 어떤 결과가 발생했다는 것을 넘어, <strong>더 나은 변화를 만들겠다는 의지와 헌신</strong>이 표현 안에 담깁니다. 사회 활동가, 혁신적인 리더, 과학자, 교육자가 자신의 일을 이야기할 때 "I want to bring about change"라고 말하는 것에는 단순한 목표 이상의 사명감이 실립니다. 이 의미에서 bring about은 단순한 인과관계의 언어가 아니라 <strong>비전과 행동력의 언어</strong>가 됩니다.</p>
+
+    <div class="example-box">
+        <span class="example-en">1. She dedicated her entire career to bringing about gender equality in the workplace.</span>
+        <span class="example-ko">(그녀는 직장 내 성평등을 이끌어내기 위해 자신의 전 경력을 바쳤어.)</span>
+        <span class="example-vocab">dedicate : 헌신하다, 바치다 / gender equality : 성평등</span>
+        <span class="example-desc">"Dedicated her entire career to bringing about"은 삶 전체를 특정 변화 실현에 쏟아부었다는 강력한 헌신을 표현합니다. bring about의 동명사 형태(bringing about)가 목표를 향한 지속적인 행동을 자연스럽게 담아냅니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">2. The organization's mission is to bring about lasting change in how society treats the elderly.</span>
+        <span class="example-ko">(그 단체의 사명은 사회가 노인을 대하는 방식에 지속적인 변화를 이끌어내는 것이야.)</span>
+        <span class="example-vocab">mission : 사명, 임무 / lasting : 지속적인, 오래가는 / treat : 대하다, 처우하다 / elderly : 노인, 고령자</span>
+        <span class="example-desc">비영리 단체나 사회적 기업의 미션 선언문(mission statement)에서 자주 등장하는 패턴입니다. "Lasting change"처럼 일시적이지 않고 영속적인 변화를 목표로 할 때 bring about이 가장 잘 어울립니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">3. If we work together, we can bring about the kind of systemic reform this industry desperately needs.</span>
+        <span class="example-ko">(우리가 함께 노력하면, 이 산업이 절실히 필요로 하는 종류의 구조적 개혁을 이끌어낼 수 있어.)</span>
+        <span class="example-vocab">systemic : 구조적인, 전반적인 / reform : 개혁 / desperately : 절실히, 몹시</span>
+        <span class="example-desc">"We can bring about"은 집단적 행동으로 변화를 실현할 수 있다는 희망과 의지를 담은 표현입니다. 조건절(If we work together)과 함께 쓰이면 협력이 변화의 조건임을 자연스럽게 강조합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">4. Education is one of the most powerful tools we have to bring about positive social change.</span>
+        <span class="example-ko">(교육은 긍정적인 사회 변화를 이끌어내기 위해 우리가 가진 가장 강력한 도구 중 하나야.)</span>
+        <span class="example-desc">교육의 사회적 역할을 강조하는 표현입니다. "One of the most powerful tools to bring about"은 수단과 목적을 연결하는 격식 있는 패턴으로, 연설이나 에세이에서 자주 쓰입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">5. What steps can individuals take to help bring about a more sustainable future?</span>
+        <span class="example-ko">(개인들이 보다 지속 가능한 미래를 이끌어내는 데 도움이 되기 위해 어떤 조치를 취할 수 있을까?)</span>
+        <span class="example-vocab">sustainable : 지속 가능한 / individual : 개인</span>
+        <span class="example-desc">의문문 형태의 bring about은 토론이나 에세이의 문제 제기에 자주 쓰입니다. "Help bring about"처럼 도움의 역할로 표현하면 개인의 기여가 더 큰 변화의 일부임을 자연스럽게 전달합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">6. His groundbreaking research on renewable energy helped bring about a shift in global energy policy.</span>
+        <span class="example-ko">(재생 에너지에 관한 그의 획기적인 연구가 글로벌 에너지 정책의 전환을 이끌어내는 데 기여했어.)</span>
+        <span class="example-vocab">groundbreaking : 획기적인, 선구적인 / renewable energy : 재생 에너지 / shift : 전환, 변화</span>
+        <span class="example-desc">"Helped bring about"은 단독 원인이 아니라 기여자로서의 역할을 표현합니다. 과학자나 연구자가 더 큰 변화에 기여했다는 것을 겸손하면서도 효과적으로 전달하는 패턴입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">7. The young activist has dedicated herself to bringing about an end to child labor in her country.</span>
+        <span class="example-ko">(그 젊은 활동가는 자국에서 아동 노동을 종식시키는 데 헌신했어.)</span>
+        <span class="example-vocab">activist : 활동가 / child labor : 아동 노동 / dedicate oneself to : ~에 헌신하다</span>
+        <span class="example-desc">"Bringing about an end to"는 어떤 부정적인 상황의 종식을 목표로 헌신하는 것을 표현하는 강력한 패턴입니다. 사회 운동, 인권 활동, NGO 관련 글에서 매우 자주 등장합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">8. Leadership is not just about managing people — it's about inspiring them to bring about meaningful change.</span>
+        <span class="example-ko">(리더십은 단지 사람을 관리하는 것이 아니라, 그들이 의미 있는 변화를 이끌어내도록 영감을 주는 것이야.)</span>
+        <span class="example-vocab">inspire : 영감을 주다 / meaningful : 의미 있는</span>
+        <span class="example-desc">리더십의 본질을 정의하는 문장에서 bring about은 단순한 관리를 넘어 변화 창출의 언어로 쓰입니다. 경영 서적, 강연, 리더십 에세이에서 자주 인용되는 구조입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">9. No single person can bring about world peace, but collective action makes it more possible.</span>
+        <span class="example-ko">(단 한 사람이 세계 평화를 이끌어낼 수는 없지만, 집단적인 행동이 그것을 더욱 가능하게 만들어.)</span>
+        <span class="example-vocab">collective : 집단적인, 공동의 / action : 행동, 실천</span>
+        <span class="example-desc">세계 평화처럼 거대한 이상을 목적어로 취하는 문장입니다. bring about은 아무리 큰 목표도 목적어로 담아낼 수 있으며, 이 문장처럼 겸손한 인식과 희망을 동시에 표현하는 데 잘 어울립니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">10. Sometimes it takes a crisis to bring about the kind of cooperation that should have existed all along.</span>
+        <span class="example-ko">(때로는 위기가 있어야 처음부터 있어야 했던 협력을 이끌어내기도 해.)</span>
+        <span class="example-vocab">crisis : 위기 / cooperation : 협력, 협동 / all along : 처음부터 줄곧</span>
+        <span class="example-desc">역설적인 통찰을 담은 문장입니다. 위기가 협력이라는 긍정적 결과를 이끌어낸다는 아이러니를 표현하는 데 bring about이 완벽하게 어울립니다. 에세이의 결론이나 연설의 핵심 문장으로 사용하기 좋습니다.</span>
+    </div>
+
+    <!-- ===== 대화문 3 ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — Bring about 3가지 의미를 한 번에
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">스타트업 창업을 앞두고 사회적 임팩트를 이야기하는 두 사람의 대화입니다. bring about의 세 가지 의미가 하나의 흐름 안에 자연스럽게 녹아 있습니다.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">You've talked about wanting your company to make a real difference. What kind of change do you actually want to <strong>bring about</strong>?</span>
+        </div>
+        <div class="speech-desc">회사가 진정한 변화를 만들기를 원한다고 했잖아. 실제로 어떤 변화를 이끌어내고 싶어? — 의미 ③: 의도적으로 변화를 실현하려는 의지를 묻는 질문입니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Honestly, I want to <strong>bring about</strong> a shift in how small businesses access financial services. Right now the system is deeply unfair.</span>
+        </div>
+        <div class="speech-desc">솔직히, 소기업들이 금융 서비스에 접근하는 방식의 전환을 이끌어내고 싶어. 지금 시스템은 너무 불공평하거든. — 의미 ③이 이어지며 구체적인 사명이 드러납니다. financial services(금융 서비스), unfair(불공평한).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">That's a big goal. What makes you think a startup can <strong>bring about</strong> that kind of structural change?</span>
+        </div>
+        <div class="speech-desc">큰 목표네. 스타트업이 그런 구조적 변화를 이끌어낼 수 있다고 생각하는 이유가 뭐야? — structural(구조적인).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Look at what fintech has already <strong>brought about</strong> in consumer banking. Five years ago, nobody was getting instant loans on their phone. Now it's normal.</span>
+        </div>
+        <div class="speech-desc">핀테크가 소비자 금융에 이미 가져온 변화를 봐. 5년 전만 해도 아무도 스마트폰으로 즉시 대출을 받지 못했잖아. 지금은 당연한 일이 됐고. — 의미 ①: 기술이 산업에 가져온 역사적 변화를 언급합니다. fintech(금융 기술).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Fair point. And you think your platform can <strong>bring about</strong> the same kind of disruption for small business lending?</span>
+        </div>
+        <div class="speech-desc">맞아. 그리고 네 플랫폼이 소기업 대출에도 같은 종류의 혁신을 가져올 수 있다고 생각하는 거야? — 의미 ②: 구체적인 사업 결과를 묻는 표현입니다. disruption(혁신적 붕괴, 파괴적 혁신), lending(대출).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">That's exactly what I'm building toward. It won't happen overnight, but the technology is there. We just need the will to <strong>bring it about</strong>.</span>
+        </div>
+        <div class="speech-desc">그게 바로 내가 향해 나아가고 있는 것이야. 하룻밤에 일어나지는 않겠지만, 기술은 갖춰져 있어. 그것을 실현시킬 의지만 있으면 돼. — "Bring it about"은 대명사 it이 bring과 about 사이에 위치하는 올바른 분리 구조입니다.</div>
+    </div>
+
+    <!-- ===== 실수 박스 3 ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — "Bring about"과 혼동하기 쉬운 표현들
+        </div>
+        <p>bring about을 배운 뒤 비슷한 표현들과 혼동하는 경우가 있습니다. 먼저 <strong>bring up</strong>은 "화제를 꺼내다" 또는 "아이를 키우다"라는 전혀 다른 뜻입니다. "She brought up an interesting point"(그녀가 흥미로운 요점을 꺼냈어)는 bring about과 아무 관계가 없습니다. 또 <strong>bring on</strong>은 "증상이나 감정 등을 유발하다"라는 뜻으로, bring about보다 훨씬 즉각적이고 신체적인 맥락에서 씁니다. "The cold weather brought on his arthritis"(추운 날씨가 그의 관절염을 유발했어)처럼 질병·증상과 연관이 깊습니다. 마지막으로 <strong>bring out</strong>은 "잠재된 특성을 끌어내다"라는 뜻입니다. "Pressure brings out the best in her"(압박이 그녀의 최선을 끌어내)처럼 씁니다. 정리하면 <strong>bring about = 변화·결과를 초래하다 / bring up = 화제를 꺼내다 / bring on = 증상을 유발하다 / bring out = 잠재력을 끌어내다.</strong> 이 네 가지를 구분하는 것만으로 bring 계열 구동사를 완전히 정복할 수 있습니다.</p>
+    </div>
+
+</article>
+
+<footer>
+    <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
