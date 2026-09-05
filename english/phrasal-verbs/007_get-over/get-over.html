@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[구동사 완벽 정리] Get over — 이별·병·충격을 극복하다, 3가지 핵심 의미 총정리 | 영어창고</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        :root{--bg-paper:#FBFBF9;--bg-white:#FFFFFF;--text-black:#1A1A1A;--text-gray:#555555;--accent-color:#4F46E5;--border-color:#E2E2DF;}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'SUIT','Pretendard',sans-serif;letter-spacing:-0.02em;}
+        body{background-color:var(--bg-paper);color:var(--text-black);line-height:1.6;-webkit-font-smoothing:antialiased;padding:0;}
+        a{text-decoration:none;color:inherit;}
+
+        /* ── 헤더 ── */
+        header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:center;align-items:center;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}
+        .logo{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:900;color:var(--text-black);display:flex;align-items:center;gap:6px;}
+        .logo span{color:var(--accent-color);font-weight:800;font-size:18px;}
+
+        /* ── 본문 컨테이너 ── */
+        .post-container{max-width:760px;margin:40px auto;background-color:var(--bg-white);padding:40px 30px;border:1px solid var(--border-color);box-shadow:0 4px 20px rgba(0,0,0,0.02);}
+
+        /* ── 메타 정보 ── */
+        .post-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;border-bottom:1px solid #f1f5f9;padding-bottom:16px;}
+        .meta-badge{display:inline-flex;align-items:center;gap:5px;font-size:0.8rem;color:#64748b;background:#F8F9FA;border:1px solid var(--border-color);border-radius:999px;padding:4px 10px;}
+        .meta-badge svg{flex-shrink:0;}
+
+        /* ── 타이포그래피 ── */
+        h1{font-size:1.8rem;color:var(--text-black);margin-bottom:20px;line-height:1.4;word-break:keep-all;font-weight:900;}
+        p{font-size:1rem;color:var(--text-gray);margin-bottom:16px;word-break:keep-all;font-weight:500;}
+        .highlight{color:var(--accent-color);font-weight:700;background:#F0F0FC;padding:2px 6px;border-radius:4px;}
+
+        /* ── h2 ── */
+        h2{font-size:1.3rem;color:var(--bg-white);margin-top:45px;margin-bottom:15px;font-weight:800;display:flex;align-items:center;gap:10px;}
+        .h2-inner{display:flex;align-items:center;gap:10px;background:var(--accent-color);padding:8px 16px 8px 12px;border-radius:8px;}
+        .h2-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(255,255,255,0.2);border-radius:6px;flex-shrink:0;}
+        .h2-icon svg{width:16px;height:16px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+        /* ── 핵심 개념 박스 ── */
+        .concept-box{background-color:#F8F9FA;border:1px solid var(--border-color);border-radius:8px;padding:24px;margin:30px 0;}
+        .concept-box-title{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+        .concept-title-icon{display:flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--accent-color);border-radius:8px;flex-shrink:0;}
+        .concept-title-icon svg{width:18px;height:18px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .concept-box-title strong{color:var(--text-black);font-size:1.05rem;font-weight:800;}
+        .concept-desc{margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--border-color);}
+        .concept-desc:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+        .concept-word{color:var(--accent-color);font-weight:800;font-size:1.05rem;}
+
+        /* ── 예문 박스 ── */
+        .example-box{background-color:#FFFFFF;border-left:4px solid var(--accent-color);padding:18px;margin:16px 0;border:1px solid var(--border-color);border-left-width:4px;}
+        .example-en{display:block;font-weight:700;color:var(--text-black);font-size:1.05rem;margin-bottom:4px;}
+        .example-ko{display:block;color:var(--text-gray);font-size:0.95rem;margin-bottom:8px;font-weight:500;}
+        .example-vocab{display:block;font-size:0.88rem;color:#4F46E5;background:#F0F0FC;padding:7px 12px;border-radius:4px;margin-bottom:8px;font-weight:600;}
+        .example-desc{display:block;font-size:0.9rem;color:#666;background-color:#FBFBF9;padding:10px 14px;border-radius:4px;border:1px solid var(--border-color);}
+
+        /* ── 대화문 박스 ── */
+        .dialogue-box{background-color:#FFFBEB;border:1px solid #FDE68A;padding:24px;border-radius:8px;margin:35px 0;}
+        .dialogue-title{font-weight:800;color:#B45309;margin-bottom:14px;font-size:1.05rem;display:flex;align-items:center;gap:8px;}
+        .dialogue-title-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#B45309;border-radius:6px;flex-shrink:0;}
+        .dialogue-title-icon svg{width:15px;height:15px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .dialogue-line{margin-bottom:10px;font-size:0.95rem;display:flex;align-items:flex-start;gap:8px;}
+        .speaker{color:#92400e;font-weight:800;min-width:20px;}
+        .speech{flex:1;color:#1A1A1A;font-weight:600;}
+        .speech-desc{color:#78350F;font-size:0.9rem;margin-top:4px;margin-bottom:14px;margin-left:28px;}
+
+        /* ── 실수 박스 ── */
+        .mistake-box{background-color:#FEF2F2;border:1px solid #FECACA;padding:24px;border-radius:8px;margin:35px 0;}
+        .mistake-title{font-weight:800;color:#B91C1C;margin-bottom:12px;display:flex;align-items:center;gap:8px;font-size:1.05rem;}
+        .mistake-title-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#B91C1C;border-radius:6px;flex-shrink:0;}
+        .mistake-title-icon svg{width:15px;height:15px;stroke:white;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+        .mistake-box p{color:#7F1D1D;margin-bottom:0;}
+
+        /* ── 푸터 ── */
+        footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px;margin-top:40px;border-top:1px solid var(--border-color);background:var(--bg-white);}
+
+        @media(max-width:768px){
+            .post-container{margin:0;padding:20px 16px;border:none;}
+            h1{font-size:1.5rem;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a class="logo" href="/">영어창고 <span>MyEnglishVault</span></a>
+</header>
+
+<article class="post-container">
+
+    <!-- ── 메타 뱃지 ── -->
+    <div class="post-meta">
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+            영어창고
+        </span>
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            2026. 09. 05
+        </span>
+        <span class="meta-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            읽는 시간: 12분
+        </span>
+    </div>
+
+    <h1>[구동사 완벽 정리] 이별 후 친구가 "Get over it!"이라고 했을 때, 그게 위로인지 핀잔인지 구분할 수 있나요?</h1>
+
+    <p>"그 사람 아직도 못 잊었어?" 이 말을 영어로 하면 어떻게 될까요? 많은 분들이 "Do you still miss him?"이나 "Can't you forget about him?" 같은 표현을 떠올립니다. 틀리지는 않지만, 원어민들이 실제로 쓰는 표현은 훨씬 간결합니다. <em>"You still haven't gotten over him?"</em> 단 다섯 단어에 이별의 아픔을 아직 털어내지 못했다는 감정이 고스란히 담깁니다.</p>
+    <p>오늘 배울 <span class="highlight">get over</span>는 이별뿐 아니라 질병, 충격적인 사건, 실패, 당혹감, 심지어 믿기 어려운 소식에 이르기까지 <strong>부정적인 경험의 고개를 넘어 앞으로 나아가는 모든 순간</strong>에 등장합니다. 이 표현 하나를 완전히 내 것으로 만들면, 삶의 가장 중요한 감정 언어를 원어민처럼 구사할 수 있게 됩니다.</p>
+
+    <!-- ── 개념 박스 ── -->
+    <div class="concept-box">
+        <div class="concept-box-title">
+            <div class="concept-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+            </div>
+            <strong>핵심 개념 전문 요약 — Get over의 뿌리를 알면 세 의미가 동시에 보인다</strong>
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">어원 해설 — "언덕을 넘어 저편으로 간다"는 이미지 하나가 전부입니다</span><br><br>
+            <strong>get over</strong>는 동사 <strong>get</strong>(이동하다, 어떤 상태에 도달하다)과 전치사 <strong>over</strong>(~위를 넘어, ~을 가로질러)가 결합된 구동사입니다. 핵심 이미지는 <strong>'장애물을 넘어 반대편으로 건너가다'</strong>입니다. 눈앞에 커다란 언덕이나 장벽이 있고, 그것을 힘겹게 넘어 마침내 저편에 도달하는 장면을 상상해 보세요. 이별의 아픔, 질병, 충격적인 사건이라는 장벽을 넘어 정상적인 삶으로 돌아오는 것이 get over의 본질입니다. 그래서 이 표현에는 단순히 '잊다(forget)'나 '버티다(endure)'가 아닌, <strong>장애물을 완전히 통과하여 이전 상태 혹은 더 나은 상태로 복귀한다</strong>는 역동적인 움직임이 담겨 있습니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ① 이별·실연의 아픔을 극복하고 털어내다</span><br><br>
+            가장 많이 쓰이는 의미입니다. 연인과의 이별, 오랜 짝사랑의 실패, 관계의 종료처럼 감정적인 상처의 고개를 넘는 것을 표현합니다. "I can't get over him"이라고 하면 아직 그 사람을 마음에서 떨쳐내지 못했다는 것이고, "She's finally gotten over the breakup"이라고 하면 오랜 시간 끝에 이별의 아픔을 완전히 털어냈다는 것입니다. 한국어의 "털어내다", "잊다", "극복하다"를 모두 포괄합니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ② 병·사고·충격적 사건에서 회복하다</span><br><br>
+            신체적 질병이나 사고, 또는 심리적으로 충격적인 사건에서 회복하는 과정을 표현합니다. "She got over the flu quickly"처럼 가벼운 질병부터, "It took him years to get over the accident"처럼 심각한 사고까지 범위가 넓습니다. 의학적 치료보다 시간이 지나면서 자연스럽게 회복되는 과정을 묘사하는 데 특히 잘 어울립니다.
+        </div>
+        <div class="concept-desc">
+            <span class="concept-word">의미 ③ 믿기 어려운 사실·놀라운 상황에 적응하다 / 당혹감을 떨쳐내다</span><br><br>
+            충격적이거나 믿기 어려운 소식, 당혹스러운 상황에서 처음의 놀라움을 떨쳐내고 현실을 받아들이는 것을 표현합니다. "I can't get over how beautiful this place is"처럼 긍정적인 충격에도 씁니다. "Get over yourself"처럼 관용 표현으로 굳어진 형태도 있는데, 이는 "자만하지 마", "그만 유난 떨어"라는 뜻으로 원어민 대화에서 매우 자주 등장합니다.
+        </div>
+    </div>
+
+    <!-- ===== 의미 1 ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: heart (이별·실연 극복) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+            </span>
+            의미 ① 이별·실연의 아픔을 극복하고 훌훌 털어내다
+        </span>
+    </h2>
+    <p>가장 널리 쓰이는 의미이자, 원어민들이 연애 이야기를 할 때 빠짐없이 등장하는 표현입니다. get over는 단순히 '잊다'보다 훨씬 능동적입니다. 어원 속 '언덕을 넘어 저편으로 건너가다'는 이미지처럼, 아픔의 언덕을 직접 발로 걸어 넘어 마침내 반대편에 도달하는 것입니다. 그래서 "I got over it"에는 '시간이 지나 자연스럽게 잊혔다'가 아니라 <strong>'그 고개를 넘어냈다'는 작은 성취감</strong>이 담겨 있습니다. 또한 "I'm over it"처럼 be동사와 결합하면 이미 극복이 완료된 현재 상태를 나타내며, 일상 대화에서 매우 자주 쓰입니다.</p>
+
+    <div class="example-box">
+        <span class="example-en">1. It took her almost a year to get over the breakup, but she's doing so much better now.</span>
+        <span class="example-ko">(이별을 극복하는 데 거의 1년이 걸렸지만, 지금은 훨씬 좋아졌어.)</span>
+        <span class="example-vocab">breakup : 이별, 결별</span>
+        <span class="example-desc">get over의 완료까지 걸린 시간을 명시하는 패턴입니다. "She's doing so much better now"가 극복 이후의 회복된 상태를 보여주어, 어원 속 '언덕을 완전히 넘어 저편에 도달했다'는 이미지를 완성합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">2. I thought I was over him, but then I saw his photo and all those feelings came rushing back.</span>
+        <span class="example-ko">(극복한 줄 알았는데, 그의 사진을 보고 나니 그 감정들이 다시 몰려왔어.)</span>
+        <span class="example-vocab">come rushing back : (감정·기억이) 갑자기 다시 밀려오다</span>
+        <span class="example-desc">"I thought I was over him"은 이미 극복했다고 믿었던 심리를 나타냅니다. 극복이 선형적으로 진행되지 않고 재발할 수 있다는 현실을 담담하게 묘사하는 표현으로, 많은 공감을 받는 패턴입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">3. You need to get over her. She's already moved on and you should too.</span>
+        <span class="example-ko">(그 애 잊어야 해. 걔는 이미 앞으로 나아갔고, 너도 그래야 해.)</span>
+        <span class="example-vocab">move on : (관계·상황에서) 앞으로 나아가다, 새 출발하다</span>
+        <span class="example-desc">친구에게 극복을 촉구하는 상황입니다. "She's already moved on"과 대비를 이루며 상대방의 현실을 직시하게 만드는 표현입니다. 위로와 약간의 독려가 동시에 담긴 뉘앙스입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">4. Honestly, I'm completely over it. I don't feel anything when I see him anymore.</span>
+        <span class="example-ko">(솔직히, 완전히 극복했어. 이제 그를 봐도 아무런 감정이 안 들어.)</span>
+        <span class="example-desc">"I'm completely over it"은 be동사와 결합하여 극복이 완료된 현재 상태를 나타냅니다. "Don't feel anything anymore"가 뒤따르면서 감정적 무감각이 곧 완전한 극복의 증거임을 보여주는 자연스러운 구조입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">5. He was devastated after the divorce, but his friends really helped him get over it.</span>
+        <span class="example-ko">(이혼 후 그는 정말 힘들었지만, 친구들이 그가 극복하는 데 큰 도움이 됐어.)</span>
+        <span class="example-vocab">devastated : 엄청난 충격을 받은, 완전히 무너진 / divorce : 이혼</span>
+        <span class="example-desc">"Help someone get over it"은 누군가의 극복 과정을 돕는다는 뜻으로, get over가 타동사처럼 활용되는 패턴입니다. 혼자 언덕을 넘는 것이 아니라 누군가와 함께 넘는 이미지가 살아납니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">6. Getting over a first love is always the hardest. It sets the template for everything after.</span>
+        <span class="example-ko">(첫사랑을 극복하는 건 언제나 가장 힘들어. 그게 이후 모든 것의 기준점이 되거든.)</span>
+        <span class="example-vocab">template : 기준, 틀, 원형 / set the template : 기준을 만들다, 패턴을 형성하다</span>
+        <span class="example-desc">동명사 주어 "Getting over a first love"는 극복 행위 자체를 문장의 주제로 만드는 구조입니다. 첫사랑 극복의 보편적인 어려움을 말하면서 인생의 감정 패턴을 이야기하는 깊이 있는 표현입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">7. My therapist says the best way to get over someone is to stop checking their social media.</span>
+        <span class="example-ko">(상담사 선생님이 누군가를 극복하는 가장 좋은 방법은 그 사람의 SNS 확인을 멈추는 거라고 했어.)</span>
+        <span class="example-vocab">therapist : 상담사, 치료사 / social media : 소셜 미디어, SNS</span>
+        <span class="example-desc">"Get over someone"은 "그 사람"을 감정적 장애물로 놓는 구조입니다. SNS 차단이라는 현대적인 해법과 결합하여, 요즘 시대의 이별 심리를 현실감 있게 묘사합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">8. It's been six months. I keep telling myself I'm over it, but I'm not sure I fully believe that yet.</span>
+        <span class="example-ko">(6개월이 지났어. 극복했다고 계속 스스로에게 말하는데, 아직 완전히 믿어지지는 않아.)</span>
+        <span class="example-desc">"I keep telling myself I'm over it"은 극복을 스스로에게 납득시키려는 심리를 적나라하게 보여줍니다. 자기 설득과 현실 사이의 간극을 솔직하게 표현하는 매우 인간적인 문장입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">9. She started a new hobby and threw herself into it as a way to get over the relationship.</span>
+        <span class="example-ko">(그녀는 새 취미를 시작해서 그 관계를 극복하기 위한 방법으로 거기에 완전히 빠져들었어.)</span>
+        <span class="example-vocab">throw oneself into : ~에 완전히 몰두하다, 푹 빠져들다</span>
+        <span class="example-desc">"Threw herself into it"은 새로운 활동에 자신을 완전히 던져 넣는다는 생생한 표현입니다. 극복의 방법으로 새로운 몰입을 선택하는 패턴은 많은 사람들이 공감하는 현실적인 대처법입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">10. Don't pressure yourself to get over it quickly. Healing takes as long as it takes.</span>
+        <span class="example-ko">(빨리 극복해야 한다고 자신을 압박하지 마. 치유에는 걸리는 만큼의 시간이 필요해.)</span>
+        <span class="example-vocab">pressure oneself : 스스로를 압박하다 / healing : 치유, 회복</span>
+        <span class="example-desc">"Healing takes as long as it takes"는 극복의 속도를 강요하지 않는 따뜻한 위로의 표현입니다. get over에 내포된 '시간이 걸리는 과정'이라는 뉘앙스를 가장 잘 드러내는 문장입니다.</span>
+    </div>
+
+    <!-- ===== 대화문 1 ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — 이별 후 친구를 위로하는 대화
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">오랜 연애를 끝내고 힘들어하는 친구를 위로하는 상황입니다. get over가 이별 맥락에서 어떻게 자연스럽게 흐르는지 확인해 보세요.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">I just feel like I'm never going to <strong>get over</strong> this. Three years, you know? That's not nothing.</span>
+        </div>
+        <div class="speech-desc">이걸 절대 극복 못 할 것 같아. 3년이잖아, 알지? 그게 별거 아닌 게 아니잖아.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">I know. Three years is a long time. You're not supposed to be <strong>over it</strong> this quickly.</span>
+        </div>
+        <div class="speech-desc">알아. 3년은 긴 시간이야. 이렇게 빨리 극복하는 게 오히려 이상한 거야. — "You're not supposed to be over it this quickly"는 극복에 시간이 필요하다는 것을 자연스럽게 허용해주는 따뜻한 위로입니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Everyone keeps saying "just get over it" like it's that simple. It's really not.</span>
+        </div>
+        <div class="speech-desc">다들 "그냥 털어버려"라고만 하는데, 마치 그게 쉬운 것처럼. 정말 그렇지 않거든.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Ignore them. <strong>Getting over</strong> someone you truly loved takes real time. There's no shortcut.</span>
+        </div>
+        <div class="speech-desc">무시해. 진심으로 사랑했던 사람을 극복하는 건 정말 시간이 걸려. 지름길 같은 건 없어. — 동명사 주어 "Getting over someone"으로 극복 과정 자체를 이야기의 중심에 놓는 구조입니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">I hope I'll be fully <strong>over it</strong> someday. I just don't know when that day is.</span>
+        </div>
+        <div class="speech-desc">언젠가는 완전히 극복할 수 있기를 바라. 그게 언제인지는 모르겠지만.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">You will. And when you are, you won't even remember how much it hurt right now.</span>
+        </div>
+        <div class="speech-desc">분명히 그럴 거야. 그리고 극복하고 나면, 지금 이게 얼마나 아팠는지조차 기억이 안 날 거야.</div>
+    </div>
+
+    <!-- ===== 실수 박스 1 ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — "Get over" vs. "Forget" — 같아 보이지만 결정적으로 다릅니다
+        </div>
+        <p>"이별을 극복했다"는 말을 할 때 <strong>"I forgot him"</strong>이라고 쓰는 경우가 있습니다. 그러나 forget은 단순히 기억에서 지워졌다는 뜻이라, 감정적 언덕을 넘어냈다는 뉘앙스가 전혀 없습니다. 심하면 "그 사람 이름도 기억 못 해?"처럼 이상하게 들릴 수 있습니다. 또 <strong>"I overcome him"</strong>이라고 쓰는 경우도 있는데, overcome은 사람이 아니라 어려움·장애물을 목적어로 취합니다. 사람을 극복할 때는 <strong>"I got over him"</strong>이 유일하게 자연스러운 표현입니다. 그리고 이미 극복이 완료된 상태를 말할 때는 동사가 아닌 형용사처럼 쓰이는 <strong>"I'm over him"</strong>을 기억하세요. 이 두 형태 — <strong>get over + 사람/상황(과정), be over + 사람/상황(완료 상태)</strong> — 를 구분하면 표현이 한결 정교해집니다.</p>
+    </div>
+
+    <!-- ===== 의미 2 ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: sparkles (병·사고·충격에서 회복) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+            </span>
+            의미 ② 병·사고·충격적 사건에서 회복하다 — 시간이 만드는 기적
+        </span>
+    </h2>
+    <p>두 번째 의미는 신체적·심리적 회복을 표현합니다. 감기나 독감 같은 가벼운 질병부터, 큰 수술 이후의 회복, 사고 후 트라우마 극복까지 get over의 스펙트럼은 매우 넓습니다. 의학적 치료가 아닌 <strong>시간의 흐름과 함께 자연스럽게 회복되는 과정</strong>에 특히 잘 어울립니다. "She recovered from the surgery"보다 "She got over the surgery"가 훨씬 구어적이고 자연스럽습니다. 회복이 얼마나 빠른지, 혹은 얼마나 오래 걸렸는지를 표현하는 시간 부사와 자주 결합합니다.</p>
+
+    <div class="example-box">
+        <span class="example-en">1. It took him three weeks to get over the flu. He was completely wiped out the whole time.</span>
+        <span class="example-ko">(독감에서 회복하는 데 3주가 걸렸어. 그동안 완전히 기진맥진해 있었거든.)</span>
+        <span class="example-vocab">flu : 독감 / wiped out : 완전히 지친, 기진맥진한</span>
+        <span class="example-desc">질병 회복에 걸린 시간을 구체적으로 명시하는 패턴입니다. "Completely wiped out"이 더해져 얼마나 심하게 앓았는지가 생생하게 전달되고, 그 언덕이 얼마나 높았는지를 간접적으로 보여줍니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">2. She got over the cold really quickly. I think all that vitamin C helped.</span>
+        <span class="example-ko">(그녀는 감기에서 정말 빨리 회복했어. 비타민 C를 많이 먹은 게 도움이 됐던 것 같아.)</span>
+        <span class="example-desc">빠른 회복을 묘사하는 패턴입니다. "Really quickly"가 get over와 결합하면 회복의 속도가 기대 이상이었다는 뉘앙스가 담깁니다. 일상에서 가장 자주 쓰이는 질병 회복 표현입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">3. It took years for him to get over the trauma from the car accident.</span>
+        <span class="example-ko">(자동차 사고로 인한 트라우마를 극복하는 데 수년이 걸렸어.)</span>
+        <span class="example-vocab">trauma : 정신적 외상, 트라우마 / car accident : 자동차 사고</span>
+        <span class="example-desc">신체적 회복이 아닌 심리적 트라우마의 극복을 묘사합니다. "Took years"는 get over의 언덕이 얼마나 가파른지를 보여주며, 사고 후 PTSD 같은 심각한 심리적 충격을 표현하는 데 자연스럽습니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">4. Are you fully over your surgery yet, or are you still recovering?</span>
+        <span class="example-ko">(수술에서 완전히 회복됐어, 아니면 아직 회복 중이야?)</span>
+        <span class="example-vocab">surgery : 수술 / recover : 회복하다</span>
+        <span class="example-desc">"Are you over it yet?"은 회복 완료 여부를 묻는 가장 자연스러운 구어 표현입니다. 아직 진행 중인 상태를 "still recovering"으로 받으면서 과정과 완료 두 상태를 대비시킵니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">5. Kids get over illnesses so much faster than adults. It's almost unfair.</span>
+        <span class="example-ko">(아이들은 어른보다 병에서 훨씬 빨리 회복해. 거의 불공평할 정도야.)</span>
+        <span class="example-desc">비교급을 활용하여 어린이와 어른의 회복 속도 차이를 묘사합니다. "It's almost unfair"라는 유머러스한 덧붙임이 표현에 생동감을 더합니다. 부모들이 특히 공감하는 표현입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">6. She's still not fully over the jet lag from her flight back from New York.</span>
+        <span class="example-ko">(그녀는 뉴욕에서 돌아온 비행으로 인한 시차 증후군에서 아직 완전히 회복되지 않았어.)</span>
+        <span class="example-vocab">jet lag : 시차로 인한 피로, 시차 증후군</span>
+        <span class="example-desc">질병이 아닌 시차 피로에도 get over를 씁니다. 신체적 불편감을 유발하는 다양한 상태에서 회복하는 것을 폭넓게 표현할 수 있다는 점이 이 구동사의 실용적인 장점입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">7. The community is still struggling to get over the destruction left by the earthquake.</span>
+        <span class="example-ko">(지역 사회가 지진이 남긴 피해에서 아직도 회복하기 위해 힘겹게 노력하고 있어.)</span>
+        <span class="example-vocab">destruction : 파괴, 피해 / earthquake : 지진 / struggle : 힘겹게 애쓰다</span>
+        <span class="example-desc">개인이 아닌 공동체 전체가 자연재해에서 회복하는 과정을 묘사합니다. "Still struggling to get over"는 회복이 아직 완료되지 않은 어려운 상태를 나타내며, get over에 담긴 '언덕을 넘는 과정'의 고통이 선명하게 드러납니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">8. I can't believe how quickly he got over that knee injury. He was back on the field in six weeks.</span>
+        <span class="example-ko">(무릎 부상에서 얼마나 빨리 회복했는지 믿기지 않아. 6주 만에 다시 경기장에 나왔거든.)</span>
+        <span class="example-vocab">knee injury : 무릎 부상 / field : 경기장, 운동장</span>
+        <span class="example-desc">스포츠 부상 회복의 빠른 속도에 놀라움을 표현하는 패턴입니다. "Back on the field"가 회복의 완료를 행동으로 증명하는 표현으로, get over의 '저편에 도달했다'는 이미지를 완성합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">9. My grandmother never fully got over losing her husband of forty years. You could always see it in her eyes.</span>
+        <span class="example-ko">(우리 할머니는 40년 함께한 남편을 잃은 것을 끝내 완전히 극복하지 못하셨어. 항상 눈빛에서 느껴졌어.)</span>
+        <span class="example-vocab">fully : 완전히, 충분히</span>
+        <span class="example-desc">"Never fully got over"는 극복이 완료되지 못한 상태를 나타냅니다. 사랑하는 사람의 죽음이라는 상실이 언덕을 영영 넘지 못하는 수준의 것일 수 있음을 조용하고 깊이 있게 전달합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">10. Rest up this weekend. You won't get over that cold if you keep pushing yourself so hard.</span>
+        <span class="example-ko">(이번 주말에 푹 쉬어. 그렇게 계속 자신을 몰아붙이면 감기가 안 나아.</span>
+        <span class="example-vocab">rest up : 충분히 쉬다, 재충전하다 / push oneself : 자신을 몰아붙이다</span>
+        <span class="example-desc">조건절로 회복의 방해 요인을 경고하는 표현입니다. "Keep pushing yourself"가 회복을 방해하는 행동을 나타내며, get over가 단순히 시간이 아닌 올바른 조건이 갖춰져야 가능한 과정임을 자연스럽게 알려줍니다.</span>
+    </div>
+
+    <!-- ===== 대화문 2 ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — 수술 후 회복 중인 동료를 걱정하는 대화
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">수술에서 회복 중인 동료에게 안부를 묻는 상황입니다. 병과 회복의 맥락에서 get over가 어떻게 자연스럽게 쓰이는지 확인하세요.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">How are you feeling? I heard you had an operation last week.</span>
+        </div>
+        <div class="speech-desc">몸은 좀 어때요? 지난주에 수술했다고 들었어요.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Getting there, thanks. I'm still not completely <strong>over</strong> it, but every day is a little better.</span>
+        </div>
+        <div class="speech-desc">회복 중이에요, 감사해요. 아직 완전히 회복된 건 아니지만, 날마다 조금씩 좋아지고 있어요. — "Getting there"는 목표에 서서히 도달하고 있다는 뜻의 구어 표현입니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">Don't rush it. You'll <strong>get over</strong> it fully if you give yourself enough time to rest.</span>
+        </div>
+        <div class="speech-desc">서두르지 마세요. 충분한 휴식 시간을 주면 완전히 회복될 거예요. — 회복을 위한 가장 중요한 조건으로 충분한 휴식을 제안하는 따뜻한 표현입니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">I know, I know. It's just hard to sit still when there's so much to do at work.</span>
+        </div>
+        <div class="speech-desc">알아요, 알아요. 그냥 회사에 할 일이 많은데 가만히 있기가 힘들어서요.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">We've got it covered. Focus on <strong>getting over</strong> this first. Everything else can wait.</span>
+        </div>
+        <div class="speech-desc">저희가 다 처리할게요. 일단 회복하는 데 집중하세요. 나머지는 다 기다릴 수 있어요. — "Getting over this first"에서 동명사 형태의 get over가 회복이라는 우선순위를 강조합니다.</div>
+    </div>
+
+    <!-- ===== 실수 박스 2 ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — "Recover" 대신 "Get over"를 써야 더 자연스러운 때
+        </div>
+        <p>병에서 회복하는 것을 표현할 때 <strong>"I recovered from the cold"</strong>라고 쓰는 분들이 많습니다. 이 표현 자체는 맞습니다. 그러나 원어민들의 일상 대화에서는 recover보다 <strong>"I got over the cold"</strong>를 훨씬 더 자주 씁니다. recover는 조금 격식 있게 들리거나, 의학 보고서·뉴스처럼 공식적인 맥락에 더 잘 어울립니다. 반면 get over는 친구와의 대화, 가족과의 안부 인사처럼 편안한 일상 어투에 딱 맞습니다. "Are you recovered?"보다 <strong>"Are you over it yet?"</strong>이 훨씬 구어적이고 자연스럽습니다. 어떤 표현이 틀린 게 아니라, 맥락에 따라 더 자연스러운 선택이 있다는 것, 이것이 영어 감각을 키우는 핵심입니다.</p>
+    </div>
+
+    <!-- ===== 의미 3 ===== -->
+    <h2>
+        <span class="h2-inner">
+            <span class="h2-icon">
+                <!-- Heroicons: face-smile (놀라움·당혹감을 떨쳐내다) -->
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"/></svg>
+            </span>
+            의미 ③ 믿기 어려운 사실에 적응하다 / 당혹감을 떨쳐내다 — 충격의 언덕을 넘다
+        </span>
+    </h2>
+    <p>세 번째 의미는 가장 폭넓고 유연한 용법입니다. 이별이나 병이 아니라, <strong>처음 접했을 때 충격적이거나 믿기 어렵거나 당혹스러운 모든 상황</strong>에서 그 첫 반응의 언덕을 넘는 것을 표현합니다. 놀랍도록 아름다운 풍경, 믿을 수 없는 가격, 예상 밖의 소식처럼 긍정적인 충격에도 씁니다. 특히 <strong>"I can't get over how…"</strong> 패턴은 원어민들이 일상에서 감탄을 표현할 때 가장 자주 쓰는 구조 중 하나입니다. 또 <strong>"Get over yourself"</strong>라는 관용 표현은 "자만하지 마" 혹은 "그만 유난 떨어"라는 뜻으로, 드라마·영화·일상 대화에서 매우 자주 등장합니다.</p>
+
+    <div class="example-box">
+        <span class="example-en">1. I still can't get over how affordable that restaurant was. The food was incredible.</span>
+        <span class="example-ko">(그 식당이 얼마나 저렴했는지 아직도 믿기지 않아. 음식은 정말 훌륭했는데.)</span>
+        <span class="example-vocab">affordable : 가격이 적당한, 부담 없는 / incredible : 믿기 어려운, 놀라운</span>
+        <span class="example-desc">"I can't get over how + 형용사"는 긍정적인 충격을 감탄으로 표현하는 가장 자주 쓰이는 패턴입니다. 아직 그 놀라움의 언덕을 완전히 넘지 못했다는 것이 곧 감탄의 깊이를 나타냅니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">2. He can't get over the fact that he got rejected from his dream university.</span>
+        <span class="example-ko">(그는 꿈에 그리던 대학에 불합격했다는 사실을 받아들이지 못하고 있어.)</span>
+        <span class="example-vocab">get rejected : 거절당하다, 불합격하다 / dream university : 꿈의 대학</span>
+        <span class="example-desc">"Can't get over the fact that"는 현실을 심리적으로 받아들이지 못하는 상태를 나타냅니다. 충격적인 소식이 아직 언덕을 넘지 못하고 있다는 것이 정확히 전달됩니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">3. I can't get over how much the kids have grown. Last time I saw them, they were tiny!</span>
+        <span class="example-ko">(아이들이 얼마나 많이 컸는지 믿기지 않아. 마지막으로 봤을 때는 정말 작았는데!)</span>
+        <span class="example-desc">오랜만에 아이들을 보고 성장에 감탄하는 상황입니다. "I can't get over how much"는 변화의 폭이 너무 커서 충격적이라는 감탄의 구어 패턴으로, 원어민 대화에서 가장 자주 등장하는 형태 중 하나입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">4. She was embarrassed about tripping in front of everyone, but she got over it and laughed it off.</span>
+        <span class="example-ko">(그녀는 모두 앞에서 넘어져서 당황했지만, 그 당혹감을 털어내고 웃어넘겼어.)</span>
+        <span class="example-vocab">embarrassed : 당황한, 창피한 / trip : 발이 걸려 넘어지다 / laugh it off : 웃어넘기다</span>
+        <span class="example-desc">당혹스러운 상황을 떨쳐내는 데도 get over를 씁니다. "Laughed it off"가 뒤따르면서 당혹감의 언덕을 유머로 넘어낸 모습이 생생하게 그려집니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">5. Get over yourself. Not everything is about you.</span>
+        <span class="example-ko">(자만하지 마. 모든 게 너 중심으로 돌아가는 게 아니야.)</span>
+        <span class="example-desc">"Get over yourself"는 원어민들이 일상에서 매우 자주 쓰는 관용 표현입니다. 지나치게 자기중심적이거나 과민 반응하는 사람에게 쓰는 표현으로, 강한 어조이므로 친한 사이에서만 쓰는 것이 안전합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">6. I honestly can't get over how rude that waiter was to us. That was completely uncalled for.</span>
+        <span class="example-ko">(그 웨이터가 우리한테 얼마나 무례했는지 아직도 믿기지 않아. 완전히 있을 수 없는 일이었어.)</span>
+        <span class="example-vocab">uncalled for : 전혀 필요 없는, 있을 수 없는, 부당한</span>
+        <span class="example-desc">부정적인 충격에도 "I can't get over how" 패턴을 씁니다. 불쾌한 경험의 충격이 아직 가시지 않았다는 것을 나타내며, "uncalled for"는 그 행동이 완전히 부당했다는 강한 불만을 표현합니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">7. Once you get over the initial shock of the price, you realize it's actually worth it.</span>
+        <span class="example-ko">(처음 가격에서 오는 충격을 일단 극복하면, 사실 그만한 가치가 있다는 걸 알게 돼.)</span>
+        <span class="example-vocab">initial : 처음의, 초기의 / worth it : 그만한 가치가 있는</span>
+        <span class="example-desc">"Once you get over the initial shock"은 충격의 언덕을 넘고 나면 다른 관점이 열린다는 구조입니다. 고가 제품이나 서비스를 추천할 때 자주 쓰이는 설득의 패턴입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">8. I can't get over the ending of that movie. I've been thinking about it all day.</span>
+        <span class="example-ko">(그 영화 결말이 아직도 믿기지 않아. 하루 종일 생각하고 있거든.)</span>
+        <span class="example-desc">강렬한 영화·드라마 결말에 충격을 받은 상황을 묘사합니다. 문화 콘텐츠를 즐기는 일상적인 맥락에서 get over가 얼마나 자연스럽게 쓰이는지 보여주는 예문입니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">9. He was nervous about public speaking, but once he got over the initial nerves, he was brilliant.</span>
+        <span class="example-ko">(그는 대중 앞에서 말하는 것을 두려워했지만, 처음의 긴장감을 극복하자 정말 훌륭했어.)</span>
+        <span class="example-vocab">public speaking : 대중 앞에서 말하기, 발표 / initial nerves : 처음의 긴장감 / brilliant : 훌륭한, 뛰어난</span>
+        <span class="example-desc">"Got over the initial nerves"는 첫 긴장의 언덕을 넘은 것을 나타냅니다. 극복 이후 능력이 발휘되는 구조는 get over의 어원 속 '저편에 도달하면 더 나아진다'는 이미지를 가장 잘 보여줍니다.</span>
+    </div>
+
+    <div class="example-box">
+        <span class="example-en">10. I can't get over the fact that we used to be best friends and now we don't even talk.</span>
+        <span class="example-ko">(우리가 한때 절친이었는데 지금은 서로 말도 안 한다는 사실이 아직도 실감이 안 나.)</span>
+        <span class="example-vocab">used to : 예전에는 ~이었다 / best friends : 가장 친한 친구들</span>
+        <span class="example-desc">"Can't get over the fact that"는 현실을 받아들이기 어려운 상태를 가장 잘 나타내는 구조입니다. 관계의 변화에 대한 씁쓸한 감정이 담긴 이 문장은 많은 사람들이 깊이 공감하는 표현입니다.</span>
+    </div>
+
+    <!-- ===== 대화문 3 ===== -->
+    <div class="dialogue-box">
+        <div class="dialogue-title">
+            <span class="dialogue-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </span>
+            실전 대화문 — Get over 3가지 의미를 한 번에
+        </div>
+        <p style="color:#92400e; font-size:0.95rem; margin-bottom:16px;">여행에서 돌아온 친구와 안부를 나누는 대화입니다. get over의 세 가지 의미가 하나의 흐름 안에 자연스럽게 녹아 있는 것을 확인하세요.</p>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">You look great! How was the trip? I heard you were sick for part of it.</span>
+        </div>
+        <div class="speech-desc">좋아 보인다! 여행 어땠어? 중간에 아팠다고 들었는데.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Yeah, I <strong>got over</strong> the food poisoning pretty quickly, thankfully. Just two rough days.</span>
+        </div>
+        <div class="speech-desc">응, 식중독에서 꽤 빨리 회복했어, 다행히도. 힘든 이틀만 보냈어. — 의미 ②: 신체적 회복을 나타냅니다. food poisoning(식중독).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">That's a relief. And how are you feeling otherwise? I know the breakup was right before you left.</span>
+        </div>
+        <div class="speech-desc">다행이다. 그리고 다른 건 어때? 출발 직전에 이별이 있었던 거 알잖아.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Honestly, being away helped a lot. I'm not completely <strong>over</strong> it, but I feel like I'm finally heading in the right direction.</span>
+        </div>
+        <div class="speech-desc">솔직히, 여행이 많이 도움이 됐어. 완전히 극복한 건 아니지만, 이제야 올바른 방향으로 가고 있는 느낌이야. — 의미 ①: 이별 극복의 진행 상황을 묘사합니다.</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">A:</span>
+            <span class="speech">That's real progress. By the way, I can't <strong>get over</strong> those photos you posted. The scenery was absolutely stunning.</span>
+        </div>
+        <div class="speech-desc">그거 진짜 발전이다. 그나저나, 네가 올린 사진들이 아직도 믿기지 않아. 경치가 정말 숨막히게 아름다웠어. — 의미 ③: 긍정적 충격에 대한 감탄을 나타냅니다. scenery(경치), stunning(숨막히게 아름다운).</div>
+
+        <div class="dialogue-line">
+            <span class="speaker">B:</span>
+            <span class="speech">Right? I can't <strong>get over</strong> it either. Standing there in person was something else entirely. You have to go someday.</span>
+        </div>
+        <div class="speech-desc">그치? 나도 아직도 믿기지 않아. 직접 거기 서 있는 건 또 완전히 다른 경험이었어. 너도 언제 꼭 가봐야 해. — 의미 ③이 반복되며 두 사람이 공유하는 감탄이 자연스럽게 이어집니다.</div>
+    </div>
+
+    <!-- ===== 실수 박스 3 ===== -->
+    <div class="mistake-box">
+        <div class="mistake-title">
+            <span class="mistake-title-icon">
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+            </span>
+            한국인들이 자주 하는 실수 — "Get over it!"의 온도를 모르면 관계가 어색해집니다
+        </div>
+        <p>힘들어하는 친구에게 위로를 건네려다 <strong>"Get over it!"</strong>이라고 했다가 오히려 상처를 준 경우가 있습니다. 이 표현은 상황에 따라 온도가 크게 달라집니다. 매우 친한 사이에서 가볍게 사용하면 "이제 그만 털어버려"라는 유머 섞인 독려가 되지만, 진심으로 힘들어하는 사람에게 쓰면 "그게 뭐가 힘들어, 그냥 잊어버려"라는 냉담한 핀잔으로 들립니다. 위로를 하고 싶다면 대신 <strong>"It's okay to take your time getting over it"</strong>(극복하는 데 시간이 걸려도 괜찮아) 또는 <strong>"You'll get over this — I know you will"</strong>(넌 분명히 극복할 수 있어)처럼 따뜻한 격려의 형태로 써야 합니다. <strong>"Get over it!"</strong>은 직접적이고 자칫 차갑게 들릴 수 있으니, 상대와의 관계와 맥락을 먼저 읽으세요.</p>
+    </div>
+
+</article>
+
+<footer>
+    <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
