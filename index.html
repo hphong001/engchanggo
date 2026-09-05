@@ -152,12 +152,53 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 .sb-ch-btn:hover{background:#0b4f5e;color:white;border-color:#0b4f5e;}
 .sb-ch-btn svg{width:15px;height:15px;stroke:#1A1A1A;fill:none;stroke-width:2;flex-shrink:0;transition:stroke .2s;}
 .sb-ch-btn:hover svg{stroke:#fff;}
-@media(max-width:1024px){
+
+/* ★ 추가: 구동사 블로그 리스트 (디자인 C) CSS 스타일 ★ */
+.blog-section { margin-top: 80px; padding-top: 40px; border-top: 2px dashed var(--border-color); }
+.blog-header { margin-bottom: 30px; text-align: center; } /* 텍스트 중앙 정렬 */
+.blog-title { 
+  font-size: 24px; 
+  font-weight: 900; 
+  color: var(--text-black); 
+  margin-bottom: 12px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 8px; 
+}
+/* 모던한 Book 아이콘 스타일 */
+.blog-title svg { 
+  width: 26px; 
+  height: 26px; 
+  stroke: var(--accent-color); 
+  fill: none; 
+  stroke-width: 2.5; 
+  stroke-linecap: round; 
+  stroke-linejoin: round; 
+}
+.blog-subtitle { font-size: 15.5px; color: var(--text-gray); font-weight: 500; word-break: keep-all; }
+
+.design-c-list { display: flex; flex-direction: column; gap: 24px; }
+.card-c { display: grid; grid-template-columns: 160px 1fr; background: var(--bg-white); border: 1px solid var(--border-color); transition: all 0.2s ease; text-decoration: none; }
+.card-c:hover { box-shadow: 0 8px 24px rgba(79,70,229,0.06); transform: translateY(-2px); border-color: var(--accent-color); }
+
+.card-c-left { background: #F8F9FA; padding: 30px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-right: 1px solid var(--border-color); }
+.card-c-no { font-size: 12px; color: var(--accent-color); font-weight: 800; margin-bottom: 6px; letter-spacing: 0.5px; }
+.card-c-verb { font-size: 26px; font-weight: 900; color: var(--text-black); line-height: 1.2; font-family: 'DM Sans', sans-serif; text-transform: capitalize; }
+
+.card-c-right { padding: 28px 30px; display: flex; flex-direction: column; justify-content: flex-start; }
+.card-c-title { font-size: 18px; font-weight: 800; margin-bottom: 12px; color: var(--text-black); line-height: 1.4; word-break: keep-all; }
+.card-c-desc { font-size: 15px; color: var(--text-gray); line-height: 1.65; word-break: keep-all; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 20px; }
+
+.card-c-action { margin-top: auto; font-size: 14px; font-weight: 700; color: var(--accent-color); display: flex; align-items: center; gap: 4px; transition: gap 0.2s; }
+.card-c:hover .card-c-action { gap: 8px; }
+
+@media(max-width: 1024px){
   .sidebar{display:none;}
   .page-wrapper{display:block;}
   header{padding-right:5%;}
 }
-@media(max-width:768px){
+@media(max-width: 768px){
   .hero h1{font-size:28px;}
   .hero-btns{flex-direction:column;align-items:center;}
   .hero-btn,.hero-btn-sub{width:260px;}
@@ -174,6 +215,14 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
   #patternGrid.view-list .card{grid-template-columns:60px 1fr auto;padding:10px 12px;}
   #patternGrid.view-list .pattern-desc{display:none;}
   #patternGrid.view-list .action-link{padding:6px 8px;font-size:12px;width:70px;}
+  
+  /* 모바일 카드 반응형 */
+  .card-c { grid-template-columns: 1fr; }
+  .card-c-left { padding: 16px 24px; border-right: none; border-bottom: 1px solid var(--border-color); align-items: flex-start; }
+  .card-c-no { margin-bottom: 2px; }
+  .card-c-verb { font-size: 22px; } 
+  .card-c-right { padding: 24px; }
+  .card-c-desc { -webkit-line-clamp: 4; }
 }
 </style>
 </head>
@@ -330,14 +379,161 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
     <button class="btn-load btn-collapse hidden" id="btnCollapse" onclick="collapseCards()">목록 줄이기 ↑</button>
   </div>
  
+  <!-- ★★★ 구동사 블로그 리스트 섹션 시작 ★★★ -->
+  <div class="blog-section">
+    <div class="blog-header">
+      <h2 class="blog-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        원어민 필수 구동사 마스터 학습 리스트
+      </h2>
+      <p class="blog-subtitle">기초 패턴을 익혔다면, 이제 원어민들이 매일 쓰는 구동사의 미묘한 뉘앙스를 학습해 보세요.</p>
+    </div>
+
+    <div class="design-c-list">
+      
+      <!-- 001 Pick up -->
+      <a href="https://hphong.com/english/phrasal-verbs/001_pick-up/pick-up.html" class="card-c">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 01</span>
+          <span class="card-c-verb">Pick up</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">상황에 따라 뜻이 계속 바뀌는 다의어 'Pick up' 핵심 의미</h3>
+          <p class="card-c-desc">미드나 유튜브 영상을 보다 보면 pick up이라는 표현이 정말 자주 등장한다는 걸 느끼신 적 있으신가요? 어떤 장면에서는 바닥에 떨어진 펜을 집어 드는 행동을 묘사하고, 또 다른 장면에서는 공항에서 누군가를 데리러 간다고 쓰이고, 대화 중에는 "I just picked that up"이라며 기술을 배운 걸 표현하기도 합니다. 심지어 전화를 받을 때도 "Just pick up!"이라고 소리치죠.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 002 Hang out -->
+      <a href="https://hphong.com/english/phrasal-verbs/002_hang-out/hang-out.html" class="card-c">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 02</span>
+          <span class="card-c-verb">Hang out</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">성인이 되어서도 "놀다"를 'Play'라고 쓰면 안 되는 이유</h3>
+          <p class="card-c-desc">성인이 된 이후에도 "놀다"를 영어로 옮기려 할 때 본능적으로 play를 떠올리는 분들이 정말 많습니다. 초등학교 때부터 "놀다 = play"로 굳게 각인되었으니 당연한 일이에요. 그런데 원어민 친구에게 "Do you want to play this weekend?"라고 문자를 보낸다면, 그 친구는 속으로 이렇게 생각합니다. "이 사람, 나랑 보드게임이라도 하자는 건가? 아니면… 아직 애처럼 뛰어놀자는 건가?"</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 003 Drop by -->
+      <a href="https://hphong.com/english/phrasal-verbs/003_drop-by/drop-by.html" class="card-c">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 03</span>
+          <span class="card-c-verb">Drop by</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">"잠깐 들를게"를 Visit으로 쓰면 원어민이 부담스러워하는 이유</h3>
+          <p class="card-c-desc">친구 집 근처를 지나가다가 "나 지금 네 집 근처야, 잠깐 들러도 돼?"라고 말하고 싶을 때, 혹시 visit이라는 단어를 떠올리셨나요? 많은 분들이 "들르다 = visit"으로 알고 있지만, 원어민 친구에게 "I want to visit you this afternoon"이라고 하면 그 친구는 갑자기 집을 청소하고 음식을 준비해야 할 것 같은 압박감을 느낍니다. visit은 목적을 갖고 격식을 차려 찾아가는 행위이기 때문입니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 004 Call off -->
+      <a href="https://hphong.com/english/phrasal-verbs/004_call-off/call-off.html" class="card-c">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 04</span>
+          <span class="card-c-verb">Call off</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">미루다(Put off)와 취소하다(Call off), 헷갈리면 큰일 나는 이유</h3>
+          <p class="card-c-desc">중요한 미팅 전날 밤, 팀장이 메시지를 보냈습니다. "Let's put off tomorrow's meeting." 이 말을 듣고 안도했는데, 알고 보니 그 미팅은 그냥 다음 주로 미뤄진 게 아니라 완전히 없어진 것이었다면 어떨까요? 혹은 반대로, 모든 참석자에게 취소 통보를 보냈는데 담당자가 "나는 단지 미루자고 한 것"이라고 한다면요? 이 두 표현의 차이를 제대로 모르면 실제 업무 현장에서 혼란이 일어날 수 있습니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 005 Run into -->
+      <a href="https://hphong.com/english/phrasal-verbs/005_run-into/run-into.html" class="card-c">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 05</span>
+          <span class="card-c-verb">Run into</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">옛 친구를 마주칠 때와 문제에 부딪힐 때 똑같이 'Run into'를 쓰는 이유</h3>
+          <p class="card-c-desc">길을 걷다가 10년 만에 옛 친구를 마주쳤을 때, 그리고 프로젝트를 진행하다가 예상치 못한 심각한 문제에 부딪혔을 때. 이 두 상황은 겉보기에 전혀 달라 보이지만, 영어로는 똑같이 run into 하나로 표현합니다. "어떻게 이렇게 다른 상황에 같은 표현을 쓰지?"라고 의아할 수 있지만, 어원을 파고들면 두 의미가 하나의 뿌리에서 자라난 것임을 즉시 이해하게 됩니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 006 Look into -->
+      <a href="https://hphong.com/english/phrasal-verbs/006_look-into/look-into.html" class="card-c">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 06</span>
+          <span class="card-c-verb">Look into</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">Find out vs Look into — 원어민이 느끼는 전혀 다른 무게감</h3>
+          <p class="card-c-desc">고객 불만을 접수한 담당자가 이렇게 말했습니다. "I'll find out what happened." 그리고 다른 담당자는 이렇게 말했습니다. "I'll look into it." 두 문장 모두 "확인해 보겠습니다"처럼 들리지만, 원어민은 이 둘에서 전혀 다른 무게감을 느낍니다. 전자는 단순히 사실 하나를 파악하겠다는 것이고, 후자는 내부를 깊이 들여다보며 속사정까지 파헤치겠다는 적극적인 의지가 담겨 있습니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 007 Get over -->
+      <a href="https://hphong.com/english/phrasal-verbs/007_get-over/get-over.html" class="card-c">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 07</span>
+          <span class="card-c-verb">Get over</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">"그 사람 아직도 못 잊었어?" 5단어로 끝내는 'Get over'</h3>
+          <p class="card-c-desc">"그 사람 아직도 못 잊었어?" 이 말을 영어로 하면 어떻게 될까요? 많은 분들이 "Do you still miss him?"이나 "Can't you forget about him?" 같은 표현을 떠올립니다. 틀리지는 않지만, 원어민들이 실제로 쓰는 표현은 훨씬 간결합니다. "You still haven't gotten over him?" 단 다섯 단어에 이별의 아픔을 아직 털어내지 못했다는 감정이 고스란히 담깁니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 008 Come across -->
+      <a href="https://hphong.com/english/phrasal-verbs/008_come-across/come-across.html" class="card-c">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 08</span>
+          <span class="card-c-verb">Come across</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">"우연히 발견하다"와 "인상을 주다" — Come across 완벽 정리</h3>
+          <p class="card-c-desc">오래된 서랍을 뒤지다 잊고 있던 편지를 발견했을 때, 그리고 면접에서 자신도 모르게 거만한 인상을 줬다는 말을 들었을 때. 겉보기에는 전혀 다른 두 상황이지만, 영어로는 둘 다 come across 하나로 표현합니다. "어떻게 이렇게 다른 맥락에 같은 표현을 쓰지?"라는 의문은 어원을 알면 단번에 풀립니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 009 Bring about -->
+      <a href="https://hphong.com/english/phrasal-verbs/009_bring-about/bring-about.html" class="card-c">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 09</span>
+          <span class="card-c-verb">Bring about</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">Cause 대신 'Bring about'을 쓰면 영어가 훨씬 세련돼지는 이유</h3>
+          <p class="card-c-desc">에세이를 쓰거나 보고서를 작성할 때, 또는 발표에서 원인과 결과를 설명할 때 cause라는 단어에 지나치게 의존하고 있지는 않으신가요? "The policy caused changes", "The decision caused problems"처럼요. 이 표현들이 틀린 것은 아닙니다. 그러나 원어민들, 특히 글을 잘 쓰는 사람들은 같은 내용을 훨씬 세련되게 표현합니다. "The policy brought about significant changes", "The decision brought about unforeseen consequences."</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 010 Take over -->
+      <a href="https://hphong.com/english/phrasal-verbs/010_take-over/take-over.html" class="card-c">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 10</span>
+          <span class="card-c-verb">Take over</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">업무 인수인계부터 기업 인수까지 하나로 통하는 'Take over'</h3>
+          <p class="card-c-desc">팀장이 출장을 가면서 업무를 넘기는 상황, 대기업이 스타트업을 인수하는 뉴스, 냉장고를 열었더니 어제 먹다 남긴 음식 냄새가 온 주방을 가득 채우고 있는 상황. 이 세 가지는 겉보기에 전혀 다른 장면이지만, 영어로는 하나의 표현 take over로 연결됩니다. "어떻게 이렇게 다른 맥락에 같은 표현을 쓰지?"라는 의문은, 어원 속 하나의 물리적 이미지를 이해하는 순간 자연스럽게 풀립니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+  <!-- ★★★ 구동사 블로그 리스트 섹션 끝 ★★★ -->
+
 <div id="premium" class="premium-banner">
   <h2>영어 회화의 완성, 전자책으로 완전정복</h2>
   <p>실전 대화문 · 원어민 표현 · 전체 패턴 워크시트<br>언제 어디서든 펴보는 나만의 영어 참고서</p>
   
-  <!-- 기존 버튼 (텍스트도 원하시는 원래 형태나 원하는 이름으로 매칭 가능합니다) -->
   <a href="https://smartstore.naver.com/qcdmall/products/13705620315" class="premium-btn" target="_blank" rel="noopener">전자책 자세히 보기</a>
 
-  <!-- 🍱 버튼 아래 한 줄 여백과 중앙 정렬된 후원 안내 문구 -->
   <p style="font-size: 16px; color: #555555; text-align: center; margin-top: 24px; line-height: 1.6; word-break: keep-all;">
     여러분의 후원은 이 학습 사이트를<br>
     무료로 유지하는데 큰 도움이 됩니다.
@@ -349,14 +545,12 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 
 
 <footer>
-  <!-- 새로 추가된 상단 링크 영역 -->
   <p style="text-align: center; font-size: 13px; font-weight: normal; margin-bottom: 15px;">
     <a href="/privacy-policy.html" style="color: #666; text-decoration: none;">개인정보처리방침</a> &nbsp;|&nbsp;
     <a href="/about.html" style="color: #666; text-decoration: none;">소개</a> &nbsp;|&nbsp;
     <a href="/contact.html" style="color: #666; text-decoration: none;">문의</a>
   </p>
 
-  <!-- 기존 영역 (변경 없음) -->
   <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
   <p style="margin-top: 6px;">문의 : <a href="mailto:hphong@hphong.com">hphong@hphong.com</a></p>
   <p id="visit-counter" style="margin-top:10px;font-size:11px;color:#C0C0C0;letter-spacing:0.03em;"></p>
