@@ -32,7 +32,14 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'SUIT',sans-serif;letter-spacing:-0.02em;}
 body{background-color:var(--bg-paper);color:var(--text-black);line-height:1.6;-webkit-font-smoothing:antialiased;}
 a{text-decoration:none;color:inherit;}
-header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:center;align-items:center;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}
+
+/* 메인 레이아웃 (사이드바 연동) */
+.page-wrapper{display:flex;align-items:flex-start;max-width:1400px;margin:0 auto;}
+.main-content{flex:1;min-width:0;}
+.sidebar{width:300px;flex-shrink:0;padding:24px 16px;align-self:flex-start;position:sticky;top:72px;}
+.sidebar-sticky{display:flex;flex-direction:column;gap:0;}
+
+header{background:var(--bg-white);padding:16px 5%;padding-right:calc(5% + 316px);display:flex;justify-content:center;align-items:center;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}
 .logo{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:900;color:var(--text-black);display:flex;align-items:center;gap:6px;letter-spacing:-0.03em;white-space:nowrap;}
 .logo span{color:var(--accent-color);font-weight:800;font-size:18px;margin-top:1px;}
 
@@ -66,6 +73,15 @@ header{background:var(--bg-white);padding:16px 5%;display:flex;justify-content:c
 
 footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px;margin-top:20px;border-top:1px solid var(--border-color);background:var(--bg-white);}
 
+/* 사이드바 내부 컴포넌트 스타일 연동 */
+.sb-card{background:#FFFFFF;border:1px solid #E2E2DF;padding:20px;margin-bottom:16px;}
+.sb-section-title{font-size:12px;font-weight:800;color:#1A1A1A;letter-spacing:.5px;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid #E2E2DF;margin-bottom:12px;display:block;text-align:center;}
+
+@media(max-width: 1024px){
+  .sidebar{display:none;}
+  .page-wrapper{display:block;}
+  header{padding-right:5%;}
+}
 @media(max-width: 768px){
   .hero h1{font-size:26px;}
   .card-c { grid-template-columns: 1fr; }
@@ -83,159 +99,196 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
   <a class="logo" href="/">영어창고 <span>MyEnglishVault</span></a>
 </header>
 
-<section class="hero">
-  <span class="hero-badge">원어민 필수 표현 아카이브</span>
-  <h1>매일 쓰는 진짜 영어,<br>구동사 뉘앙스 마스터하기</h1>
-  <p>단순 암기로는 이해할 수 없는 전치사의 비밀.<br>상황별 미묘한 의미 차이와 살아있는 예문으로 구동사를 완벽하게 내 것으로 만드세요.</p>
-</section>
+<div class="page-wrapper">
+<div class="main-content">
 
-<div class="container">
-  <div class="breadcrumb">
-    <a href="/">홈</a> &gt; 구동사 마스터 리스트
+  <section class="hero">
+    <span class="hero-badge">원어민 필수 표현 아카이브</span>
+    <h1>매일 쓰는 진짜 영어,<br>구동사 뉘앙스 마스터하기</h1>
+    <p>단순 암기로는 이해할 수 없는 전치사의 비밀.<br>상황별 미묘한 의미 차이와 살아있는 예문으로 구동사를 완벽하게 내 것으로 만드세요.</p>
+  </section>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">홈</a> &gt; 구동사 마스터 리스트
+    </div>
+
+    <div class="design-c-list">
+      
+      <!-- 001 Pick up -->
+      <a href="./001_pick-up/" class="card-c" target="_blank">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 01</span>
+          <span class="card-c-verb">Pick up</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">상황에 따라 뜻이 계속 바뀌는 다의어 'Pick up' 핵심 의미</h3>
+          <p class="card-c-desc">미드나 유튜브 영상을 보다 보면 pick up이라는 표현이 정말 자주 등장한다는 걸 느끼신 적 있으신가요? 어떤 장면에서는 바닥에 떨어진 펜을 집어 드는 행동을 묘사하고, 또 다른 장면에서는 공항에서 누군가를 데리러 간다고 쓰이고, 대화 중에는 기술을 배운 걸 표현하기도 합니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 002 Hang out -->
+      <a href="./002_hang-out/" class="card-c" target="_blank">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 02</span>
+          <span class="card-c-verb">Hang out</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">성인이 되어서도 "놀다"를 'Play'라고 쓰면 안 되는 이유</h3>
+          <p class="card-c-desc">성인이 된 이후에도 "놀다"를 영어로 옮기려 할 때 본능적으로 play를 떠올리는 분들이 정말 많습니다. 원어민 친구에게 "Do you want to play this weekend?"라고 한다면 애처럼 뛰어놀자는 의미로 오해받을 수 있습니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 003 Drop by -->
+      <a href="./003_drop-by/" class="card-c" target="_blank">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 03</span>
+          <span class="card-c-verb">Drop by</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">"잠깐 들를게"를 Visit으로 쓰면 원어민이 부담스러워하는 이유</h3>
+          <p class="card-c-desc">친구 집 근처를 지나가다가 "잠깐 들러도 돼?"라고 말하고 싶을 때 visit을 쓰면 상대방이 격식을 차려야 할 것 같은 압박감을 느낍니다. 가볍게 들를 때는 이 표현을 쓰세요.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 004 Call off -->
+      <a href="./004_call-off/" class="card-c" target="_blank">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 04</span>
+          <span class="card-c-verb">Call off</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">미루다(Put off)와 취소하다(Call off), 헷갈리면 큰일 나는 이유</h3>
+          <p class="card-c-desc">중요한 미팅 전날 밤, 일정이 미뤄진 것인지 완전히 없어진 것인지 명확히 전달하지 않으면 큰 혼란이 일어날 수 있습니다. 두 표현의 명확한 차이를 업무 현장에서 구분해 보세요.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 005 Run into -->
+      <a href="./005_run-into/" class="card-c" target="_blank">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 05</span>
+          <span class="card-c-verb">Run into</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">옛 친구를 마주칠 때와 문제에 부딪힐 때 똑같이 'Run into'를 쓰는 이유</h3>
+          <p class="card-c-desc">길을 걷다 우연히 친구를 만날 때와 예상치 못한 문제에 맞닥뜨릴 때 영어로는 똑같이 run into를 씁니다. 어원을 파고들면 두 의미가 하나의 뿌리에서 나온 것임을 알 수 있습니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 006 Look into -->
+      <a href="./006_look-into/" class="card-c" target="_blank">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 06</span>
+          <span class="card-c-verb">Look into</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">Find out vs Look into — 원어민이 느끼는 전혀 다른 무게감</h3>
+          <p class="card-c-desc">순순히 사실을 파악하는 것과 내부를 깊이 들여다보며 속사정까지 파헤치겠다는 적극적인 의지. 두 표현에서 원어민이 느끼는 온도 차이를 비교합니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 007 Get over -->
+      <a href="./007_get-over/" class="card-c" target="_blank">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 07</span>
+          <span class="card-c-verb">Get over</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">"그 사람 아직도 못 잊었어?" 5단어로 끝내는 'Get over'</h3>
+          <p class="card-c-desc">이별의 아픔이나 힘든 시련을 아직 털어내지 못했다는 감정을 간결하게 표현할 때 원어민들이 즐겨 쓰는 마법 같은 구동사입니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 008 Come across -->
+      <a href="./008_come-across/" class="card-c" target="_blank">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 08</span>
+          <span class="card-c-verb">Come across</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">"우연히 발견하다"와 "인상을 주다" — Come across 완벽 정리</h3>
+          <p class="card-c-desc">물건을 우연히 발견할 때와 타인에게 특정한 인상을 풍길 때 왜 같은 표현을 쓰는지, 그 숨겨진 어원의 비밀을 확인해 보세요.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 009 Bring up -->
+      <a href="./009_bring-up/" class="card-c" target="_blank">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 09</span>
+          <span class="card-c-verb">Bring up</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">회의 중 화제를 꺼낼 때부터 아이를 키울 때까지 하나로 통하는 'Bring up'</h3>
+          <p class="card-c-desc">회의 중에 상사가 지난달 실수를 꺼낼 때, 오랫동안 키워온 자녀가 독립할 때, 그리고 뱃멀미로 고생할 때 모두 쓰이는 bring up의 핵심 어원을 파헤칩니다.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+      <!-- 010 Take over -->
+      <a href="./010_take-over/" class="card-c" target="_blank">
+        <div class="card-c-left">
+          <span class="card-c-no">VERB 10</span>
+          <span class="card-c-verb">Take over</span>
+        </div>
+        <div class="card-c-right">
+          <h3 class="card-c-title">업무 인수인계부터 기업 인수까지 하나로 통하는 'Take over'</h3>
+          <p class="card-c-desc">업무를 이어받거나 기업을 인수하고, 냄새가 공간을 가득 채우는 상황 등 물리적 장악의 이미지를 가진 take over의 모든 것.</p>
+          <span class="card-c-action">학습하기 ➔</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="back-home">
+      <a href="/" class="back-btn">← 메인 페이지로 돌아가기</a>
+    </div>
   </div>
 
-  <div class="design-c-list">
-    
-    <!-- 001 Pick up -->
-    <a href="./001_pick-up/" class="card-c" target="_blank">
-      <div class="card-c-left">
-        <span class="card-c-no">VERB 01</span>
-        <span class="card-c-verb">Pick up</span>
-      </div>
-      <div class="card-c-right">
-        <h3 class="card-c-title">상황에 따라 뜻이 계속 바뀌는 다의어 'Pick up' 핵심 의미</h3>
-        <p class="card-c-desc">미드나 유튜브 영상을 보다 보면 pick up이라는 표현이 정말 자주 등장한다는 걸 느끼신 적 있으신가요? 어떤 장면에서는 바닥에 떨어진 펜을 집어 드는 행동을 묘사하고, 또 다른 장면에서는 공항에서 누군가를 데리러 간다고 쓰이고, 대화 중에는 기술을 배운 걸 표현하기도 합니다.</p>
-        <span class="card-c-action">학습하기 ➔</span>
-      </div>
-    </a>
+  <footer>
+    <p style="text-align: center; font-size: 13px; font-weight: normal; margin-bottom: 15px;">
+      <a href="/privacy-policy.html" style="color: #666; text-decoration: none;">개인정보처리방침</a> &nbsp;|&nbsp;
+      <a href="/about.html" style="color: #666; text-decoration: none;">소개</a> &nbsp;|&nbsp;
+      <a href="/contact.html" style="color: #666; text-decoration: none;">문의</a>
+    </p>
+    <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
+    <p style="margin-top: 6px;">문의 : <a href="mailto:hphong@hphong.com">hphong@hphong.com</a></p>
+  </footer>
 
-    <!-- 002 Hang out -->
-    <a href="./002_hang-out/" class="card-c" target="_blank">
-      <div class="card-c-left">
-        <span class="card-c-no">VERB 02</span>
-        <span class="card-c-verb">Hang out</span>
-      </div>
-      <div class="card-c-right">
-        <h3 class="card-c-title">성인이 되어서도 "놀다"를 'Play'라고 쓰면 안 되는 이유</h3>
-        <p class="card-c-desc">성인이 된 이후에도 "놀다"를 영어로 옮기려 할 때 본능적으로 play를 떠올리는 분들이 정말 많습니다. 원어민 친구에게 "Do you want to play this weekend?"라고 한다면 애처럼 뛰어놀자는 의미로 오해받을 수 있습니다.</p>
-        <span class="card-c-action">학습하기 ➔</span>
-      </div>
-    </a>
+</div><!-- /main-content -->
 
-    <!-- 003 Drop by -->
-    <a href="./003_drop-by/" class="card-c" target="_blank">
-      <div class="card-c-left">
-        <span class="card-c-no">VERB 03</span>
-        <span class="card-c-verb">Drop by</span>
-      </div>
-      <div class="card-c-right">
-        <h3 class="card-c-title">"잠깐 들를게"를 Visit으로 쓰면 원어민이 부담스러워하는 이유</h3>
-        <p class="card-c-desc">친구 집 근처를 지나가다가 "잠깐 들러도 돼?"라고 말하고 싶을 때 visit을 쓰면 상대방이 격식을 차려야 할 것 같은 압박감을 느낍니다. 가볍게 들를 때는 이 표현을 쓰세요.</p>
-        <span class="card-c-action">학습하기 ➔</span>
-      </div>
-    </a>
+<aside class="sidebar">
+  <div class="sidebar-sticky" id="sidebar-wrap"></div>
+</aside>
 
-    <!-- 004 Call off -->
-    <a href="./004_call-off/" class="card-c" target="_blank">
-      <div class="card-c-left">
-        <span class="card-c-no">VERB 04</span>
-        <span class="card-c-verb">Call off</span>
-      </div>
-      <div class="card-c-right">
-        <h3 class="card-c-title">미루다(Put off)와 취소하다(Call off), 헷갈리면 큰일 나는 이유</h3>
-        <p class="card-c-desc">중요한 미팅 전날 밤, 일정이 미뤄진 것인지 완전히 없어진 것인지 명확히 전달하지 않으면 큰 혼란이 일어날 수 있습니다. 두 표현의 명확한 차이를 업무 현장에서 구분해 보세요.</p>
-        <span class="card-c-action">학습하기 ➔</span>
-      </div>
-    </a>
+</div><!-- /page-wrapper -->
 
-    <!-- 005 Run into -->
-    <a href="./005_run-into/" class="card-c" target="_blank">
-      <div class="card-c-left">
-        <span class="card-c-no">VERB 05</span>
-        <span class="card-c-verb">Run into</span>
-      </div>
-      <div class="card-c-right">
-        <h3 class="card-c-title">옛 친구를 마주칠 때와 문제에 부딪힐 때 똑같이 'Run into'를 쓰는 이유</h3>
-        <p class="card-c-desc">길을 걷다 우연히 친구를 만날 때와 예상치 못한 문제에 맞닥뜨릴 때 영어로는 똑같이 run into를 씁니다. 어원을 파고들면 두 의미가 하나의 뿌리에서 나온 것임을 알 수 있습니다.</p>
-        <span class="card-c-action">학습하기 ➔</span>
-      </div>
-    </a>
-
-    <!-- 006 Look into -->
-    <a href="./006_look-into/" class="card-c" target="_blank">
-      <div class="card-c-left">
-        <span class="card-c-no">VERB 06</span>
-        <span class="card-c-verb">Look into</span>
-      </div>
-      <div class="card-c-right">
-        <h3 class="card-c-title">Find out vs Look into — 원어민이 느끼는 전혀 다른 무게감</h3>
-        <p class="card-c-desc">순순히 사실을 파악하는 것과 내부를 깊이 들여다보며 속사정까지 파헤치겠다는 적극적인 의지. 두 표현에서 원어민이 느끼는 온도 차이를 비교합니다.</p>
-        <span class="card-c-action">학습하기 ➔</span>
-      </div>
-    </a>
-
-    <!-- 007 Get over -->
-    <a href="./007_get-over/" class="card-c" target="_blank">
-      <div class="card-c-left">
-        <span class="card-c-no">VERB 07</span>
-        <span class="card-c-verb">Get over</span>
-      </div>
-      <div class="card-c-right">
-        <h3 class="card-c-title">"그 사람 아직도 못 잊었어?" 5단어로 끝내는 'Get over'</h3>
-        <p class="card-c-desc">이별의 아픔이나 힘든 시련을 아직 털어내지 못했다는 감정을 간결하게 표현할 때 원어민들이 즐겨 쓰는 마법 같은 구동사입니다.</p>
-        <span class="card-c-action">학습하기 ➔</span>
-      </div>
-    </a>
-
-    <!-- 008 Come across -->
-    <a href="./008_come-across/" class="card-c" target="_blank">
-      <div class="card-c-left">
-        <span class="card-c-no">VERB 08</span>
-        <span class="card-c-verb">Come across</span>
-      </div>
-      <div class="card-c-right">
-        <h3 class="card-c-title">"우연히 발견하다"와 "인상을 주다" — Come across 완벽 정리</h3>
-        <p class="card-c-desc">물건을 우연히 발견할 때와 타인에게 특정한 인상을 풍길 때 왜 같은 표현을 쓰는지, 그 숨겨진 어원의 비밀을 확인해 보세요.</p>
-        <span class="card-c-action">학습하기 ➔</span>
-      </div>
-    </a>
-
-    <!-- 009 Bring up -->
-    <a href="./009_bring-up/" class="card-c" target="_blank">
-      <div class="card-c-left">
-        <span class="card-c-no">VERB 09</span>
-        <span class="card-c-verb">Bring up</span>
-      </div>
-      <div class="card-c-right">
-        <h3 class="card-c-title">회의 중 화제를 꺼낼 때부터 아이를 키울 때까지 하나로 통하는 'Bring up'</h3>
-        <p class="card-c-desc">회의 중에 상사가 지난달 실수를 꺼낼 때, 오랫동안 키워온 자녀가 독립할 때, 그리고 뱃멀미로 고생할 때 모두 쓰이는 bring up의 핵심 어원을 파헤칩니다.</p>
-        <span class="card-c-action">학습하기 ➔</span>
-      </div>
-    </a>
-
-    <!-- 010 Take over -->
-    <a href="./010_take-over/" class="card-c" target="_blank">
-      <div class="card-c-left">
-        <span class="card-c-no">VERB 10</span>
-        <span class="card-c-verb">Take over</span>
-      </div>
-      <div class="card-c-right">
-        <h3 class="card-c-title">업무 인수인계부터 기업 인수까지 하나로 통하는 'Take over'</h3>
-        <p class="card-c-desc">업무를 이어받거나 기업을 인수하고, 냄새가 공간을 가득 채우는 상황 등 물리적 장악의 이미지를 가진 take over의 모든 것.</p>
-        <span class="card-c-action">학습하기 ➔</span>
-      </div>
-    </a>
-
-  </div>
-
-  <div class="back-home">
-    <a href="/" class="back-btn">← 메인 페이지로 돌아가기</a>
-  </div>
-</div>
-
-<footer>
-  <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
-</footer>
+<!-- 사이드바 동적 로드 스크립트 -->
+<script>
+(function(){
+  fetch('/sidebar.html')
+    .then(function(r){ return r.text(); })
+    .then(function(html){
+      var wrap = document.getElementById('sidebar-wrap');
+      if(!wrap) return;
+      wrap.innerHTML = html;
+      var scripts = wrap.querySelectorAll('script');
+      scripts.forEach(function(oldScript){
+        var newScript = document.createElement('script');
+        newScript.textContent = oldScript.textContent;
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+      });
+    })
+    .catch(function(e){ console.log('sidebar fetch error:', e); });
+})();
+</script>
 
 </body>
 </html>
