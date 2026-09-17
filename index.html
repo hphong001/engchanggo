@@ -3,10 +3,7 @@
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9KL65SFTT"></script>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2437237394401868"crossorigin="anonymous"></script>
-
-  
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2437237394401868" crossorigin="anonymous"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -19,12 +16,18 @@
 <meta name="description" content="짧은 문장에 살을 붙여가는 꼬리물기 방식으로 영어를 배우세요. 기초부터 고급까지 100개 필수 패턴을 예문·영상·전자책으로 완전 학습합니다.">
 <meta name="keywords" content="영어회화, 패턴영어, 영어공부, 생활영어, 기초영어, 영어말하기, 영어창고, 영어독학, 꼬리물기영어">
 <link rel="canonical" href="https://hphong.com/">
+
+<!-- ✅ 수정 ⑦: og:image / twitter:image 추가 -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="영어창고 | 꼬리물기 문장 확장 패턴영어 영어회화">
 <meta property="og:description" content="짧은 문장에 살을 붙여가는 꼬리물기 방식으로 100개 필수 영어패턴을 학습하세요.">
 <meta property="og:url" content="https://hphong.com/">
 <meta property="og:site_name" content="영어창고 MyEnglishVault">
+<meta property="og:image" content="https://hphong.com/images/og-main.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hphong.com/images/og-main.jpg">
+<meta name="twitter:title" content="영어창고 | 꼬리물기 패턴영어 영어회화">
+
 <script type="application/ld+json">
 {
   "@context":"https://schema.org","@type":"Course",
@@ -45,21 +48,31 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'SUIT',sans-serif;letter-spacing:-0.02em;}
 body{background-color:var(--bg-paper);color:var(--text-black);line-height:1.6;-webkit-font-smoothing:antialiased;}
 a{text-decoration:none;color:inherit;}
-header{background:var(--bg-white);padding:16px 5%;padding-right:calc(5% + 316px);display:flex;justify-content:center;align-items:center;gap:48px;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}
+
+/* ✅ 수정 ⑥: 헤더 네비게이션 추가를 위한 스타일 */
+header{background:var(--bg-white);padding:16px 5%;padding-right:calc(5% + 316px);display:flex;justify-content:space-between;align-items:center;gap:24px;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:100;}
 .logo{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:900;color:var(--text-black);display:flex;align-items:center;gap:6px;letter-spacing:-0.03em;white-space:nowrap;}
 .logo span{color:var(--accent-color);font-weight:800;font-size:18px;margin-top:1px;}
+.header-nav{display:flex;align-items:center;gap:8px;}
 .nav-btn{color:var(--text-black);border:1px solid var(--border-color);padding:8px 18px;font-weight:700;font-size:14px;transition:all 0.3s ease;background:var(--bg-paper);white-space:nowrap;}
 .nav-btn:hover{background:var(--accent-color);color:var(--bg-white);border-color:var(--accent-color);}
+
 .hero{padding:90px 5% 100px 5%;text-align:center;border-bottom:1px solid var(--border-color);}
 .hero-badge{color:var(--accent-color);font-weight:700;font-size:17px;display:block;margin-bottom:20px;}
 .hero h1{font-size:38px;font-weight:900;margin-bottom:24px;line-height:1.35;word-break:keep-all;}
-.hero p{font-size:17px;color:var(--text-gray);margin-bottom:40px;font-weight:500;max-width:650px;margin-inline:auto;word-break:keep-all;line-height:1.6;}
+.hero-desc{font-size:17px;color:var(--text-gray);margin-bottom:24px;font-weight:500;max-width:650px;margin-inline:auto;word-break:keep-all;line-height:1.6;}
+
+/* ✅ 수정 ⑤: 히어로 본문 텍스트 스타일 */
+.hero-body{font-size:15px;color:var(--text-gray);max-width:680px;margin:0 auto 36px;line-height:1.85;word-break:keep-all;background:var(--bg-white);border:1px solid var(--border-color);padding:20px 28px;text-align:left;}
+.hero-body strong{color:var(--text-black);font-weight:700;}
+
 .hero-cta-label{font-size:14px;font-weight:600;color:var(--text-gray);margin-bottom:16px;}
 .hero-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
-.hero-btn{display:inline-block;width:200px;text-align:center;background:var(--bg-white);color:var(--text-black);padding:15px 0;font-size:15px;font-weight:700;border:1px solid var(--border-color);transition:all 0.3s ease;}
-.hero-btn:hover{background:var(--accent-color);color:var(--bg-white);border-color:var(--accent-color);}
-.hero-btn-sub{display:inline-block;width:200px;text-align:center;background:var(--bg-white);color:var(--text-black);padding:15px 0;font-size:15px;font-weight:700;border:1px solid var(--border-color);transition:all 0.3s ease;}
-.hero-btn-sub:hover{background:var(--accent-color);color:var(--bg-white);border-color:var(--accent-color);}
+
+/* ✅ 수정 ③: 히어로 버튼 — 내부 링크용 단일 버튼 */
+.hero-btn-primary{display:inline-block;padding:15px 40px;text-align:center;background:var(--accent-color);color:var(--bg-white);font-size:15px;font-weight:700;border:1px solid var(--accent-color);transition:all 0.3s ease;}
+.hero-btn-primary:hover{background:#3730a3;border-color:#3730a3;}
+
 .container{max-width:1100px;margin:0 auto;padding:70px 5%;}
 .section-header{margin-bottom:30px;text-align:left;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;}
 .section-title{font-size:28px;font-weight:900;color:var(--text-black);}
@@ -85,8 +98,6 @@ header{background:var(--bg-white);padding:16px 5%;padding-right:calc(5% + 316px)
 .card-actions{display:flex;position:relative;z-index:2;}
 .action-link{text-align:center;font-weight:700;color:var(--text-black);border:1px solid var(--border-color);background:var(--bg-paper);transition:all 0.2s;}
 .action-link:hover{background:var(--text-black);color:var(--bg-white);border-color:var(--text-black);}
-.action-link.video{background:var(--bg-white);color:var(--accent-color);border:1px solid var(--accent-color);}
-.action-link.video:hover{color:var(--bg-white);background:var(--accent-color);}
 .hidden{display:none!important;}
 .no-result{text-align:center;padding:60px 20px;font-size:15px;color:var(--text-gray);border:1px solid var(--border-color);background:var(--bg-white);grid-column:1/-1;}
 .load-more-container{text-align:center;margin-top:40px;display:flex;justify-content:center;gap:12px;}
@@ -111,6 +122,8 @@ header{background:var(--bg-white);padding:16px 5%;padding-right:calc(5% + 316px)
 #patternGrid.view-card .pattern-name{font-size:26px;margin-bottom:10px;}
 #patternGrid.view-card .pattern-desc{display:-webkit-box;margin-bottom:30px;}
 #patternGrid.view-card .card-actions{border-top:1px solid var(--border-color);padding-top:20px;gap:10px;}
+
+/* ✅ 수정 ④: 영상 시청 버튼 제거 → 예문 학습 버튼 단독 full-width */
 #patternGrid.view-card .action-link{padding:10px 0;font-size:14px;flex:1;}
 #patternGrid.view-compact{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
 #patternGrid.view-compact .card{flex-direction:column;justify-content:space-between;padding:14px;border-radius:0;}
@@ -156,93 +169,86 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 .sb-ch-btn:hover{background:#0b4f5e;color:white;border-color:#0b4f5e;}
 .sb-ch-btn svg{width:15px;height:15px;stroke:#1A1A1A;fill:none;stroke-width:2;flex-shrink:0;transition:stroke .2s;}
 .sb-ch-btn:hover svg{stroke:#fff;}
-
-/* 구동사 블로그 리스트 (디자인 C) CSS 스타일 */
-.blog-section { margin-top: 80px; padding-top: 40px; border-top: 2px dashed var(--border-color); }
-.blog-header { margin-bottom: 30px; text-align: center; }
-.blog-title { 
-  font-size: 24px; 
-  font-weight: 900; 
-  color: var(--text-black); 
-  margin-bottom: 12px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  gap: 8px; 
-}
-.blog-title svg { 
-  width: 26px; 
-  height: 26px; 
-  stroke: var(--accent-color); 
-  fill: none; 
-  stroke-width: 2.5; 
-  stroke-linecap: round; 
-  stroke-linejoin: round; 
-}
-.blog-subtitle { font-size: 15.5px; color: var(--text-gray); font-weight: 500; word-break: keep-all; }
-
-.design-c-list { display: flex; flex-direction: column; gap: 24px; }
-.card-c { display: grid; grid-template-columns: 160px 1fr; background: var(--bg-white); border: 1px solid var(--border-color); transition: all 0.2s ease; text-decoration: none; }
-.card-c:hover { box-shadow: 0 8px 24px rgba(79,70,229,0.06); transform: translateY(-2px); border-color: var(--accent-color); }
-
-.card-c-left { background: #F8F9FA; padding: 30px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-right: 1px solid var(--border-color); }
-.card-c-no { font-size: 12px; color: var(--accent-color); font-weight: 800; margin-bottom: 6px; letter-spacing: 0.5px; }
-.card-c-verb { font-size: 26px; font-weight: 900; color: var(--text-black); line-height: 1.2; font-family: 'DM Sans', sans-serif; text-transform: capitalize; }
-
-.card-c-right { padding: 28px 30px; display: flex; flex-direction: column; justify-content: flex-start; }
-.card-c-title { font-size: 18px; font-weight: 800; margin-bottom: 12px; color: var(--text-black); line-height: 1.4; word-break: keep-all; }
-.card-c-desc { font-size: 15px; color: var(--text-gray); line-height: 1.65; word-break: keep-all; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 20px; }
-
-.card-c-action { margin-top: auto; font-size: 14px; font-weight: 700; color: var(--accent-color); display: flex; align-items: center; gap: 4px; transition: gap 0.2s; }
-.card-c:hover .card-c-action { gap: 8px; }
-
-@media(max-width: 1024px){
+.blog-section{margin-top:80px;padding-top:40px;border-top:2px dashed var(--border-color);}
+.blog-header{margin-bottom:30px;text-align:center;}
+.blog-title{font-size:24px;font-weight:900;color:var(--text-black);margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:8px;}
+.blog-title svg{width:26px;height:26px;stroke:var(--accent-color);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+.blog-subtitle{font-size:15.5px;color:var(--text-gray);font-weight:500;word-break:keep-all;}
+.design-c-list{display:flex;flex-direction:column;gap:24px;}
+.card-c{display:grid;grid-template-columns:160px 1fr;background:var(--bg-white);border:1px solid var(--border-color);transition:all 0.2s ease;text-decoration:none;}
+.card-c:hover{box-shadow:0 8px 24px rgba(79,70,229,0.06);transform:translateY(-2px);border-color:var(--accent-color);}
+.card-c-left{background:#F8F9FA;padding:30px 20px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-right:1px solid var(--border-color);}
+.card-c-no{font-size:12px;color:var(--accent-color);font-weight:800;margin-bottom:6px;letter-spacing:0.5px;}
+.card-c-verb{font-size:26px;font-weight:900;color:var(--text-black);line-height:1.2;font-family:'DM Sans',sans-serif;text-transform:capitalize;}
+.card-c-right{padding:28px 30px;display:flex;flex-direction:column;justify-content:flex-start;}
+.card-c-title{font-size:18px;font-weight:800;margin-bottom:12px;color:var(--text-black);line-height:1.4;word-break:keep-all;}
+.card-c-desc{font-size:15px;color:var(--text-gray);line-height:1.65;word-break:keep-all;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:20px;}
+.card-c-action{margin-top:auto;font-size:14px;font-weight:700;color:var(--accent-color);display:flex;align-items:center;gap:4px;transition:gap 0.2s;}
+.card-c:hover .card-c-action{gap:8px;}
+@media(max-width:1024px){
   .sidebar{display:none;}
   .page-wrapper{display:block;}
   header{padding-right:5%;}
 }
-@media(max-width: 768px){
+@media(max-width:768px){
   .hero h1{font-size:28px;}
   .hero-btns{flex-direction:column;align-items:center;}
-  .hero-btn,.hero-btn-sub{width:260px;}
+  .hero-btn-primary{width:260px;text-align:center;}
   .section-header{flex-direction:column;align-items:flex-start;gap:12px;}
   .section-controls{width:100%;justify-content:space-between;}
   .search-box{max-width:100%;flex:1;}
   header{gap:12px;padding:12px 4%;}
   .logo{font-size:16px;}
   .logo span{font-size:14px;}
-  .nav-btn{padding:7px 12px;font-size:12px;}
+  .header-nav{display:none;}
   .view-btn-card{display:none;}
   #patternGrid.view-card{grid-template-columns:1fr;}
   #patternGrid.view-compact{grid-template-columns:repeat(2,1fr);}
   #patternGrid.view-list .card{grid-template-columns:60px 1fr auto;padding:10px 12px;}
   #patternGrid.view-list .pattern-desc{display:none;}
   #patternGrid.view-list .action-link{padding:6px 8px;font-size:12px;width:70px;}
-  
-  .card-c { grid-template-columns: 1fr; }
-  .card-c-left { padding: 16px 24px; border-right: none; border-bottom: 1px solid var(--border-color); align-items: flex-start; }
-  .card-c-no { margin-bottom: 2px; }
-  .card-c-verb { font-size: 22px; } 
-  .card-c-right { padding: 24px; }
-  .card-c-desc { -webkit-line-clamp: 4; }
+  .card-c{grid-template-columns:1fr;}
+  .card-c-left{padding:16px 24px;border-right:none;border-bottom:1px solid var(--border-color);align-items:flex-start;}
+  .card-c-no{margin-bottom:2px;}
+  .card-c-verb{font-size:22px;}
+  .card-c-right{padding:24px;}
+  .card-c-desc{-webkit-line-clamp:4;}
+  .hero-body{padding:16px 18px;}
 }
 </style>
 </head>
 <body>
+
+<!-- ✅ 수정 ⑥: 헤더에 네비게이션 추가 -->
 <header>
   <a class="logo" href="/">영어창고 <span>MyEnglishVault</span></a>
+  <nav class="header-nav">
+    <a href="/#curriculum" class="nav-btn">패턴 학습</a>
+    <a href="/english/phrasal-verbs/" class="nav-btn">구동사</a>
+    <a href="/about.html" class="nav-btn">소개</a>
+    <a href="/contact.html" class="nav-btn">문의</a>
+  </nav>
 </header>
+
 <div class="page-wrapper">
 <div class="main-content">
 
 <section class="hero">
   <span class="hero-badge">기초부터 실전까지 필수 패턴 완결판</span>
   <h1>머릿속에 맴도는 영단어,<br>이제 긴 문장으로 시원하게 내뱉으세요!</h1>
-  <p>단순 암기식 공부는 그만!<br>기초 패턴 하나에 살을 붙여 나가는 '문장 꼬리물기' 훈련으로<br>짧은 문장이 자연스러운 대화로 바뀝니다.</p>
+  <p class="hero-desc">단순 암기식 공부는 그만!<br>기초 패턴 하나에 살을 붙여 나가는 '문장 꼬리물기' 훈련으로<br>짧은 문장이 자연스러운 대화로 바뀝니다.</p>
+
+  <!-- ✅ 수정 ⑤: 히어로 본문 텍스트 추가 -->
+  <div class="hero-body">
+    <strong>영어창고(MyEnglishVault)</strong>는 영어 회화를 처음 시작하거나 오랫동안 공부했지만 막막한 분들을 위한 <strong>무료 패턴 영어 학습 사이트</strong>입니다.<br><br>
+    100개의 핵심 영어 패턴을 <strong>꼬리물기 방식</strong>으로 학습합니다. 짧은 초급 문장에서 시작해 중급·고급으로 단계별로 확장하면서 자연스러운 영어 문장이 입에서 나올 수 있도록 훈련합니다.<br><br>
+    각 패턴마다 <strong>10개의 단계별 예문, 핵심 어휘, 실전 롤플레이 대화문, 문법 포인트, 유튜브 영상 강의</strong>를 무료로 제공합니다.
+  </div>
+
+  <!-- ✅ 수정 ③: 히어로 외부 링크 제거 → 내부 앵커 링크 단일 버튼 -->
   <p class="hero-cta-label">지금 바로 시작해보세요.</p>
   <div class="hero-btns">
-    <a href="https://www.youtube.com/@MyEnglishVault" target="_blank" rel="noopener" class="hero-btn">유튜브 영상 학습</a>
-    <a href="https://smartstore.naver.com/qcdmall/products/13705620315" target="_blank" rel="noopener" class="hero-btn-sub">전자책 안내</a>
+    <a href="#curriculum" class="hero-btn-primary">패턴 학습 시작하기 →</a>
   </div>
 </section>
 
@@ -273,114 +279,119 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
       </div>
     </div>
   </div>
-  <div class="view-list" id="patternGrid">
-<div class="card"><a href="english/ko/001-i-can/" class="card-link" aria-label="I can 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">001</span></div><h3 class="pattern-name">I can</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/001-i-can/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=bwwKi2c4HyY" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/002-can-i/" class="card-link" aria-label="Can I 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">002</span></div><h3 class="pattern-name">Can I</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/002-can-i/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=YseF-WvMpgo" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/003-may-i/" class="card-link" aria-label="May I 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">003</span></div><h3 class="pattern-name">May I</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/003-may-i/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=ExHTg45uoTY" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/004-it-is/" class="card-link" aria-label="It is 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">004</span></div><h3 class="pattern-name">It is</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/004-it-is/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=_-m0Z9FvgM8" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/005-dont/" class="card-link" aria-label="Don't 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">005</span></div><h3 class="pattern-name">Don't</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/005-dont/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=m2Y5GGtFNIc" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/006-lets/" class="card-link" aria-label="Let's 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">006</span></div><h3 class="pattern-name">Let's</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/006-lets/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=GZxdb4ZkZtI" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/007-do-you/" class="card-link" aria-label="Do you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">007</span></div><h3 class="pattern-name">Do you</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/007-do-you/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=1GdIWIOKR4M" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/008-how-is/" class="card-link" aria-label="How is 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">008</span></div><h3 class="pattern-name">How is</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/008-how-is/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=XG466jtvrh4" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/009-please/" class="card-link" aria-label="Please 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">009</span></div><h3 class="pattern-name">Please</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/009-please/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=Qst_LpDtpg4" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/010-i-think/" class="card-link" aria-label="I think 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">010</span></div><h3 class="pattern-name">I think</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/010-i-think/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=9m9o3e8mB8c" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/011-can-you/" class="card-link" aria-label="Can you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">011</span></div><h3 class="pattern-name">Can you</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/011-can-you/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=X4mcHM1QBf0" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/012-are-you/" class="card-link" aria-label="Are you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">012</span></div><h3 class="pattern-name">Are you</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/012-are-you/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=ZitmeGEl_vw" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/013-when-is/" class="card-link" aria-label="When is 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">013</span></div><h3 class="pattern-name">When is</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/013-when-is/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=vE1rZCbp1Y8" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/014-how-was/" class="card-link" aria-label="How was 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">014</span></div><h3 class="pattern-name">How was</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/014-how-was/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=YVPdHyOmPng" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/015-this-is/" class="card-link" aria-label="This is 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">015</span></div><h3 class="pattern-name">This is</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/015-this-is/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=VBWG-g1XsqA" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/016-im-sure/" class="card-link" aria-label="I'm sure 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">016</span></div><h3 class="pattern-name">I'm sure</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/016-im-sure/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=VUACnYkQV_A" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/017-where-is/" class="card-link" aria-label="Where is 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">017</span></div><h3 class="pattern-name">Where is</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/017-where-is/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=Htgnm3eA1P0" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/018-is-there/" class="card-link" aria-label="Is there 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">018</span></div><h3 class="pattern-name">Is there</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/018-is-there/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=VzAWUJ8FTO0" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/019-shall-we/" class="card-link" aria-label="Shall we 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">019</span></div><h3 class="pattern-name">Shall we</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/019-shall-we/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=zgUzRZESymg" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/020-i-want-to/" class="card-link" aria-label="I want to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">020</span></div><h3 class="pattern-name">I want to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/020-i-want-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=Pyn-Rdfp6KA" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/021-i-need-to/" class="card-link" aria-label="I need to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">021</span></div><h3 class="pattern-name">I need to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/021-i-need-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=RcC4WqEi6Ts" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/022-i-have-to/" class="card-link" aria-label="I have to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">022</span></div><h3 class="pattern-name">I have to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/022-i-have-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=kqb3XiJY2HI" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/023-i-like-to/" class="card-link" aria-label="I like to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">023</span></div><h3 class="pattern-name">I like to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/023-i-like-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=vX9r5IgMeu0" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/024-i-hate-to/" class="card-link" aria-label="I hate to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">024</span></div><h3 class="pattern-name">I hate to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/024-i-hate-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=rvBqWVeOg_c" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/025-i-hope-to/" class="card-link" aria-label="I hope to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">025</span></div><h3 class="pattern-name">I hope to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/025-i-hope-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=Wkc9SHWJit0" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/026-i-used-to/" class="card-link" aria-label="I used to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">026</span></div><h3 class="pattern-name">I used to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/026-i-used-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=h8255wloZQ4" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/027-could-you/" class="card-link" aria-label="Could you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">027</span></div><h3 class="pattern-name">Could you</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/027-could-you/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=ZxuU8ERrxbA" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/028-how-about/" class="card-link" aria-label="How about 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">028</span></div><h3 class="pattern-name">How about</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/028-how-about/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=T6zhTEr1xq0" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/029-im-afraid/" class="card-link" aria-label="I'm afraid 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">029</span></div><h3 class="pattern-name">I'm afraid</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/029-im-afraid/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=Gd_3LX0uDq4" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/030-i-remember/" class="card-link" aria-label="I remember 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">030</span></div><h3 class="pattern-name">I remember</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/030-i-remember/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=WektQcOHu8c" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/031-thats-why/" class="card-link" aria-label="That's why 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">031</span></div><h3 class="pattern-name">That's why</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/031-thats-why/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=cTeZeojohSo" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/032-what-about/" class="card-link" aria-label="What about 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">032</span></div><h3 class="pattern-name">What about</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/032-what-about/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=1byLSIJSnwg" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/033-im-good-at/" class="card-link" aria-label="I'm good at 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">033</span></div><h3 class="pattern-name">I'm good at</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/033-im-good-at/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=5UL97VaVeEI" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/034-id-like-to/" class="card-link" aria-label="I'd like to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">034</span></div><h3 class="pattern-name">I'd like to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/034-id-like-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=9oyKxpfdnb8" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/035-i-feel-like/" class="card-link" aria-label="I feel like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">035</span></div><h3 class="pattern-name">I feel like</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/035-i-feel-like/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=W60CE5M_ASM" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/036-i-forgot-to/" class="card-link" aria-label="I forgot to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">036</span></div><h3 class="pattern-name">I forgot to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/036-i-forgot-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=CtkSuJ_HdKE" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/037-do-you-like/" class="card-link" aria-label="Do you like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">037</span></div><h3 class="pattern-name">Do you like</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/037-do-you-like/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=Dqrr88CIoec" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/038-do-you-have/" class="card-link" aria-label="Do you have 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">038</span></div><h3 class="pattern-name">Do you have</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/038-do-you-have/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=qXEVvZ6T5tE" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/039-do-you-need/" class="card-link" aria-label="Do you need 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">039</span></div><h3 class="pattern-name">Do you need</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/039-do-you-need/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=wJA8ywOSmR4" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/040-do-you-know/" class="card-link" aria-label="Do you know 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">040</span></div><h3 class="pattern-name">Do you know</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/040-do-you-know/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=El2ufNXYSd4" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/041-why-are-you/" class="card-link" aria-label="Why are you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">041</span></div><h3 class="pattern-name">Why are you</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/041-why-are-you/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=HMbsu0Zp01A" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/042-there-is-no/" class="card-link" aria-label="There is no 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">042</span></div><h3 class="pattern-name">There is no</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/042-there-is-no/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=w_rrkSSg7Cs" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/043-im-ready-to/" class="card-link" aria-label="I'm ready to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">043</span></div><h3 class="pattern-name">I'm ready to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/043-im-ready-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=eQSBM6sbFH0" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/044-i-dont-like/" class="card-link" aria-label="I don't like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">044</span></div><h3 class="pattern-name">I don't like</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/044-i-dont-like/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=AgmqaWeRNjA" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/045-i-decided-to/" class="card-link" aria-label="I decided to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">045</span></div><h3 class="pattern-name">I decided to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/045-i-decided-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=l80MgXNSsZ0" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/046-are-you-sure/" class="card-link" aria-label="Are you sure 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">046</span></div><h3 class="pattern-name">Are you sure</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/046-are-you-sure/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=X6mAA8D3XIg" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/047-what-are-you/" class="card-link" aria-label="What are you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">047</span></div><h3 class="pattern-name">What are you</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/047-what-are-you/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=04XYQnkTG4A" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/048-its-time-to/" class="card-link" aria-label="It's time to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">048</span></div><h3 class="pattern-name">It's time to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/048-its-time-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=kDxglhekYEA" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/049-its-hard-to/" class="card-link" aria-label="It's hard to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">049</span></div><h3 class="pattern-name">It's hard to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/049-its-hard-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=093zUhT_9ao" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/050-its-easy-to/" class="card-link" aria-label="It's easy to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">050</span></div><h3 class="pattern-name">It's easy to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/050-its-easy-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=sMyQB62dNOw" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/051-its-nice-to/" class="card-link" aria-label="It's nice to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">051</span></div><h3 class="pattern-name">It's nice to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/051-its-nice-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=nmIzd4Mi2Fw" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/052-im-sorry-for/" class="card-link" aria-label="I'm sorry for 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">052</span></div><h3 class="pattern-name">I'm sorry for</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/052-im-sorry-for/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=mFz1W5cynKo" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/053-i-dont-think/" class="card-link" aria-label="I don't think 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">053</span></div><h3 class="pattern-name">I don't think</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/053-i-dont-think/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=yOvUTXsw0dU" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/054-i-promised-to/" class="card-link" aria-label="I promised to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">054</span></div><h3 class="pattern-name">I promised to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/054-i-promised-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=9LAk6thTpdU" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/055-i-know-how-to/" class="card-link" aria-label="I know how to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">055</span></div><h3 class="pattern-name">I know how to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/055-i-know-how-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=A9az263ydOo" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/056-thats-what-i/" class="card-link" aria-label="That's what I 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">056</span></div><h3 class="pattern-name">That's what I</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/056-thats-what-i/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=mWAL5SzpMkE" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/057-why-dont-you/" class="card-link" aria-label="Why don't you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">057</span></div><h3 class="pattern-name">Why don't you</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/057-why-dont-you/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=7OdFmYekktA" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/058-thank-you-for/" class="card-link" aria-label="Thank you for 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">058</span></div><h3 class="pattern-name">Thank you for</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/058-thank-you-for/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=paGx-1NQlJg" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/059-i-wish-i-could/" class="card-link" aria-label="I wish I could 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">059</span></div><h3 class="pattern-name">I wish I could</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/059-i-wish-i-could/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=e13w9y88p1E" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/060-do-you-want-to/" class="card-link" aria-label="Do you want to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">060</span></div><h3 class="pattern-name">Do you want to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/060-do-you-want-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=ShJZx8A6eq4" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/061-im-looking-for/" class="card-link" aria-label="I'm looking for 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">061</span></div><h3 class="pattern-name">I'm looking for</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/061-im-looking-for/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=J3UKimFv5kE" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/062-i-cant-wait-to/" class="card-link" aria-label="I can't wait to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">062</span></div><h3 class="pattern-name">I can't wait to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/062-i-cant-wait-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=nCiBoVT462U" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/063-im-planning-to/" class="card-link" aria-label="I'm planning to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">063</span></div><h3 class="pattern-name">I'm planning to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/063-im-planning-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=W4QExkKDETw" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/064-im-thinking-of/" class="card-link" aria-label="I'm thinking of 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">064</span></div><h3 class="pattern-name">I'm thinking of</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/064-im-thinking-of/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=2WkKLlHHqIk" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/065-is-it-okay-if-i/" class="card-link" aria-label="Is it okay if I 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">065</span></div><h3 class="pattern-name">Is it okay if I</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/065-is-it-okay-if-i/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=HsLod1VK-xI" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/066-are-you-ready-to/" class="card-link" aria-label="Are you ready to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">066</span></div><h3 class="pattern-name">Are you ready to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/066-are-you-ready-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=z6eTiPxi7KM" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/067-im-interested-in/" class="card-link" aria-label="I'm interested in 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">067</span></div><h3 class="pattern-name">I'm interested in</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/067-im-interested-in/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=RI2ydNWFs40" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/068-its-important-to/" class="card-link" aria-label="It's important to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">068</span></div><h3 class="pattern-name">It's important to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/068-its-important-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=RHN_p4po1Lg" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/069-do-you-know-how-to/" class="card-link" aria-label="Do you know how to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">069</span></div><h3 class="pattern-name">Do you know how to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/069-do-you-know-how-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=1NAzXGIeP_M" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/070-what-if/" class="card-link" aria-label="What if 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">070</span></div><h3 class="pattern-name">What if</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/070-what-if/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=zpE3Jv5sGJY" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/071-how-do-i/" class="card-link" aria-label="How do I 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">071</span></div><h3 class="pattern-name">How do I</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/071-how-do-i/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=gsF_Mx4gdgo" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/072-how-come/" class="card-link" aria-label="How come 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">072</span></div><h3 class="pattern-name">How come</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/072-how-come/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=_vscRzW6xSs" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/073-ive-been/" class="card-link" aria-label="I've been 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">073</span></div><h3 class="pattern-name">I've been</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/073-ive-been/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=EvaTs7dgVIA" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/074-im-used-to/" class="card-link" aria-label="I'm used to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">074</span></div><h3 class="pattern-name">I'm used to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/074-im-used-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=AD8lJ1xUiNg" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/075-i-wonder-if/" class="card-link" aria-label="I wonder if 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">075</span></div><h3 class="pattern-name">I wonder if</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/075-i-wonder-if/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=M-bYXLg39E0" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/076-im-here-to/" class="card-link" aria-label="I'm here to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">076</span></div><h3 class="pattern-name">I'm here to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/076-im-here-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=QHpIr_gmceo" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/077-im-about-to/" class="card-link" aria-label="I'm about to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">077</span></div><h3 class="pattern-name">I'm about to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/077-im-about-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=-kXjtF35LUs" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/078-i-dont-mind/" class="card-link" aria-label="I don't mind 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">078</span></div><h3 class="pattern-name">I don't mind</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/078-i-dont-mind/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=wip4M4kSz9k" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/079-what-kind-of/" class="card-link" aria-label="What kind of 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">079</span></div><h3 class="pattern-name">What kind of</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/079-what-kind-of/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=hf3YXdBrBck" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/080-whatever-you/" class="card-link" aria-label="Whatever you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">080</span></div><h3 class="pattern-name">Whatever you</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/080-whatever-you/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=1_8B17umnHk" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/081-whenever-you/" class="card-link" aria-label="Whenever you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">081</span></div><h3 class="pattern-name">Whenever you</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/081-whenever-you/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=DltCdZOkqtA" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/082-wherever-you/" class="card-link" aria-label="Wherever you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">082</span></div><h3 class="pattern-name">Wherever you</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/082-wherever-you/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=JC0kqj10H6A" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/083-youd-better/" class="card-link" aria-label="You'd better 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">083</span></div><h3 class="pattern-name">You'd better</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/083-youd-better/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=qpyzPecgplw" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/084-make-sure-to/" class="card-link" aria-label="Make sure to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">084</span></div><h3 class="pattern-name">Make sure to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/084-make-sure-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=lWdhHzHWaBA" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/085-feel-free-to/" class="card-link" aria-label="Feel free to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">085</span></div><h3 class="pattern-name">Feel free to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/085-feel-free-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=3cbnzGhhmB8" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/086-let-me-check/" class="card-link" aria-label="Let me check 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">086</span></div><h3 class="pattern-name">Let me check</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/086-let-me-check/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=WRiFQlwrkq8" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/087-it-looks-like/" class="card-link" aria-label="It looks like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">087</span></div><h3 class="pattern-name">It looks like</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/087-it-looks-like/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=fAPgVurbtdM" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/088-it-seems-like/" class="card-link" aria-label="It seems like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">088</span></div><h3 class="pattern-name">It seems like</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/088-it-seems-like/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=CiLOPVsbsJI" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/089-it-doesnt-seem-like/" class="card-link" aria-label="It doesn't seem like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">089</span></div><h3 class="pattern-name">It doesn't seem like</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/089-it-doesnt-seem-like/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=SyQQlbnLI9w" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/090-it-feels-like/" class="card-link" aria-label="It feels like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">090</span></div><h3 class="pattern-name">It feels like</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/090-it-feels-like/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=uF2J0FgXgi8" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/091-im-busy--ing/" class="card-link" aria-label="I'm busy -ing 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">091</span></div><h3 class="pattern-name">I'm busy -ing</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/091-im-busy--ing/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=nCaPvmwghUg" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/092-i-have-no-idea/" class="card-link" aria-label="I have no idea 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">092</span></div><h3 class="pattern-name">I have no idea</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/092-i-have-no-idea/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=00bjBlNwZyo" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/093-it-sounds-like/" class="card-link" aria-label="It sounds like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">093</span></div><h3 class="pattern-name">It sounds like</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/093-it-sounds-like/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=gl8N05pwN_c" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/094-its-better-to/" class="card-link" aria-label="It's better to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">094</span></div><h3 class="pattern-name">It's better to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/094-its-better-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=ehayQPF_RAk" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/095-what-makes-you/" class="card-link" aria-label="What makes you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">095</span></div><h3 class="pattern-name">What makes you</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/095-what-makes-you/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=b0GNeMQuRLk" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/096-let-me-know-if/" class="card-link" aria-label="Let me know if 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">096</span></div><h3 class="pattern-name">Let me know if</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/096-let-me-know-if/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=7QvPDEMw5cg" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/097-im-calling-to/" class="card-link" aria-label="I'm calling to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">097</span></div><h3 class="pattern-name">I'm calling to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/097-im-calling-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=Vs-7GwmA8j0" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/098-im-supposed-to/" class="card-link" aria-label="I'm supposed to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">098</span></div><h3 class="pattern-name">I'm supposed to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/098-im-supposed-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=A6gZUQzEllE" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/099-im-not-sure-if/" class="card-link" aria-label="I'm not sure if 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">099</span></div><h3 class="pattern-name">I'm not sure if</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/099-im-not-sure-if/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=_UgmlIxrn0A" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-<div class="card"><a href="english/ko/100-ive-decided-to/" class="card-link" aria-label="I've decided to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">100</span></div><h3 class="pattern-name">I've decided to</h3><p class="pattern-desc">꼬리물기 문장 확장 패턴 훈련</p></div><div class="card-actions"><a href="english/ko/100-ive-decided-to/" class="action-link" target="_blank">예문 학습</a><a href="https://www.youtube.com/watch?v=9bVhx2Bq52w" target="_blank" class="action-link video">영상 시청 ↗</a></div></div>
-  </div>
+
+  <div class="view-card" id="patternGrid">
+
+<!-- ✅ 수정 ①④: pattern-desc는 JSON으로 교체됨 / 영상 시청 버튼 제거 -->
+<div class="card"><a href="english/ko/001-i-can/" class="card-link" aria-label="I can 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">001</span></div><h3 class="pattern-name">I can</h3><p class="pattern-desc">~할 수 있어요</p></div><div class="card-actions"><a href="english/ko/001-i-can/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/002-can-i/" class="card-link" aria-label="Can I 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">002</span></div><h3 class="pattern-name">Can I</h3><p class="pattern-desc">~해도 될까요?</p></div><div class="card-actions"><a href="english/ko/002-can-i/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/003-may-i/" class="card-link" aria-label="May I 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">003</span></div><h3 class="pattern-name">May I</h3><p class="pattern-desc">~해도 될까요? (정중)</p></div><div class="card-actions"><a href="english/ko/003-may-i/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/004-it-is/" class="card-link" aria-label="It is 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">004</span></div><h3 class="pattern-name">It is</h3><p class="pattern-desc">~입니다, ~예요</p></div><div class="card-actions"><a href="english/ko/004-it-is/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/005-dont/" class="card-link" aria-label="Don't 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">005</span></div><h3 class="pattern-name">Don't</h3><p class="pattern-desc">~하지 마세요</p></div><div class="card-actions"><a href="english/ko/005-dont/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/006-lets/" class="card-link" aria-label="Let's 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">006</span></div><h3 class="pattern-name">Let's</h3><p class="pattern-desc">~하자, ~합시다</p></div><div class="card-actions"><a href="english/ko/006-lets/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/007-do-you/" class="card-link" aria-label="Do you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">007</span></div><h3 class="pattern-name">Do you</h3><p class="pattern-desc">~하나요? (당신은)</p></div><div class="card-actions"><a href="english/ko/007-do-you/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/008-how-is/" class="card-link" aria-label="How is 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">008</span></div><h3 class="pattern-name">How is</h3><p class="pattern-desc">~은 어때요?</p></div><div class="card-actions"><a href="english/ko/008-how-is/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/009-please/" class="card-link" aria-label="Please 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">009</span></div><h3 class="pattern-name">Please</h3><p class="pattern-desc">~해주세요</p></div><div class="card-actions"><a href="english/ko/009-please/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/010-i-think/" class="card-link" aria-label="I think 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">010</span></div><h3 class="pattern-name">I think</h3><p class="pattern-desc">~라고 생각해요</p></div><div class="card-actions"><a href="english/ko/010-i-think/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/011-can-you/" class="card-link" aria-label="Can you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">011</span></div><h3 class="pattern-name">Can you</h3><p class="pattern-desc">~해줄 수 있어요?</p></div><div class="card-actions"><a href="english/ko/011-can-you/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/012-are-you/" class="card-link" aria-label="Are you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">012</span></div><h3 class="pattern-name">Are you</h3><p class="pattern-desc">~인가요? (당신은)</p></div><div class="card-actions"><a href="english/ko/012-are-you/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/013-when-is/" class="card-link" aria-label="When is 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">013</span></div><h3 class="pattern-name">When is</h3><p class="pattern-desc">~은 언제예요?</p></div><div class="card-actions"><a href="english/ko/013-when-is/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/014-how-was/" class="card-link" aria-label="How was 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">014</span></div><h3 class="pattern-name">How was</h3><p class="pattern-desc">~은 어땠어요?</p></div><div class="card-actions"><a href="english/ko/014-how-was/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/015-this-is/" class="card-link" aria-label="This is 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">015</span></div><h3 class="pattern-name">This is</h3><p class="pattern-desc">이것은 ~입니다</p></div><div class="card-actions"><a href="english/ko/015-this-is/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/016-im-sure/" class="card-link" aria-label="I'm sure 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">016</span></div><h3 class="pattern-name">I'm sure</h3><p class="pattern-desc">~을 확신해요</p></div><div class="card-actions"><a href="english/ko/016-im-sure/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/017-where-is/" class="card-link" aria-label="Where is 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">017</span></div><h3 class="pattern-name">Where is</h3><p class="pattern-desc">~은 어디에 있어요?</p></div><div class="card-actions"><a href="english/ko/017-where-is/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/018-is-there/" class="card-link" aria-label="Is there 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">018</span></div><h3 class="pattern-name">Is there</h3><p class="pattern-desc">~이 있나요?</p></div><div class="card-actions"><a href="english/ko/018-is-there/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/019-shall-we/" class="card-link" aria-label="Shall we 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">019</span></div><h3 class="pattern-name">Shall we</h3><p class="pattern-desc">우리 ~할까요?</p></div><div class="card-actions"><a href="english/ko/019-shall-we/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/020-i-want-to/" class="card-link" aria-label="I want to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">020</span></div><h3 class="pattern-name">I want to</h3><p class="pattern-desc">~하고 싶어요</p></div><div class="card-actions"><a href="english/ko/020-i-want-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/021-i-need-to/" class="card-link" aria-label="I need to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">021</span></div><h3 class="pattern-name">I need to</h3><p class="pattern-desc">~해야 해요 (필요)</p></div><div class="card-actions"><a href="english/ko/021-i-need-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/022-i-have-to/" class="card-link" aria-label="I have to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">022</span></div><h3 class="pattern-name">I have to</h3><p class="pattern-desc">~해야만 해요 (의무)</p></div><div class="card-actions"><a href="english/ko/022-i-have-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/023-i-like-to/" class="card-link" aria-label="I like to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">023</span></div><h3 class="pattern-name">I like to</h3><p class="pattern-desc">~하는 것을 좋아해요</p></div><div class="card-actions"><a href="english/ko/023-i-like-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/024-i-hate-to/" class="card-link" aria-label="I hate to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">024</span></div><h3 class="pattern-name">I hate to</h3><p class="pattern-desc">~하기 싫지만요</p></div><div class="card-actions"><a href="english/ko/024-i-hate-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/025-i-hope-to/" class="card-link" aria-label="I hope to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">025</span></div><h3 class="pattern-name">I hope to</h3><p class="pattern-desc">~하기를 바라요</p></div><div class="card-actions"><a href="english/ko/025-i-hope-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/026-i-used-to/" class="card-link" aria-label="I used to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">026</span></div><h3 class="pattern-name">I used to</h3><p class="pattern-desc">예전에는 ~했었어요</p></div><div class="card-actions"><a href="english/ko/026-i-used-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/027-could-you/" class="card-link" aria-label="Could you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">027</span></div><h3 class="pattern-name">Could you</h3><p class="pattern-desc">~해주실 수 있을까요?</p></div><div class="card-actions"><a href="english/ko/027-could-you/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/028-how-about/" class="card-link" aria-label="How about 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">028</span></div><h3 class="pattern-name">How about</h3><p class="pattern-desc">~은 어때요? (제안)</p></div><div class="card-actions"><a href="english/ko/028-how-about/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/029-im-afraid/" class="card-link" aria-label="I'm afraid 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">029</span></div><h3 class="pattern-name">I'm afraid</h3><p class="pattern-desc">유감이지만 ~예요</p></div><div class="card-actions"><a href="english/ko/029-im-afraid/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/030-i-remember/" class="card-link" aria-label="I remember 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">030</span></div><h3 class="pattern-name">I remember</h3><p class="pattern-desc">~이 기억나요</p></div><div class="card-actions"><a href="english/ko/030-i-remember/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/031-thats-why/" class="card-link" aria-label="That's why 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">031</span></div><h3 class="pattern-name">That's why</h3><p class="pattern-desc">그래서 ~한 거예요</p></div><div class="card-actions"><a href="english/ko/031-thats-why/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/032-what-about/" class="card-link" aria-label="What about 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">032</span></div><h3 class="pattern-name">What about</h3><p class="pattern-desc">~은 어떻게 할 건가요?</p></div><div class="card-actions"><a href="english/ko/032-what-about/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/033-im-good-at/" class="card-link" aria-label="I'm good at 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">033</span></div><h3 class="pattern-name">I'm good at</h3><p class="pattern-desc">~을 잘해요</p></div><div class="card-actions"><a href="english/ko/033-im-good-at/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/034-id-like-to/" class="card-link" aria-label="I'd like to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">034</span></div><h3 class="pattern-name">I'd like to</h3><p class="pattern-desc">~하고 싶습니다 (정중)</p></div><div class="card-actions"><a href="english/ko/034-id-like-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/035-i-feel-like/" class="card-link" aria-label="I feel like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">035</span></div><h3 class="pattern-name">I feel like</h3><p class="pattern-desc">~하고 싶은 기분이에요</p></div><div class="card-actions"><a href="english/ko/035-i-feel-like/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/036-i-forgot-to/" class="card-link" aria-label="I forgot to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">036</span></div><h3 class="pattern-name">I forgot to</h3><p class="pattern-desc">~하는 것을 깜빡했어요</p></div><div class="card-actions"><a href="english/ko/036-i-forgot-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/037-do-you-like/" class="card-link" aria-label="Do you like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">037</span></div><h3 class="pattern-name">Do you like</h3><p class="pattern-desc">~을 좋아하나요?</p></div><div class="card-actions"><a href="english/ko/037-do-you-like/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/038-do-you-have/" class="card-link" aria-label="Do you have 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">038</span></div><h3 class="pattern-name">Do you have</h3><p class="pattern-desc">~을 가지고 있나요?</p></div><div class="card-actions"><a href="english/ko/038-do-you-have/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/039-do-you-need/" class="card-link" aria-label="Do you need 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">039</span></div><h3 class="pattern-name">Do you need</h3><p class="pattern-desc">~이 필요한가요?</p></div><div class="card-actions"><a href="english/ko/039-do-you-need/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/040-do-you-know/" class="card-link" aria-label="Do you know 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">040</span></div><h3 class="pattern-name">Do you know</h3><p class="pattern-desc">~을 알고 있나요?</p></div><div class="card-actions"><a href="english/ko/040-do-you-know/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/041-why-are-you/" class="card-link" aria-label="Why are you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">041</span></div><h3 class="pattern-name">Why are you</h3><p class="pattern-desc">왜 ~하고 있어요?</p></div><div class="card-actions"><a href="english/ko/041-why-are-you/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/042-there-is-no/" class="card-link" aria-label="There is no 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">042</span></div><h3 class="pattern-name">There is no</h3><p class="pattern-desc">~이 없어요</p></div><div class="card-actions"><a href="english/ko/042-there-is-no/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/043-im-ready-to/" class="card-link" aria-label="I'm ready to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">043</span></div><h3 class="pattern-name">I'm ready to</h3><p class="pattern-desc">~할 준비가 됐어요</p></div><div class="card-actions"><a href="english/ko/043-im-ready-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/044-i-dont-like/" class="card-link" aria-label="I don't like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">044</span></div><h3 class="pattern-name">I don't like</h3><p class="pattern-desc">~을 좋아하지 않아요</p></div><div class="card-actions"><a href="english/ko/044-i-dont-like/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/045-i-decided-to/" class="card-link" aria-label="I decided to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">045</span></div><h3 class="pattern-name">I decided to</h3><p class="pattern-desc">~하기로 결정했어요</p></div><div class="card-actions"><a href="english/ko/045-i-decided-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/046-are-you-sure/" class="card-link" aria-label="Are you sure 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">046</span></div><h3 class="pattern-name">Are you sure</h3><p class="pattern-desc">정말 확실한가요?</p></div><div class="card-actions"><a href="english/ko/046-are-you-sure/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/047-what-are-you/" class="card-link" aria-label="What are you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">047</span></div><h3 class="pattern-name">What are you</h3><p class="pattern-desc">당신은 무엇을 ~하고 있나요?</p></div><div class="card-actions"><a href="english/ko/047-what-are-you/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/048-its-time-to/" class="card-link" aria-label="It's time to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">048</span></div><h3 class="pattern-name">It's time to</h3><p class="pattern-desc">이제 ~할 시간이에요</p></div><div class="card-actions"><a href="english/ko/048-its-time-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/049-its-hard-to/" class="card-link" aria-label="It's hard to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">049</span></div><h3 class="pattern-name">It's hard to</h3><p class="pattern-desc">~하기가 어려워요</p></div><div class="card-actions"><a href="english/ko/049-its-hard-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/050-its-easy-to/" class="card-link" aria-label="It's easy to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">050</span></div><h3 class="pattern-name">It's easy to</h3><p class="pattern-desc">~하기가 쉬워요</p></div><div class="card-actions"><a href="english/ko/050-its-easy-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/051-its-nice-to/" class="card-link" aria-label="It's nice to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">051</span></div><h3 class="pattern-name">It's nice to</h3><p class="pattern-desc">~하니 좋네요</p></div><div class="card-actions"><a href="english/ko/051-its-nice-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/052-im-sorry-for/" class="card-link" aria-label="I'm sorry for 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">052</span></div><h3 class="pattern-name">I'm sorry for</h3><p class="pattern-desc">~에 대해 미안해요</p></div><div class="card-actions"><a href="english/ko/052-im-sorry-for/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/053-i-dont-think/" class="card-link" aria-label="I don't think 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">053</span></div><h3 class="pattern-name">I don't think</h3><p class="pattern-desc">~라고 생각하지 않아요</p></div><div class="card-actions"><a href="english/ko/053-i-dont-think/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/054-i-promised-to/" class="card-link" aria-label="I promised to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">054</span></div><h3 class="pattern-name">I promised to</h3><p class="pattern-desc">~하기로 약속했어요</p></div><div class="card-actions"><a href="english/ko/054-i-promised-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/055-i-know-how-to/" class="card-link" aria-label="I know how to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">055</span></div><h3 class="pattern-name">I know how to</h3><p class="pattern-desc">~하는 방법을 알아요</p></div><div class="card-actions"><a href="english/ko/055-i-know-how-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/056-thats-what-i/" class="card-link" aria-label="That's what I 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">056</span></div><h3 class="pattern-name">That's what I</h3><p class="pattern-desc">그게 바로 내가 ~한 거예요</p></div><div class="card-actions"><a href="english/ko/056-thats-what-i/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/057-why-dont-you/" class="card-link" aria-label="Why don't you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">057</span></div><h3 class="pattern-name">Why don't you</h3><p class="pattern-desc">~하는 게 어때요? (권유)</p></div><div class="card-actions"><a href="english/ko/057-why-dont-you/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/058-thank-you-for/" class="card-link" aria-label="Thank you for 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">058</span></div><h3 class="pattern-name">Thank you for</h3><p class="pattern-desc">~해줘서 고마워요</p></div><div class="card-actions"><a href="english/ko/058-thank-you-for/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/059-i-wish-i-could/" class="card-link" aria-label="I wish I could 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">059</span></div><h3 class="pattern-name">I wish I could</h3><p class="pattern-desc">~할 수 있으면 좋겠어요</p></div><div class="card-actions"><a href="english/ko/059-i-wish-i-could/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/060-do-you-want-to/" class="card-link" aria-label="Do you want to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">060</span></div><h3 class="pattern-name">Do you want to</h3><p class="pattern-desc">~하고 싶나요?</p></div><div class="card-actions"><a href="english/ko/060-do-you-want-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/061-im-looking-for/" class="card-link" aria-label="I'm looking for 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">061</span></div><h3 class="pattern-name">I'm looking for</h3><p class="pattern-desc">~을 찾고 있어요</p></div><div class="card-actions"><a href="english/ko/061-im-looking-for/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/062-i-cant-wait-to/" class="card-link" aria-label="I can't wait to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">062</span></div><h3 class="pattern-name">I can't wait to</h3><p class="pattern-desc">~하는 게 너무 기대돼요</p></div><div class="card-actions"><a href="english/ko/062-i-cant-wait-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/063-im-planning-to/" class="card-link" aria-label="I'm planning to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">063</span></div><h3 class="pattern-name">I'm planning to</h3><p class="pattern-desc">~할 계획이에요</p></div><div class="card-actions"><a href="english/ko/063-im-planning-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/064-im-thinking-of/" class="card-link" aria-label="I'm thinking of 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">064</span></div><h3 class="pattern-name">I'm thinking of</h3><p class="pattern-desc">~할까 생각 중이에요</p></div><div class="card-actions"><a href="english/ko/064-im-thinking-of/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/065-is-it-okay-if-i/" class="card-link" aria-label="Is it okay if I 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">065</span></div><h3 class="pattern-name">Is it okay if I</h3><p class="pattern-desc">제가 ~해도 될까요?</p></div><div class="card-actions"><a href="english/ko/065-is-it-okay-if-i/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/066-are-you-ready-to/" class="card-link" aria-label="Are you ready to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">066</span></div><h3 class="pattern-name">Are you ready to</h3><p class="pattern-desc">~할 준비됐나요?</p></div><div class="card-actions"><a href="english/ko/066-are-you-ready-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/067-im-interested-in/" class="card-link" aria-label="I'm interested in 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">067</span></div><h3 class="pattern-name">I'm interested in</h3><p class="pattern-desc">~에 관심이 있어요</p></div><div class="card-actions"><a href="english/ko/067-im-interested-in/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/068-its-important-to/" class="card-link" aria-label="It's important to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">068</span></div><h3 class="pattern-name">It's important to</h3><p class="pattern-desc">~하는 것이 중요해요</p></div><div class="card-actions"><a href="english/ko/068-its-important-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/069-do-you-know-how-to/" class="card-link" aria-label="Do you know how to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">069</span></div><h3 class="pattern-name">Do you know how to</h3><p class="pattern-desc">~하는 방법을 알고 있나요?</p></div><div class="card-actions"><a href="english/ko/069-do-you-know-how-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/070-what-if/" class="card-link" aria-label="What if 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">070</span></div><h3 class="pattern-name">What if</h3><p class="pattern-desc">만약 ~하면 어떻게 될까요?</p></div><div class="card-actions"><a href="english/ko/070-what-if/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/071-how-do-i/" class="card-link" aria-label="How do I 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">071</span></div><h3 class="pattern-name">How do I</h3><p class="pattern-desc">~하려면 어떻게 해요?</p></div><div class="card-actions"><a href="english/ko/071-how-do-i/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/072-how-come/" class="card-link" aria-label="How come 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">072</span></div><h3 class="pattern-name">How come</h3><p class="pattern-desc">어째서 ~한 거예요?</p></div><div class="card-actions"><a href="english/ko/072-how-come/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/073-ive-been/" class="card-link" aria-label="I've been 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">073</span></div><h3 class="pattern-name">I've been</h3><p class="pattern-desc">~해왔어요, ~하고 있었어요</p></div><div class="card-actions"><a href="english/ko/073-ive-been/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/074-im-used-to/" class="card-link" aria-label="I'm used to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">074</span></div><h3 class="pattern-name">I'm used to</h3><p class="pattern-desc">~에 익숙해져 있어요</p></div><div class="card-actions"><a href="english/ko/074-im-used-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/075-i-wonder-if/" class="card-link" aria-label="I wonder if 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">075</span></div><h3 class="pattern-name">I wonder if</h3><p class="pattern-desc">~인지 궁금해요</p></div><div class="card-actions"><a href="english/ko/075-i-wonder-if/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/076-im-here-to/" class="card-link" aria-label="I'm here to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">076</span></div><h3 class="pattern-name">I'm here to</h3><p class="pattern-desc">~하러 여기 왔어요</p></div><div class="card-actions"><a href="english/ko/076-im-here-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/077-im-about-to/" class="card-link" aria-label="I'm about to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">077</span></div><h3 class="pattern-name">I'm about to</h3><p class="pattern-desc">막 ~하려던 참이에요</p></div><div class="card-actions"><a href="english/ko/077-im-about-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/078-i-dont-mind/" class="card-link" aria-label="I don't mind 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">078</span></div><h3 class="pattern-name">I don't mind</h3><p class="pattern-desc">~해도 상관없어요</p></div><div class="card-actions"><a href="english/ko/078-i-dont-mind/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/079-what-kind-of/" class="card-link" aria-label="What kind of 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">079</span></div><h3 class="pattern-name">What kind of</h3><p class="pattern-desc">어떤 종류의 ~인가요?</p></div><div class="card-actions"><a href="english/ko/079-what-kind-of/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/080-whatever-you/" class="card-link" aria-label="Whatever you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">080</span></div><h3 class="pattern-name">Whatever you</h3><p class="pattern-desc">당신이 ~하는 것은 무엇이든</p></div><div class="card-actions"><a href="english/ko/080-whatever-you/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/081-whenever-you/" class="card-link" aria-label="Whenever you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">081</span></div><h3 class="pattern-name">Whenever you</h3><p class="pattern-desc">당신이 ~할 때는 언제든지</p></div><div class="card-actions"><a href="english/ko/081-whenever-you/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/082-wherever-you/" class="card-link" aria-label="Wherever you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">082</span></div><h3 class="pattern-name">Wherever you</h3><p class="pattern-desc">당신이 ~하는 곳은 어디든지</p></div><div class="card-actions"><a href="english/ko/082-wherever-you/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/083-youd-better/" class="card-link" aria-label="You'd better 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">083</span></div><h3 class="pattern-name">You'd better</h3><p class="pattern-desc">~하는 게 좋을 거예요</p></div><div class="card-actions"><a href="english/ko/083-youd-better/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/084-make-sure-to/" class="card-link" aria-label="Make sure to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">084</span></div><h3 class="pattern-name">Make sure to</h3><p class="pattern-desc">반드시 ~하세요</p></div><div class="card-actions"><a href="english/ko/084-make-sure-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/085-feel-free-to/" class="card-link" aria-label="Feel free to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">085</span></div><h3 class="pattern-name">Feel free to</h3><p class="pattern-desc">편하게 ~하세요</p></div><div class="card-actions"><a href="english/ko/085-feel-free-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/086-let-me-check/" class="card-link" aria-label="Let me check 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">086</span></div><h3 class="pattern-name">Let me check</h3><p class="pattern-desc">제가 확인해볼게요</p></div><div class="card-actions"><a href="english/ko/086-let-me-check/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/087-it-looks-like/" class="card-link" aria-label="It looks like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">087</span></div><h3 class="pattern-name">It looks like</h3><p class="pattern-desc">~처럼 보여요</p></div><div class="card-actions"><a href="english/ko/087-it-looks-like/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/088-it-seems-like/" class="card-link" aria-label="It seems like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">088</span></div><h3 class="pattern-name">It seems like</h3><p class="pattern-desc">~인 것 같아요</p></div><div class="card-actions"><a href="english/ko/088-it-seems-like/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/089-it-doesnt-seem-like/" class="card-link" aria-label="It doesn't seem like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">089</span></div><h3 class="pattern-name">It doesn't seem like</h3><p class="pattern-desc">~인 것 같지 않아요</p></div><div class="card-actions"><a href="english/ko/089-it-doesnt-seem-like/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/090-it-feels-like/" class="card-link" aria-label="It feels like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">090</span></div><h3 class="pattern-name">It feels like</h3><p class="pattern-desc">~인 느낌이에요</p></div><div class="card-actions"><a href="english/ko/090-it-feels-like/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/091-im-busy--ing/" class="card-link" aria-label="I'm busy -ing 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">091</span></div><h3 class="pattern-name">I'm busy -ing</h3><p class="pattern-desc">~하느라 바빠요</p></div><div class="card-actions"><a href="english/ko/091-im-busy--ing/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/092-i-have-no-idea/" class="card-link" aria-label="I have no idea 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">092</span></div><h3 class="pattern-name">I have no idea</h3><p class="pattern-desc">전혀 모르겠어요</p></div><div class="card-actions"><a href="english/ko/092-i-have-no-idea/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/093-it-sounds-like/" class="card-link" aria-label="It sounds like 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">093</span></div><h3 class="pattern-name">It sounds like</h3><p class="pattern-desc">~처럼 들려요</p></div><div class="card-actions"><a href="english/ko/093-it-sounds-like/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/094-its-better-to/" class="card-link" aria-label="It's better to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">094</span></div><h3 class="pattern-name">It's better to</h3><p class="pattern-desc">~하는 편이 더 나아요</p></div><div class="card-actions"><a href="english/ko/094-its-better-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/095-what-makes-you/" class="card-link" aria-label="What makes you 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">095</span></div><h3 class="pattern-name">What makes you</h3><p class="pattern-desc">무엇이 당신을 ~하게 해요?</p></div><div class="card-actions"><a href="english/ko/095-what-makes-you/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/096-let-me-know-if/" class="card-link" aria-label="Let me know if 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">096</span></div><h3 class="pattern-name">Let me know if</h3><p class="pattern-desc">~하면 알려주세요</p></div><div class="card-actions"><a href="english/ko/096-let-me-know-if/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/097-im-calling-to/" class="card-link" aria-label="I'm calling to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">097</span></div><h3 class="pattern-name">I'm calling to</h3><p class="pattern-desc">~하려고 전화했어요</p></div><div class="card-actions"><a href="english/ko/097-im-calling-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/098-im-supposed-to/" class="card-link" aria-label="I'm supposed to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">098</span></div><h3 class="pattern-name">I'm supposed to</h3><p class="pattern-desc">~하기로 되어 있어요</p></div><div class="card-actions"><a href="english/ko/098-im-supposed-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/099-im-not-sure-if/" class="card-link" aria-label="I'm not sure if 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">099</span></div><h3 class="pattern-name">I'm not sure if</h3><p class="pattern-desc">~인지 잘 모르겠어요</p></div><div class="card-actions"><a href="english/ko/099-im-not-sure-if/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+<div class="card"><a href="english/ko/100-ive-decided-to/" class="card-link" aria-label="I've decided to 예문 학습" target="_blank"></a><div><div class="card-top"><span class="card-no">100</span></div><h3 class="pattern-name">I've decided to</h3><p class="pattern-desc">~하기로 결심했어요</p></div><div class="card-actions"><a href="english/ko/100-ive-decided-to/" class="action-link" target="_blank">예문 학습 →</a></div></div>
+
+  </div><!-- /patternGrid -->
+
   <div class="load-more-container" id="loadMoreContainer">
     <button class="btn-load" id="btnLoadMore" onclick="loadMore()">패턴 더보기 ↓</button>
     <button class="btn-load btn-collapse hidden" id="btnCollapse" onclick="collapseCards()">목록 줄이기 ↑</button>
   </div>
- 
-  <!-- 구동사 블로그 리스트 섹션 -->
+
+  <!-- 구동사 섹션 -->
   <div class="blog-section">
     <div class="blog-header">
       <h2 class="blog-title">
@@ -392,168 +403,39 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
       </h2>
       <p class="blog-subtitle">기초 패턴을 익혔다면, 이제 원어민들이 매일 쓰는 구동사의 미묘한 뉘앙스를 학습해 보세요.</p>
     </div>
-
     <div class="design-c-list">
-      
-      <!-- 001 Pick up -->
-      <a href="https://hphong.com/english/phrasal-verbs/001_pick-up/" class="card-c" target="_blank">
-        <div class="card-c-left">
-          <span class="card-c-no">VERB 01</span>
-          <span class="card-c-verb">Pick up</span>
-        </div>
-        <div class="card-c-right">
-          <h3 class="card-c-title">상황에 따라 뜻이 계속 바뀌는 다의어 'Pick up' 핵심 의미</h3>
-          <p class="card-c-desc">미드나 유튜브 영상을 보다 보면 pick up이라는 표현이 정말 자주 등장한다는 걸 느끼신 적 있으신가요? 어떤 장면에서는 바닥에 떨어진 펜을 집어 드는 행동을 묘사하고, 또 다른 장면에서는 공항에서 누군가를 데리러 간다고 쓰이고, 대화 중에는 "I just picked that up"이라며 기술을 배운 걸 표현하기도 합니다. 심지어 전화를 받을 때도 "Just pick up!"이라고 소리치죠.</p>
-          <span class="card-c-action">학습하기 ➔</span>
-        </div>
-      </a>
-
-      <!-- 002 Hang out -->
-      <a href="https://hphong.com/english/phrasal-verbs/002_hang-out/" class="card-c" target="_blank">
-        <div class="card-c-left">
-          <span class="card-c-no">VERB 02</span>
-          <span class="card-c-verb">Hang out</span>
-        </div>
-        <div class="card-c-right">
-          <h3 class="card-c-title">성인이 되어서도 "놀다"를 'Play'라고 쓰면 안 되는 이유</h3>
-          <p class="card-c-desc">성인이 된 이후에도 "놀다"를 영어로 옮기려 할 때 본능적으로 play를 떠올리는 분들이 정말 많습니다. 초등학교 때부터 "놀다 = play"로 굳게 각인되었으니 당연한 일이에요. 그런데 원어민 친구에게 "Do you want to play this weekend?"라고 문자를 보낸다면, 그 친구는 속으로 이렇게 생각합니다. "이 사람, 나랑 보드게임이라도 하자는 건가? 아니면… 아직 애처럼 뛰어놀자는 건가?"</p>
-          <span class="card-c-action">학습하기 ➔</span>
-        </div>
-      </a>
-
-      <!-- 003 Drop by -->
-      <a href="https://hphong.com/english/phrasal-verbs/003_drop-by/" class="card-c" target="_blank">
-        <div class="card-c-left">
-          <span class="card-c-no">VERB 03</span>
-          <span class="card-c-verb">Drop by</span>
-        </div>
-        <div class="card-c-right">
-          <h3 class="card-c-title">"잠깐 들를게"를 Visit으로 쓰면 원어민이 부담스러워하는 이유</h3>
-          <p class="card-c-desc">친구 집 근처를 지나가다가 "나 지금 네 집 근처야, 잠깐 들러도 돼?"라고 말하고 싶을 때, 혹시 visit이라는 단어를 떠올리셨나요? 많은 분들이 "들르다 = visit"으로 알고 있지만, 원어민 친구에게 "I want to visit you this afternoon"이라고 하면 그 친구는 갑자기 집을 청소하고 음식을 준비해야 할 것 같은 압박감을 느낍니다. visit은 목적을 갖고 격식을 차려 찾아가는 행위이기 때문입니다.</p>
-          <span class="card-c-action">학습하기 ➔</span>
-        </div>
-      </a>
-
-      <!-- 004 Call off -->
-      <a href="https://hphong.com/english/phrasal-verbs/004_call-off/" class="card-c" target="_blank">
-        <div class="card-c-left">
-          <span class="card-c-no">VERB 04</span>
-          <span class="card-c-verb">Call off</span>
-        </div>
-        <div class="card-c-right">
-          <h3 class="card-c-title">미루다(Put off)와 취소하다(Call off), 헷갈리면 큰일 나는 이유</h3>
-          <p class="card-c-desc">중요한 미팅 전날 밤, 팀장이 메시지를 보냈습니다. "Let's put off tomorrow's meeting." 이 말을 듣고 안도했는데, 알고 보니 그 미팅은 그냥 다음 주로 미뤄진 게 아니라 완전히 없어진 것이었다면 어떨까요? 혹은 반대로, 모든 참석자에게 취소 통보를 보냈는데 담당자가 "나는 단지 미루자고 한 것"이라고 한다면요? 이 두 표현의 차이를 제대로 모르면 실제 업무 현장에서 혼란이 일어날 수 있습니다.</p>
-          <span class="card-c-action">학습하기 ➔</span>
-        </div>
-      </a>
-
-      <!-- 005 Run into -->
-      <a href="https://hphong.com/english/phrasal-verbs/005_run-into/" class="card-c" target="_blank">
-        <div class="card-c-left">
-          <span class="card-c-no">VERB 05</span>
-          <span class="card-c-verb">Run into</span>
-        </div>
-        <div class="card-c-right">
-          <h3 class="card-c-title">옛 친구를 마주칠 때와 문제에 부딪힐 때 똑같이 'Run into'를 쓰는 이유</h3>
-          <p class="card-c-desc">길을 걷다가 10년 만에 옛 친구를 마주쳤을 때, 그리고 프로젝트를 진행하다가 예상치 못한 심각한 문제에 부딪혔을 때. 이 두 상황은 겉보기에 전혀 달라 보이지만, 영어로는 똑같이 run into 하나로 표현합니다. "어떻게 이렇게 다른 상황에 같은 표현을 쓰지?"라고 의아할 수 있지만, 어원을 파고들면 두 의미가 하나의 뿌리에서 자라난 것임을 즉시 이해하게 됩니다.</p>
-          <span class="card-c-action">학습하기 ➔</span>
-        </div>
-      </a>
-
-      <!-- 006 Look into -->
-      <a href="https://hphong.com/english/phrasal-verbs/006_look-into/" class="card-c" target="_blank">
-        <div class="card-c-left">
-          <span class="card-c-no">VERB 06</span>
-          <span class="card-c-verb">Look into</span>
-        </div>
-        <div class="card-c-right">
-          <h3 class="card-c-title">Find out vs Look into — 원어민이 느끼는 전혀 다른 무게감</h3>
-          <p class="card-c-desc">고객 불만을 접수한 담당자가 이렇게 말했습니다. "I'll find out what happened." 그리고 다른 담당자는 이렇게 말했습니다. "I'll look into it." 두 문장 모두 "확인해 보겠습니다"처럼 들리지만, 원어민은 이 둘에서 전혀 다른 무게감을 느낍니다. 전자는 단순히 사실 하나를 파악하겠다는 것이고, 후자는 내부를 깊이 들여다보며 속사정까지 파헤치겠다는 적극적인 의지가 담겨 있습니다.</p>
-          <span class="card-c-action">학습하기 ➔</span>
-        </div>
-      </a>
-
-      <!-- 007 Get over -->
-      <a href="https://hphong.com/english/phrasal-verbs/007_get-over/" class="card-c" target="_blank">
-        <div class="card-c-left">
-          <span class="card-c-no">VERB 07</span>
-          <span class="card-c-verb">Get over</span>
-        </div>
-        <div class="card-c-right">
-          <h3 class="card-c-title">"그 사람 아직도 못 잊었어?" 5단어로 끝내는 'Get over'</h3>
-          <p class="card-c-desc">"그 사람 아직도 못 잊었어?" 이 말을 영어로 하면 어떻게 될까요? 많은 분들이 "Do you still miss him?"이나 "Can't you forget about him?" 같은 표현을 떠올립니다. 틀리지는 않지만, 원어민들이 실제로 쓰는 표현은 훨씬 간결합니다. "You still haven't gotten over him?" 단 다섯 단어에 이별의 아픔을 아직 털어내지 못했다는 감정이 고스란히 담깁니다.</p>
-          <span class="card-c-action">학습하기 ➔</span>
-        </div>
-      </a>
-
-      <!-- 008 Come across -->
-      <a href="https://hphong.com/english/phrasal-verbs/008_come-across/" class="card-c" target="_blank">
-        <div class="card-c-left">
-          <span class="card-c-no">VERB 08</span>
-          <span class="card-c-verb">Come across</span>
-        </div>
-        <div class="card-c-right">
-          <h3 class="card-c-title">"우연히 발견하다"와 "인상을 주다" — Come across 완벽 정리</h3>
-          <p class="card-c-desc">오래된 서랍을 뒤지다 잊고 있던 편지를 발견했을 때, 그리고 면접에서 자신도 모르게 거만한 인상을 줬다는 말을 들었을 때. 겉보기에는 전혀 다른 두 상황이지만, 영어로는 둘 다 come across 하나로 표현합니다. "어떻게 이렇게 다른 맥락에 같은 표현을 쓰지?"라는 의문은 어원을 알면 단번에 풀립니다.</p>
-          <span class="card-c-action">학습하기 ➔</span>
-        </div>
-      </a>
-
-      <!-- 009 Bring up (내용 및 주소 전면 수정 반영) -->
-      <a href="https://hphong.com/english/phrasal-verbs/009_bring-up/" class="card-c" target="_blank">
-        <div class="card-c-left">
-          <span class="card-c-no">VERB 09</span>
-          <span class="card-c-verb">Bring up</span>
-        </div>
-        <div class="card-c-right">
-          <h3 class="card-c-title">회의 중 화제를 꺼낼 때부터 아이를 키울 때까지 하나로 통하는 'Bring up'</h3>
-          <p class="card-c-desc">회의 중에 상사가 갑자기 지난달 실수를 꺼낼 때, 오랫동안 키워온 자녀가 독립할 때, 그리고 뱃멀미로 고생할 때. 이 세 가지 상황은 삶의 결이 완전히 다르지만, 영어로는 모두 bring up 하나로 표현할 수 있습니다. "어떻게 이렇게 다른 상황에 같은 표현을?"이라는 의문은 어원 하나로 단번에 풀립니다.</p>
-          <span class="card-c-action">학습하기 ➔</span>
-        </div>
-      </a>
-
-      <!-- 010 Take over -->
-      <a href="https://hphong.com/english/phrasal-verbs/010_take-over/" class="card-c" target="_blank">
-        <div class="card-c-left">
-          <span class="card-c-no">VERB 10</span>
-          <span class="card-c-verb">Take over</span>
-        </div>
-        <div class="card-c-right">
-          <h3 class="card-c-title">업무 인수인계부터 기업 인수까지 하나로 통하는 'Take over'</h3>
-          <p class="card-c-desc">팀장이 출장을 가면서 업무를 넘기는 상황, 대기업이 스타트업을 인수하는 뉴스, 냉장고를 열었더니 어제 먹다 남긴 음식 냄새가 온 주방을 가득 채우고 있는 상황. 이 세 가지는 겉보기에 전혀 다른 장면이지만, 영어로는 하나의 표현 take over로 연결됩니다. "어떻게 이렇게 다른 맥락에 같은 표현을 쓰지?"라는 의문은, 어원 속 하나의 물리적 이미지를 이해하는 순간 자연스럽게 풀립니다.</p>
-          <span class="card-c-action">학습하기 ➔</span>
-        </div>
-      </a>
-
+      <a href="https://hphong.com/english/phrasal-verbs/001_pick-up/" class="card-c"><div class="card-c-left"><span class="card-c-no">VERB 01</span><span class="card-c-verb">Pick up</span></div><div class="card-c-right"><h3 class="card-c-title">상황에 따라 뜻이 계속 바뀌는 다의어 'Pick up' 핵심 의미</h3><p class="card-c-desc">미드나 유튜브 영상을 보다 보면 pick up이라는 표현이 정말 자주 등장한다는 걸 느끼신 적 있으신가요? 어떤 장면에서는 바닥에 떨어진 펜을 집어 드는 행동을 묘사하고, 또 다른 장면에서는 공항에서 누군가를 데리러 간다고 쓰이기도 합니다.</p><span class="card-c-action">학습하기 ➔</span></div></a>
+      <a href="https://hphong.com/english/phrasal-verbs/002_hang-out/" class="card-c"><div class="card-c-left"><span class="card-c-no">VERB 02</span><span class="card-c-verb">Hang out</span></div><div class="card-c-right"><h3 class="card-c-title">성인이 되어서도 "놀다"를 'Play'라고 쓰면 안 되는 이유</h3><p class="card-c-desc">성인이 된 이후에도 "놀다"를 영어로 옮기려 할 때 본능적으로 play를 떠올리는 분들이 정말 많습니다. 그런데 원어민 친구에게 "Do you want to play this weekend?"라고 문자를 보낸다면 어색하게 들립니다.</p><span class="card-c-action">학습하기 ➔</span></div></a>
+      <a href="https://hphong.com/english/phrasal-verbs/003_drop-by/" class="card-c"><div class="card-c-left"><span class="card-c-no">VERB 03</span><span class="card-c-verb">Drop by</span></div><div class="card-c-right"><h3 class="card-c-title">"잠깐 들를게"를 Visit으로 쓰면 원어민이 부담스러워하는 이유</h3><p class="card-c-desc">많은 분들이 "들르다 = visit"으로 알고 있지만, 원어민 친구에게 "I want to visit you this afternoon"이라고 하면 그 친구는 집을 청소하고 음식을 준비해야 할 것 같은 압박감을 느낍니다.</p><span class="card-c-action">학습하기 ➔</span></div></a>
+      <a href="https://hphong.com/english/phrasal-verbs/004_call-off/" class="card-c"><div class="card-c-left"><span class="card-c-no">VERB 04</span><span class="card-c-verb">Call off</span></div><div class="card-c-right"><h3 class="card-c-title">미루다(Put off)와 취소하다(Call off), 헷갈리면 큰일 나는 이유</h3><p class="card-c-desc">중요한 미팅 전날 팀장이 "Let's put off tomorrow's meeting."이라고 했는데, 이게 미루는 건지 취소하는 건지 헷갈린다면? 두 표현의 차이를 정확히 알아야 합니다.</p><span class="card-c-action">학습하기 ➔</span></div></a>
+      <a href="https://hphong.com/english/phrasal-verbs/005_run-into/" class="card-c"><div class="card-c-left"><span class="card-c-no">VERB 05</span><span class="card-c-verb">Run into</span></div><div class="card-c-right"><h3 class="card-c-title">옛 친구를 마주칠 때와 문제에 부딪힐 때 똑같이 'Run into'를 쓰는 이유</h3><p class="card-c-desc">길을 걷다가 10년 만에 옛 친구를 마주쳤을 때, 그리고 프로젝트를 진행하다가 예상치 못한 문제에 부딪혔을 때. 이 두 상황은 영어로는 똑같이 run into 하나로 표현합니다.</p><span class="card-c-action">학습하기 ➔</span></div></a>
+      <a href="https://hphong.com/english/phrasal-verbs/006_look-into/" class="card-c"><div class="card-c-left"><span class="card-c-no">VERB 06</span><span class="card-c-verb">Look into</span></div><div class="card-c-right"><h3 class="card-c-title">Find out vs Look into — 원어민이 느끼는 전혀 다른 무게감</h3><p class="card-c-desc">"I'll find out what happened"와 "I'll look into it" — 둘 다 확인하겠다는 뜻처럼 들리지만, 원어민은 이 둘에서 전혀 다른 무게감을 느낍니다.</p><span class="card-c-action">학습하기 ➔</span></div></a>
+      <a href="https://hphong.com/english/phrasal-verbs/007_get-over/" class="card-c"><div class="card-c-left"><span class="card-c-no">VERB 07</span><span class="card-c-verb">Get over</span></div><div class="card-c-right"><h3 class="card-c-title">"그 사람 아직도 못 잊었어?" 5단어로 끝내는 'Get over'</h3><p class="card-c-desc">"You still haven't gotten over him?" — 단 다섯 단어에 이별의 아픔을 아직 털어내지 못했다는 감정이 담깁니다. get over의 쓰임새를 완벽하게 정리합니다.</p><span class="card-c-action">학습하기 ➔</span></div></a>
+      <a href="https://hphong.com/english/phrasal-verbs/008_come-across/" class="card-c"><div class="card-c-left"><span class="card-c-no">VERB 08</span><span class="card-c-verb">Come across</span></div><div class="card-c-right"><h3 class="card-c-title">"우연히 발견하다"와 "인상을 주다" — Come across 완벽 정리</h3><p class="card-c-desc">오래된 서랍을 뒤지다 잊고 있던 편지를 발견했을 때, 면접에서 거만한 인상을 줬을 때 — 겉보기에 전혀 다른 두 상황이지만 영어로는 둘 다 come across로 표현합니다.</p><span class="card-c-action">학습하기 ➔</span></div></a>
+      <a href="https://hphong.com/english/phrasal-verbs/009_bring-up/" class="card-c"><div class="card-c-left"><span class="card-c-no">VERB 09</span><span class="card-c-verb">Bring up</span></div><div class="card-c-right"><h3 class="card-c-title">회의 중 화제를 꺼낼 때부터 아이를 키울 때까지 하나로 통하는 'Bring up'</h3><p class="card-c-desc">회의에서 화제를 꺼낼 때, 자녀를 키울 때, 뱃멀미가 날 때 — 이 세 가지 전혀 다른 상황을 영어로는 모두 bring up 하나로 표현할 수 있습니다.</p><span class="card-c-action">학습하기 ➔</span></div></a>
+      <a href="https://hphong.com/english/phrasal-verbs/010_take-over/" class="card-c"><div class="card-c-left"><span class="card-c-no">VERB 10</span><span class="card-c-verb">Take over</span></div><div class="card-c-right"><h3 class="card-c-title">업무 인수인계부터 기업 인수까지 하나로 통하는 'Take over'</h3><p class="card-c-desc">팀장이 업무를 넘기는 상황, 대기업이 스타트업을 인수하는 뉴스 — 이 전혀 다른 장면들이 영어로는 하나의 표현 take over로 연결됩니다.</p><span class="card-c-action">학습하기 ➔</span></div></a>
     </div>
   </div>
-  <!-- 구동사 블로그 리스트 섹션 끝 -->
 
-<div id="premium" class="premium-banner">
-  <h2>영어 회화의 완성, 전자책으로 완전정복</h2>
-  <p>실전 대화문 · 원어민 표현 · 전체 패턴 워크시트<br>언제 어디서든 펴보는 나만의 영어 참고서</p>
-  
-  <a href="https://smartstore.naver.com/qcdmall/products/13705620315" class="premium-btn" target="_blank" rel="noopener">전자책 자세히 보기</a>
+  <div id="premium" class="premium-banner">
+    <h2>영어 회화의 완성, 전자책으로 완전정복</h2>
+    <p>실전 대화문 · 원어민 표현 · 전체 패턴 워크시트<br>언제 어디서든 펴보는 나만의 영어 참고서</p>
+    <a href="https://smartstore.naver.com/qcdmall/products/13705620315" class="premium-btn" target="_blank" rel="noopener">전자책 자세히 보기</a>
+    <p style="font-size:16px;color:#555555;text-align:center;margin-top:24px;line-height:1.6;word-break:keep-all;">
+      여러분의 후원은 이 학습 사이트를<br>무료로 유지하는데 큰 도움이 됩니다.
+    </p>
+  </div>
 
-  <p style="font-size: 16px; color: #555555; text-align: center; margin-top: 24px; line-height: 1.6; word-break: keep-all;">
-    여러분의 후원은 이 학습 사이트를<br>
-    무료로 유지하는데 큰 도움이 됩니다.
-  </p>
-</div>
-
-  
 </section>
 
-
 <footer>
-  <p style="text-align: center; font-size: 13px; font-weight: normal; margin-bottom: 15px;">
-    <a href="/privacy-policy.html" style="color: #666; text-decoration: none;">개인정보처리방침</a> &nbsp;|&nbsp;
-    <a href="/about.html" style="color: #666; text-decoration: none;">소개</a> &nbsp;|&nbsp;
-    <a href="/contact.html" style="color: #666; text-decoration: none;">문의</a>
+  <p style="text-align:center;font-size:13px;font-weight:normal;margin-bottom:15px;">
+    <a href="/privacy-policy.html" style="color:#666;text-decoration:none;">개인정보처리방침</a> &nbsp;|&nbsp;
+    <a href="/about.html" style="color:#666;text-decoration:none;">소개</a> &nbsp;|&nbsp;
+    <a href="/contact.html" style="color:#666;text-decoration:none;">문의</a>
   </p>
-
   <p>© 2026 영어창고 MyEnglishVault. All rights reserved.</p>
-  <p style="margin-top: 6px;">문의 : <a href="mailto:hphong@hphong.com">hphong@hphong.com</a></p>
+  <p style="margin-top:6px;">문의 : <a href="mailto:hphong@hphong.com">hphong@hphong.com</a></p>
   <p id="visit-counter" style="margin-top:10px;font-size:11px;color:#C0C0C0;letter-spacing:0.03em;"></p>
 </footer>
 
@@ -562,6 +444,8 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
 <aside class="sidebar">
   <div class="sidebar-sticky" id="sidebar-wrap"></div>
 </aside>
+
+</div><!-- /page-wrapper -->
 
 <script>
 (function(){
@@ -581,13 +465,16 @@ footer{text-align:center;padding:40px 20px;color:var(--text-gray);font-size:13px
     .catch(function(e){ console.log('sidebar fetch error:', e); });
 })();
 </script>
+
 <script>
 var allCards = Array.from(document.querySelectorAll('#patternGrid .card'));
 var filteredCards = allCards;
 var currentView = 'card';
+
+/* ✅ 수정 ②: initCount list 100 → 20, 초기뷰 card */
 var displayCount = 9;
-var initCount = { card: 9, compact: 20, list: 100 };
-var addCount  = { card: 9, compact: 16, list: 30 };
+var initCount = { card: 9, compact: 20, list: 20 };
+var addCount  = { card: 9, compact: 16, list: 20 };
 
 function setView(v){
   currentView = v;
@@ -596,7 +483,7 @@ function setView(v){
   document.querySelectorAll('.view-btn').forEach(function(b){
     b.classList.toggle('active', b.getAttribute('onclick').indexOf("'" + v + "'") !== -1);
   });
-  displayCount = initCount[v] || 12;
+  displayCount = initCount[v] || 9;
   renderCards();
   try{ localStorage.setItem('engchanggo_view', v); } catch(e){}
 }
@@ -608,7 +495,7 @@ function renderCards(){
   var lm = document.getElementById('loadMoreContainer');
   var btnMore = document.getElementById('btnLoadMore');
   var btnCollapse = document.getElementById('btnCollapse');
-  var init = initCount[currentView] || 12;
+  var init = initCount[currentView] || 9;
   lm.classList.remove('hidden');
   if(filteredCards.length > displayCount){ btnMore.classList.remove('hidden'); }
   else { btnMore.classList.add('hidden'); }
@@ -617,34 +504,10 @@ function renderCards(){
   if(btnMore.classList.contains('hidden') && btnCollapse.classList.contains('hidden')){ lm.classList.add('hidden'); }
 }
 
-function loadMore(){ displayCount += addCount[currentView] || 12; renderCards(); }
-
-var meaningMap = {};
-fetch('/pattern-list.json')
-  .then(function(r){ return r.json(); })
-  .then(function(list){
-    list.forEach(function(p){ meaningMap[p.slug] = p.meaning || ''; });
-    injectMeanings();
-  })
-  .catch(function(){});
-
-function injectMeanings(){
-  allCards.forEach(function(card){
-    var link = card.querySelector('.card-link');
-    if(!link) return;
-    var href = link.getAttribute('href') || '';
-    var match = href.match(/\/([^\/]+)\/$/);
-    var slug = match ? match[1] : '';
-    var desc = card.querySelector('.pattern-desc');
-    if(desc && slug && meaningMap[slug]){ desc.textContent = meaningMap[slug]; }
-  });
-}
-
-var _origSetView = setView;
-setView = function(v){ _origSetView(v); if(v === 'list') setTimeout(injectMeanings, 0); };
+function loadMore(){ displayCount += addCount[currentView] || 9; renderCards(); }
 
 function collapseCards(){
-  displayCount = initCount[currentView] || 12;
+  displayCount = initCount[currentView] || 9;
   renderCards();
   document.getElementById('curriculum').scrollIntoView({behavior:'smooth'});
 }
@@ -657,7 +520,7 @@ function filterPatterns(){
     var descText = desc ? desc.textContent.toLowerCase() : '';
     return (n && n.textContent.toLowerCase().includes(q)) || descText.includes(q);
   });
-  displayCount = initCount[currentView] || 12;
+  displayCount = initCount[currentView] || 9;
   var grid = document.getElementById('patternGrid');
   var nr = grid.querySelector('.no-result');
   if(nr) nr.remove();
@@ -670,10 +533,12 @@ function filterPatterns(){
   renderCards();
 }
 
+/* ✅ 수정 ②: 초기 뷰를 card로 설정 */
 (function(){
-  setView('list');
+  setView('card');
 })();
 </script>
+
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment }
@@ -746,5 +611,6 @@ async function recordAndDisplayVisit() {
 }
 recordAndDisplayVisit();
 </script>
+
 </body>
 </html>
