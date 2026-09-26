@@ -6,13 +6,13 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- 원어민 필수 구동사 마스터 10개 페이지 -->
   <url>
-    <loc>https://hphong.com/ebook-info.html</loc>
+    <loc>https://hphong.com/english/phrasal-verbs/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- 원어민 필수 구동사 마스터 10개 페이지 -->
   <url>
     <loc>https://hphong.com/english/phrasal-verbs/001_pick-up/</loc>
     <changefreq>weekly</changefreq>
