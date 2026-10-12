@@ -3,22 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- SEO: 타겟 키워드를 포함한 명확한 Title -->
-<title>영어회화 필수 패턴! 영어창고 문장꼬리물기 패턴회화 100 | 기초영어 영어전자책</title>
-<!-- SEO: 검색 결과에 노출될 설명(Description) -->
-<meta name="description" content="단순 암기식 영어공부는 이제 그만! 영어창고에서 제공하는 영어전자책으로 패턴회화 100가지를 익히고 원어민처럼 길게 말해보세요. 기초영어를 탄탄하게 다져주는 최고의 영어회화 학습서입니다.">
-<!-- SEO: 검색 키워드 (최근 검색엔진 비중은 낮아졌으나 명시적 분류를 위해 추가) -->
-<meta name="keywords" content="영어회화, 패턴회화, 영어전자책, 기초영어, 영어창고, 영어공부">
+<title>영어회화 필수 패턴! 영어창고 문장꼬리물기 패턴회화 100 | 기초영어 영어전자책 무료</title>
+<meta name="description" content="영어학습자를 위해 ISBN 정식 등록 출판물을 무료로 공개합니다. 영어창고 패턴회화 100가지 PDF 전자책을 지금 바로 무료 다운로드하세요.">
+<meta name="keywords" content="영어회화, 패턴회화, 영어전자책, 기초영어, 영어창고, 영어공부, 무료전자책">
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&display=swap');
   * { margin:0; padding:0; box-sizing:border-box; }
-  
-  /* 모바일 대응: body 너비를 유연하게 변경 */
   body { font-family:'Noto Sans KR',sans-serif; background:#fff; color:#1a1a1a; width:100%; max-width:860px; margin:0 auto; overflow-x:hidden; }
 
-  /* ── 공통 ── */
   .section-label { font-size:12px; font-weight:700; letter-spacing:2px; color:#C9A050; text-transform:uppercase; margin-bottom:10px; }
   .section-title { font-size:28px; font-weight:900; color:#1a1a1a; margin-bottom:32px; line-height:1.35; word-break:keep-all; }
 
@@ -29,6 +23,13 @@
   .hook h1 { font-size:38px; font-weight:900; color:#fff; line-height:1.35; margin-bottom:20px; word-break:keep-all; }
   .hook h1 em { color:#C9A050; font-style:normal; }
   .hook-sub { font-size:17px; color:rgba(255,255,255,0.7); line-height:1.7; word-break:keep-all; }
+
+  /* 무료공개 배지 */
+  .free-badge {
+    display:inline-block; background:#C9A050; color:#fff;
+    font-size:14px; font-weight:900; letter-spacing:1px;
+    padding:8px 22px; border-radius:24px; margin-bottom:18px;
+  }
 
   /* ━━ 02. 책 목업 + 스펙 ━━ */
   .book-section { background:#f7f8fa; padding:64px 60px; display:flex; align-items:center; gap:52px; }
@@ -48,23 +49,91 @@
   .spec-icon svg { width:22px; height:22px; stroke:#0b4f5e; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
   .spec-label { font-size:12px; color:#888; margin-bottom:2px; }
   .spec-val { font-size:15px; font-weight:700; color:#1a1a1a; }
-  .badge-row { display:flex; gap:8px; flex-wrap:wrap; }
+  .badge-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
   .badge { display:inline-flex; align-items:center; gap:6px; padding:7px 14px; border-radius:20px; font-size:13px; font-weight:700; }
-  .badge svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
   .badge-teal { background:#e6f4f7; color:#0b4f5e; }
   .badge-gold { background:#fdf3dc; color:#9a7020; }
   .badge-gray { background:#f0f0f2; color:#555; }
-  .buy-btn-wrap { margin-top:24px; }
-  .buy-btn {
-    display:flex; align-items:center; justify-content:center; gap:10px; width: 100%;
-    background:#0b4f5e; color:#fff; font-family:'Noto Sans KR',sans-serif; font-size:16px; font-weight:900;
+
+  /* ISBN 무료공개 박스 */
+  .isbn-free-box {
+    background: linear-gradient(135deg, #0b4f5e 0%, #0a3d49 100%);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .isbn-free-box .isbn-line1 {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 4px;
+  }
+  .isbn-free-box .isbn-line2 {
+    font-size: 18px;
+    font-weight: 900;
+    color: #C9A050;
+    line-height: 1.4;
+  }
+
+  /* 다운로드 버튼 */
+  .download-btn-wrap { margin-bottom: 0; }
+  .download-btn {
+    display:flex; align-items:center; justify-content:center; gap:10px; width:100%;
+    background:#C9A050; color:#fff; font-family:'Noto Sans KR',sans-serif; font-size:18px; font-weight:900;
     padding:22px 36px; border-radius:10px; border:none; cursor:pointer;
     letter-spacing:0.2px; transition:background 0.2s, transform 0.15s;
-    box-shadow:0 4px 16px rgba(11,79,94,0.25);
+    box-shadow:0 4px 16px rgba(201,160,80,0.35);
+    text-decoration: none;
   }
-  .buy-btn:hover { background:#0d6478; transform:translateY(-2px); }
-  .buy-btn:active { transform:translateY(0); }
-  .buy-btn-price { background:rgba(255,255,255,0.15); border-radius:6px; padding:3px 10px; font-size:15px; font-weight:700; letter-spacing:0.5px; }
+  .download-btn:hover { background:#b08a3e; transform:translateY(-2px); }
+  .download-btn:active { transform:translateY(0); }
+
+  /* 후원 박스 */
+  .support-box {
+    background: #fffbf0;
+    border: 1px solid #f0d89a;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-top: 16px;
+    text-align: center;
+  }
+  .support-box .support-q {
+    font-size: 16px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .support-box .support-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.75;
+    margin-bottom: 18px;
+    word-break: keep-all;
+  }
+  .support-box .support-desc strong { color: #9a7020; }
+  .support-btn-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .btn-kakao {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #FEE500; color: #3A1D1D;
+    font-family:'Noto Sans KR',sans-serif; font-size: 14px; font-weight: 900;
+    padding: 12px 20px; border-radius: 8px; border: none; cursor: pointer;
+    text-decoration: none; transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(254,229,0,0.4);
+  }
+  .btn-kakao:hover { background: #f5da00; transform: translateY(-1px); }
+  .btn-account {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; color: #0b4f5e;
+    font-family:'Noto Sans KR',sans-serif; font-size: 14px; font-weight: 900;
+    padding: 12px 20px; border-radius: 8px;
+    border: 2px solid #0b4f5e; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-account:hover { background: #0b4f5e; color: #fff; transform: translateY(-1px); }
 
   /* ━━ 03. 이런 분께 추천 ━━ */
   .who { background:#fff; padding:64px 60px; }
@@ -108,7 +177,6 @@
 
   /* ━━ 06. 내지 샘플 ━━ */
   .sample { background:#f7f8fa; padding:64px 60px; }
-  .sample > .section-label, .sample > h2 { padding: 0; }
 
   /* ━━ 07. QR 섹션 ━━ */
   .qr-section { background:#fff; padding:64px 60px; }
@@ -118,154 +186,97 @@
   .qr-text h3 em { color:#C9A050; font-style:normal; }
   .qr-text p { font-size:15px; color:rgba(255,255,255,0.72); line-height:1.7; word-break:keep-all; }
 
-  /* ━━ 08. 구매 안내 ━━ */
+  /* ━━ 08. 이용 안내 ━━ */
   .purchase { background:#f7f8fa; padding:64px 60px; }
   .info-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:40px; }
   .info-card { background:#fff; border-radius:12px; padding:22px; border:1px solid #e8eaed; }
-  .info-card-icon { width:36px; height:36px; margin-bottom:12px; }
-  .info-card-icon svg { width:36px; height:36px; stroke:#0b4f5e; fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
   .info-card-title { font-size:14px; font-weight:700; color:#0b4f5e; margin-bottom:6px; }
   .info-card-desc { font-size:14px; color:#444; line-height:1.65; word-break:keep-all; }
-  .faq-list { display:flex; flex-direction:column; gap:12px; }
-  .faq-item { background:#fff; border-radius:12px; padding:20px 22px; border:1px solid #e8eaed; }
-  .faq-q { font-size:15px; font-weight:700; color:#1a1a1a; margin-bottom:8px; display:flex; gap:10px; align-items:flex-start; }
-  .faq-q-badge { background:#0b4f5e; color:#fff; font-size:12px; font-weight:900; padding:2px 8px; border-radius:5px; flex-shrink:0; margin-top:1px; }
-  .faq-a { font-size:14px; color:#555; line-height:1.65; padding-left:34px; word-break:keep-all; }
 
   /* ━━ 09. CTA ━━ */
   .cta { background:#0b4f5e; padding:64px 60px; text-align:center; }
   .cta h2 { font-size:30px; font-weight:900; color:#fff; margin-bottom:14px; line-height:1.35; word-break:keep-all; }
   .cta h2 em { color:#C9A050; font-style:normal; }
   .cta p { font-size:16px; color:rgba(255,255,255,0.7); margin-bottom:32px; line-height:1.65; word-break:keep-all; }
-  .cta-sub { margin-top:16px; font-size:13px; color:rgba(255,255,255,0.4); }
+  .cta .download-btn { max-width: 480px; margin: 0 auto; display: flex; }
 
-  /* ━━ 팝업 모달 ━━ */
-  #ebookPopupOverlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
-  #ebookPopupOverlay.active { display: flex; }
-  #ebookPopup { background: #fff; border-radius: 14px; max-width: 560px; width: 100%; box-shadow: 0 24px 60px rgba(0,0,0,0.22); overflow: hidden; animation: popupIn 0.28s cubic-bezier(0.34,1.4,0.64,1) both; }
-  @keyframes popupIn { from { transform: scale(0.88); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-  .popup-header { background: #0b4f5e; padding: 24px 28px 20px; position: relative; text-align: center; }
-  .popup-badge { display: inline-block; background: rgba(201,160,80,0.22); color: #C9A050; font-size: 16px; font-weight: 900; padding: 6px 18px; border-radius: 22px; margin-bottom: 12px; }
-  .popup-title { color: #fff; font-size: 22px; font-weight: 900; line-height: 1.4; }
-  .popup-close { position: absolute; top: 14px; right: 16px; background: rgba(255,255,255,0.12); border: none; color: rgba(255,255,255,0.8); font-size: 18px; width: 34px; height: 34px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-  .popup-body { padding: 28px 32px 32px; text-align: center; }
-  .popup-desc { font-size: 16px; color: #111; font-weight: 700; line-height: 1.8; margin-bottom: 20px; word-break: keep-all; }
-  .popup-bank-box { background: #f7f8fa; border: 1px solid #e4e6ea; border-radius: 12px; padding: 16px 24px; margin-bottom: 20px; width: 100%; display:inline-block; }
-  .popup-bank-row { display: flex; align-items: baseline; justify-content: center; padding: 8px 0; font-size: 16px; border-bottom: 1px dashed #e4e6ea; }
-  .popup-bank-row:last-child { border-bottom: none; }
-  .popup-bank-label { color: #888; font-weight: 600; width: 86px; text-align: right; }
-  .popup-bank-colon { color: #bbb; margin: 0 12px; }
-  .popup-bank-value { color: #1a1a1a; font-weight: 700; width: 210px; text-align: left; }
-  .popup-bank-value.price { color: #0b4f5e; font-size: 20px; font-weight: 900; }
-  .popup-send-box { background: #fff8ec; border: 1px solid #f0d89a; border-radius: 12px; padding: 16px 20px; margin-bottom: 20px; }
-  .popup-send-title { font-size: 15px; font-weight: 700; color: #9a7520; margin-bottom: 12px; }
-  .popup-send-list { list-style: none; padding: 0; margin: 0 0 14px 0; display: inline-block; text-align: left; }
-  .popup-send-list li { font-size: 15px; color: #555; padding: 4px 0; display: flex; gap: 8px; line-height: 1.6; }
-  .popup-send-list li::before { content: '·'; color: #C9A050; font-weight: 900; }
-  .popup-email-link { display: block; background: #0b4f5e; color: #fff; font-size: 15px; font-weight: 700; padding: 12px 18px; border-radius: 8px; text-decoration: none; }
-  .popup-notice { font-size: 15px; color: #666; line-height: 1.7; }
-  .popup-copy-btn {
-    display: block; width: 100%; margin-top: 10px;
-    background: #fff; color: #0b4f5e;
-    border: 2px solid #0b4f5e; border-radius: 8px;
-    font-family: 'Noto Sans KR', sans-serif; font-size: 15px; font-weight: 700;
-    padding: 11px 18px; cursor: pointer; letter-spacing: 0.2px;
-    transition: background 0.2s, color 0.2s;
+  /* ━━ 후원 팝업 모달 ━━ */
+  #supportOverlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center; padding:20px; }
+  #supportOverlay.active { display:flex; }
+  #supportPopup { background:#fff; border-radius:14px; max-width:480px; width:100%; box-shadow:0 24px 60px rgba(0,0,0,0.22); overflow:hidden; animation:popupIn 0.28s cubic-bezier(0.34,1.4,0.64,1) both; }
+  @keyframes popupIn { from { transform:scale(0.88); opacity:0; } to { transform:scale(1); opacity:1; } }
+  .sp-header { background:#0b4f5e; padding:22px 28px 18px; position:relative; text-align:center; }
+  .sp-header-title { color:#fff; font-size:18px; font-weight:900; }
+  .sp-header-sub { color:rgba(255,255,255,0.7); font-size:13px; margin-top:4px; }
+  .sp-close { position:absolute; top:12px; right:14px; background:rgba(255,255,255,0.12); border:none; color:rgba(255,255,255,0.8); font-size:16px; width:30px; height:30px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+  .sp-body { padding:24px 28px 28px; }
+
+  /* 카카오페이 섹션 */
+  .sp-kakao-section { text-align:center; margin-bottom:20px; }
+  .sp-kakao-logo { display:flex; align-items:center; justify-content:center; gap:6px; margin-bottom:12px; }
+  .sp-kakao-logo span { font-size:15px; font-weight:900; color:#3A1D1D; }
+  .sp-qr-img { width:160px; height:160px; border-radius:8px; border:1px solid #eee; display:block; margin:0 auto 12px; object-fit:cover; }
+  .sp-kakao-btn {
+    display:inline-flex; align-items:center; gap:8px;
+    background:#FEE500; color:#3A1D1D;
+    font-family:'Noto Sans KR',sans-serif; font-size:14px; font-weight:900;
+    padding:12px 28px; border-radius:8px; text-decoration:none;
+    box-shadow:0 2px 8px rgba(254,229,0,0.4); transition:all 0.2s;
   }
-  .popup-copy-btn:hover { background: #0b4f5e; color: #fff; }
-  .popup-copy-btn.copied { background: #28a745; color: #fff; border-color: #28a745; }
+  .sp-kakao-btn:hover { background:#f5da00; }
+  .sp-qr-hint { font-size:12px; color:#aaa; margin-top:8px; }
 
-  /* 말풍선 토스트 */
+  .sp-divider { display:flex; align-items:center; gap:12px; margin:20px 0; }
+  .sp-divider::before, .sp-divider::after { content:''; flex:1; height:1px; background:#e8eaed; }
+  .sp-divider span { font-size:12px; color:#aaa; white-space:nowrap; }
+
+  /* 계좌이체 섹션 */
+  .sp-bank-section { background:#f7f8fa; border-radius:10px; padding:16px 20px; }
+  .sp-bank-title { font-size:13px; font-weight:700; color:#0b4f5e; margin-bottom:12px; }
+  .sp-bank-row { display:flex; align-items:baseline; padding:6px 0; border-bottom:1px dashed #e4e6ea; font-size:14px; }
+  .sp-bank-row:last-child { border-bottom:none; }
+  .sp-bank-label { color:#888; font-weight:600; width:70px; flex-shrink:0; }
+  .sp-bank-value { color:#1a1a1a; font-weight:700; flex:1; }
+  .sp-copy-btn {
+    display:block; width:100%; margin-top:12px;
+    background:#fff; color:#0b4f5e; border:2px solid #0b4f5e;
+    border-radius:8px; font-family:'Noto Sans KR',sans-serif;
+    font-size:14px; font-weight:700; padding:10px; cursor:pointer;
+    transition:all 0.2s; position:relative;
+  }
+  .sp-copy-btn:hover { background:#0b4f5e; color:#fff; }
   #copyToast {
-    display: none;
-    position: absolute;
-    bottom: calc(100% + 10px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: #1a1a1a;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 8px 16px;
-    border-radius: 20px;
-    white-space: nowrap;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    z-index: 10000;
-    pointer-events: none;
+    display:none; position:absolute; bottom:calc(100% + 8px); left:50%;
+    transform:translateX(-50%); background:#1a1a1a; color:#fff;
+    font-size:12px; font-weight:700; padding:6px 14px; border-radius:16px;
+    white-space:nowrap; pointer-events:none;
   }
-  #copyToast::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 6px solid transparent;
-    border-top-color: #1a1a1a;
-  }
-  .popup-copy-wrap {
-    position: relative;
-    margin-top: 10px;
-  }
+  #copyToast::after { content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%); border:5px solid transparent; border-top-color:#1a1a1a; }
 
-  /* ━━ 모바일 반응형 미디어 쿼리 ━━ */
-  @media screen and (max-width: 768px) {
-    /* 패딩 축소 */
-    .hook { padding: 50px 20px 40px; }
-    .book-section, .who, .diff, .method, .sample, .qr-section, .purchase, .cta { padding: 40px 20px; }
-    
-    /* 폰트 및 구조 조정 */
-    .section-title { font-size: 24px; margin-bottom: 24px; }
-    .hook h1 { font-size: 26px; }
-    
-    /* 가로 배열을 세로로 변경 */
-    .book-section { flex-direction: column; gap: 30px; text-align: center; }
-    .book-info h2 { justify-content: center; }
-    
-    /* 그리드를 1열로 변경 */
-    .spec-grid, .info-grid { grid-template-columns: 1fr; gap: 16px; }
-    .diff-grid { grid-template-columns: 1fr; gap: 16px; }
-    
-    /* QR 섹션 모바일 정렬 */
-    .qr-inner { flex-direction: column; gap: 20px; padding: 30px 20px; text-align: center; }
-    
-    /* 팝업 모달 크기 최적화 — 좌우 패딩 늘려서 팝업 가로 축소 */
-    #ebookPopupOverlay { padding: 28px 20px; }
-    #ebookPopup { max-height: 82vh; overflow-y: auto; border-radius: 12px; }
-
-    /* 팝업 헤더 */
-    .popup-header { padding: 16px 20px 14px; }
-    .popup-badge { font-size: 12px; padding: 4px 12px; margin-bottom: 8px; }
-    .popup-title { font-size: 16px; }
-    .popup-close { width: 28px; height: 28px; font-size: 14px; top: 10px; right: 12px; }
-
-    /* 팝업 바디 */
-    .popup-body { padding: 16px 14px 20px; }
-    .popup-desc { font-size: 13px; margin-bottom: 14px; line-height: 1.7; }
-
-    /* 계좌 정보 박스 — 중앙 정렬 */
-    .popup-bank-box { padding: 10px 12px; margin-bottom: 14px; border-radius: 10px; }
-    .popup-bank-row { font-size: 13px; padding: 6px 0; justify-content: center; gap: 0; flex-wrap: nowrap; }
-    .popup-bank-label { width: 70px; text-align: right; font-size: 12px; flex-shrink: 0; }
-    .popup-bank-colon { display: inline; margin: 0 8px; color: #bbb; }
-    .popup-bank-value { width: 130px; text-align: left; font-size: 13px; }
-    .popup-bank-value.price { font-size: 15px; }
-
-    /* 이메일 안내 박스 */
-    .popup-send-box { padding: 12px 14px; margin-top: 0; margin-bottom: 14px; border-radius: 10px; display: block; }
-    .popup-send-title { font-size: 12px; margin-bottom: 8px; }
-    .popup-send-list li { font-size: 12px; padding: 3px 0; }
-    .popup-email-link { font-size: 13px; padding: 10px 14px; border-radius: 7px; display: block; width: 100%; box-sizing: border-box; }
+  /* ━━ 모바일 ━━ */
+  @media screen and (max-width:768px) {
+    .hook { padding:50px 20px 40px; }
+    .book-section, .who, .diff, .method, .sample, .qr-section, .purchase, .cta { padding:40px 20px; }
+    .section-title { font-size:24px; margin-bottom:24px; }
+    .hook h1 { font-size:26px; }
+    .book-section { flex-direction:column; gap:30px; text-align:center; }
+    .book-info h2 { justify-content:center; }
+    .spec-grid, .info-grid { grid-template-columns:1fr; }
+    .diff-grid { grid-template-columns:1fr; }
+    .qr-inner { flex-direction:column; gap:20px; padding:30px 20px; text-align:center; }
+    .support-btn-row { flex-direction:column; }
+    .btn-kakao, .btn-account { justify-content:center; }
+    #supportOverlay { padding:20px 16px; }
+    #supportPopup { max-height:88vh; overflow-y:auto; }
+    .sp-body { padding:20px 18px 24px; }
   }
 </style>
 </head>
 <body>
-
-<!-- SEO 시맨틱 태그 <main> 사용 -->
 <main>
-  <!-- ① 후킹 배너 (SEO 키워드 반영) -->
+  <!-- ① 후킹 배너 -->
   <header class="hook">
     <div class="hook-eyebrow">영어창고 · 코어북스</div>
-    <!-- h1 태그에 SEO 핵심 키워드(패턴회화, 기초영어) 자연스럽게 배치 -->
     <h1>머릿속에 맴도는 영단어,<br>이제 <em>패턴회화로 시원하게</em> 내뱉어 보세요!</h1>
     <p class="hook-sub">
       단순 암기식 영어공부가 아니라,<br>
@@ -277,36 +288,29 @@
     </p>
   </header>
 
-  <!-- ② 책 정면 이미지 + 스펙 -->
+  <!-- ② 책 목업 + 스펙 -->
   <section class="book-section">
     <div class="book-mockup">
-      <!-- 이미지 alt 속성에 SEO 키워드 추가 -->
       <img src="image/book-cover.png" alt="기초영어 회화 정복을 위한 영어창고 문장꼬리물기 패턴회화 100 전자책 표지" class="book-cover"
         onerror="this.style.background='#0b4f5e';this.style.height='296px';" />
     </div>
     <div class="book-info">
       <h2>
         <span>문장 꼬리물기<br>영어패턴 100</span>
-        <span class="pdf-ribbon-title">PDF 영어전자책</span>
+        <span class="pdf-ribbon-title">PDF 전자책</span>
       </h2>
       <p class="book-sub">원어민처럼 길게 말하는 100가지 패턴회화 훈련</p>
       <div class="spec-grid">
         <div class="spec-item">
-          <div class="spec-icon">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          </div>
+          <div class="spec-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
           <div><div class="spec-label">총 페이지</div><div class="spec-val">약 200페이지</div></div>
         </div>
         <div class="spec-item">
-          <div class="spec-icon">
-            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          </div>
+          <div class="spec-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
           <div><div class="spec-label">핵심 패턴</div><div class="spec-val">100개</div></div>
         </div>
         <div class="spec-item">
-          <div class="spec-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </div>
+          <div class="spec-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
           <div>
             <div class="spec-label">수록 예문</div>
             <div class="spec-val">1,000개</div>
@@ -314,27 +318,51 @@
           </div>
         </div>
         <div class="spec-item">
-          <div class="spec-icon">
-            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </div>
+          <div class="spec-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
           <div><div class="spec-label">영상 강의</div><div class="spec-val">QR코드 연계</div></div>
         </div>
       </div>
       <div class="badge-row">
         <span class="badge badge-teal">PDF 전자책</span>
-        <span class="badge badge-gold">ISBN 공식 등록 전자책</span>
-        <span class="badge badge-gray">기초영어부터 고급까지 가능</span>
+        <span class="badge badge-gold">ISBN 공식 등록 출판물</span>
+        <span class="badge badge-gray">기초영어부터 고급까지</span>
       </div>
-      <div class="buy-btn-wrap">
-        <button class="buy-btn" onclick="openEbookPopup()">
-          🛒 지금 사전 할인가로 구매하기
-          <span class="buy-btn-price">₩9,900</span>
-        </button>
+
+      <!-- ISBN 무료공개 박스 -->
+      <div class="isbn-free-box">
+        <div class="isbn-line1">영어학습자를 위해</div>
+        <div class="isbn-line2">ISBN 정식 등록 출판물을 무료로 공개합니다.</div>
+      </div>
+
+      <!-- 다운로드 버튼 -->
+      <div class="download-btn-wrap">
+        <a href="https://download.hphong.com/%EC%98%81%EC%96%B4%EC%B0%BD%EA%B3%A0_%EB%AC%B8%EC%9E%A5%EA%BC%AC%EB%A6%AC%EB%AC%BC%EA%B8%B0_%EC%98%81%EC%96%B4%ED%8C%A8%ED%84%B4100.pdf"
+           target="_blank" class="download-btn">
+          📥 무료 PDF 다운로드
+        </a>
+      </div>
+
+      <!-- 후원 박스 -->
+      <div class="support-box">
+        <p class="support-q">무료 전자책이 도움이 되셨나요?</p>
+        <p class="support-desc">
+          커피 한 잔 값(3,000원~)으로 이 사이트를 응원해 주세요 ☕<br>
+          매달 청구되는 서버비와 트래픽 비용에 사용되며,<br>
+          <strong>여러분의 후원은 영어를 다시 시작하려는 누군가에게<br>큰 도움이 될 수 있습니다.</strong>
+        </p>
+        <div class="support-btn-row">
+          <button class="btn-kakao" onclick="openSupport('kakao')">
+            ☕ 카카오페이로 후원하기
+          </button>
+          <button class="btn-account" onclick="openSupport('bank')">
+            🏦 계좌이체로 후원하기
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ③ 이런 분께 추천 (키워드 삽입) -->
+  <!-- ③ 이런 분께 추천 -->
   <section class="who">
     <div class="section-label">For whom</div>
     <h2 class="section-title">이런 분이라면 꼭 필요한<br>영어회화 전자책입니다</h2>
@@ -386,7 +414,6 @@
     <div class="section-label">How it works</div>
     <h2 class="section-title">문장 꼬리물기<br>3단계 패턴회화 훈련법</h2>
     <div class="step-visual">
-      <!-- STEP 1 -->
       <div class="step-row">
         <div class="step-left">
           <div class="step-block step-block-1">STEP<br>1</div>
@@ -399,7 +426,6 @@
           <span class="step-badge-pill pill-1">짧게 말하기</span>
         </div>
       </div>
-      <!-- STEP 2 -->
       <div class="step-row">
         <div class="step-left">
           <div class="step-block step-block-2">STEP<br>2</div>
@@ -412,7 +438,6 @@
           <span class="step-badge-pill pill-2">확장해서 말하기</span>
         </div>
       </div>
-      <!-- STEP 3 -->
       <div class="step-row">
         <div class="step-left">
           <div class="step-block step-block-3">STEP<br>3</div>
@@ -427,11 +452,11 @@
     </div>
   </section>
 
-  <!-- ⑥ 실제 내지 샘플 -->
+  <!-- ⑥ 내지 샘플 -->
   <section class="sample">
     <div class="section-label">Preview</div>
     <h2 class="section-title">실제 책 내용을 미리 확인해보세요</h2>
-    <img src="image/book-preview.png" alt="영어창고 문장꼬리물기 패턴회화 100 전자책 내지 샘플 이미지" style="width:100%; max-width:100%; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.10); display:block;">
+    <img src="image/book-preview.png" alt="영어창고 문장꼬리물기 패턴회화 100 전자책 내지 샘플" style="width:100%;max-width:100%;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.10);display:block;">
   </section>
 
   <!-- ⑦ QR 영상 연계 -->
@@ -453,38 +478,42 @@
     </div>
   </section>
 
-  <!-- ⑧ 구매 안내 + FAQ -->
+  <!-- ⑧ 이용 안내 -->
   <section class="purchase">
-    <div class="section-label">Purchase Guide</div>
-    <h2 class="section-title">구매 안내</h2>
+    <div class="section-label">Download Guide</div>
+    <h2 class="section-title">이용 안내</h2>
     <div class="info-grid">
       <div class="info-card">
         <div class="info-card-title">파일 형식</div>
-        <div class="info-card-desc">PDF 영어전자책 1종이 제공됩니다. PC, 태블릿, 스마트폰에서 모두 열람 가능합니다.</div>
+        <div class="info-card-desc">PDF 전자책 1종이 제공됩니다. PC, 태블릿, 스마트폰에서 모두 열람 가능합니다.</div>
       </div>
       <div class="info-card">
-        <div class="info-card-title">파일 전달 방법</div>
-        <div class="info-card-desc">구매 시 입력하신 이메일 주소로 <strong>24시간 이내</strong> 발송됩니다.</div>
+        <div class="info-card-title">다운로드 방법</div>
+        <div class="info-card-desc">다운로드 버튼 클릭 즉시 PDF 파일이 저장됩니다. 회원가입 불필요.</div>
       </div>
       <div class="info-card">
-        <div class="info-card-title">환불 정책</div>
-        <div class="info-card-desc">디지털 상품 특성상 전송 이후 환불이 불가합니다. 구매 전 샘플을 꼭 확인해 주세요.</div>
+        <div class="info-card-title">저작권 안내</div>
+        <div class="info-card-desc">개인 학습 목적으로만 사용 가능합니다. 무단 배포 및 상업적 이용은 금지됩니다.</div>
       </div>
       <div class="info-card">
         <div class="info-card-title">문의</div>
-        <div class="info-card-desc">파일 미수신 등 문의는 hphong@hphong.com 으로 연락해 주세요.</div>
+        <div class="info-card-desc">다운로드 오류 등 문의는 hphong@hphong.com 으로 연락해 주세요.</div>
       </div>
     </div>
   </section>
 
   <!-- ⑨ 최종 CTA -->
   <section class="cta">
-    <h2>지금 구매하고<br><em>영어를 길게 말하는 경험</em>을 시작해 보세요!</h2>
+    <h2>지금 무료로 받고<br><em>영어를 길게 말하는 경험</em>을 시작해 보세요!</h2>
     <p>
       100개 패턴 × 10개 예문 × 3단계 확장 훈련<br>
       QR코드 영상 강의 연계로 언제 어디서나 반복 영어공부<br><br>
-      <strong style="color:rgba(255,255,255,0.85);">PDF 전자책 · ISBN 공식 등록 · 구매 후 24시간 이내 이메일 발송</strong>
+      <strong style="color:rgba(255,255,255,0.85);">PDF 전자책 · ISBN 공식 등록 · 무료 즉시 다운로드</strong>
     </p>
+    <a href="https://download.hphong.com/%EC%98%81%EC%96%B4%EC%B0%BD%EA%B3%A0_%EB%AC%B8%EC%9E%A5%EA%BC%AC%EB%A6%AC%EB%AC%BC%EA%B8%B0_%EC%98%81%EC%96%B4%ED%8C%A8%ED%84%B4100.pdf"
+       target="_blank" class="download-btn">
+      📥 무료 PDF 다운로드
+    </a>
   </section>
 
   <!-- ⑩ 헌정 문구 -->
@@ -505,96 +534,90 @@
   </footer>
 </main>
 
-<!-- ══ 사전 구매 안내 팝업 ══ -->
-<div id="ebookPopupOverlay">
-  <div id="ebookPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
-    <div class="popup-header">
-      <button class="popup-close" onclick="closeEbookPopup()" aria-label="닫기">✕</button>
-      <span class="popup-badge">📦 전자책 사전 구매 안내</span>
-      <p class="popup-title" id="popupTitle">현재 온라인 판매 준비 중입니다</p>
+<!-- ══ 후원 팝업 ══ -->
+<div id="supportOverlay">
+  <div id="supportPopup" role="dialog" aria-modal="true">
+    <div class="sp-header">
+      <button class="sp-close" onclick="closeSupport()">✕</button>
+      <div class="sp-header-title">☕ 후원하기</div>
+      <div class="sp-header-sub">커피 한 잔 값으로 응원해 주세요 (3,000원~)</div>
     </div>
-    <div class="popup-body">
-      <p class="popup-desc">온라인 판매 오픈 전,
-        <br> 지금 계좌 입금으로 구매하시면 
-        <br><span style="color:#C9A050; font-weight:900;">사전 할인가</span>로 발송해 드립니다.
-      </p>
-      <!-- 계좌 정보 박스 생략/유지 -->
-      <div class="popup-bank-box">
-        <div class="popup-bank-row"><span class="popup-bank-label">은행명</span><span class="popup-bank-colon">:</span><span class="popup-bank-value">하나은행</span></div>
-        <div class="popup-bank-row"><span class="popup-bank-label">계좌번호</span><span class="popup-bank-colon">:</span><span class="popup-bank-value">346-911021-08307</span></div>
-        <div class="popup-bank-row"><span class="popup-bank-label">예금주</span><span class="popup-bank-colon">:</span><span class="popup-bank-value">홍O표</span></div>
-        <div class="popup-bank-row"><span class="popup-bank-label">입금 금액</span><span class="popup-bank-colon">:</span><span class="popup-bank-value price">₩9,900</span></div>
-      </div>
-      <div class="popup-send-box">
-        <p class="popup-send-title">✉️ 입금후 아래 내용을 이메일로 보내주세요.</p>
-        <ul class="popup-send-list">
-          <li>메일 제목 : 전자잭 구매</li>
-          <li>송금자 성함</li>
-          <li>전자책 받으실 이메일 주소 <br><br>
-          ※ 당일 저녁 일괄 확인 후 이메일로 발송해 드립니다. </li>
-        </ul>
-        
-        <a href="mailto:hphong@hphong.com" class="popup-email-link">📧 hphong@hphong.com</a>
-        <div class="popup-copy-wrap">
-          <div id="copyToast">📋 hphong@hphong.com 복사완료!</div>
-          <button id="copyEmailBtn" onclick="copyEmail()" class="popup-copy-btn">이메일 주소 복사</button>
+    <div class="sp-body">
+
+      <!-- 카카오페이 탭 -->
+      <div id="tab-kakao">
+        <div class="sp-kakao-section">
+          <div class="sp-kakao-logo">
+            <span>카카오페이 송금</span>
+          </div>
+          <img src="/image/kakao-qr.png"
+               alt="카카오페이 QR코드" class="sp-qr-img"
+               onerror="this.style.display='none'">
+          <div style="margin-top:4px;">
+            <a href="https://qr.kakaopay.com/FXqcTUCVO" target="_blank" class="sp-kakao-btn">
+              카카오페이로 송금하기 →
+            </a>
+          </div>
+          <p class="sp-qr-hint">PC에서는 스마트폰으로 QR을 스캔해 주세요</p>
+        </div>
+
+        <div class="sp-divider"><span>또는 계좌이체</span></div>
+
+        <div class="sp-bank-section">
+          <div class="sp-bank-title">🏦 계좌이체 후원</div>
+          <div class="sp-bank-row"><span class="sp-bank-label">은행</span><span class="sp-bank-value">하나은행</span></div>
+          <div class="sp-bank-row"><span class="sp-bank-label">계좌번호</span><span class="sp-bank-value">346-911021-08307</span></div>
+          <div class="sp-bank-row"><span class="sp-bank-label">예금주</span><span class="sp-bank-value">홍○표</span></div>
+          <div style="position:relative;">
+            <div id="copyToast">📋 복사완료!</div>
+            <button class="sp-copy-btn" onclick="copyAccount()">계좌번호 복사</button>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
 
 <script>
-window.copyEmail = function() {
-  var email = 'hphong@hphong.com';
+function openSupport(tab) {
+  document.getElementById('supportOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeSupport() {
+  document.getElementById('supportOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.getElementById('supportOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeSupport();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeSupport();
+});
+
+function copyAccount() {
+  var text = '346-911021-08307';
   var toast = document.getElementById('copyToast');
-
-  function showToast() {
+  function show() {
     toast.style.display = 'block';
-    setTimeout(function() {
-      toast.style.display = 'none';
-    }, 1000);
+    setTimeout(function(){ toast.style.display = 'none'; }, 1500);
   }
-
   try {
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(email).then(showToast).catch(function() {
-        fallbackCopy(email);
-        showToast();
-      });
-    } else {
-      fallbackCopy(email);
-      showToast();
-    }
-  } catch(e) {
-    fallbackCopy(email);
-    showToast();
-  }
-};
-
-function fallbackCopy(text) {
+      navigator.clipboard.writeText(text).then(show).catch(function(){ fallback(text); show(); });
+    } else { fallback(text); show(); }
+  } catch(e) { fallback(text); show(); }
+}
+function fallback(text) {
   var el = document.createElement('textarea');
-  el.value = text;
-  el.style.position = 'fixed';
-  el.style.top = '-9999px';
-  el.style.left = '-9999px';
-  document.body.appendChild(el);
-  el.focus();
-  el.select();
+  el.value = text; el.style.position = 'fixed'; el.style.top = '-9999px';
+  document.body.appendChild(el); el.focus(); el.select();
   try { document.execCommand('copy'); } catch(e) {}
   document.body.removeChild(el);
 }
-var POPUP_AUTO_SHOW = true;
-(function() {
-  window.openEbookPopup = function() { document.getElementById('ebookPopupOverlay').classList.add('active'); document.body.style.overflow = 'hidden'; };
-  window.closeEbookPopup = function() { document.getElementById('ebookPopupOverlay').classList.remove('active'); document.body.style.overflow = ''; };
-  document.getElementById('ebookPopupOverlay').addEventListener('click', function(e) { if (e.target === this) closeEbookPopup(); });
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeEbookPopup(); });
-  window.addEventListener('load', function() { if (POPUP_AUTO_SHOW) setTimeout(openEbookPopup, 400); });
-})();
 </script>
 
-<!-- ── Firebase 방문자 카운터 ── -->
+<!-- Firebase 방문자 카운터 -->
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
 import { getFirestore, doc, getDoc, setDoc, updateDoc, increment }
@@ -615,7 +638,7 @@ function _ydayKey(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'
 function _weekKey(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'}));var day=d.getDay();d.setDate(d.getDate()+((day===0)?-6:1-day));return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function _monthKey(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'}));return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');}
 (async function(){
-  var todayKey=_todayKey(), monthKey=_monthKey(), weekStart=_weekKey();
+  var todayKey=_todayKey(),monthKey=_monthKey(),weekStart=_weekKey();
   var sessionKey='visited_'+PAGE_SLUG+'_'+todayKey;
   var ref=doc(_db,'visits',PAGE_SLUG);
   try{
@@ -637,8 +660,7 @@ function _monthKey(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:
     var days=data.days||{};
     var monthly=data.monthly||{};
     function gi(obj,key){return parseInt(obj[key]||0);}
-    var y=gi(days,_ydayKey()), t=gi(days,_todayKey());
-    var w=gi(data,'weekly'), m=gi(monthly,_monthKey()), a=gi(data,'total');
+    var y=gi(days,_ydayKey()),t=gi(days,_todayKey()),w=gi(data,'weekly'),m=gi(monthly,_monthKey()),a=gi(data,'total');
     var el=document.getElementById('visit-counter');
     if(el) el.textContent='y.'+y+' / t.'+t+' / w.'+w+' / m.'+m+' / a.'+a;
   } catch(e){ console.log('counter error:',e); }
