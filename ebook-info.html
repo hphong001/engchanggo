@@ -213,8 +213,29 @@
   .sp-close { position:absolute; top:12px; right:14px; background:rgba(255,255,255,0.12); border:none; color:rgba(255,255,255,0.8); font-size:16px; width:30px; height:30px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; }
   .sp-body { padding:24px 28px 28px; }
 
+  /* 방법 안내 요약 */
+  .sp-methods-guide {
+    background:#f7f8fa; border-radius:10px; padding:14px 16px;
+    margin-bottom:20px; display:flex; flex-direction:column; gap:8px;
+  }
+  .sp-method-item { display:flex; align-items:center; gap:10px; }
+  .sp-method-badge {
+    flex-shrink:0; background:#0b4f5e; color:#fff;
+    font-size:11px; font-weight:700; padding:3px 9px;
+    border-radius:4px; letter-spacing:0.5px;
+  }
+  .sp-method-desc { font-size:14px; font-weight:700; color:#1a1a1a; }
+  .sp-method-sub { font-size:12px; font-weight:400; color:#888; margin-left:4px; }
+
+  /* 섹션 레이블 */
+  .sp-section-label {
+    display:flex; align-items:center; gap:8px;
+    font-size:14px; font-weight:700; color:#1a1a1a;
+    margin-bottom:14px;
+  }
+
   /* 카카오페이 섹션 */
-  .sp-kakao-section { text-align:center; margin-bottom:20px; }
+  .sp-kakao-section { text-align:center; margin-bottom:4px; }
   .sp-kakao-logo { display:flex; align-items:center; justify-content:center; gap:6px; margin-bottom:12px; }
   .sp-kakao-logo span { font-size:15px; font-weight:900; color:#1a1a1a; }
   .sp-qr-img { width:160px; height:160px; border-radius:8px; border:1px solid #e0e0e0; display:block; margin:0 auto 12px; object-fit:cover; }
@@ -244,7 +265,7 @@
 
   /* 계좌이체 섹션 */
   .sp-bank-section { background:#f7f8fa; border-radius:10px; padding:16px 20px; }
-  .sp-bank-title { font-size:13px; font-weight:700; color:#0b4f5e; margin-bottom:12px; }
+  .sp-bank-title { font-size:12px; font-weight:500; color:#888; margin-bottom:12px; }
   .sp-bank-row { display:flex; align-items:baseline; padding:6px 0; border-bottom:1px dashed #e4e6ea; font-size:14px; }
   .sp-bank-row:last-child { border-bottom:none; }
   .sp-bank-label { color:#888; font-weight:600; width:70px; flex-shrink:0; }
@@ -559,18 +580,30 @@
     </div>
     <div class="sp-body">
 
-      <!-- 카카오페이 섹션 -->
+      <!-- 방법 안내 요약 -->
+      <div class="sp-methods-guide">
+        <div class="sp-method-item">
+          <span class="sp-method-badge">방법 1</span>
+          <span class="sp-method-desc">카카오페이 QR 스캔 <span class="sp-method-sub">(PC · 스마트폰)</span></span>
+        </div>
+        <div class="sp-method-item">
+          <span class="sp-method-badge">방법 2</span>
+          <span class="sp-method-desc">계좌이체 <span class="sp-method-sub">(은행 앱 · 인터넷뱅킹)</span></span>
+        </div>
+      </div>
+
+      <!-- 방법 1: 카카오페이 -->
       <div id="tab-kakao">
+        <div class="sp-section-label">
+          <span class="sp-method-badge">방법 1</span>
+          <span>카카오페이로 송금</span>
+        </div>
         <div class="sp-kakao-section">
-          <div class="sp-kakao-logo">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-            <span>카카오페이 송금</span>
-          </div>
           <!-- PC: QR 이미지 + 안내 문구 -->
           <img src="/image/kakao-qr.png"
                alt="카카오페이 QR코드" class="sp-qr-img"
                onerror="this.style.display='none'">
-          <p class="sp-qr-hint-pc">스마트폰 카카오페이 앱으로<br>QR을 스캔해 주세요</p>
+          <p class="sp-qr-hint-pc">스마트폰으로 QR을 스캔하면<br>카카오페이 송금 화면이 열립니다</p>
           <!-- 모바일: 버튼 + 안내 -->
           <div style="margin-top:4px;">
             <a href="https://qr.kakaopay.com/FXqcTUCVO" target="_blank" class="sp-kakao-btn">
@@ -578,13 +611,18 @@
               카카오페이로 송금하기
             </a>
           </div>
-          <p class="sp-qr-hint-mobile">버튼을 눌러 카카오페이 앱으로 바로 송금할 수 있습니다</p>
+          <p class="sp-qr-hint-mobile">버튼을 누르면 카카오페이 앱으로 바로 연결됩니다</p>
         </div>
 
-        <div class="sp-divider"><span>또는 계좌이체</span></div>
+        <div class="sp-divider" style="margin:18px 0 16px;"></div>
 
+        <!-- 방법 2: 계좌이체 -->
+        <div class="sp-section-label">
+          <span class="sp-method-badge">방법 2</span>
+          <span>계좌이체로 송금</span>
+        </div>
         <div class="sp-bank-section">
-          <div class="sp-bank-title">계좌이체 후원</div>
+          <div class="sp-bank-title">은행 앱 또는 인터넷뱅킹으로 이체해 주세요</div>
           <div class="sp-bank-row"><span class="sp-bank-label">은행</span><span class="sp-bank-value">하나은행</span></div>
           <div class="sp-bank-row"><span class="sp-bank-label">계좌번호</span><span class="sp-bank-value">346-911021-08307</span></div>
           <div class="sp-bank-row"><span class="sp-bank-label">예금주</span><span class="sp-bank-value">홍○표</span></div>
