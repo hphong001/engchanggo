@@ -1,7 +1,9 @@
 <style>
 .sb-card{background:#FFFFFF;border:1px solid #E2E2DF;padding:22px;margin-bottom:18px;box-sizing:border-box;}
 .sb-card *{box-sizing:border-box;}
-#sidebar-wrap, .sidebar-wrap{width:300px;}
+#sidebar-wrap, .sidebar-wrap{width:300px;position:sticky;top:20px;max-height:calc(100vh - 40px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;scrollbar-color:#E2E2DF transparent;}
+#sidebar-wrap::-webkit-scrollbar, .sidebar-wrap::-webkit-scrollbar{width:4px;}
+#sidebar-wrap::-webkit-scrollbar-thumb, .sidebar-wrap::-webkit-scrollbar-thumb{background:#E2E2DF;border-radius:2px;}
 
 /* 전자책 */
 .sb-ebook-eyebrow{font-size:14px;font-weight:800;color:#1A1A1A;letter-spacing:.5px;text-transform:uppercase;text-align:center;margin-bottom:12px;display:block;padding-bottom:10px;border-bottom:1px solid #E2E2DF;}
@@ -58,6 +60,11 @@
     <strong>200페이지 전체 무료 다운로드</strong><br>
     PDF로 즉시 받아보세요.
   </p>
+  <a href="/ebook-info/" class="sb-ebook-btn">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+    무료 PDF 다운로드
+  </a>
+  <div class="sb-ebook-divider" style="margin-top:14px;"></div>
   <a href="/ebook-info/">
     <img src="/image/book-cover.png" alt="영어창고 전자책 표지" class="sb-ebook-cover"
          onerror="this.style.display='none';" style="cursor:pointer;">
@@ -76,11 +83,6 @@
       <span>항상 곁에 두고 <strong>예습·복습</strong> 완성</span>
     </div>
   </div>
-  <div class="sb-ebook-divider"></div>
-  <a href="/ebook-info/" class="sb-ebook-btn">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
-    무료 PDF 다운로드
-  </a>
 </div>
 
 <!-- ③ 패턴 목록 -->
