@@ -81,13 +81,13 @@
   .download-btn-wrap { margin-bottom: 0; }
   .download-btn {
     display:flex; align-items:center; justify-content:center; gap:10px; width:100%;
-    background:#C9A050; color:#fff; font-family:'Noto Sans KR',sans-serif; font-size:18px; font-weight:900;
+    background:#0b4f5e; color:#fff; font-family:'Noto Sans KR',sans-serif; font-size:18px; font-weight:900;
     padding:22px 36px; border-radius:10px; border:none; cursor:pointer;
     letter-spacing:0.2px; transition:background 0.2s, transform 0.15s;
-    box-shadow:0 4px 16px rgba(201,160,80,0.35);
+    box-shadow:0 4px 20px rgba(11,79,94,0.35);
     text-decoration: none;
   }
-  .download-btn:hover { background:#b08a3e; transform:translateY(-2px); }
+  .download-btn:hover { background:#093f4d; transform:translateY(-2px); }
   .download-btn:active { transform:translateY(0); }
 
   /* 후원 박스 */
@@ -216,17 +216,27 @@
   /* 카카오페이 섹션 */
   .sp-kakao-section { text-align:center; margin-bottom:20px; }
   .sp-kakao-logo { display:flex; align-items:center; justify-content:center; gap:6px; margin-bottom:12px; }
-  .sp-kakao-logo span { font-size:15px; font-weight:900; color:#3A1D1D; }
-  .sp-qr-img { width:160px; height:160px; border-radius:8px; border:1px solid #eee; display:block; margin:0 auto 12px; object-fit:cover; }
+  .sp-kakao-logo span { font-size:15px; font-weight:900; color:#1a1a1a; }
+  .sp-qr-img { width:160px; height:160px; border-radius:8px; border:1px solid #e0e0e0; display:block; margin:0 auto 12px; object-fit:cover; }
+  .sp-qr-hint-pc { font-size:14px; color:#1a1a1a; font-weight:700; margin-top:10px; line-height:1.6; }
+  .sp-qr-hint-mobile { display:none; font-size:13px; color:#555; margin-top:6px; }
   .sp-kakao-btn {
     display:inline-flex; align-items:center; gap:8px;
-    background:#FEE500; color:#3A1D1D;
-    font-family:'Noto Sans KR',sans-serif; font-size:14px; font-weight:900;
+    background:#0b4f5e; color:#fff;
+    font-family:'Noto Sans KR',sans-serif; font-size:14px; font-weight:700;
     padding:12px 28px; border-radius:8px; text-decoration:none;
-    box-shadow:0 2px 8px rgba(254,229,0,0.4); transition:all 0.2s;
+    transition:all 0.2s;
   }
-  .sp-kakao-btn:hover { background:#f5da00; }
-  .sp-qr-hint { font-size:12px; color:#aaa; margin-top:8px; }
+  .sp-kakao-btn:hover { background:#093f4d; }
+  /* PC: 버튼 숨김, QR+안내 표시 */
+  .sp-kakao-btn { display:none; }
+  /* 모바일: QR 숨기고 버튼+안내 표시 */
+  @media (hover: none) and (pointer: coarse) {
+    .sp-qr-img { display:none !important; }
+    .sp-qr-hint-pc { display:none !important; }
+    .sp-kakao-btn { display:inline-flex !important; }
+    .sp-qr-hint-mobile { display:block !important; }
+  }
 
   .sp-divider { display:flex; align-items:center; gap:12px; margin:20px 0; }
   .sp-divider::before, .sp-divider::after { content:''; flex:1; height:1px; background:#e8eaed; }
@@ -544,37 +554,42 @@
   <div id="supportPopup" role="dialog" aria-modal="true">
     <div class="sp-header">
       <button class="sp-close" onclick="closeSupport()">✕</button>
-      <div class="sp-header-title">☕ 후원하기</div>
+      <div class="sp-header-title">후원하기</div>
       <div class="sp-header-sub">커피 한 잔 값으로 응원해 주세요 (3,000원~)</div>
     </div>
     <div class="sp-body">
 
-      <!-- 카카오페이 탭 -->
+      <!-- 카카오페이 섹션 -->
       <div id="tab-kakao">
         <div class="sp-kakao-section">
           <div class="sp-kakao-logo">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
             <span>카카오페이 송금</span>
           </div>
+          <!-- PC: QR 이미지 + 안내 문구 -->
           <img src="/image/kakao-qr.png"
                alt="카카오페이 QR코드" class="sp-qr-img"
                onerror="this.style.display='none'">
+          <p class="sp-qr-hint-pc">스마트폰 카카오페이 앱으로<br>QR을 스캔해 주세요</p>
+          <!-- 모바일: 버튼 + 안내 -->
           <div style="margin-top:4px;">
             <a href="https://qr.kakaopay.com/FXqcTUCVO" target="_blank" class="sp-kakao-btn">
-              카카오페이로 송금하기 →
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M14 9l3 3-3 3"/></svg>
+              카카오페이로 송금하기
             </a>
           </div>
-          <p class="sp-qr-hint">PC에서는 스마트폰으로 QR을 스캔해 주세요</p>
+          <p class="sp-qr-hint-mobile">버튼을 눌러 카카오페이 앱으로 바로 송금할 수 있습니다</p>
         </div>
 
         <div class="sp-divider"><span>또는 계좌이체</span></div>
 
         <div class="sp-bank-section">
-          <div class="sp-bank-title">🏦 계좌이체 후원</div>
+          <div class="sp-bank-title">계좌이체 후원</div>
           <div class="sp-bank-row"><span class="sp-bank-label">은행</span><span class="sp-bank-value">하나은행</span></div>
           <div class="sp-bank-row"><span class="sp-bank-label">계좌번호</span><span class="sp-bank-value">346-911021-08307</span></div>
           <div class="sp-bank-row"><span class="sp-bank-label">예금주</span><span class="sp-bank-value">홍○표</span></div>
           <div style="position:relative;">
-            <div id="copyToast">📋 복사완료!</div>
+            <div id="copyToast">복사완료</div>
             <button class="sp-copy-btn" onclick="copyAccount()">계좌번호 복사</button>
           </div>
         </div>
