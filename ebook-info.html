@@ -735,22 +735,38 @@ function _monthKey(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:
 })();
 </script>
 
-  <!-- 최초 유입 경로(original)를 다운로드 버튼에 전달하는 스크립트 -->
-<script>
+  <script>
 document.addEventListener("DOMContentLoaded", function() {
-  // 1. 현재 주소창에서 original 파라미터 값 추출
+  var currentDomain = location.hostname;
+  var currentReferrer = document.referrer;
   var urlParams = new URLSearchParams(window.location.search);
-  var original = urlParams.get('original');
+  var source = urlParams.get('original') || urlParams.get('utm_source');
 
-  // 2. original 값이 존재하면 모든 다운로드 링크 끝에 파라미터 이어 붙이기
-  if (original) {
-    var downloadBtns = document.querySelectorAll('a[href^="https://download.hphong.com/track"]');
-    for (var i = 0; i < downloadBtns.length; i++) {
-      // 기존 주소 뒤에 &original=유튜브주소 추가
-      downloadBtns[i].href += '&original=' + encodeURIComponent(original);
-    }
+  // 🔥 [핵심] SNS 인앱 브라우저 자동 감지
+  if (!source) {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('kakao') > -1) source = 'kakaotalk';
+    else if (ua.indexOf('instagram') > -1) source = 'instagram';
+    else if (ua.indexOf('threads') > -1) source = 'threads';
+    else if (ua.indexOf('facebook') > -1 || ua.indexOf('fb') > -1) source = 'facebook';
+    else if (ua.indexOf('naver') > -1) source = 'naver';
+  }
+
+  if (!source && currentReferrer && currentReferrer.indexOf(currentDomain) === -1) {
+    source = currentReferrer;
+  }
+  if (!source) {
+    source = sessionStorage.getItem('first_referrer') || "직접접속_또는_출처알수없음";
+  }
+
+  var downloadBtns = document.querySelectorAll('a[href^="https://download.hphong.com/track"]');
+  for (var i = 0; i < downloadBtns.length; i++) {
+    var btnHref = downloadBtns[i].href;
+    var separator = btnHref.indexOf('?') !== -1 ? '&' : '?';
+    downloadBtns[i].href = btnHref + separator + 'original=' + encodeURIComponent(source);
   }
 });
 </script>
+  
 </body>  
 </html>
