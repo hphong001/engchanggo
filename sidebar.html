@@ -93,19 +93,34 @@
 
 <script>
 (function(){
-  // 1. 최초 외부 유입 경로(Referrer) 추적 및 저장 (즉시 실행)
   var currentDomain = location.hostname;
   var currentReferrer = document.referrer;
-  
-  if (currentReferrer && currentReferrer.indexOf(currentDomain) === -1) {
-    sessionStorage.setItem('first_referrer', currentReferrer);
+  var urlParams = new URLSearchParams(window.location.search);
+  var source = urlParams.get('utm_source');
+
+  // 🔥 [핵심] SNS 인앱 브라우저 자동 감지 로직 추가
+  if (!source) {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('kakao') > -1) source = 'kakaotalk';
+    else if (ua.indexOf('instagram') > -1) source = 'instagram';
+    else if (ua.indexOf('threads') > -1) source = 'threads';
+    else if (ua.indexOf('facebook') > -1 || ua.indexOf('fb') > -1) source = 'facebook';
+    else if (ua.indexOf('naver') > -1) source = 'naver';
   }
-  
-  // 2. 페이지 전체 로딩이 끝난 후 모든 다운로드 버튼 주소 변경 (안전장치 추가)
+
+  if (!source && currentReferrer && currentReferrer.indexOf(currentDomain) === -1) {
+    source = currentReferrer;
+  }
+  if (!source && !sessionStorage.getItem('first_referrer')) {
+    source = "직접접속_또는_출처알수없음";
+  }
+  if (source) {
+    sessionStorage.setItem('first_referrer', source);
+  }
+
   document.addEventListener("DOMContentLoaded", function() {
     var savedReferrer = sessionStorage.getItem('first_referrer');
     if (savedReferrer) {
-      // 페이지 전체(메인+사이드바)에서 해당 링크를 모두 찾아 일괄 변경
       var ebookLinks = document.querySelectorAll('a[href="/ebook-info/"]');
       for (var i = 0; i < ebookLinks.length; i++) {
         ebookLinks[i].href = '/ebook-info/?original=' + encodeURIComponent(savedReferrer);
@@ -113,7 +128,6 @@
     }
   });
 
-  // --- 기존 패턴 목록 불러오기 로직 ---
   fetch('/pattern-list.json')
     .then(function(r){ return r.json(); })
     .then(function(list){
