@@ -93,6 +93,26 @@
 
 <script>
 (function(){
+  // 🔥 [추가된 부분] 최초 외부 유입 경로(Referrer) 추적 및 저장
+  var currentDomain = location.hostname;
+  var currentReferrer = document.referrer;
+  
+  // 이전 주소가 존재하고, 내 사이트 내부 이동이 아닌 '외부 유입'일 경우에만 임시 저장
+  if (currentReferrer && currentReferrer.indexOf(currentDomain) === -1) {
+    sessionStorage.setItem('first_referrer', currentReferrer);
+  }
+  
+  // 저장된 '최초 유입 경로'가 있다면 전자책 다운로드 링크에 파라미터로 붙여줌
+  var savedReferrer = sessionStorage.getItem('first_referrer');
+  if (savedReferrer) {
+    var ebookLinks = document.querySelectorAll('a[href="/ebook-info/"]');
+    for (var i = 0; i < ebookLinks.length; i++) {
+      // 링크를 /ebook-info/?original=유튜브주소 형태로 변경
+      ebookLinks[i].href = '/ebook-info/?original=' + encodeURIComponent(savedReferrer);
+    }
+  }
+
+  // --- 기존 패턴 목록 불러오기 로직 (변경 없음) ---
   fetch('/pattern-list.json')
     .then(function(r){ return r.json(); })
     .then(function(list){
