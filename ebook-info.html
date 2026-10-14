@@ -734,5 +734,23 @@ function _monthKey(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:
   } catch(e){ console.log('counter error:',e); }
 })();
 </script>
-</body>
+
+  <!-- 최초 유입 경로(original)를 다운로드 버튼에 전달하는 스크립트 -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 1. 현재 주소창에서 original 파라미터 값 추출
+  var urlParams = new URLSearchParams(window.location.search);
+  var original = urlParams.get('original');
+
+  // 2. original 값이 존재하면 모든 다운로드 링크 끝에 파라미터 이어 붙이기
+  if (original) {
+    var downloadBtns = document.querySelectorAll('a[href^="https://download.hphong.com/track"]');
+    for (var i = 0; i < downloadBtns.length; i++) {
+      // 기존 주소 뒤에 &original=유튜브주소 추가
+      downloadBtns[i].href += '&original=' + encodeURIComponent(original);
+    }
+  }
+});
+</script>
+</body>  
 </html>
